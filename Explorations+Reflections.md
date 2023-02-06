@@ -45,7 +45,7 @@ While analyzing data in DFIR is helpful, the struggles encountered while complet
 
 2)  Converting Microsoft-specific languages: Analyzing and understanding PowerShell scripts, .vbs, .exes or other Microsoft-specific languages was a challenge. The best approach could be to run the code through a Python script to try to identify the called functions, change those to prints, and run the script on a Windows virtual machine.
 
-3) Reluctance of the community to move to Python 3: The community's reluctance to move to Python 3, especially in areas that deal with bytes, is a challenge. Some tools, such as Volatility, have been converted from Python 2 to Python 3 but are lacking crucial commands that were available in Python 2.
+3) Reluctance of the community to move to Python 3: The community's reluctance to move to Python 3, especially in areas that deal with bytes, is a challenge. Some tools, such as Volatility, have been converted from Python 2 to Python 3 but are lacking crucial commands that were available in Python 2. [Export Challenge - Vol2 had cmdscan. V3 only has cmdline, which did not yeild the flag.]
 
 # Success
 In 2 cases of drowning I was able to develop python scripts that can be found  https://github.com/dbissell6/PCAP_Analysis and https://github.com/dbissell6/EVTX_analysis. Applying data science techiques I attempted to filter the packets and events to give the user an overview of the landscape and atleast reccomened some places to start looking. The other realm where these struggles still exist for me is memory. Like pcaps and logs i have a tool(volatility) that i can access the information on linux, but it is too much to skim through.
@@ -76,4 +76,5 @@ The easy problems I will be able to find the flag with a grep, maybe base64 enco
 # Next steps
 
 As I continue to complete HTB forensics challenges I will update the dataset and maybe analyze again at 100 completions. I am excited to test my scripts on new challenges that present pcaps or evtx. I plan to make adjustments to the scripts if they 'miss' anything in the future challenges. I've also done a bunch of challeges on other sites and am considering adding that data.
-In the not to distant future I also plan on getting my hands on a DFIR textbook.
+In the not to distant future I also plan on getting my hands on a DFIR textbook. SO i can compare my predictions with an actual book.
+Maybe a Memory analysis
