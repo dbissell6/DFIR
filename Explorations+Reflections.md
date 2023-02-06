@@ -30,6 +30,7 @@ For instance look at downgrade and event horizon then look at the graph.
 ![image](https://user-images.githubusercontent.com/50979196/217052142-6e8e7617-2120-46e6-83ce-14293021155f.png)
 
 ## However, in most cases knowing the relationship between boxes isnt as useful and knowing the relationships of the qualities that compose the challenges.
+Remembering the qualities of downgrade and event horizon we can see them as the mustard colored module.  
 ![image](https://user-images.githubusercontent.com/50979196/217053537-83ec1822-821e-4a85-8eef-de4c19326f4b.png)
 
 # Reflections
@@ -52,21 +53,21 @@ small win in converting a python2 script to python3
 
 # Things I know I missed
 
-In considerations it was mentioned this path would miss some things, what were they? First and the maybe most important was the aquisition. In a real senario you probably wont just be handed some data, but instead we may have to walk over to a computer and extract the memory ourselves. In other foreensics challenges on other sites they include stentography, wchih HTB includes in misc, so there were areas such as those missed.
+In considerations it was mentioned this path would miss some things, what were they? First and the maybe most important was the aquisition. In a real senario you probably wont just be handed some data, but instead we may have to walk over to a computer and extract the memory ourselves. After the malware is discovered how to remove? In other foreensics challenges on other sites they include stentography, wchih HTB includes in misc, so there were areas such as those missed.
 
 # Predictions
 
-##What a DFIR textbook will look like
+## What a DFIR textbook will look like
 
 Aquisition
 General croptography encrpython/decryption
   Deobfuscating powershell commands/docms malware
   Compressed data
-memory/images
-registry
-Logs -evtx, browser, 
-Networks -Pcaps
-
+Memory/images
+Registry
+Logs - evtx, browser, 
+Networks - Pcaps
+Removal 
 
 ## What will i see in the next forensics CTF i compete in?
 Pico is in mid-March(2/6/2023 now). If there are 5 forensics challenges i assume 2 will have pcaps, 1 log, and something completly neiche and random.
