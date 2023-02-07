@@ -48,12 +48,12 @@ While analyzing data in DFIR is helpful, the struggles encountered while complet
 3) Reluctance of the community to move to Python 3: The community's reluctance to move to Python 3, especially in areas that deal with bytes, is a challenge. Some tools, such as Volatility, have been converted from Python 2 to Python 3 but are lacking crucial commands that were available in Python 2. [Export Challenge - Vol2 had cmdscan. V3 only has cmdline, which did not yeild the flag.]
 
 # Success
-In 2 cases of drowning I was able to develop python scripts that can be found  https://github.com/dbissell6/PCAP_Analysis and https://github.com/dbissell6/EVTX_analysis. Applying data science techiques I attempted to filter the packets and events to give the user an overview of the landscape and atleast reccomened some places to start looking. The other realm where these struggles still exist for me is memory. Like pcaps and logs i have a tool(volatility) that i can access the information on linux, but it is too much to skim through.
-small win in converting a python2 script to python3
+In 2 cases of drowning I was able to develop python scripts that can be found  https://github.com/dbissell6/PCAP_Analysis and https://github.com/dbissell6/EVTX_analysis. Using data science techniques, I aimed to filter the packets and events to provide an overview of the data and suggest starting points for further investigation. I did manage a small victory by converting a Python 2 script to Python 3.
+
 
 # Things I know I missed
 
-In considerations it was mentioned this path would miss some things, what were they? First and the maybe most important was the aquisition. In a real senario you probably wont just be handed some data, but instead we may have to walk over to a computer and extract the memory ourselves. After the malware is discovered how to remove? In other foreensics challenges on other sites they include stentography, wchih HTB includes in misc, so there were areas such as those missed.
+It was noted that this approach may overlook some aspects. The most crucial one being data acquisition. In real-world scenarios, data is rarely handed to us; rather, we may need to physically access a computer and extract the memory. Additionally, in the event of malware detection, there is the challenge of removal. Other forensic challenges on other sites cover areas such as steganography, which is included in the "Misc" category on HTB. These were some of the areas that were not covered in this approach.
 
 # Predictions
 
@@ -70,11 +70,9 @@ Networks - Pcaps
 Removal 
 
 ## What will i see in the next forensics CTF i compete in?
-Pico is in mid-March(2/6/2023 now). If there are 5 forensics challenges i assume 2 will have pcaps, 1 log, and something completly neiche and random.
-The easy problems I will be able to find the flag with a grep, maybe base64 encoded. 
+The Pico CTF competition is taking place in mid-March (as of February 6, 2023). Out of the 5 expected forensic challenges, I anticipate 2 will involve PCAP files, 1 will be logs, 1 will be a memory dump (.mem), and the last will be something niche and random. The easier problems can likely be solved by using a grep command to search for the flag, which may be encoded in base64.
 
 # Next steps
 
-As I continue to complete HTB forensics challenges I will update the dataset and maybe analyze again at 100 completions. I am excited to test my scripts on new challenges that present pcaps or evtx. I plan to make adjustments to the scripts if they 'miss' anything in the future challenges. I've also done a bunch of challeges on other sites and am considering adding that data.
-In the not to distant future I also plan on getting my hands on a DFIR textbook. SO i can compare my predictions with an actual book.
-Maybe a Memory analysis
+In my ongoing efforts to complete HTB forensics challenges, I will continue to update my dataset and re-analyze it after 100 completions. I look forward to testing my scripts on new challenges that involve PCAPs or EVTX files. If any future challenges reveal limitations in my scripts, I plan to make adjustments to improve their performance. Additionally, I have completed challenges on other sites and may consider incorporating this data into my analysis in the future.
+In the near future, I plan to obtain a DFIR textbook to compare my findings with the industry standard and gain a deeper understanding of the field. I also aim to expand my knowledge to include memory analysis.
