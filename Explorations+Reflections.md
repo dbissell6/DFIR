@@ -60,7 +60,7 @@ It was noted that this approach may overlook some aspects. The most crucial one 
 ## What a DFIR textbook will look like
 
 Aquisition
-General croptography encrpython/decryption
+General cryptography encrpython/decryption
   Deobfuscating powershell commands/docms malware
   Compressed data
 Memory/images
