@@ -26,6 +26,58 @@ Advanced Obfuscation Techniques: Advanced obfuscation techniques are used by mal
 
 File Carving: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
+## Encryption
+
+Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
+
+Encryption can pose significant challenges to DFIR investigations, as it can prevent investigators from accessing or understanding the protected data. In some cases, encryption may be used by malicious actors to hide their activities or exfiltrate data from a network undetected. Understanding encryption, therefore, is essential for identifying and analyzing encrypted data, as well as for determining the appropriate techniques to recover or bypass it.
+
+Furthermore, encryption may also be encountered in forensic artifacts such as logs, memory dumps, and registry entries. These artifacts may contain encrypted data that can provide valuable insights into an incident or investigation, and decrypting this data may be critical for understanding the full scope of an incident.
+
+In summary, understanding encryption and its use cases is essential for any DFIR practitioner. Encryption can pose significant challenges to investigations, but it can also provide valuable insights into an incident or investigation. As such, DFIR practitioners should be familiar with the basics of encryption and the common encryption tools and techniques used in digital investigations.
+### OpenSSL
+
+OpenSSL is an open-source software library that provides cryptographic functions and tools for a wide range of applications. It includes a number of command-line tools that can be used for tasks such as generating key pairs, creating certificates, and encrypting data.
+
+Common OpenSSL Commands
+
+OpenSSL includes many command-line tools, some of which are commonly used in DFIR investigations. Here are some of the most commonly used OpenSSL commands and their syntax:
+
+    openssl genpkey: generates a private key
+    openssl req: generates a certificate signing request (CSR)
+    openssl x509: manages SSL/TLS certificates
+    openssl enc: encrypts and decrypts files
+    openssl dgst: computes message digests (hashes) of files
+
+Common OpenSSL Use Cases
+
+OpenSSL can be used for a wide range of tasks, including generating SSL/TLS certificates, encrypting files and data, and creating digital signatures.
+
+Example: Decrypting a File
+
+To decrypt a file encrypted with AES-256 or DES3 encryption using OpenSSL, use the following commands:
+
+For AES-256 encryption:
+
+```openssl aes256 -d -salt -in [encrypted file] -out [decrypted file] -k [password]```
+
+For example, to decrypt a file named flag.txt.enc using the password unbreakablepassword1234567, you would use the following command:
+
+```openssl aes256 -d -salt -in flag.txt.enc -out flag -k unbreakablepassword1234567```
+
+For DES3 encryption:
+
+```openssl des3 -d -salt -in [encrypted file] -out [decrypted file] -k [password]```
+
+For example, to decrypt a file named file.des3 using the password supersecretpassword123, you would use the following command:
+
+```openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123```
+
+### Encryption in Wireshark
+
+Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
+
+
 # PCAPS
 ## Intro
 Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
@@ -64,20 +116,20 @@ wireshark sus_file.pcp
 
 ![[Pasted image 20230212122101.png]]
 
-1. ip.addr != 192.0.2.1: This display filter command excludes packets with an IP address of 192.0.2.1. You can replace "192.0.2.1" with any IP address you want to exclude.
+1. ```ip.addr != 192.0.2.1```: This display filter command excludes packets with an IP address of 192.0.2.1. You can replace "192.0.2.1" with any IP address you want to exclude.
  
-2.  tcp: This display filter command only shows TCP packets. You can replace "tcp" with "udp" to only show UDP packets, or with "icmp" to only show ICMP packets., or http: This display filter command only shows HTTP packets. -   (http.request: This display filter command only shows HTTP request packets. http.response: This display filter command only shows HTTP response packets.)
+2.  ```tcp```: This display filter command only shows TCP packets. You can replace "tcp" with "udp" to only show UDP packets, or with "icmp" to only show ICMP packets., or http: This display filter command only shows HTTP packets. -   (http.request: This display filter command only shows HTTP request packets. http.response: This display filter command only shows HTTP response packets.)
    
-3.  ip.src == 192.0.2.1: This display filter command only shows packets with a source IP address of 192.0.2.1.
+3.  ```ip.src == 192.0.2.1```: This display filter command only shows packets with a source IP address of 192.0.2.1.
    
-4.  ip.dst == 192.0.2.1: This display filter command only shows packets with a destination IP address of 192.0.2.1.
+4.  ```ip.dst == 192.0.2.1```: This display filter command only shows packets with a destination IP address of 192.0.2.1.
    
-5.  tcp.port == 80: This display filter command only shows TCP packets using port 80 (HTTP).
+5.  ```tcp.port == 80```: This display filter command only shows TCP packets using port 80 (HTTP).
    
-6.  udp.port == 53: This display filter command only shows UDP packets using port 53 (DNS).
-7. udp.length > 500: This display filter command only shows UDP packets with a length greater than 500 bytes.
+6.  ```udp.port == 53```: This display filter command only shows UDP packets using port 53 (DNS).
+7. ```udp.length > 500```: This display filter command only shows UDP packets with a length greater than 500 bytes.
    
-8.  frame.time >= "Feb 13, 2022 12:00:00": This display filter command only shows packets captured after the specified date and time.
+8.  ```frame.time >= "Feb 13, 2022 12:00:00"```: This display filter command only shows packets captured after the specified date and time.
 ### Export Objects
 One of the first things to do is determine if any files were transfered. This can be done by in wireshark by File -> Export Objects -> (probably http, try all)
 
@@ -240,6 +292,21 @@ Compressed files are a common way of packaging and distributing multiple files o
 -   .rar: This is another popular compression format that is known for its high compression ratio. It supports both lossless compression and encryption of archive contents. To extract the contents of a .rar file, one can use the 'unrar' command in Linux or a file archiver software in Windows.
     
 -   .tar.gz: This is a common compression format used in Linux environments. It combines multiple files or directories into a single archive and compresses the archive using the gzip algorithm. To extract the contents of a .tar.gz file, one can use the 'tar' and 'gzip' commands in Linux.
+-       .7z: This is a compression format that offers high compression ratios and supports both lossless and lossy compression. It is commonly used for compressing large files. To extract the contents of a .7z file, one can use the '7za' command in Linux or a file archiver software in Windows.
+
+-    .tar: This is a file format used for archiving files and directories in a Unix-based system. It does not compress the archive but combines multiple files or directories into a single archive. To extract the contents of a .tar file, one can use the 'tar' command in Linux.
+
+-    .tar.bz2: This is a compression format that combines the tar archive and the bzip2 compression algorithm. It is commonly used in Linux environments. To extract the contents of a .tar.bz2 file, one can use the 'tar' and 'bzip2' commands in Linux.
+
+-    .tgz: This is a compression format that combines the tar archive and the gzip compression algorithm. It is commonly used in Linux environments. To extract the contents of a .tgz file, one can use the 'tar' and 'gzip' commands in Linux.
+
+-    .tar.xz: This is a compression format that combines the tar archive and the xz compression algorithm. It is commonly used in Linux environments. To extract the contents of a .tar.xz file, one can use the 'tar' and 'xz' commands in Linux.
+
+-    .zipx: This is an extension of the .zip format that supports advanced compression methods such as LZMA, PPMD, and WavPack. It is commonly used in Windows environments. To extract the contents of a .zipx file, one can use a file archiver software in Windows.
+
+-    .cab: This is a file format used for distributing software components in a Windows environment. It is commonly used for device drivers and system files. To extract the contents of a .cab file, one can use the 'cabextract' command in Linux or a file archiver software in Windows.
+
+-    .iso: This is a file format used for creating disc images of CDs or DVDs. It is commonly used for distributing operating system installation media. To extract the contents of an .iso file, one can mount the image as a virtual drive or use a file archiver software in Windows.
 
 ### Audio files (e.g., MP3, WAV)
 Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.
@@ -250,6 +317,21 @@ Information can be hidden within the individual frames of the video, in unused s
 Virus total can be useful to get some information from
 
 ![[Pasted image 20230212170655.png]]
+
+## Decompressing
+
+Files may be compressed in all sorts of ways to avoid detection. some of the most common decompressing
+```
+unzip file.zip
+gzip -d file.gz
+bzip2 -d file.bz2
+tar -xf file.tar
+7z x file.7z
+unrar x file.rar
+xz -d file.xz
+cabextract file.cab
+
+```
 
 ## Reconstructing 
 
