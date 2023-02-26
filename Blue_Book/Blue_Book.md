@@ -81,27 +81,27 @@ Encryption may be encountered in Wireshark captures, and can be identified by th
 # PCAPS
 ## Intro
 Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
-
+```
 Bob -> Alice - Hi
 Alice -> Bob - oh-hey.jpeg
 Bob -> Alice - What you doing tomorrow?
 Charles -> Bob - Dont text my girlfriend!
-
+```
 There are 2 flavors of pcaps and 4-5 different types of challenges regarding skill. 
 
-2 flavors 
-the first flavor and most seen is a typical network catpure maybe containing html traffic. This can often be thought of as finiding a needle in a haystack
+### 2 Flavors 
+The first flavor and most seen is a typical network catpure. These are large captures with the flag hidden in a single packet maybe containing html traffic. This can often be thought of as finding a needle in a haystack
 
-The second flavor is when every packet will be needed. this can be seen in something like a usb logger and almost instalntly is a encrpytion problem.
+The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instalntly is a encrpytion problem.
 
-5 levels
+### 5 levels
 1) flag found plaintext 
 2) flag encoded in rot13 or base64
 3) flag hidden in encryption that needs credentials
 4) file found containing binary that needs to be reversed
 5)  something tough
 
-Most often in level 3 challegnes and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
+Most often in level 3 challenges and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
 
 ## Wireshark 
 
@@ -135,7 +135,7 @@ One of the first things to do is determine if any files were transfered. This ca
 
 ![[Pasted image 20230212115835.png]]
 
-Clicking on HTTP for example will bring up a screen showing files wireshark found and an option to preview and download. It is important to remember that if you find credenti9als and decrypt traffic to come back here and look for new files wireshark may have found.
+Clicking on HTTP for example will bring up a screen showing files wireshark found and an option to preview and download. It is important to remember that if you find credentials and decrypt traffic to come back here and look for new files wireshark may have found.
 
 ### Streams
 ![[Pasted image 20230212123447.png]]
@@ -155,12 +155,11 @@ From G, but TLS instead of SSL
 
 
 
-
-
-
 marshall in the middle Similar method used in but instead of a RSA to decrypt the TLS it is a secrets.log
 
 Rouge shows how to decrypt SMB2 traffic
+
+To learn a full wirehark tutorial chris greer
 
 ### Tshark
 Sometimes it is useful to extract data from wireshark, this can be done with tshark
@@ -262,6 +261,7 @@ If you have a file that has a wrong extentions, no extentions, or corrputed you 
 can sometimes using unzip or 7z on word files can reveal hidden content.
 
 Olevba
+A Python module that allows for the analysis of Microsoft Office documents (e.g., Word, Excel, PowerPoint) to detect and extract any embedded VBA (Visual Basic for Applications) macros. It can be used for security assessments, forensics analysis, and malware analysis, as VBA macros can be used as a vector for malware infection and data exfiltration. Olevba is able to parse the VBA code, extract the embedded binaries, and detect any obfuscation techniques used in the macro. 
 ![[Pasted image 20230212151320.png]]
 ### Windows Executables (.exe, .dll, .so, .ps1)
 
@@ -283,7 +283,7 @@ These files can contain hidden messages or steganography, where data is hidden w
 
 .bmp  is primarily used for storing digital images and icons, but can also be used for storing simple graphics and illustrations. BMP files are widely recognized by image processing software and can be easily converted to other image file formats for use in different applications.
 
-### Compressed Files (.zip, .rar, .tar.gz)
+### Compressed Files (.zip, .rar, .tar.gz, .7z, .bz2, .cab, ...)
 
 Compressed files are a common way of packaging and distributing multiple files or directories as a single archive. In a CTF, compressed files may contain clues or important information that can aid in solving challenges. Here are some common types of compressed files:
 
@@ -320,7 +320,7 @@ Virus total can be useful to get some information from
 
 ## Decompressing
 
-Files may be compressed in all sorts of ways to avoid detection. some of the most common decompressing
+Files may be compressed in all sorts of ways to avoid detection. Some of the most common decompressing tools + commands.
 ```
 unzip file.zip
 gzip -d file.gz
@@ -333,9 +333,11 @@ cabextract file.cab
 
 ```
 
+
+
 ## Reconstructing 
 
-Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. 
+Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
 ### Binwalk
 Binwalk is a tool that is used to analyze and extract firmware images, file systems, and other binary files. It can be used to identify the different components of a binary file, such as the file system, bootloader, and kernel. Binwalk is particularly useful when analyzing firmware images and other embedded systems.
 ### xxd
@@ -489,5 +491,63 @@ RAID, or Redundant Array of Independent Disks, is a technology that allows multi
 
 The RAID Disk recovery section will cover the different types of RAID configurations, common causes of RAID failures, and techniques for identifying and repairing RAID issues. Additionally, we'll discuss tools and techniques for data recovery from RAID arrays, including software-based RAID recovery and hardware-based RAID recovery. By understanding the fundamentals of RAID disk recovery and having a solid toolkit of recovery techniques at your disposal, you'll be better equipped to handle data loss incidents and recover critical information in a timely manner.
 https://blog.bi0s.in/2020/02/09/Forensics/RR-HackTM/
+
+### mdadm
+
+mdadm is a Linux utility used for managing and monitoring software RAID devices. It allows users to create, manage, and monitor RAID devices, as well as to assemble and disassemble RAID arrays. In CTFs, mdadm can be used to reconstruct a RAID 5 array using information about the disks that make up the array. This can be helpful when trying to recover data or find hidden clues in a CTF challenge that involves a RAID 5 array.
+
+### losetup
+
+losetup is a Linux command used to set up and control loop devices, which are virtual block devices that allow a file to be accessed as if it were a block device. In the context of RAID 5 reconstruction in a CTF, losetup can be used to map individual disks or partitions that make up a RAID 5 array to a loop device. Once the disks are mapped to loop devices, tools like mdadm can be used to assemble the array and recover the data.
+
+```
+Scenario:
+You are participating in a CTF and have been given an image of a RAID 5 array. The image consists of four disks, with one of them having failed. Your task is to reconstruct the array and recover the data. The image file is named raid5.img.
+
+Steps:
+
+    Determine the block size of the RAID array by inspecting the image file. You can use the fdisk command to view the partition table of the image file and note the block size. Let's assume that the block size is 512 bytes.
+
+bash
+
+fdisk -l raid5.img
+
+    Create loop devices for the image file and each disk image. You can use the losetup command to associate the image files with loop devices. Let's assume that the disk images are named disk1.img, disk2.img, and disk3.img.
+
+bash
+
+losetup -fP raid5.img
+losetup -fP disk1.img
+losetup -fP disk2.img
+losetup -fP disk3.img
+
+    Use mdadm to create the RAID 5 array using the loop devices. The -C option creates a new array, -l5 specifies RAID level 5, -n4 specifies the number of disks in the array, and missing indicates that one disk is missing.
+
+bash
+
+mdadm -C /dev/md0 -l5 -n4 missing /dev/loop0 /dev/loop1 /dev/loop2
+
+    Verify that the array is created successfully and check the status. The /proc/mdstat file shows the current status of the array.
+
+bash
+
+cat /proc/mdstat
+
+    Use mdadm to add the failed disk to the array. The -a option adds a new device to the array.
+
+bash
+
+mdadm /dev/md0 -a /dev/loop3
+
+    Once the array is reconstructed, mount it and recover the data as necessary.
+
+bash
+
+mount /dev/md0 /mnt/raid
+
+
+
+```
+
 
 also another htb challenge had it from cyberpocalypse
