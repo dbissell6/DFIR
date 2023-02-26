@@ -5,7 +5,7 @@ In a world where cyber attacks are becoming more frequent and sophisticated, the
 
 This handbook is specifically geared towards the blue team during a CTF, and aims to provide a comprehensive guide for blue team forensics. In a CTF, the blue team's goal is to defend their systems against simulated cyber attacks launched by the red team, and this requires a deep understanding of key tools and techniques that can be used to detect and respond to such attacks.
 
-Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF, including network traffic analysis, system logs analysis, and memory forensics. We will also introduce key tools and techniques that can be used to detect and respond to cyber attacks during a CTF.
+Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 1) Network traffic analysis, 2) System logs analysis, 3) Files/Executables, 4) Memory forensics 5) Disk. We will also introduce key tools and techniques that can be used to detect and respond to cyber attacks during a CTF.
 
 By the end of this handbook, you should have a solid understanding of blue team forensics and be equipped with the knowledge and tools necessary to effectively detect and respond to cyber attacks during a CTF.
 
