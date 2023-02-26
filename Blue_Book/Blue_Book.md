@@ -621,6 +621,26 @@ mount /dev/md0 /mnt/raid
 
 
 ```
+### SluethKit
+
+SleuthKit is another popular open-source digital forensic platform that provides a set of command-line tools for analyzing disk images. It supports a wide range of file systems, including FAT, NTFS, and EXT, and can be used to recover deleted files, view file metadata, and perform keyword searches.
+
+    mmls: The 'mmls' command is used to display the partition layout of a disk image. It identifies the start and end sectors of each partition and displays other information such as the partition type, size, and offset. This information is important for identifying the partition that contains the file system you're interested in.
+
+    fsstat: The 'fsstat' command is used to display information about a file system, such as its size, block size, and the number of allocated and unallocated blocks. It can also display information about the file system's metadata, such as the location of the Master File Table (MFT) in NTFS file systems.
+
+    fls: The 'fls' command is used to list the contents of a file system. It displays the files and directories in the file system along with their attributes and inode numbers. The 'fls' command can also display deleted files and directories, which can be important for recovering data that has been deleted by an attacker or lost due to a system crash.
+
+sudo mmls win_image.dd
+
+
+sudo fsstat -o 2048 win_image.dd
+
+Replace '2048' with the start sector of the partition you're interested in.
+
+Use the 'fls' command to list the contents of the file system:
+
+sudo fls -o 2048 -f ntfs win_image.dd
 
 
 also another htb challenge had it from cyberpocalypse
