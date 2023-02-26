@@ -292,7 +292,7 @@ Compressed files are a common way of packaging and distributing multiple files o
 -   .rar: This is another popular compression format that is known for its high compression ratio. It supports both lossless compression and encryption of archive contents. To extract the contents of a .rar file, one can use the 'unrar' command in Linux or a file archiver software in Windows.
     
 -   .tar.gz: This is a common compression format used in Linux environments. It combines multiple files or directories into a single archive and compresses the archive using the gzip algorithm. To extract the contents of a .tar.gz file, one can use the 'tar' and 'gzip' commands in Linux.
--       .7z: This is a compression format that offers high compression ratios and supports both lossless and lossy compression. It is commonly used for compressing large files. To extract the contents of a .7z file, one can use the '7za' command in Linux or a file archiver software in Windows.
+-   .7z: This is a compression format that offers high compression ratios and supports both lossless and lossy compression. It is commonly used for compressing large files. To extract the contents of a .7z file, one can use the '7za' command in Linux or a file archiver software in Windows.
 
 -    .tar: This is a file format used for archiving files and directories in a Unix-based system. It does not compress the archive but combines multiple files or directories into a single archive. To extract the contents of a .tar file, one can use the 'tar' command in Linux.
 
@@ -330,7 +330,6 @@ tar -xf file.tar
 unrar x file.rar
 xz -d file.xz
 cabextract file.cab
-
 ```
 
 
@@ -489,7 +488,81 @@ sudo ls -la root
 
 RAID, or Redundant Array of Independent Disks, is a technology that allows multiple hard drives to be used as a single logical unit for storing data. While RAID can provide increased performance and redundancy, it can also make data recovery more challenging in the event of a disk failure.
 
-The RAID Disk recovery section will cover the different types of RAID configurations, common causes of RAID failures, and techniques for identifying and repairing RAID issues. Additionally, we'll discuss tools and techniques for data recovery from RAID arrays, including software-based RAID recovery and hardware-based RAID recovery. By understanding the fundamentals of RAID disk recovery and having a solid toolkit of recovery techniques at your disposal, you'll be better equipped to handle data loss incidents and recover critical information in a timely manner.
+RAID 5 is a popular type of RAID configuration that provides both data redundancy and increased performance. However, in CTF competitions, RAID 5 arrays are often deliberately subjected to various types of failures to test the contestants' ability to recover data.
+
+Some common types of RAID 5 failures that may be encountered in CTFs include:
+
+    Single Drive Failure: If a single drive in a RAID 5 array fails, the array can still function. However, the array becomes more vulnerable to additional drive failures, and the performance may be degraded.
+
+    Multiple Drive Failures: If multiple drives fail in a RAID 5 array, data loss can occur. The number of drive failures that can be tolerated depends on the number of drives in the array and the stripe size. In CTFs, multiple drive failures may be simulated by removing multiple drives from the array.
+
+    Rebuild Failure: When a failed drive is replaced in a RAID 5 array, the data is rebuilt onto the new drive from the parity data. However, if the parity data is incorrect or missing, the rebuild may fail, and data loss can occur. In CTFs, contestants may be given a partially rebuilt RAID 5 array and asked to recover the missing data.
+
+    RAID Controller Failure: If the RAID controller fails in a RAID 5 array, the array can become inaccessible. In CTFs, contestants may be given a faulty RAID controller and asked to recover the data without the controller.
+
+To successfully recover data from a failed RAID 5 array in a CTF, contestants must have a deep understanding of RAID 5 configurations, data recovery techniques, and tools. By practicing and gaining experience with these challenges, contestants can become more skilled at recovering data from RAID 5 arrays and gain a competitive advantage in CTF competitions.
+
+### XOR
+In a RAID 5 array with n drives, data is striped across n-1 drives, and a parity block is stored on the remaining drive. The parity block is generated using an XOR operation on the corresponding blocks of data on the other drives. This means that if one of the drives fails, the missing data can be reconstructed using the data on the remaining drives and the parity block.
+
+Here's an example to illustrate how XOR can be used to recover missing data in a RAID 5 array:
+
+Suppose we have a RAID 5 array with 3 drives, A, B, and C, and a block size of 512 bytes. We write a file that is 1KB in size, which is striped across the drives as follows:
+
+    Block 1 is written to drive A
+    Block 2 is written to drive B
+    Block 3 is written to drive C
+    Parity block is calculated as XOR of blocks 1, 2, and 3 and written to drive A (the parity block can be written to any drive)
+
+If drive B fails, we can recover the missing data as follows:
+
+    Read blocks 1 and 3 from drives A and C, respectively
+    Calculate the missing block 2 as the XOR of blocks 1, 3, and the parity block on drive A: Block 2 = Block 1 XOR Block 3 XOR Parity
+    Write the recovered data to a new drive to rebuild the RAID array
+
+By using XOR to calculate the missing block, we can recover the data that was lost due to the failure of one of the drives in the RAID 5 array. However, if more than one drive fails, the recovery process becomes more complex and may require specialized tools and techniques.
+
+The following python psuedocode first simulates a file that is 1KB in size and striped across a RAID 5 array with three drives. It then simulates a single drive failure by removing drive B from the array. Finally, it uses XOR to recover the missing data from the remaining drives and the parity block.
+
+```
+# Define the RAID 5 array configuration
+drives = ['A', 'B', 'C']    # Drive labels
+block_size = 512            # Block size in bytes
+
+# Simulate a file that is 1KB in size striped across the drives
+data = b'0123456789' * 100  # 1KB file data
+n_blocks = len(data) // block_size
+stripe = [[] for _ in range(len(drives))]
+parity = [0] * block_size
+
+for i in range(n_blocks):
+    block = data[i*block_size:(i+1)*block_size]
+    parity = [p ^ b for p, b in zip(parity, block)]
+    for j in range(len(drives)):
+        if j != i % len(drives):
+            stripe[j].append(block)
+
+stripe.append(parity)
+
+# Simulate a single drive failure (drive B)
+failed_drive = 1
+
+# Recover the missing data using XOR
+recovered_data = b''
+for i in range(n_blocks):
+    if failed_drive == i % len(drives):
+        block1 = stripe[(i+1)%len(drives)][i//len(drives)]
+        block2 = stripe[(i+2)%len(drives)][i//len(drives)]
+        recovered_block = bytes([b1 ^ b2 ^ p for b1, b2, p in zip(block1, block2, parity)])
+        recovered_data += recovered_block
+    else:
+        block = stripe[i%len(drives)][i//len(drives)]
+        recovered_data += block
+
+print(recovered_data)
+```
+
+
 https://blog.bi0s.in/2020/02/09/Forensics/RR-HackTM/
 
 ### mdadm
