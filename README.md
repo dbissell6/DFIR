@@ -2,16 +2,25 @@
 
 This is a repository dedicated to the DFIR journey. Contains notes, reflections and links to tools.
 
-https://github.com/dbissell6/PCAP_Analysis
-
-https://github.com/dbissell6/EVTX_analysis
-
-
 ## For Act I of the journey please visit
 
 Explorations+Reflections
+
+## Act II PICO! Boo?
+Replication of study done on HTB Forensics problems, this time with PICO Forensics problems. Intresting because it adds more overall data points to the Foresncis CTF challenge landscape. Additioanlly this allows for a comparison between the two "Brands" of challenges. Can we finally determine why everyone says PICO is easier than HTB?
+
+Explorations+Reflections2
+
+## Walkthroughs
+
+Soon home of all walkthrough from the challeges
 
 ## BlueBook
 
 BlueBook is aimed to be a noob friendly hacktricks type resource for Forensics CTF challenges. The culmination of the previous analyses.
 https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md
+
+## Tools
+https://github.com/dbissell6/PCAP_Analysis
+
+https://github.com/dbissell6/EVTX_analysis
