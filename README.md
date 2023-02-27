@@ -10,6 +10,7 @@ Explorations+Reflections
 Replication of study done on HTB Forensics problems, this time with PICO Forensics problems. Intresting because it adds more overall data points to the Foresncis CTF challenge landscape. Additioanlly this allows for a comparison between the two "Brands" of challenges. Can we finally determine why everyone says PICO is easier than HTB?
 
 Explorations+Reflections2
+https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections2_PICO.md
 
 ## Walkthroughs
 
