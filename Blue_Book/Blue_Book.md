@@ -1,11 +1,21 @@
-# CTF Blue Team HackTricks
+# The Blue Book
 ## Intro
 
 In a world where cyber attacks are becoming more frequent and sophisticated, the ability to detect and respond to such attacks is critical for any organization. During a Cybersecurity Capture The Flag (CTF) competition, the blue team is responsible for detecting and responding to cyber attacks, and this often involves forensic analysis of systems, networks, and data.
 
 This handbook is specifically geared towards the blue team during a CTF, and aims to provide a comprehensive guide for blue team forensics. In a CTF, the blue team's goal is to defend their systems against simulated cyber attacks launched by the red team, and this requires a deep understanding of key tools and techniques that can be used to detect and respond to such attacks.
 
-Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 1) Network traffic analysis, 2) System logs analysis, 3) Files/Executables, 4) Memory forensics 5) Disk. We will also introduce key tools and techniques that can be used to detect and respond to cyber attacks during a CTF.
+Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 
+
+1) Network traffic analysis, 
+ 
+2) System logs analysis,
+ 
+3) Files/Executables, 
+
+4) Memory forensics 
+ 
+5) Disk. We will also introduce key tools and techniques that can be used to detect and respond to cyber attacks during a CTF.
 
 By the end of this handbook, you should have a solid understanding of blue team forensics and be equipped with the knowledge and tools necessary to effectively detect and respond to cyber attacks during a CTF.
 
@@ -35,6 +45,25 @@ Encryption can pose significant challenges to DFIR investigations, as it can pre
 Furthermore, encryption may also be encountered in forensic artifacts such as logs, memory dumps, and registry entries. These artifacts may contain encrypted data that can provide valuable insights into an incident or investigation, and decrypting this data may be critical for understanding the full scope of an incident.
 
 In summary, understanding encryption and its use cases is essential for any DFIR practitioner. Encryption can pose significant challenges to investigations, but it can also provide valuable insights into an incident or investigation. As such, DFIR practitioners should be familiar with the basics of encryption and the common encryption tools and techniques used in digital investigations.
+
+### Common types
+
+
+-    AES (Advanced Encryption Standard): This is a symmetric encryption algorithm that is widely used for data encryption. It uses block ciphers with a key size of 128, 192, or 256 bits.
+
+-    RSA: This is an asymmetric encryption algorithm that is widely used for securing data transmission over the internet. It uses a public-private key pair to encrypt and decrypt data.
+
+-    DES (Data Encryption Standard): This is a symmetric encryption algorithm that uses block ciphers with a key size of 56 bits. It is not considered secure for modern applications.
+
+-    Triple DES (3DES): This is a symmetric encryption algorithm that uses DES with three keys applied in sequence. It provides a higher level of security than DES.
+
+-    Blowfish: This is a symmetric encryption algorithm that uses block ciphers with a variable key size of up to 448 bits. It is widely used for file encryption.
+
+-    Twofish: This is a symmetric encryption algorithm that uses block ciphers with a key size of 128, 192, or 256 bits. It is designed to be faster and more secure than AES.
+
+-    ChaCha20: This is a symmetric encryption algorithm that is designed to be fast and secure. It uses a 256-bit key and can be used for data encryption, password hashing, and other applications.
+
+
 ### OpenSSL
 
 OpenSSL is an open-source software library that provides cryptographic functions and tools for a wide range of applications. It includes a number of command-line tools that can be used for tasks such as generating key pairs, creating certificates, and encrypting data.
@@ -113,8 +142,9 @@ wireshark sus_file.pcp
 ```
 ### Helpful Queries
 
+![Pasted image 20230212122101](https://user-images.githubusercontent.com/50979196/221450082-f592ae4c-daef-4035-a0f5-aed4e3c256b4.png)
 
-![[Pasted image 20230212122101.png]]
+
 
 1. ```ip.addr != 192.0.2.1```: This display filter command excludes packets with an IP address of 192.0.2.1. You can replace "192.0.2.1" with any IP address you want to exclude.
  
@@ -133,26 +163,26 @@ wireshark sus_file.pcp
 ### Export Objects
 One of the first things to do is determine if any files were transfered. This can be done by in wireshark by File -> Export Objects -> (probably http, try all)
 
-![[Pasted image 20230212115835.png]]
+
+![Pasted image 20230212115835](https://user-images.githubusercontent.com/50979196/221450122-e1115a06-7d90-453e-9e30-bad69b92ea8d.png)
 
 Clicking on HTTP for example will bring up a screen showing files wireshark found and an option to preview and download. It is important to remember that if you find credentials and decrypt traffic to come back here and look for new files wireshark may have found.
 
 ### Streams
-![[Pasted image 20230212123447.png]]
+![Pasted image 20230212123447](https://user-images.githubusercontent.com/50979196/221450162-f3187e94-1e3a-4ec7-8611-5e05f4fadd4c.png)
+
 
 To access streams right click on a packet
-![[Pasted image 20230212123647.png]]
 
+![Pasted image 20230212123647](https://user-images.githubusercontent.com/50979196/221450181-2bbd9132-4d32-410a-a94e-67119e6d00fa.png)
 
 
 ### Input RSA key to decrpyt TLS
 From G, but TLS instead of SSL
-![[Pasted image 20230113164502.png]]
-![[Pasted image 20230113164429.png]]
-![[Pasted image 20230113164557.png]]
 
-
-
+![Pasted image 20230113164502](https://user-images.githubusercontent.com/50979196/221450214-77e163e3-dc62-4555-b15c-811c27d5f114.png)
+![Pasted image 20230113164429](https://user-images.githubusercontent.com/50979196/221450223-9ff74041-c577-41ee-9c5a-88688848ee6c.png)
+![Pasted image 20230113164557](https://user-images.githubusercontent.com/50979196/221450269-c795cfa1-5921-44ce-9aa6-a33de361632f.png)
 
 
 marshall in the middle Similar method used in but instead of a RSA to decrypt the TLS it is a secrets.log
@@ -170,7 +200,8 @@ tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17
 
 ## Aircrack-ng
 cracking wifi passwords
-![[Pasted image 20230222082539.png]]
+
+![Pasted image 20230222082539](https://user-images.githubusercontent.com/50979196/221450312-2ecdfc1e-9086-4434-b7c8-e82bfee254ca.png)
 
 # Logs
 ## Intro
@@ -204,7 +235,8 @@ The main types of Event Viewer (EVTX) logs in Windows are:
 
 They can be parsed using evtx_dump.py or windows has a native program. 
 
-![[Pasted image 20221029120345.png]]
+
+![Pasted image 20221029120345](https://user-images.githubusercontent.com/50979196/221450336-c3adc6da-3d0c-4d3d-8c7a-25fd5a349135.png)
 
 Ok we have the txt but  there a similar problem as with pcaps(lots of data) However there is no wireshark (use https://github.com/dbissell6/EVTX_analysis)
 
@@ -262,7 +294,8 @@ can sometimes using unzip or 7z on word files can reveal hidden content.
 
 Olevba
 A Python module that allows for the analysis of Microsoft Office documents (e.g., Word, Excel, PowerPoint) to detect and extract any embedded VBA (Visual Basic for Applications) macros. It can be used for security assessments, forensics analysis, and malware analysis, as VBA macros can be used as a vector for malware infection and data exfiltration. Olevba is able to parse the VBA code, extract the embedded binaries, and detect any obfuscation techniques used in the macro. 
-![[Pasted image 20230212151320.png]]
+![Pasted image 20230212151320](https://user-images.githubusercontent.com/50979196/221450379-c3e6b586-0b8d-4146-b960-02865564b9ea.png)
+
 ### Windows Executables (.exe, .dll, .so, .ps1)
 
 These files can contain malicious code that attackers may use to compromise a system. Analyzing these files can reveal information about how an attack was carried out.
@@ -316,7 +349,8 @@ Information can be hidden within the individual frames of the video, in unused s
 
 Virus total can be useful to get some information from
 
-![[Pasted image 20230212170655.png]]
+![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
+
 
 ## Decompressing
 
@@ -342,7 +376,8 @@ Binwalk is a tool that is used to analyze and extract firmware images, file syst
 ### xxd
 xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
 
-![[Pasted image 20230213121602.png]]
+![Pasted image 20230213121602](https://user-images.githubusercontent.com/50979196/221450472-5829ddc8-15a5-4b61-ac00-240bd1ea7346.png)
+
 ### Hexedit
 Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
 
@@ -364,13 +399,16 @@ There are countless methods and tools for hiding information in files, making th
 ### Steghide 
 A steganography tool that allows users to embed hidden data within image and audio files. It uses strong encryption algorithms to hide the data and is useful for hiding sensitive information or secret messages within images or audio files. Steghide can also extract hidden data from files.
 
-![[Pasted image 20230216081232.png]]
+![Pasted image 20230216081232](https://user-images.githubusercontent.com/50979196/221450510-6200f7e2-45b7-4669-afb4-430cad7c25f7.png)
+
 ### Zsteg 
 A steganography tool that can be used to detect hidden information within images. It can be used to identify the type of steganography being used, extract hidden data, and even recover lost data. Zsteg is particularly useful for identifying the presence of LSB (Least Significant Bit) steganography, which is a common technique used to hide data within images.
-![[Pasted image 20230221160217.png]]
+![Pasted image 20230221160217](https://user-images.githubusercontent.com/50979196/221450531-b66bfdf7-3c9d-4cd0-9a20-54fe3d14c5ef.png)
+
 ### Stegsolve 
 A Java-based tool that can be used to analyze and manipulate images for steganography purposes. It provides a range of filters and visual aids to help users identify hidden information within images. Stegsolve is particularly useful for identifying the location and type of steganography being used within an image.
-![[Pasted image 20230221202426.png]]
+![Pasted image 20230221202426](https://user-images.githubusercontent.com/50979196/221450558-7c93ed5f-4a8a-450a-84d1-8d77d9b77458.png)
+
 # Memory Dumps
 ## Intro
 Memory dumps are a type of digital forensic artifact that can be used to analyze the state of a computer's memory at the time of a crash or system failure. Memory dumps contain a complete snapshot of the memory contents of a computer, including the contents of volatile memory such as RAM, as well as the contents of any mapped physical memory pages. Memory dumps can be used to diagnose and troubleshoot system issues, as well as to recover and analyze digital evidence related to malicious activities or other incidents.
@@ -420,7 +458,8 @@ Dump windows registry hivelist
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw -o "dump" windows.registry.hivelist --dump
 ```
 Dump Windows user password hashes
-![[Pasted image 20221123074049.png]]
+![Pasted image 20221123074049](https://user-images.githubusercontent.com/50979196/221450622-46170f92-5a13-42dd-a7ff-4b9b1479f2b1.png)
+
 Print dlls
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.dlllist
@@ -463,15 +502,18 @@ To find offset in order to mount.
 ```
 fdisk -l disk.img
 ```
-![[Pasted image 20230216134532.png]]
-![[Pasted image 20230216134646.png]]
+![Pasted image 20230216134532](https://user-images.githubusercontent.com/50979196/221450652-341c6db0-16a0-4fec-bafc-094d9a3f56d1.png)
+
+![Pasted image 20230216134646](https://user-images.githubusercontent.com/50979196/221450672-b00b0f20-2d3c-4326-b7f4-07564f01b4ac.png)
+
 ```
 mkdir test
 ```
 ```
  sudo mount -o loop,offset=210763776 disk.flag.img test/   
 ```
-![[Pasted image 20230216101009.png]]
+![Pasted image 20230216101009](https://user-images.githubusercontent.com/50979196/221450698-af50833b-dc66-47a8-96d9-01d5568a69e8.png)
+
 Just like pentesting we can use linpeas in the mount
 ```
  sudo /usr/share/peass/linpeas/linpeas.sh -f ~/PICO/Forensics/Orchid/test 
