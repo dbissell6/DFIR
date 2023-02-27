@@ -12,6 +12,8 @@ Firstly, it's important to recognize that the challenges in HTB and PicoCTF may 
 
 Furthermore, the challenges in the forensics domain may not be transferable to other domains such as web or reversing. Also, comparing challenges in PicoCTF and HTB may be different because of the overall structure of their CTFs. For instance, if HTB has a steganography challenge, it might show up in the MISC category instead of the Forensics category.
 
+Finally,  I dont think the points for PICO challenges is that accurate, the challenges are taken from ~5 CTFs and it looks like the scoring system differed in them.
+
 Therefore, it's important to view the findings of this study as a starting point for further research and not a definitive roadmap for learning DFIR.
 
 # Advancements
@@ -28,6 +30,14 @@ For this study on the data was collected from the challenges provided on the Pic
 # Results 
 ![image](https://user-images.githubusercontent.com/50979196/221475216-1c53b5f6-cb28-4b61-a540-caf5c1fa6793.png)
 ![image](https://user-images.githubusercontent.com/50979196/221475238-e4890bfd-4bd3-41bb-a60f-2aac6f97d371.png)
+
+
+# Graph
+
+![image](https://user-images.githubusercontent.com/50979196/221667200-06dcfba6-581b-4471-b9de-c590d3c43756.png)
+
+
+The graphs look similar in relation to the pcap wireshark dominance. This new PICO graph has a nice module of the disk and tools. However aside from that this graph doesnt feel as helpful as the HTB one. This could be due to PICO challenges being less complex, less steps, therefore less oppurtnities to tie to others. It could also be something related to the tuning.
 
 # Comparison to HTB
 ## 
@@ -49,11 +59,13 @@ On top of missing these harder types there were some challenges that could be so
 One key difference that I cant account for(pngs,jpgs/STEGO are MISC HTB problems so this makes sense) is how many more disk challenges there were.  HTB didnt have many so the partion and mounting process was still slightly foriegn. However, once I was able to to mount the drive it felt very similar to enumerating a box on the red team. I was even able to run linpeas in the mount and it discovered a ssh key that solved a problem. 
 HTB did have a disk challenge and ofcourse it was more difficult than any of PICOs where you first had to reconstruct the image. PICO had a problem that didnt even need to mount the disk, just find the length in sectors.
 
-If anything i think this experiment was useful just for the fact I encountered so many disk images but I will evenutally have to learn to use sleuthkit. 
+If anything I think this experiment was useful just for the fact I encountered so many disk images and am now confortable mounting and manually enumerating but I will evenutally have to learn to use sleuthkit. 
 
-Small take home. I learned that any of the four categories (pcaps, logs, disks, and memory) can be equally challenging, but the easiest tasks may vary slightly. For example, anyone can open a pcap file in Wireshark, while opening logs with evtx_dump may be slightly more challenging. Mounting a disk is a bit more difficult than that, and using Volatility can be the most challenging of all. 
+Small take home #1 regarding difficulty. I learned that any of the four categories (pcaps, logs, disks, and memory) can be equally challenging, but the easiest tasks may vary slightly. For example, anyone can open a pcap file in Wireshark, while opening logs with evtx_dump may be slightly more challenging. Mounting a disk is a bit more difficult than that, and using Volatility can be the most challenging of all. 
 
-Swithing gears to compare the pcaps, since the same in both samples we can ask when the content is the same is there a difference in difficulty?
+Small take home #2 regarding difficulty. Looking at the difficulty within PICO challenges is also useful. There is a coorlation between question difficulty needing to make a python script. as you get into the upper medium problems its almost a gureantee you will need to script/automate something. 
+
+Swithing gears to compare the pcaps, since both samples contain about the same number of Pcaps, we ask when the content is the same is there a difference in difficulty?
 PICO has a mid range problem that the flag can be found in clear text. HTB thats never the case, even easy problems the flag is base64 encoded.
 Looking at the harder problems in PICO, if there was a need to use something like OPENSSL to decrypt something, PICO would provided the command, HTB not so.
 
@@ -70,3 +82,4 @@ If there are 5 forensics problems: 2 Pcaps, 1 .png, 1 .img, something compressed
 
 Each analysis is about 75% completed. I need to finish the remaining challenges and add them to my analysis. I also need to fix inconsistencies in the tools and ideas categories and refine the edges of the graph. Additionally, I plan to create a guide for new users who are interested in solving forensics challenges in their first CTF. First showing the ideas that must be understood before entering(base64, http protocol, powershell, anything that was central in the graph). Then the problems and the tools. Finally the walkthrough and Blue Book can tie all the missing pieces together and fill in the theoretical knowledge.
 
+HTB and PICO CTFs are both in 2 weeks. Those will be good indicators and gauges on if any of this has been useful. Additionally they will be more data points added to the analysis. There could also be oppurtunities to upgrade the tools if they encounter a challenge and fail.
