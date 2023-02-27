@@ -478,6 +478,18 @@ Disk images are copies of an entire disk drive or a portion of it. In DFIR, disk
 Typically found as .img or dd
 Windows can be found as .img, .vmdk, .vhdx, .dd, .raw
 
+Differences in the way that Linux and Windows handle disk drives, which can be relevant to forensic analysis in a CTF challenge.
+
+-    File systems: Linux and Windows use different file systems to organize and store data on disk drives. Windows primarily uses the NTFS (New Technology File System) file system, while Linux typically uses the ext4 (Fourth Extended File System) file system. There are also other file systems used by both operating systems, such as FAT32, exFAT, and ReFS (Resilient File System). Different file systems have different structures and metadata, which can affect the way that files are stored, accessed, and recovered.
+
+-    Permissions and ownership: Linux and Windows use different approaches to managing permissions and ownership of files and directories. Linux uses a permission model based on users, groups, and permissions bits (e.g., read, write, execute), while Windows uses a more complex permission model that includes access control lists (ACLs) and security identifiers (SIDs). This can affect the way that files and directories are accessed and modified, as well as the ability to recover deleted files or data.
+
+-    Disk partitioning: Linux and Windows use different methods for partitioning disk drives. Windows uses the Master Boot Record (MBR) or the newer GUID Partition Table (GPT) for partitioning, while Linux typically uses the GPT partitioning scheme. Different partitioning schemes can affect the way that data is organized and accessed on the disk, as well as the ability to recover deleted files or data.
+
+-    Forensic tools and techniques: Different forensic tools and techniques may be needed to analyze disk drives on Linux versus Windows. For example, some tools may be more effective at recovering data from a specific file system or partitioning scheme, while others may be better suited for analyzing permissions and ownership. It is important to understand the differences between Linux and Windows disk drives when selecting and using forensic tools and techniques for a CTF challenge.
+
+
+
 There are many tools available to create and analyze disk images, including:
 
 1.  dd: A Unix tool that is commonly used to create raw disk images.
