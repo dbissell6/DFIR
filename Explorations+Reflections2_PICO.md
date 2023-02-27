@@ -30,23 +30,43 @@ For this study on the data was collected from the challenges provided on the Pic
 ![image](https://user-images.githubusercontent.com/50979196/221475238-e4890bfd-4bd3-41bb-a60f-2aac6f97d371.png)
 
 # Comparison to HTB
-## Key noticable differences 
+## 
 | Sample           | PICO | HTB |
 |------------------|------|-----|
 | PCAPs            |  11  |  11 |
 | Memory Dumps     |  0   |  4  |
 | .docm challenges |  1   |  6  |
 | LOG(evtx)        |  0   |  2  |
-| Image files      | ~15  |  0  | (.png, .jpg, etc.)
+| Disk/.imgs       | 6 | 1 |
+| Image files(.png, jpg, ...)| ~15  |  0  | 
 
 Another key difference has to be the difficulty each organization assigns to the challenges. HTB is easy,med hard. PICO 10,30,40,50,60,60,10,110,130....500
 
-Reflecting on my past struggles and limitations (decoding .vbs/powershell scripts) + mem.dump and volatility I found it interesting that these were the things PICO were missing.
-This seems like a difference in content that contain reasons for the differences in difficulty. On top of missing the harder content there were some easier 
-challenges that could be solved be grepping a txt file.
+Reflecting on my past struggles and limitations (decoding .vbs/powershell scripts) + mem.dump/volatility I found it interesting that these were the things PICO were missing.
+This seems like some of the reasons for difference in difficulty is difference in content. 
+On top of missing these harder types there were some challenges that could be solved just by grepping a txt file or unzipping something 10 times.
 
-However looking at the pcaps, since the same in both samples we can ask whenthe content is the same is there a difference in difficulty?
+One key difference that I cant account for(pngs,jpgs/STEGO are MISC HTB problems so this makes sense) is how many more disk challenges there were.  HTB didnt have many so the partion and mounting process was still slightly foriegn. However, once I was able to to mount the drive it felt very similar to enumerating a box on the red team. I was even able to run linpeas in the mount and it discovered a ssh key that solved a problem. 
+HTB did have a disk challenge and ofcourse it was more difficult than any of PICOs where you first had to reconstruct the image. PICO had a problem that didnt even need to mount the disk, just find the length in sectors.
+
+If anything i think this experiment was useful just for the fact I encountered so many disk images but I will evenutally have to learn to use sleuthkit. 
+
+Small take home. I learned that any of the four categories (pcaps, logs, disks, and memory) can be equally challenging, but the easiest tasks may vary slightly. For example, anyone can open a pcap file in Wireshark, while opening logs with evtx_dump may be slightly more challenging. Mounting a disk is a bit more difficult than that, and using Volatility can be the most challenging of all. 
+
+Swithing gears to compare the pcaps, since the same in both samples we can ask when the content is the same is there a difference in difficulty?
 PICO has a mid range problem that the flag can be found in clear text. HTB thats never the case, even easy problems the flag is base64 encoded.
 Looking at the harder problems in PICO, if there was a need to use something like OPENSSL to decrypt something, PICO would provided the command, HTB not so.
 
+# Struggles
+
+The main issue I would like to address is my pcap analysis tool. It can find a clear text flag in data if all in one packet but if the data is transmitted one character per packet it will miss it, even clear text.  Getting stream data will probably be useful. The tool still needs to be able to do a basic analysis of objects passed in the capture. There was also a challenge that hide ascii characters in port numbers that the tool is useless at detecting.
+
+# Predictions
+
+## Update to prediction on what to expect on next PICO CTF
+If there are 5 forensics problems: 2 Pcaps, 1 .png, 1 .img, something compressed many times
+
+# Next Steps
+
+Each analysis is about 75% completed. I need to finish the remaining challenges and add them to my analysis. I also need to fix inconsistencies in the tools and ideas categories and refine the edges of the graph. Additionally, I plan to create a guide for new users who are interested in solving forensics challenges in their first CTF. First showing the ideas that must be understood before entering(base64, http protocol, powershell, anything that was central in the graph). Then the problems and the tools. Finally the walkthrough and Blue Book can tie all the missing pieces together and fill in the theoretical knowledge.
 
