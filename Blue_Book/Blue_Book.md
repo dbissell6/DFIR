@@ -237,8 +237,9 @@ They can be parsed using evtx_dump.py or windows has a native program.
 
 
 ![Pasted image 20221029120345](https://user-images.githubusercontent.com/50979196/221450336-c3adc6da-3d0c-4d3d-8c7a-25fd5a349135.png)
+![image](https://user-images.githubusercontent.com/50979196/221738025-e0593c2b-363f-4f79-84ca-1efc09cf9345.png)
 
-Ok we have the txt but  there a similar problem as with pcaps(lots of data) However there is no wireshark (use https://github.com/dbissell6/EVTX_analysis)
+Ok we have the txt but there a similar problem as with pcaps(lots of data) However there is no wireshark (use https://github.com/dbissell6/EVTX_analysis)
 
 
 # Files/Executables
@@ -261,7 +262,7 @@ Below are some of the most common files we might come across. Short recap here, 
 Files are typically determined by thier magic bytes or headers.
 If you have a file that has a wrong extentions, no extentions, or corrputed you can check the magic bytes in something like hexedit.
 ```
-- PDF (.pdf) - %PDF-
+-   PDF (.pdf) - %PDF-
 -   ZIP (.zip) - PK
 -   GZIP (.gz) - \x1f\x8b
 -   TAR (.tar) - \x75\x73\x74\x61\x72
@@ -395,6 +396,14 @@ Steganography is a technique used to hide information within other files or data
 In the realm of CTF challenges, steganography problems can come in all shapes and sizes. Image files are a common choice for hiding information, where the data is often stored in the least significant bits or in unused space within the image file. However, other types of files, such as audio or video files, can also be used.
 
 There are countless methods and tools for hiding information in files, making this area of forensics a bit of a "wild west". Common tools used for steganography analysis include steghide, outguess, and zsteg, among others. Techniques for steganalysis, or the detection of hidden information, can include visual inspection, frequency analysis, and entropy analysis, among others.
+
+### LSB 
+
+
+
+### exiftool
+
+
 
 ### Steghide 
 A steganography tool that allows users to embed hidden data within image and audio files. It uses strong encryption algorithms to hide the data and is useful for hiding sensitive information or secret messages within images or audio files. Steghide can also extract hidden data from files.
@@ -546,13 +555,13 @@ RAID 5 is a popular type of RAID configuration that provides both data redundanc
 
 Some common types of RAID 5 failures that may be encountered in CTFs include:
 
-    Single Drive Failure: If a single drive in a RAID 5 array fails, the array can still function. However, the array becomes more vulnerable to additional drive failures, and the performance may be degraded.
+-   Single Drive Failure: If a single drive in a RAID 5 array fails, the array can still function. However, the array becomes more vulnerable to additional drive failures, and the performance may be degraded.
 
-    Multiple Drive Failures: If multiple drives fail in a RAID 5 array, data loss can occur. The number of drive failures that can be tolerated depends on the number of drives in the array and the stripe size. In CTFs, multiple drive failures may be simulated by removing multiple drives from the array.
+-   Multiple Drive Failures: If multiple drives fail in a RAID 5 array, data loss can occur. The number of drive failures that can be tolerated depends on the number of drives in the array and the stripe size. In CTFs, multiple drive failures may be simulated by removing multiple drives from the array.
 
-    Rebuild Failure: When a failed drive is replaced in a RAID 5 array, the data is rebuilt onto the new drive from the parity data. However, if the parity data is incorrect or missing, the rebuild may fail, and data loss can occur. In CTFs, contestants may be given a partially rebuilt RAID 5 array and asked to recover the missing data.
+-   Rebuild Failure: When a failed drive is replaced in a RAID 5 array, the data is rebuilt onto the new drive from the parity data. However, if the parity data is incorrect or missing, the rebuild may fail, and data loss can occur. In CTFs, contestants may be given a partially rebuilt RAID 5 array and asked to recover the missing data.
 
-    RAID Controller Failure: If the RAID controller fails in a RAID 5 array, the array can become inaccessible. In CTFs, contestants may be given a faulty RAID controller and asked to recover the data without the controller.
+-   RAID Controller Failure: If the RAID controller fails in a RAID 5 array, the array can become inaccessible. In CTFs, contestants may be given a faulty RAID controller and asked to recover the data without the controller.
 
 To successfully recover data from a failed RAID 5 array in a CTF, contestants must have a deep understanding of RAID 5 configurations, data recovery techniques, and tools. By practicing and gaining experience with these challenges, contestants can become more skilled at recovering data from RAID 5 arrays and gain a competitive advantage in CTF competitions.
 
