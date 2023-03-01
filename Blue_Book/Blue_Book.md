@@ -1,9 +1,9 @@
 # The Blue Book
 ## Intro
 
-In a world where cyber attacks are becoming more frequent and sophisticated, the ability to detect and respond to such attacks is critical for any organization. During a Cybersecurity Capture The Flag (CTF) competition, the blue team is responsible for detecting and responding to cyber attacks, and this often involves forensic analysis of systems, networks, and data.
+The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. It covers a wide range of topics including incident response, malware analysis, memory forensics, network forensics, and more. Overall the goal is to tie together the knowledge and tools learned from the various challenges. Hopefully useful to someone with no expiernce wanting to start and to someone with experience that needs a reference. Because the content and topics here are results from CTF challenges please remember that some of the info may not be as applicable to real DFIR. In addition this is me trying to teach myself DFIR CTF so everything in it could be wrong.
 
-This handbook is specifically geared towards the blue team during a CTF, and aims to provide a comprehensive guide for blue team forensics. In a CTF, the blue team's goal is to defend their systems against simulated cyber attacks launched by the red team, and this requires a deep understanding of key tools and techniques that can be used to detect and respond to such attacks.
+Understanding the story that the evidence is telling is crucial in more difficult challenges. As a forensic analyst, you need to piece together the who, what, where, when, and how of an attack. A packet capture file (pcap) can reveal a lot about an attack, such as an IP address attempting to bruteforce a website. When the attacker finally gains access, this is a significant piece of the puzzle, and it could also be where a flag is located. Therefore, it's essential to keep detailed notes that reconstruct the timeline of critical events.
 
 Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 
 
@@ -15,13 +15,14 @@ Throughout this handbook, we will cover the various challenges that blue teams m
 
 4) Memory forensics 
  
-5) Disk. We will also introduce key tools and techniques that can be used to detect and respond to cyber attacks during a CTF.
+5) Disk.
+ 
 
-By the end of this handbook, you should have a solid understanding of blue team forensics and be equipped with the knowledge and tools necessary to effectively detect and respond to cyber attacks during a CTF.
-
-Often it is important to remember that in more difficult challanges the flag cannot be found if you dont understand the story the evidence is telling. Therefore, keep detailed notes that reconstruct the timeline of important events.
 
 ## Ideas That Will be encountered
+
+Before we start here is a high level view of concepts that will be seen and related domains that must be touched upon before entering forensics. 
+
 Malware Analysis Tools: Malware analysis tools are software programs used by analysts to dissect malware and understand its behavior. Some commonly used tools include IDA Pro, Ghidra, OllyDbg, and Immunity Debugger. IDA Pro is a disassembler and debugger that allows analysts to analyze the assembly code of a program. Ghidra is an open-source reverse engineering tool that allows for static analysis of binary files. OllyDbg is a debugger that allows analysts to step through a program and analyze its behavior. Immunity Debugger is a powerful debugger that can be used to find vulnerabilities in software. Each tool has its own strengths and use cases.
 
 Static Analysis Techniques: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
@@ -365,6 +366,11 @@ tar -xf file.tar
 unrar x file.rar
 xz -d file.xz
 cabextract file.cab
+lzip -d -k flag
+lz4 -d flag.out flag2.out
+lzma -d -k flag2.lzma
+lzop -d -k flag2.lzop -o flag3
+lzip -d -k flag3
 ```
 
 
