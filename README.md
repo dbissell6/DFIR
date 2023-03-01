@@ -15,7 +15,7 @@ https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections2_PICO.md
 
 ## Walkthroughs
 
-Soon home of all walkthrough from the challeges
+Soon home of all walkthrough from the challenges
 
 ## BlueBook
 
