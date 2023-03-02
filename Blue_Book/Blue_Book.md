@@ -7,15 +7,15 @@ Understanding the story that the evidence is telling is crucial in more difficul
 
 Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 
 
-1) Network traffic analysis, 
+1) [Network traffic analysis](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#pcaps) 
  
-2) System logs analysis,
+2) [System logs analysis](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#logs)
  
-3) Files/Executables, 
+3) [Files/Executables](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#filesexecutables) 
 
-4) Memory forensics 
+4) [Memory forensics](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#memory-dumps)
  
-5) Disk.
+5) [Disk](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#Disk)
  
 
 
@@ -23,19 +23,18 @@ Throughout this handbook, we will cover the various challenges that blue teams m
 
 Before we start here is a high level view of concepts that will be seen and related domains that must be touched upon before entering forensics. 
 
-Malware Analysis Tools: Malware analysis tools are software programs used by analysts to dissect malware and understand its behavior. Some commonly used tools include IDA Pro, Ghidra, OllyDbg, and Immunity Debugger. IDA Pro is a disassembler and debugger that allows analysts to analyze the assembly code of a program. Ghidra is an open-source reverse engineering tool that allows for static analysis of binary files. OllyDbg is a debugger that allows analysts to step through a program and analyze its behavior. Immunity Debugger is a powerful debugger that can be used to find vulnerabilities in software. Each tool has its own strengths and use cases.
 
-Static Analysis Techniques: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
+**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
 
-Dynamic Analysis Techniques: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
+**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
-Fileless Malware: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions. Detection and analysis of fileless malware requires a thorough understanding of the underlying system and its behavior.
+**Fileless Malware**: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions. Detection and analysis of fileless malware requires a thorough understanding of the underlying system and its behavior.
 
-Data Exfiltration Techniques: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
+**Data Exfiltration Techniques**: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
 
-Advanced Obfuscation Techniques: Advanced obfuscation techniques are used by malware authors to make their code more difficult to analyze and detect. Techniques like code obfuscation and packers can make malware more resilient to analysis. Detection and analysis of advanced obfuscation techniques requires a deep understanding of the underlying code and the ability to identify patterns and anomalies.
+**Advanced Obfuscation Techniques**: Advanced obfuscation techniques are used by malware authors to make their code more difficult to analyze and detect. Techniques like code obfuscation and packers can make malware more resilient to analysis. Detection and analysis of advanced obfuscation techniques requires a deep understanding of the underlying code and the ability to identify patterns and anomalies.
 
-File Carving: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
+**File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
 ## Encryption
 
