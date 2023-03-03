@@ -26,3 +26,6 @@ https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md
 https://github.com/dbissell6/PCAP_Analysis
 
 https://github.com/dbissell6/EVTX_analysis
+
+## Videos
+https://www.youtube.com/@digitaldeductions
