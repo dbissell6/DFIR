@@ -247,8 +247,8 @@ using a python script on the evil_duck.png image
 ![Pasted image 20230113153109](https://user-images.githubusercontent.com/50979196/223189589-a9b312d3-d0c4-4541-b6fc-07dad50b4494.png)
 
 xor encoded
-![Pasted image 20230113153402](https://user-images.githubusercontent.com/50979196/223189669-e3a9fed7-2205-46ff-be88-68f34fdf41a2.png)
 
+![image](https://user-images.githubusercontent.com/50979196/223191633-d279ae26-19a5-44e1-a637-f0c596bdff7c.png)
 
 
 # eavesdrop
