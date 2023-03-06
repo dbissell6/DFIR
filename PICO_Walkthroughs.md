@@ -1,0 +1,46 @@
+# Included Challenges
+information= {Difficulty:10,.jpg:1}  
+Matryoshka doll= {Difficulty:30,.jpg:1}  
+tunn3l_v1s10n= {Difficulty:40,.bmp:1,hexedit:1}  
+Glory_of_the Garden= {Difficulty:50,.jpg:1}  
+Wireshark_doo_doo= {Difficulty:50,pcap:1, Wireshark:1,ROT13:1}   
+MacroHard WeakEdge= {Difficulty:60,.pptm:1}  
+Trivial_Flag_Transfer= {Difficulty:90,pcap:1,Wireshark:1,Protocol-FTP:1,ROT13:1,.bmp:1,steghide:1}  
+Wireshark_two_two= {Difficulty:100,pcap:1, Wireshark:1,Protocol-DNS:1,Base64:1}  
+advanced_potion_making= {Difficulty:100,.png:1,stegsolve:1}  
+File_types= {Difficulty:100,.pdf:1,.ar:1,decompress:1}  
+Enhance!= {Difficulty:100,.svg:1,strings:1}  
+Lookey_here= {Difficulty:100,.txt:1,grep:1}  
+Packets_Primer= {Difficulty:100,pcap:1,Wireshark:1}  
+Redaction_gone_wrong= {Difficulty:100,.pdf:1,}
+Sleuthkit_intro= {Difficulty:100,.img:1,fdisk:1}  
+Disk,disk,sleuth!= {Difficulty:110,.img:1,fdisk:1,mount:1}   really jsut a grep
+Milkslap= {Difficulty:120,.png:1,zsteg:1}  
+Disk,disk,sleuth!2= {Difficulty:130,.img:1,fdisk:1,mount:1}  
+So_Meta= {Difficulty:150,.png:1,exiftool:1}  
+shark_on_wire_1= {Difficulty:150,pcap:1, Wireshark:1,Stream:1}  
+extensions= {Difficulty:150,.txt:1,.png:1}  
+What_Lies_Within= {Difficulty:150,.png:1,zsteg:1}  
+Pitter,Patter,Platters= {Difficulty:200,dd.sda1:1,fdisk:1,mount:1,xxd:1}  
+WPA-ing_Out= {Difficulty:200,pcap:1, Wireshark:1,aircrack-ng:1}  
+Sleuthkit_Apprentice= {Difficulty:200,.img:1,fdisk:1,mount:1}  
+WhitePages= {Difficulty:250,.txt:1,hexedit:1,SMPythonScript:1}  
+like1000= {Difficulty:250,.tar:1,SMPythonScript:1}  
+c0rrupt= {Difficulty:250,.png:1,hexedit:1}  
+shark_on_wire_2= {Difficulty:300,pcap:1, Wireshark:1,SMPythonScript:1}  
+very_very_hidden= {Difficulty:300,pcap:1, Wireshark:1,.png:1,SMPythonScript:1,XOR:1}  
+Eavesdrop= {Difficulty:300,pcap:1, Wireshark:1,openssl:1,des3:1}  
+Operation_Oni= {Difficulty:300,.img:1,fdisk:1,mount:1,id_rsa:1,ssh:1}  
+St3g0= {Difficulty:300,.png:1,zsteg:1}  
+webnet0= {Difficulty:350,pcap:1, Wireshark:1,RSA_Key:1,Protocol-TLS:1}  
+OP_Orchid= {Difficulty:400,.img:1,fdisk:1,mount:1,openssl:1,Encrypted_AES:1}  
+SideChannel= {Difficulty:400,elf:1,SMPythonScript:1}  
+webnet1= {Difficulty:450,pcap:1, Wireshark:1,RSA_Key:1,Protocol-TLS:1,.jpg:1,exiftool:1}  
+
+scrambled-bytes= {Difficulty:200,}#NF
+m00nwalk= {Difficulty:250,}#NF
+Surfing the Waves= {Difficulty:250,}#NF
+m00nwalk2= {Difficulty:300,}#NF
+Torrent_Analyze= {Difficulty:400,}#NF
+B1g_Mac= {Difficulty:500,}#NF
+
