@@ -82,14 +82,7 @@ steghide
 ![[Pasted image 20230113161316.png]]
 use password DUEDILIGENCE
 ![[Pasted image 20230113161350.png]]
-# very very hidden
 
-![[Pasted image 20230113142415.png]]
-using a python script on the evil_duck.png image
-![[Pasted image 20230113153109.png]]
-
-xor encoded
-![[Pasted image 20230113153402.png]]
 
 # Wireshark two two
 ![[Pasted image 20221229162904.png]]
@@ -215,15 +208,18 @@ aircrack-ng -w rockyou capture.pcap
 # Sluethkit_apperentice
 given .img
 
-![[Pasted image 20230222130428.png]]
+![[Pasted image 20230222130428.png]]![Pasted image 20230222130428](https://user-images.githubusercontent.com/50979196/223188743-78453def-e9ef-4963-921a-de391e603fba.png)
 
-![[Pasted image 20230222130804.png]]
 
-![[Pasted image 20230222130718.png]]
+![[Pasted image 20230222130804.png]]![Pasted image 20230222130804](https://user-images.githubusercontent.com/50979196/223188759-e850df34-99f5-477d-9d80-85917acdf2aa.png)
+
+
+![[Pasted image 20230222130718.png]]![Pasted image 20230222130718](https://user-images.githubusercontent.com/50979196/223188784-f0f21426-6459-4dab-9de7-b494e6bccc91.png)
+
 ```
 sudo mount -o loop,ro,offset=184549376 disk.flag.img test 
 ```
-![[Pasted image 20230222130320.png]]
+Can find flag in root 
 
 
 # Whitepages
@@ -243,42 +239,59 @@ create python script to handle output. The key was to see the src port would alw
 # Like1000
 this is a 1000 deep tar file. Created python script to automate it.
 
+# very very hidden
+
+![Pasted image 20230113142415](https://user-images.githubusercontent.com/50979196/223189539-7edf5a54-3e64-4b6a-8771-0033d17be1de.png)
+
+using a python script on the evil_duck.png image
+![Pasted image 20230113153109](https://user-images.githubusercontent.com/50979196/223189589-a9b312d3-d0c4-4541-b6fc-07dad50b4494.png)
+
+xor encoded
+![Pasted image 20230113153402](https://user-images.githubusercontent.com/50979196/223189669-e3a9fed7-2205-46ff-be88-68f34fdf41a2.png)
+
+
 
 # eavesdrop
-![[Pasted image 20230222083155.png]]
+![Pasted image 20230222083155](https://user-images.githubusercontent.com/50979196/223190317-359173ff-d8a7-4d15-964c-ac9fcaf3a8f6.png)
+
 ```
 openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123
 ```
 
-![[Pasted image 20230222083932.png]]
+![Pasted image 20230222083932](https://user-images.githubusercontent.com/50979196/223190372-3ad0d5e4-66c1-4b1d-b511-892ad4b1c593.png)
 File -> export packet bytes
 
-![[Pasted image 20230222084016.png]]
-![[Pasted image 20230222084027.png]]
+
+![Pasted image 20230222084016](https://user-images.githubusercontent.com/50979196/223190440-93de414f-b48b-401f-bc2b-65994f6759f8.png)
+
+Produces flag
 
 # ST3g0
-![[Pasted image 20230222090751.png]]
-
+![image](https://user-images.githubusercontent.com/50979196/223190683-2d90b990-8f26-4a00-8309-08439d31cc6b.png)
 
 
 # webnet0
 given pcap and rsa key
 from G, but TLS instead of SSL
-![[Pasted image 20230113164502.png]]
-![[Pasted image 20230113164429.png]]
-![[Pasted image 20230113164557.png]]
+![Pasted image 20230113164502](https://user-images.githubusercontent.com/50979196/223189032-f842bfa3-001e-4025-869d-38f2e4f84ccf.png)
+
+![Pasted image 20230113164429](https://user-images.githubusercontent.com/50979196/223189070-68a5d33c-6fd3-491b-bbe9-0fa991ea22df.png)
+
+Can now find flag in stream
 
 # OP Orchid
-
-mount disk img
+given .img
 
 calculate offset
+mount disk img
 ```
 sudo mount -o loop,ro,offset=210763776 disk.flag.img /mnt/
 
 ```
 
-![[Pasted image 20230213195911.png]]
+
+![Pasted image 20230213195911](https://user-images.githubusercontent.com/50979196/223191046-d7ae37b1-82f3-45b2-8e10-8e580d9c10b5.png)
+
 ```
 openssl aes256 -d -salt -in flag.txt.enc -out flag -k unbreakablepassword1234567
 ```
@@ -291,6 +304,6 @@ Timing based attack. Can use python script to interact with pin checker binary t
 
 # webnet1
 rsa key is the same
-![[Pasted image 20230113165754.png]]
+![Pasted image 20230113165754](https://user-images.githubusercontent.com/50979196/223191318-90aeafef-ef08-49b5-9588-9b7dd096ea61.png)
 
-
+can also use exiftool on vulture.jpeg to get flag 
