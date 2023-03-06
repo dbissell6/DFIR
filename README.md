@@ -15,7 +15,7 @@ https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections2_PICO.md
 
 ## Walkthroughs
 
-PICO - https://github.com/dbissell6/DFIR/blob/main/PICO_Walkthroughs
+PICO - https://github.com/dbissell6/DFIR/blob/main/PICO_Walkthroughs.md
 
 ## BlueBook
 
