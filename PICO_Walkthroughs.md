@@ -276,6 +276,9 @@ tshark -r capture.pcap -T fields -e udp.srcport -Y "udp.port == 22" > output
 create python script to handle output. The key was to see the src port would always start with 5 and be 4 nums long, the last 3 nums were ascii characters
 ![[Pasted image 20230213175847.png]]
 
+# C0rrupt
+
+https://github.com/Dvd848/CTFs/blob/master/2019_picoCTF/c0rrupt.md
 
 # Like1000
 this is a 1000 deep tar file. Created python script to automate it.
