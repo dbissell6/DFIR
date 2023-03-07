@@ -62,7 +62,7 @@ hexedit tunn3l_v1s10n.bmp
 Then view image
 
 # Glory_of_the Garden
-
+Given .jpg
 
 # Wireshark doo dooo
 Given pcap  
@@ -166,7 +166,7 @@ The way you are supposed to do it is mount the disk, then grep
 ![[Pasted image 20230226193015.png]]
 ![[Pasted image 20230226193100.png]]
 
-zstep errored out for me, other walk throughs it worked for them, online tools take too long to upload, must revist.
+zsteg errored out for me, other walk throughs it worked for them, online tools take too long to upload, must revist.
 
 # Slueth2
 given .img
@@ -178,6 +178,7 @@ given .img
 
 
 # So Meta
+Given .png
 
 # shark on the wire 1
 Given pcap, check streams
