@@ -254,6 +254,22 @@ Having a solid understanding of file analysis is crucial in identifying potentia
 file sus.elf
 strings sus.txt
 ```
+
+## Strings
+The strings command in Linux is a useful utility that enables users to extract printable characters from binary files. This command searches for and displays all the printable character sequences (i.e., strings) found in a binary file, which can be helpful in analyzing and debugging the file.
+
+One common use case for the strings command is in analyzing executable files and libraries. For example, if you're trying to troubleshoot an issue with a program, you can use strings to extract any relevant information that may be stored within the binary file, such as error messages or configuration options.
+
+Two of the most popular switches used with strings are:
+
+    -a  
+This switch tells strings to look for strings in all sections of the file, including those that are not typically examined by default. This can be helpful in identifying strings that are buried deep within the binary file.
+
+    -n  
+This switch specifies the minimum length of the strings that strings will display. By default, strings will display all strings that are at least four characters long, but you can use the -n switch to adjust this minimum length to your liking.
+
+Overall, the strings command is a powerful tool for analyzing binary files and can be especially helpful in debugging and troubleshooting issues with programs and libraries.
+
 Sandboxes
 ## Common file types
 
