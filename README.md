@@ -1,6 +1,6 @@
 # DFIR
 
-This is a repository dedicated to the DFIR journey. Contains notes, reflections and links to tools.
+This is a repository dedicated to the DFIR journey. Contains notes, reflections, walkkthroughs and links to tools.
 
 ## For Act I of the journey please visit
 
