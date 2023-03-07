@@ -1,48 +1,48 @@
 # Included Challenges
-information= {Difficulty:10,.jpg:1}  
-Matryoshka doll= {Difficulty:30,.jpg:1}  
-tunn3l_v1s10n= {Difficulty:40,.bmp:1,hexedit:1}  
-Glory_of_the Garden= {Difficulty:50,.jpg:1}  
-Wireshark_doo_doo= {Difficulty:50,pcap:1, Wireshark:1,ROT13:1}   
-MacroHard WeakEdge= {Difficulty:60,.pptm:1}  
-Trivial_Flag_Transfer= {Difficulty:90,pcap:1,Wireshark:1,Protocol-FTP:1,ROT13:1,.bmp:1,steghide:1}  
-Wireshark_two_two= {Difficulty:100,pcap:1, Wireshark:1,Protocol-DNS:1,Base64:1}  
-advanced_potion_making= {Difficulty:100,.png:1,stegsolve:1}  
-File_types= {Difficulty:100,.pdf:1,.ar:1,decompress:1}  
-Enhance!= {Difficulty:100,.svg:1,strings:1}  
-Lookey_here= {Difficulty:100,.txt:1,grep:1}  
-Packets_Primer= {Difficulty:100,pcap:1,Wireshark:1}  
-Redaction_gone_wrong= {Difficulty:100,.pdf:1,}
-Sleuthkit_intro= {Difficulty:100,.img:1,fdisk:1}  
-Disk,disk,sleuth!= {Difficulty:110,.img:1,fdisk:1,mount:1}   really jsut a grep
-Milkslap= {Difficulty:120,.png:1,zsteg:1}  
-Disk,disk,sleuth!2= {Difficulty:130,.img:1,fdisk:1,mount:1}  
-So_Meta= {Difficulty:150,.png:1,exiftool:1}  
-shark_on_wire_1= {Difficulty:150,pcap:1, Wireshark:1,Stream:1}  
-extensions= {Difficulty:150,.txt:1,.png:1}  
-What_Lies_Within= {Difficulty:150,.png:1,zsteg:1}  
-Pitter,Patter,Platters= {Difficulty:200,dd.sda1:1,fdisk:1,mount:1,xxd:1}  
-WPA-ing_Out= {Difficulty:200,pcap:1, Wireshark:1,aircrack-ng:1}  
-Sleuthkit_Apprentice= {Difficulty:200,.img:1,fdisk:1,mount:1}  
-WhitePages= {Difficulty:250,.txt:1,hexedit:1,SMPythonScript:1}  
-like1000= {Difficulty:250,.tar:1,SMPythonScript:1}  
-c0rrupt= {Difficulty:250,.png:1,hexedit:1}  
-shark_on_wire_2= {Difficulty:300,pcap:1, Wireshark:1,SMPythonScript:1}  
-very_very_hidden= {Difficulty:300,pcap:1, Wireshark:1,.png:1,SMPythonScript:1,XOR:1}  
-Eavesdrop= {Difficulty:300,pcap:1, Wireshark:1,openssl:1,des3:1}  
-Operation_Oni= {Difficulty:300,.img:1,fdisk:1,mount:1,id_rsa:1,ssh:1}  
-St3g0= {Difficulty:300,.png:1,zsteg:1}  
-webnet0= {Difficulty:350,pcap:1, Wireshark:1,RSA_Key:1,Protocol-TLS:1}  
-OP_Orchid= {Difficulty:400,.img:1,fdisk:1,mount:1,openssl:1,Encrypted_AES:1}  
-SideChannel= {Difficulty:400,elf:1,SMPythonScript:1}  
-webnet1= {Difficulty:450,pcap:1, Wireshark:1,RSA_Key:1,Protocol-TLS:1,.jpg:1,exiftool:1}  
+information = {Difficulty:10, .jpg:1}  
+Matryoshka doll = {Difficulty:30, .jpg:1}  
+tunn3l_v1s10n = {Difficulty:40, .bmp:1, hexedit:1}  
+Glory_of_the Garden = {Difficulty:50, .jpg:1}  
+Wireshark_doo_doo = {Difficulty:50, pcap:1, Wireshark:1, ROT13:1}   
+MacroHard WeakEdge = {Difficulty:60, .pptm:1}  
+Trivial_Flag_Transfer = {Difficulty:90, pcap:1, Wireshark:1, Protocol-FTP:1, ROT13:1, .bmp:1, steghide:1}  
+Wireshark_two_two = {Difficulty:100, pcap:1, Wireshark:1, Protocol-DNS:1, Base64:1}  
+advanced_potion_making = {Difficulty:100, .png:1, stegsolve:1}  
+File_types = {Difficulty:100, .pdf:1, .ar:1, decompress:1}  
+Enhance!= {Difficulty:100, .svg:1, strings:1}  
+Lookey_here= {Difficulty:100, .txt:1, grep:1}  
+Packets_Primer= {Difficulty:100, pcap:1, Wireshark:1}  
+Redaction_gone_wrong= {Difficulty:100, .pdf:1,}
+Sleuthkit_intro= {Difficulty:100, .img:1, fdisk:1}  
+Disk,disk,sleuth! = {Difficulty:110, .img:1, fdisk:1, mount:1}   really jsut a grep
+Milkslap = {Difficulty:120, .png:1, zsteg:1}  
+Disk,disk,sleuth!2 = {Difficulty:130, .img:1, fdisk:1, mount:1}  
+So_Meta = {Difficulty:150, .png:1, exiftool:1}  
+shark_on_wire_1 = {Difficulty:150, pcap:1, Wireshark:1, Stream:1}  
+extensions = {Difficulty:150, .txt:1, .png:1}  
+What_Lies_Within = {Difficulty:150,.png:1, zsteg:1}  
+Pitter,Patter,Platters = {Difficulty:200, dd.sda1:1, fdisk:1, mount:1, xxd:1}  
+WPA-ing_Out = {Difficulty:200,pcap:1, Wireshark:1, aircrack-ng:1}  
+Sleuthkit_Apprentice = {Difficulty:200,.img:1, fdisk:1, mount:1}  
+WhitePages = {Difficulty:250,.txt:1, hexedit:1, SMPythonScript:1}  
+like1000 = {Difficulty:250, .tar:1, SMPythonScript:1}  
+c0rrupt = {Difficulty:250, .png:1, hexedit:1}  
+shark_on_wire_ = {Difficulty:300,pcap:1, Wireshark:1, SMPythonScript:1}  
+very_very_hidden = {Difficulty:300, pcap:1, Wireshark:1,.png:1, SMPythonScript:1,XOR:1}  
+Eavesdrop = {Difficulty:300,pcap:1, Wireshark:1, openssl:1, des3:1}  
+Operation_Oni = {Difficulty:300, .img:1, fdisk:1, mount:1, id_rsa:1, ssh:1}  
+St3g0 = {Difficulty:300, .png:1, zsteg:1}  
+webnet0 = {Difficulty:350, pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1}  
+OP_Orchid = {Difficulty:400, .img:1, fdisk:1, mount:1, openssl:1, Encrypted_AES:1}  
+SideChannel = {Difficulty:400, elf:1, SMPythonScript:1}  
+webnet1 = {Difficulty:450,pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1, .jpg:1, exiftool:1}  
 
-scrambled-bytes= {Difficulty:200,}#NF
-m00nwalk= {Difficulty:250,}#NF
-Surfing the Waves= {Difficulty:250,}#NF
-m00nwalk2= {Difficulty:300,}#NF
-Torrent_Analyze= {Difficulty:400,}#NF
-B1g_Mac= {Difficulty:500,}#NF
+scrambled-bytes = {Difficulty:200,}#NF
+m00nwalk = {Difficulty:250,}#NF
+Surfing the Waves = {Difficulty:250,}#NF
+m00nwalk2 = {Difficulty:300,}#NF
+Torrent_Analyze = {Difficulty:400,}#NF
+B1g_Mac = {Difficulty:500,}#NF
 
 # information
 
@@ -71,28 +71,37 @@ Take to cyberchef and run ROT13 on in
 
 # MacroHard WeakEdge
 
-# TFTP
-![[Pasted image 20230113161433.png]]
-![[Pasted image 20221229174855.png]]
-![[Pasted image 20230113161053.png]]
-![[Pasted image 20230113161036.png]]
 
-![[Pasted image 20230113161249.png]]
+# TFTP
+![Pasted image 20230113161433](https://user-images.githubusercontent.com/50979196/223304014-e147809e-1b3f-44e4-99b1-eb2a1677bf74.png)
+![Pasted image 20221229174855](https://user-images.githubusercontent.com/50979196/223304100-a9b4db6a-3d15-4750-95c0-fa0a6dce5520.png)
+![Pasted image 20230113161053](https://user-images.githubusercontent.com/50979196/223304154-504cce6e-ca93-488d-bff7-20cfb52825b0.png)
+
+
+![Pasted image 20230113161036](https://user-images.githubusercontent.com/50979196/223304189-c8e151ca-6a00-4b73-84d7-0cbd169c7bf6.png)
+
+
+![Pasted image 20230113161249](https://user-images.githubusercontent.com/50979196/223304225-d52cd2f5-0799-45b3-bc65-0b7be8183bce.png)
+
 steghide
-![[Pasted image 20230113161316.png]]
+![Pasted image 20230113161316](https://user-images.githubusercontent.com/50979196/223304379-50b9f942-52c8-43e1-9e62-8436f1b63a7e.png)
 use password DUEDILIGENCE
+
 ![[Pasted image 20230113161350.png]]
 
 
 # Wireshark two two
-![[Pasted image 20221229162904.png]]
-![[Pasted image 20221229163440.png]]
+![Pasted image 20221229162904](https://user-images.githubusercontent.com/50979196/223304664-563efc32-ab6e-4931-a223-50d4f91a1e82.png)
+
+![Pasted image 20221229163440](https://user-images.githubusercontent.com/50979196/223304719-9254fe30-b24b-42bc-bbd3-67c3638e5eb7.png)
+
 first /flag is a bunch of decoys
 notice that 18.217.1.57 has a wierd connection with DNS
-![[Pasted image 20221229165224.png]]
-![[Pasted image 20221229165310.png]]
-![[Pasted image 20221229165144.png]]
+![Pasted image 20221229165224](https://user-images.githubusercontent.com/50979196/223304789-2f415b32-b2b0-4b83-b43a-9a11f8fbbab6.png)
 
+![Pasted image 20221229165310](https://user-images.githubusercontent.com/50979196/223304828-d68daf1e-83ec-4309-a549-9aa99ebbc230.png)
+
+These segments ran through a base 64 decoder will yeild the flag.  
 # advanced potion making
 
 start with a corrupted png, used a normal png to compare the header and footer to fix. the loaded into stegsolve red 0
@@ -100,8 +109,9 @@ start with a corrupted png, used a normal png to compare the header and footer t
   
 # Enhance
 
-given svg, image was a black ciurlce, like a record, ran strings on file
-![[Pasted image 20230222092406.png]]
+given svg, image was a black cirlce, like a music record, ran strings on file  
+![Pasted image 20230222092406](https://user-images.githubusercontent.com/50979196/223305379-30afd591-6ce6-4c74-ac79-f1703e0735bb.png)
+
 
 # File types
 Given pdf that is really a shell. Shell executes and creates a flag. Flag is a compressed file, of a compressed file. Finally Hex of flag
@@ -118,8 +128,7 @@ lzip -d -k flag3
 xz -d -k flag4.xz
 
 ```
-
-![[Pasted image 20230224124736.png]]
+Decompress each output will yiled a hex string
 
 # Lookey Here
 
@@ -129,18 +138,19 @@ xz -d -k flag4.xz
 ![[Pasted image 20221229170138.png]]
 
 # Redaction gone wrong
-pdf file, some text redacted properly others not, can just hightlight to reveal flag
-![[Pasted image 20230222091926.png]]
+given pdf file, some text redacted properly others not, can just open document and hightlight to reveal flag
+
 
 # Slueth Intro
 given img
 fdisk to determine sectors length
 
 # Slueth1
-given .img
+given .img  
 
-![[Pasted image 20230224133208.png]]
-![[Pasted image 20230224133350.png]]
+![[Pasted image 20230224133208.png]]![image](https://user-images.githubusercontent.com/50979196/223307422-2c354d63-3864-43bc-b93c-d47f84af973a.png)
+
+The way you are supposed to do it is mount the disk, then grep
 
 
 
@@ -153,9 +163,12 @@ zstep errored out for me, other walk throughs it worked for them, online tools t
 
 # Slueth2
 given .img
-![[Pasted image 20230224131740.png]]
-![[Pasted image 20230224131801.png]]
-![[Pasted image 20230224131717.png]]
+
+![[Pasted image 20230224131740.png]]![Pasted image 20230224131740](https://user-images.githubusercontent.com/50979196/223309891-6596661e-36a3-4e1f-bedc-5abc5b4e265f.png)
+![Pasted image 20230224131801](https://user-images.githubusercontent.com/50979196/223309962-a9c8ca7d-9fac-4a40-807c-cc20661f12f0.png)
+
+![image](https://user-images.githubusercontent.com/50979196/223310065-ff40f79e-7c5c-4f90-b4b1-18cfe953f2af.png)
+
 
 # So Meta
 
