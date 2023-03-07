@@ -45,11 +45,18 @@ Torrent_Analyze = {Difficulty:400,}#NF
 B1g_Mac = {Difficulty:500,}#NF
 
 # information
-Given .jpg
+Given .jpg of a cat  
+Can run strings on it  
+![image](https://user-images.githubusercontent.com/50979196/223497620-0cc541bb-02f2-4844-9329-0582bc30514a.png)  
+Base64 resource to yield flag
 
 # Matryoshka doll
- Given .jpg
+Given .jpg  
 
+```
+binwalk -e -M dolls.jpg
+```
+This will recursivly search the file+output for additional files
 # tunn3l_v1s1on
 Given .bmp  
 ![Pasted image 20230213131653](https://user-images.githubusercontent.com/50979196/223185060-c0376adf-52f4-4bd0-a490-433ef5b3cf5e.png)
@@ -71,10 +78,16 @@ Given pcap
 start by looking at the http traffic 
 ![Pasted image 20221229162224](https://user-images.githubusercontent.com/50979196/223185547-39a199f8-b32b-4ac6-9f95-cd2bded955b2.png)
 
-Take to cyberchef and run ROT13 on in
+Take to cyberchef and run ROT13 on it
 
 # MacroHard WeakEdge
-Given .pptm
+Given .pptm  
+![image](https://user-images.githubusercontent.com/50979196/223500570-7b710320-9e25-4156-976b-02636d254993.png)
+
+![image](https://user-images.githubusercontent.com/50979196/223500653-a959d878-c570-46e0-b115-54feec994614.png)
+
+Remove spaces and abse64 decode for flag
+
 
 # TFTP
 Given Pcap  
