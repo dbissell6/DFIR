@@ -45,13 +45,14 @@ Torrent_Analyze = {Difficulty:400,}#NF
 B1g_Mac = {Difficulty:500,}#NF
 
 # information
+Given .jpg
 
 # Matryoshka doll
- 
-# Glory_of_the Garden
+ Given .jpg
 
 # tunn3l_v1s1on
- ![Pasted image 20230213131653](https://user-images.githubusercontent.com/50979196/223185060-c0376adf-52f4-4bd0-a490-433ef5b3cf5e.png)
+Given .bmp  
+![Pasted image 20230213131653](https://user-images.githubusercontent.com/50979196/223185060-c0376adf-52f4-4bd0-a490-433ef5b3cf5e.png)
 ![Pasted image 20230213131322](https://user-images.githubusercontent.com/50979196/223185943-68f0724a-8610-4881-9bca-2c8e77a46957.png)
 
 ```
@@ -60,8 +61,11 @@ hexedit tunn3l_v1s10n.bmp
 ![Pasted image 20230213131714](https://user-images.githubusercontent.com/50979196/223185163-d3ca6a91-a808-4025-909a-f900f30a0122.png)
 Then view image
 
+# Glory_of_the Garden
+
+
 # Wireshark doo dooo
-given pcap
+Given pcap  
 
 
 start by looking at the http traffic 
@@ -70,7 +74,7 @@ start by looking at the http traffic
 Take to cyberchef and run ROT13 on in
 
 # MacroHard WeakEdge
-
+Given .pptm
 
 # TFTP
 ![Pasted image 20230113161433](https://user-images.githubusercontent.com/50979196/223304014-e147809e-1b3f-44e4-99b1-eb2a1677bf74.png)
@@ -83,11 +87,10 @@ Take to cyberchef and run ROT13 on in
 
 ![Pasted image 20230113161249](https://user-images.githubusercontent.com/50979196/223304225-d52cd2f5-0799-45b3-bc65-0b7be8183bce.png)
 
-steghide
+steghide  
 ![Pasted image 20230113161316](https://user-images.githubusercontent.com/50979196/223304379-50b9f942-52c8-43e1-9e62-8436f1b63a7e.png)
-use password DUEDILIGENCE
+use password DUEDILIGENCE  
 
-![[Pasted image 20230113161350.png]]
 
 
 # Wireshark two two
@@ -95,8 +98,8 @@ use password DUEDILIGENCE
 
 ![Pasted image 20221229163440](https://user-images.githubusercontent.com/50979196/223304719-9254fe30-b24b-42bc-bbd3-67c3638e5eb7.png)
 
-first /flag is a bunch of decoys
-notice that 18.217.1.57 has a wierd connection with DNS
+first /flag is a bunch of decoys  
+notice that 18.217.1.57 has a wierd connection with DNS  
 ![Pasted image 20221229165224](https://user-images.githubusercontent.com/50979196/223304789-2f415b32-b2b0-4b83-b43a-9a11f8fbbab6.png)
 
 ![Pasted image 20221229165310](https://user-images.githubusercontent.com/50979196/223304828-d68daf1e-83ec-4309-a549-9aa99ebbc230.png)
@@ -131,11 +134,14 @@ xz -d -k flag4.xz
 Decompress each output will yiled a hex string
 
 # Lookey Here
+Given large .txt file  
 
 # Packets Primer
 
-![[Pasted image 20221229170104.png]]
-![[Pasted image 20221229170138.png]]
+Given pcap  
+![Pasted image 20221229170104](https://user-images.githubusercontent.com/50979196/223475514-df5d0bc4-5db9-40bc-bbb7-6d9b1bf07e5e.png)
+
+
 
 # Redaction gone wrong
 given pdf file, some text redacted properly others not, can just open document and hightlight to reveal flag
@@ -148,7 +154,7 @@ fdisk to determine sectors length
 # Slueth1
 given .img  
 
-![[Pasted image 20230224133208.png]]![image](https://user-images.githubusercontent.com/50979196/223307422-2c354d63-3864-43bc-b93c-d47f84af973a.png)
+![image](https://user-images.githubusercontent.com/50979196/223307422-2c354d63-3864-43bc-b93c-d47f84af973a.png)
 
 The way you are supposed to do it is mount the disk, then grep
 
@@ -164,7 +170,7 @@ zstep errored out for me, other walk throughs it worked for them, online tools t
 # Slueth2
 given .img
 
-![[Pasted image 20230224131740.png]]![Pasted image 20230224131740](https://user-images.githubusercontent.com/50979196/223309891-6596661e-36a3-4e1f-bedc-5abc5b4e265f.png)
+![Pasted image 20230224131740](https://user-images.githubusercontent.com/50979196/223309891-6596661e-36a3-4e1f-bedc-5abc5b4e265f.png)
 ![Pasted image 20230224131801](https://user-images.githubusercontent.com/50979196/223309962-a9c8ca7d-9fac-4a40-807c-cc20661f12f0.png)
 
 ![image](https://user-images.githubusercontent.com/50979196/223310065-ff40f79e-7c5c-4f90-b4b1-18cfe953f2af.png)
@@ -173,20 +179,25 @@ given .img
 # So Meta
 
 # shark on the wire 1
-	![[Pasted image 20221229172520.png]]
+Given pcap, check streams
 
 # extentions
 .png saved as .txt, change to .png then view
 
 # What lies within
-![[Pasted image 20230221160303.png]]
-zsteg
+Given .png  
+zsteg  
+![image](https://user-images.githubusercontent.com/50979196/223476206-d2bef411-10ab-49f4-989d-a055d2ee9b0a.png)
+
+
 
 
 # Pitter Patter
-![[Pasted image 20230222093051.png]]
+Given .dd.sda1
+![Pasted image 20230222093051](https://user-images.githubusercontent.com/50979196/223476393-c9adf0e6-087b-49b6-8c0d-7398119934bb.png)
 
-![[Pasted image 20230222162114.png]]
+![Pasted image 20230222162114](https://user-images.githubusercontent.com/50979196/223476429-c3c7c915-c4c5-4f0e-af52-40bb9a7dc6dc.png)
+
 
 
 ![[Pasted image 20230113170105.png]]
