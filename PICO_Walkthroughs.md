@@ -193,7 +193,7 @@ zsteg
 
 
 # Pitter Patter
-Given .dd.sda1
+Given .dd.sda1  
 ![Pasted image 20230222093051](https://user-images.githubusercontent.com/50979196/223476393-c9adf0e6-087b-49b6-8c0d-7398119934bb.png)
 
 ![Pasted image 20230222162114](https://user-images.githubusercontent.com/50979196/223476429-c3c7c915-c4c5-4f0e-af52-40bb9a7dc6dc.png)
@@ -208,11 +208,13 @@ can also use exiftool on vulture.jpeg to get flag
 
 
 # Scrambled
-given pcap and python code
+given pcap and python code  
 
-python code shows udp ports are randomized and bytes are scrambled
-![[Pasted image 20230214124724.png]]
-![[Pasted image 20230214124302.png]]
+python code shows udp ports are randomized and bytes are scrambled  
+![Pasted image 20230214124724](https://user-images.githubusercontent.com/50979196/223480564-07ac6525-a911-4c62-9117-eff607277933.png)
+
+![Pasted image 20230214124302](https://user-images.githubusercontent.com/50979196/223480663-6edb1d8e-b88d-420b-a94a-11b6ed8eef4c.png)
+
 this should isolate the scrabmbled message
 ```
 !(_ws.expert) && ip.src == 172.17.0.2 && ip.src!=172.17.0.3
@@ -232,13 +234,13 @@ aircrack-ng -w rockyou capture.pcap
 # Sluethkit_apperentice
 given .img
 
-![[Pasted image 20230222130428.png]]![Pasted image 20230222130428](https://user-images.githubusercontent.com/50979196/223188743-78453def-e9ef-4963-921a-de391e603fba.png)
+![Pasted image 20230222130428](https://user-images.githubusercontent.com/50979196/223188743-78453def-e9ef-4963-921a-de391e603fba.png)
 
 
-![[Pasted image 20230222130804.png]]![Pasted image 20230222130804](https://user-images.githubusercontent.com/50979196/223188759-e850df34-99f5-477d-9d80-85917acdf2aa.png)
+![Pasted image 20230222130804](https://user-images.githubusercontent.com/50979196/223188759-e850df34-99f5-477d-9d80-85917acdf2aa.png)
 
 
-![[Pasted image 20230222130718.png]]![Pasted image 20230222130718](https://user-images.githubusercontent.com/50979196/223188784-f0f21426-6459-4dab-9de7-b494e6bccc91.png)
+![Pasted image 20230222130718](https://user-images.githubusercontent.com/50979196/223188784-f0f21426-6459-4dab-9de7-b494e6bccc91.png)
 
 ```
 sudo mount -o loop,ro,offset=184549376 disk.flag.img test 
@@ -248,9 +250,9 @@ Can find flag in root
 
 # Whitepages
 
-blank txt file, open with hexedit see a pattern, use python to convert byes to binary then binary back to ascii
-2
-they are being sent as single len=1 data
+blank txt file, open with hexedit see a pattern, use python to convert bytes to binary then binary back to ascii
+2  
+they are being sent as single len=1 data  
 ![[Pasted image 20230213173514.png]]
 ![[Pasted image 20230213173523.png]]
 ```
