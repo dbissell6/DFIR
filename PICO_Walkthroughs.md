@@ -77,6 +77,7 @@ Take to cyberchef and run ROT13 on in
 Given .pptm
 
 # TFTP
+Given Pcap  
 ![Pasted image 20230113161433](https://user-images.githubusercontent.com/50979196/223304014-e147809e-1b3f-44e4-99b1-eb2a1677bf74.png)
 ![Pasted image 20221229174855](https://user-images.githubusercontent.com/50979196/223304100-a9b4db6a-3d15-4750-95c0-fa0a6dce5520.png)
 ![Pasted image 20230113161053](https://user-images.githubusercontent.com/50979196/223304154-504cce6e-ca93-488d-bff7-20cfb52825b0.png)
@@ -85,10 +86,10 @@ Given .pptm
 ![Pasted image 20230113161036](https://user-images.githubusercontent.com/50979196/223304189-c8e151ca-6a00-4b73-84d7-0cbd169c7bf6.png)
 
 
-![Pasted image 20230113161249](https://user-images.githubusercontent.com/50979196/223304225-d52cd2f5-0799-45b3-bc65-0b7be8183bce.png)
+![Pasted image 20230113161249](https://user-images.githubusercontent.com/50979196/223304225-d52cd2f5-0799-45b3-bc65-0b7be8183bce.png)  
 
 steghide  
-![Pasted image 20230113161316](https://user-images.githubusercontent.com/50979196/223304379-50b9f942-52c8-43e1-9e62-8436f1b63a7e.png)
+![Pasted image 20230113161316](https://user-images.githubusercontent.com/50979196/223304379-50b9f942-52c8-43e1-9e62-8436f1b63a7e.png)  
 use password DUEDILIGENCE  
 
 
