@@ -251,7 +251,13 @@ Attackers may use a variety of techniques to establish persistence via the regis
 
 For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
+### RegRipper
 
+RegRipper is a popular open-source tool used for extracting and analyzing information from the Windows registry. RegRipper can be used to quickly and efficiently extract key artifacts from the registry, including user and account information, installed software, network settings, and much more.
+
+RegRipper operates by applying a series of pre-defined plugins or "rippers" to the registry, each of which is designed to extract specific types of information. This modular design allows users to easily customize and extend RegRipper's functionality, tailoring it to their specific forensic needs.
+
+For CTF participants, RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data, participants can gain valuable insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
 
 # Files/Executables
 ## Intro
@@ -347,9 +353,7 @@ These files can contain hidden messages or steganography, where data is hidden w
 
 .bmp  is primarily used for storing digital images and icons, but can also be used for storing simple graphics and illustrations. BMP files are widely recognized by image processing software and can be easily converted to other image file formats for use in different applications.
 
-### PNG file in depth
-
-A PNG file is made up of chunks of data, where each chunk contains information about the image. Each chunk starts with a 4-byte length field, which specifies the number of bytes in the chunk (excluding the length field itself). This is followed by a 4-byte type field, which identifies the type of data in the chunk. After the type field comes the chunk data, which can be of varying length depending on the type of chunk. Finally, the chunk ends with a 4-byte CRC (Cyclic Redundancy Check) field, which is used to verify the integrity of the chunk data.
+A .png file is made up of chunks of data, where each chunk contains information about the image. Each chunk starts with a 4-byte length field, which specifies the number of bytes in the chunk (excluding the length field itself). This is followed by a 4-byte type field, which identifies the type of data in the chunk. After the type field comes the chunk data, which can be of varying length depending on the type of chunk. Finally, the chunk ends with a 4-byte CRC (Cyclic Redundancy Check) field, which is used to verify the integrity of the chunk data.
 
 The first chunk in a PNG file is always the IHDR (Image Header) chunk, which contains basic information about the image such as its dimensions, color depth, and compression method. In the problem you're working on, it seems that the length field of the IHDR chunk is incorrect and needs to be fixed to 0xD (13 in decimal).
 
