@@ -32,3 +32,4 @@ https://www.youtube.com/@digitaldeductions
 
 ## Outside Resources
 https://github.com/cugu/awesome-forensics#ctfs-and-challenges
+https://github.com/apsdehal/awesome-ctf/blob/master/README.md#forensics
