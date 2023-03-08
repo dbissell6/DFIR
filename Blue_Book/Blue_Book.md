@@ -304,6 +304,9 @@ If you have a file that has a wrong extentions, no extentions, or corrputed you 
 -   PHP script (.php) - <?php
 -   HTML (.html) - <!DOCTYPE html>
 ```
+
+https://www.garykessler.net/library/file_sigs.html
+
 ### Windows/Macros(.docm, .doc, .bin, .vba, .pptm)
 .docm .doc .bin .vba .pptm
 
