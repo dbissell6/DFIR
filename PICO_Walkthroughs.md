@@ -35,7 +35,7 @@ St3g0 = {Difficulty:300, .png:1, zsteg:1}
 webnet0 = {Difficulty:350, pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1}  
 OP_Orchid = {Difficulty:400, .img:1, fdisk:1, mount:1, openssl:1, Encrypted_AES:1}  
 SideChannel = {Difficulty:400, elf:1, SMPythonScript:1}  
-Torrent_Analyze = {Difficulty:400, pcap:1, Wireshark:1}  
+Torrent_Analyze = {Difficulty:400, pcap:1, Wireshark:1, Torrent:1, Hash:1}  
 webnet1 = {Difficulty:450,pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1, .jpg:1, exiftool:1}  
 
 scrambled-bytes = {Difficulty:200,}#NF
