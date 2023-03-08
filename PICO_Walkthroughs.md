@@ -35,13 +35,13 @@ St3g0 = {Difficulty:300, .png:1, zsteg:1}
 webnet0 = {Difficulty:350, pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1}  
 OP_Orchid = {Difficulty:400, .img:1, fdisk:1, mount:1, openssl:1, Encrypted_AES:1}  
 SideChannel = {Difficulty:400, elf:1, SMPythonScript:1}  
+Torrent_Analyze = {Difficulty:400, pcap:1, Wireshark:1}  
 webnet1 = {Difficulty:450,pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1, .jpg:1, exiftool:1}  
 
 scrambled-bytes = {Difficulty:200,}#NF
 m00nwalk = {Difficulty:250,}#NF
 Surfing the Waves = {Difficulty:250,}#NF
 m00nwalk2 = {Difficulty:300,}#NF
-Torrent_Analyze = {Difficulty:400,}#NF
 B1g_Mac = {Difficulty:500,}#NF
 
 # information
@@ -345,6 +345,19 @@ openssl aes256 -d -salt -in flag.txt.enc -out flag -k unbreakablepassword1234567
 # SideChannel
 Timing based attack. Can use python script to interact with pin checker binary to determine password from diffrerence in timing of responses
 
+# Torrent_Analyze
+Given pcap  
+Tasked to look for file name, not file contents  
+
+In a BitTorrent network, files are broken down into small chunks, which are distributed among the peers participating in the network. Each chunk is identified by a unique hash value, which is calculated using a cryptographic hashing algorithm.
+
+The info_hash is a specific type of hash value that is used to uniquely identify a specific torrent file in the BitTorrent network. This hash value is calculated based on the metadata associated with the file, including its name, size, and the hashes of its constituent chunks.
+
+When a client wants to download a file from the BitTorrent network, it sends a request to the tracker server, which responds with a list of peers that are currently seeding the file. The client then contacts these peers and requests the chunks of the file that it needs, using the info_hash value to specify which file it is requesting.
+
+In the context of a CTF challenge involving a pcap of torrent traffic, the info_hash value can be a valuable piece of information for forensic analysts. By examining the traffic and identifying the info_hash values associated with specific files, analysts can gain insights into the types of files that were being downloaded or shared on the network. This can be useful for identifying potential intellectual property violations, tracking the spread of malware, or investigating other types of cybercrime.
+
+Once you find the info_hash, you can search for the hash in google. it will return the file name
 
 # webnet1
 rsa key is the same
