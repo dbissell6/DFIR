@@ -29,3 +29,6 @@ https://github.com/dbissell6/EVTX_analysis
 
 ## Videos
 https://www.youtube.com/@digitaldeductions
+
+## Outside Resources
+https://github.com/cugu/awesome-forensics#ctfs-and-challenges
