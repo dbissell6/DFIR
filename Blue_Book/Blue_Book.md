@@ -203,7 +203,7 @@ cracking wifi passwords
 
 ![Pasted image 20230222082539](https://user-images.githubusercontent.com/50979196/221450312-2ecdfc1e-9086-4434-b7c8-e82bfee254ca.png)
 
-# Logs
+# Logs + Registry
 ## Intro
 Logs are similar to pcaps in they are a long list of events, the main difference is logs tend to be local events(obviously not true for things like browser/apache/nginx logs).
 
@@ -240,6 +240,17 @@ They can be parsed using evtx_dump.py or windows has a native program.
 ![image](https://user-images.githubusercontent.com/50979196/221738025-e0593c2b-363f-4f79-84ca-1efc09cf9345.png)
 
 Ok we have the txt but there a similar problem as with pcaps(lots of data) However there is no wireshark (use https://github.com/dbissell6/EVTX_analysis)
+
+## Registry
+
+The Windows registry is a hierarchical database that stores configuration settings and options for the Windows operating system and other installed applications. During a CTF, the registry can be a valuable source of information for forensic analysts, as it contains details about installed applications, user accounts, system settings, and much more.
+
+Persistence is a technique used by attackers to maintain access to a compromised system, even after the system has been rebooted or other defensive measures have been taken. The Windows registry is a common location for attackers to establish persistence, as it provides a centralized location for storing configuration settings that can be executed automatically upon system startup or other trigger events.
+
+Attackers may use a variety of techniques to establish persistence via the registry, including adding or modifying registry keys or values, creating scheduled tasks, or installing malicious services. By doing so, they can ensure that their malicious code will execute every time the system boots up, allowing them to maintain access and continue to carry out their objectives.
+
+For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
+
 
 
 # Files/Executables
