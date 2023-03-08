@@ -333,6 +333,21 @@ These files can contain hidden messages or steganography, where data is hidden w
 
 .bmp  is primarily used for storing digital images and icons, but can also be used for storing simple graphics and illustrations. BMP files are widely recognized by image processing software and can be easily converted to other image file formats for use in different applications.
 
+### PNG file in depth
+
+A PNG file is made up of chunks of data, where each chunk contains information about the image. Each chunk starts with a 4-byte length field, which specifies the number of bytes in the chunk (excluding the length field itself). This is followed by a 4-byte type field, which identifies the type of data in the chunk. After the type field comes the chunk data, which can be of varying length depending on the type of chunk. Finally, the chunk ends with a 4-byte CRC (Cyclic Redundancy Check) field, which is used to verify the integrity of the chunk data.
+
+The first chunk in a PNG file is always the IHDR (Image Header) chunk, which contains basic information about the image such as its dimensions, color depth, and compression method. In the problem you're working on, it seems that the length field of the IHDR chunk is incorrect and needs to be fixed to 0xD (13 in decimal).
+
+To summarize, each chunk in a PNG file contains 4 fields in the following order:
+
+-    Length (4 bytes): specifies the number of bytes in the chunk (excluding the length field itself).
+-    Type (4 bytes): identifies the type of data in the chunk.
+-    Chunk data (variable length): the actual data contained in the chunk.
+-    CRC (4 bytes): a checksum used to verify the integrity of the chunk data.
+
+The first chunk in a PNG file is the IHDR chunk, which contains basic information about the image.
+
 ### Compressed Files (.zip, .rar, .tar.gz, .7z, .bz2, .cab, ...)
 
 Compressed files are a common way of packaging and distributing multiple files or directories as a single archive. In a CTF, compressed files may contain clues or important information that can aid in solving challenges. Here are some common types of compressed files:
@@ -424,6 +439,7 @@ Foremost is a tool that is used for file recovery and reconstruction. It can be 
 Foremost uses a technique called file carving to recover files from disk images or other sources. It scans through the input data looking for specific file headers and footers, and then extracts the data between them. Foremost supports a wide range of file types, including images, audio files, videos, documents, and archives.
 
 Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
+
 ## Stegnography 
 ### Intro
 Steganography is a technique used to hide information within other files or data, making it difficult to detect without the use of special tools or techniques. This technique can be used to conceal sensitive information or to hide messages in plain sight.
