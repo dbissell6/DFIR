@@ -199,7 +199,9 @@ tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17
 ```
 
 ## Aircrack-ng
-cracking wifi passwords
+Aircrack-ng is a powerful tool for analyzing WiFi packet captures and can be used to crack various types of encryption keys used to protect WiFi network traffic. Some of the encryption keys that Aircrack-ng can crack include WEP (Wired Equivalent Privacy), WPA (Wi-Fi Protected Access), and WPA2 (Wi-Fi Protected Access II).  
+
+Cracking wifi passwords
 
 ![Pasted image 20230222082539](https://user-images.githubusercontent.com/50979196/221450312-2ecdfc1e-9086-4434-b7c8-e82bfee254ca.png)
 
@@ -335,7 +337,7 @@ A Python module that allows for the analysis of Microsoft Office documents (e.g.
 
 ### Windows Executables (.exe, .dll, .so, .ps1)
 
-These files can contain malicious code that attackers may use to compromise a system. Analyzing these files can reveal information about how an attack was carried out.
+These files can contain malicious code that attackers may use to compromise a system. Analyzing these files can reveal information about how an attack was carried out. Often these will be obfuscated, it is a whole seperate art to bring light.
 
 ### Linux Executables (.sh, .bin, .elf)   
 
@@ -355,7 +357,7 @@ These files can contain hidden messages or steganography, where data is hidden w
 
 A .png file is made up of chunks of data, where each chunk contains information about the image. Each chunk starts with a 4-byte length field, which specifies the number of bytes in the chunk (excluding the length field itself). This is followed by a 4-byte type field, which identifies the type of data in the chunk. After the type field comes the chunk data, which can be of varying length depending on the type of chunk. Finally, the chunk ends with a 4-byte CRC (Cyclic Redundancy Check) field, which is used to verify the integrity of the chunk data.
 
-The first chunk in a PNG file is always the IHDR (Image Header) chunk, which contains basic information about the image such as its dimensions, color depth, and compression method. In the problem you're working on, it seems that the length field of the IHDR chunk is incorrect and needs to be fixed to 0xD (13 in decimal).
+The first chunk in a PNG file is always the IHDR (Image Header) chunk, which contains basic information about the image such as its dimensions, color depth, and compression method.
 
 To summarize, each chunk in a PNG file contains 4 fields in the following order:
 
@@ -364,7 +366,6 @@ To summarize, each chunk in a PNG file contains 4 fields in the following order:
 -    Chunk data (variable length): the actual data contained in the chunk.
 -    CRC (4 bytes): a checksum used to verify the integrity of the chunk data.
 
-The first chunk in a PNG file is the IHDR chunk, which contains basic information about the image.
 
 ### Compressed Files (.zip, .rar, .tar.gz, .7z, .bz2, .cab, ...)
 
@@ -392,12 +393,12 @@ Compressed files are a common way of packaging and distributing multiple files o
 -    .iso: This is a file format used for creating disc images of CDs or DVDs. It is commonly used for distributing operating system installation media. To extract the contents of an .iso file, one can mount the image as a virtual drive or use a file archiver software in Windows.
 
 ### Audio files (e.g., MP3, WAV)
-Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.
+Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
 ### Video files (e.g., MP4, AVI)
 Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
 ## VirusTotal
 
-Virus total can be useful to get some information from
+Virus total can be useful to get some information from  
 
 ![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
 
