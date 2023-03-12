@@ -253,6 +253,21 @@ Attackers may use a variety of techniques to establish persistence via the regis
 
 For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
+### Hive
+Hive files are an important component of the Windows Registry, containing critical system and user-specific information. During a forensic investigation or a Capture The Flag (CTF) challenge, analyzing these hive files can provide valuable insights into the activities performed on a system.
+
+The SAM hive file contains user account information such as hashed passwords, login timestamps, and group information. The SYSTEM hive file provides information about file execution times, USB devices connected, and system information such as the local timezone and last shutdown time. The SOFTWARE hive file contains information about both user and system software, including the operating system version and build, network connections, and input/output devices. The SECURITY hive file contains information about security measures and policies in place for the system.
+
+User-specific hive files include the Amcache.hve file, which contains information about application executables, such as their full path, size, and SHA-1 hashes. The ntuser.dat file contains information about autostart applications, recently accessed files, and last execution times of applications. The UsrClass.dat file contains information about user-specific shellbags.
+
+One tool commonly used for extracting passwords from the SAM hive file is Mimikatz. It can also be used to extract other sensitive information from the hive files, such as cached credentials and stored certificates. By analyzing the hive files with tools such as Mimikatz, investigators or CTF participants can uncover important evidence that can be used to solve a challenge or provide insights into the activities performed on a system.
+
+To run Mimikatz successfully and extract sensitive information from hive files, administrative-level permissions are usually required. This is because Mimikatz works by injecting itself into the memory space of running processes and accessing sensitive information that is typically only available to privileged users.
+
+
+
+
+
 ### RegRipper
 
 RegRipper is a popular open-source tool used for extracting and analyzing information from the Windows registry. RegRipper can be used to quickly and efficiently extract key artifacts from the registry, including user and account information, installed software, network settings, and much more.
