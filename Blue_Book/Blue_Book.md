@@ -134,6 +134,9 @@ Most often in level 3 challenges and above the pcap will be just one piece of ev
 
 ## Wireshark 
 
+Wireshark is a tool that allows you to analyze network traffic at the packet level and examine the contents of individual packets, including the source and destination addresses, protocols used, and any data transmitted. This can be extremely useful for troubleshooting network issues, identifying security threats, and developing and testing network protocols.
+
+
 Most Pcaps are too long to look through packet by packet. So opening up wireshark you should have a plan and be looking out for some things(also use Pcap-analysis https://github.com/dbissell6/PCAP_Analysis). 
 
 To open wireshark, open up a terminal, navigate to the pcap
