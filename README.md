@@ -13,6 +13,9 @@ Replication of study done on HTB Forensics problems, this time with PICO Forensi
 Explorations+Reflections2 ~*~
 https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections2_PICO.md
 
+## Act III PICO+HTB Spring 2023
+Explorations+Reflections3 ~*~
+
 ## Walkthroughs
 
 PICO - https://github.com/dbissell6/DFIR/blob/main/PICO_Walkthroughs.md
