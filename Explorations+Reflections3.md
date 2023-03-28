@@ -1,13 +1,20 @@
 # Everything All At Once
 
-The PICO and HTB CTFs both too place in spring 2023 and included approximately 17 forensics challenges that tested a wide range of skills,
+The PICO and HTB CTFs both took place in spring 2023 and included approximately 17 forensics challenges that tested a wide range of skills,
 from steganography to memory forensics. In this review, we'll be taking a closer look at the forensics challenges in both CTFs,
-highlighting the types of challenges that were presented and offering our take on the level of difficulty.
+was the previous research useful.
+
+## Results
+![image](https://user-images.githubusercontent.com/50979196/228352276-6d08169a-1763-4c04-81ae-6fc73bcc52c0.png)
+![image](https://user-images.githubusercontent.com/50979196/228352213-a5636f23-8bc5-4bf1-8a06-52bebdcbfd23.png)
+![image](https://user-images.githubusercontent.com/50979196/228352123-8c59b824-7ebf-48e7-ab7f-eb9541960b86.png)
+![image](https://user-images.githubusercontent.com/50979196/228352187-2d068fb4-4363-42d9-8fad-22b817fdc0c9.png)
+
 
 ## New Expectations
 As expected, the PICO CTF featured a heavy emphasis on steganography and PNG challenges,
 which have been a staple of PICO challenges in previous years. On the other hand,
-HTB's forensics challenges included  problems dealing with .evtxs, windows scripts(.bat,ps1) and memory dumps.
+HTB's forensics challenges included problems dealing with .evtxs, windows scripts(.bat,ps1) and memory dumps.
 
 ## Something New
 One notable aspect of the 2023 HTB CTF's forensics challenges was the inclusion of some very easy problems.
@@ -53,6 +60,10 @@ the harder ones were more like questions on Hackerrank or Leetcode interview que
 One in particular, called "Calibration," involved finding the center of a circle in a coordinate system.
 The player is presented with the challenge 47 times and must guess the center of the circle correctly each time.
 Writeup can be found here()
+
+## Next Steps
+
+I like being good at the Misc category, not sure how to leverege that tho lol. Before the next HTB CTF I will venture into the ML category, that will be the next category I would like to excel in, should be a low hanging fruit. 
 
 ## Updated Statistics
 Finally with the addition of new challenges the dataset becomes more robust and the relations become more refined. Moving forward I have decided to compute the stats
