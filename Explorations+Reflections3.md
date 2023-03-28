@@ -21,9 +21,7 @@ We still need to explore its capabilities more to fully understand its potential
 We also learned how to mount a Windows drive, which was particularly useful in some of the HTB challenges. 
 This skill is a fundamental one in digital forensics and provides an effective way to access data on a suspect's machine.
 
-In addition to new technical skills, we also encountered some interesting scenarios that required us to use our knowledge of social engineering and investigative techniques. 
-For example, one PICO challenge involved analyzing an .eml file to uncover the identity of the sender, 
-while another required us to use WHOIS data to trace the origin of a suspicious email.
+One PICO challenge involved analyzing an .eml file to uncover the identity of the sender and using WHOIS data to trace the origin of a suspicious email.
 
 ## Gripes
 
