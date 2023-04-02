@@ -77,4 +77,19 @@ I need to find a couple people or a team that specializes in my weaknesses(cyrpt
 
 ## Updated Statistics
 Finally with the addition of new challenges the dataset becomes more robust and the relations become more refined. Moving forward I have decided to compute the stats
-of both CTF challenges together. I feel confident of the overview so this will be the last graph. The devils in the details.
+of both CTF challenges together. I feel confident of the overview so this will be the last graph. The devils in the details.  
+
+There are ~90 forensics challenges included.  
+![image](https://user-images.githubusercontent.com/50979196/229377994-74fac043-1d9e-468e-8466-63d748ab8a39.png)
+![image](https://user-images.githubusercontent.com/50979196/229378012-159c503a-e5bc-463c-82cf-15fd595f34b0.png)
+
+## Graph of challenges
+
+![image](https://user-images.githubusercontent.com/50979196/229378172-380216e6-07d9-4519-b02b-32af3ce8802c.png)
+
+## Graph of relations
+![image](https://user-images.githubusercontent.com/50979196/229371465-0d26beb3-cd6a-4330-a7d6-98aed5785d80.png)
+
+The graph provides a useful starting point for anyone interested in exploring the DFIR CTF landscape, by highlighting some of the key types of evidence, tools, and challenges that are available. While the graph may not capture all the nuances and complexities of the field, it does provide a helpful way of orienting oneself to the overall landscape, and can serve as a useful reference for further exploration and analysis.
+
+
