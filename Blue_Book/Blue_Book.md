@@ -325,11 +325,12 @@ RegRipper operates by applying a series of pre-defined plugins or "rippers" to t
 
 For CTF participants, RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data, participants can gain valuable insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
 
-### Linux logs
+## Linux logs
 
 Linux logs are an essential source of information for conducting digital forensics and incident response analysis in a CTF competition. There are several types of Linux logs that can be analyzed, including system logs (e.g., syslog), authentication logs (e.g., auth.log), and kernel logs (e.g., dmesg). Each of these logs provides valuable insights into the system's behavior and can help identify signs of intrusion or compromise.
 
 When analyzing Linux logs in a CTF DFIR competition, it is important to focus on specific entries that could indicate suspicious activity. These entries may include failed login attempts, unusual system behavior, and any unauthorized access attempts. Additionally, analyzing the logs in conjunction with other system artifacts (e.g., memory dumps, network traffic) can provide a more comprehensive picture of the incident and help to identify potential threat actors.
+
 
 
 # Files/Executables
