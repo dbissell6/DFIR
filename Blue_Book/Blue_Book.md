@@ -653,9 +653,22 @@ Common File formats of memory dumps
 -   Raw binary format (.bin)
 -   Microsoft crash dump format (.dmp)
 
+
 ## Volatility
 
-Volatility 3 - An open-source memory forensics framework
+Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
+
+### Kernel 
+
+Kernels are responsible for managing system resources, such as memory, processes, and input/output operations. They provide a layer of abstraction between the hardware and the rest of the operating system, and allow applications to interact with the hardware without having to know the details of the underlying hardware.
+
+Windows and Linux have different kernel architectures, although they share many similar concepts. The Windows kernel is a monolithic kernel, which means that all core system services are part of a single executable file (ntoskrnl.exe). The Windows kernel is responsible for managing memory, processes, threads, file systems, input/output operations, and other system services.
+
+On the other hand, the Linux kernel is a modular kernel, which means that core system services are implemented as loadable kernel modules. This allows for greater flexibility and modularity, as system services can be loaded or unloaded dynamically as needed. The Linux kernel is responsible for managing memory, processes, threads, file systems, input/output operations, and other system services, and provides a wide range of configurable options and features.
+
+In terms of memory forensics, the differences between Windows and Linux kernels can affect how memory is organized and accessed by memory forensics tools such as Volatility. For example, the Windows kernel uses a Virtual Address Descriptor (VAD) tree to manage process memory, while the Linux kernel uses a Virtual Memory Area (VMA) structure. The details of how the kernel manages memory can affect how memory forensics tools parse and interpret the data, and can impact the accuracy and completeness of the analysis.
+
+Overall, understanding the kernel architecture and how it manages system resources is an important aspect of memory forensics analysis, and can help analysts to correctly interpret and analyze the data in memory. The differences between Windows and Linux kernels are important to consider when using memory forensics tools on different operating systems.
 
 ### Windows Commands
 
@@ -740,7 +753,7 @@ There are many tools available to create and analyze disk images, including:
 
 ## Example fdisk+Mount Linux
 
-Mounting a file system in Linux is similar to gaining access to a victim system on platforms like Hack The Box (HTB). However, there are some key differences. Unlike a live computer, the mounted system is just a file system, and you cannot run commands like netstat to view current connections. Despite this, the process of enumeration from a pentesting perspective is similar. The advantage of mounting a file system is that you can use sudo, which grants you root access to the mounted system, allowing for more comprehensive analysis and investigation.
+Mounting a file system in Linux is similar to gaining access to a victim system on platforms like Hack The Box (HTB). However, there are some key differences. Unlike a live computer, the mounted system is just a file system, and you cannot run commands like netstat to view current connections. Despite this, the process of enumeration from a pentesting perspective is similar. The advantage of mounting a file system is that you can use sudo, which grants you root access to the mounted system, allowing for more comprehensive analysis and investigation. This is useful when looking for sensitive information or and intresting executable... Other times you may only need to extract logs.
 
 In order to mount a filesystem, you typically need to first determine the offset or starting point of the filesystem within the disk image or device file. Once you have determined the offset, you can then use the "mount" command with the "-o loop" option to mount the filesystem at the specified location.
 
