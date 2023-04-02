@@ -390,8 +390,8 @@ zip	50 4B 03 04	PK..
 
 https://www.garykessler.net/library/file_sigs.html
 
-### Windows/Macros(.docm, .doc, .bin, .vba, .pptm)
-.docm .doc .bin .vba .pptm
+### Windows/Macros(.docm, .doc, .bin, .vba, .pptm, .one)
+.docm .doc .bin .vba .pptm .one
 
 can sometimes using unzip or 7z on word files can reveal hidden content.
 
