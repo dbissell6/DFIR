@@ -37,17 +37,17 @@ OP_Orchid = {Difficulty:400, .img:1, fdisk:1, mount:1, openssl:1, Encrypted_AES:
 SideChannel = {Difficulty:400, elf:1, SMPythonScript:1}  
 Torrent_Analyze = {Difficulty:400, pcap:1, Wireshark:1, Torrent:1, Hash:1}  
 webnet1 = {Difficulty:450,pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1, .jpg:1, exiftool:1}  
-2023
-hideme = {'Difficulty':'100','.png':1,'binwalk':1,}#VC
-PcapPoisoning = {'Difficulty':'100','pcap':1,'Wireshark':1}#VC
-who_is_it = {'Difficulty':'100','.eml':1,'whois':1,}#VC
-FindAndOpen = {'Difficulty':'200','.zip':1,'pcap':1,'Wireshark':1}#VC
-MSB = {'Difficulty':'200','.png':1,'stegoveritas':1,}#VC
-Invisible_WORDs = {'Difficulty':'300','.bmp':1,}
-UnforgottenBits = {'Difficulty':'500','.img':1,'fdisk':1,'mount':1, 'steghide':1,'openssl':1,}
+2023  
+hideme = {'Difficulty':'100','.png':1,'binwalk':1,}  
+PcapPoisoning = {'Difficulty':'100','pcap':1,'Wireshark':1}  
+who_is_it = {'Difficulty':'100','.eml':1,'whois':1,}  
+FindAndOpen = {'Difficulty':'200','.zip':1,'pcap':1,'Wireshark':1}  
+MSB = {'Difficulty':'200','.png':1,'stegoveritas':1,}  
+Invisible_WORDs = {'Difficulty':'300','.bmp':1,}  
+UnforgottenBits = {'Difficulty':'500','.img':1,'fdisk':1,'mount':1, 'steghide':1,'openssl':1,}  
 
 
-
+NF  
 scrambled-bytes = {Difficulty:200,}#NF
 m00nwalk = {Difficulty:250,}#NF
 Surfing the Waves = {Difficulty:250,}#NF
@@ -398,6 +398,10 @@ EML files can also be useful in forensic investigations, as they may contain val
 
 # FindandOpen
 Given password protected zip file and pcap. 
+![image](https://user-images.githubusercontent.com/50979196/229325319-fd7cbb73-28a0-4a0a-a7aa-a1e5312651d5.png)
+![image](https://user-images.githubusercontent.com/50979196/229325335-487f2ca1-ea56-4805-9e4a-0614e662b02d.png)  
+Use First half of flag ass password to open zip.
+![image](https://user-images.githubusercontent.com/50979196/229325366-c809595c-1cfd-4a1e-a9bf-886abe46a0c8.png)
 
 
 # MSB
@@ -424,7 +428,7 @@ First tool was steghide 2nd was openssl.
 
 ##  Find evidence + Steghide
 ![Pasted image 20230314121446](https://user-images.githubusercontent.com/50979196/229324489-77f3c269-6cba-4cf7-9d02-e40b58de6685.png)
-![Pasted image 20230314121446](https://user-images.githubusercontent.com/50979196/229324509-fad1fede-a485-4185-adcf-485b92241f83.png)
+
 
 Wont work on 7
 ![Pasted image 20230315091256](https://user-images.githubusercontent.com/50979196/229324559-d8c8c9d1-a094-4dfb-9616-0dc65160c83a.png)
