@@ -37,6 +37,16 @@ OP_Orchid = {Difficulty:400, .img:1, fdisk:1, mount:1, openssl:1, Encrypted_AES:
 SideChannel = {Difficulty:400, elf:1, SMPythonScript:1}  
 Torrent_Analyze = {Difficulty:400, pcap:1, Wireshark:1, Torrent:1, Hash:1}  
 webnet1 = {Difficulty:450,pcap:1, Wireshark:1, RSA_Key:1, Protocol-TLS:1, .jpg:1, exiftool:1}  
+2023
+hideme = {'Difficulty':'100','.png':1,'binwalk':1,}#VC
+PcapPoisoning = {'Difficulty':'100','pcap':1,'Wireshark':1}#VC
+who_is_it = {'Difficulty':'100','.eml':1,'whois':1,}#VC
+FindAndOpen = {'Difficulty':'200','.zip':1,'pcap':1,'Wireshark':1}#VC
+MSB = {'Difficulty':'200','.png':1,'stegoveritas':1,}#VC
+Invisible_WORDs = {'Difficulty':'300','.bmp':1,}
+UnforgottenBits = {'Difficulty':'500','.img':1,'fdisk':1,'mount':1, 'steghide':1,'openssl':1,}
+
+
 
 scrambled-bytes = {Difficulty:200,}#NF
 m00nwalk = {Difficulty:250,}#NF
@@ -364,3 +374,60 @@ rsa key is the same
 ![Pasted image 20230113165754](https://user-images.githubusercontent.com/50979196/223191318-90aeafef-ef08-49b5-9588-9b7dd096ea61.png)
 
 can also use exiftool on vulture.jpeg to get flag 
+
+### 2023
+
+# Hideme
+Given .png
+binwalk shows another hidden file with another png. view second image to get flag
+
+# Pcap Poisoning
+Given pcap
+
+# whoisit
+
+Given .eml, told to find name behind email address.
+
+An EML file is an email message that contains the complete contents of an email, including the sender, recipient, subject, and message body.
+
+EML files can also be useful in forensic investigations, as they may contain valuable information such as email headers, metadata, and email attachments that can provide clues about the source of the message or the intent of the sender.
+
+![Pasted image 20230314110357](https://user-images.githubusercontent.com/50979196/229324263-7d256c3e-e709-4725-8b44-1b497c6b66f4.png)
+![Pasted image 20230314110343](https://user-images.githubusercontent.com/50979196/229324269-7ec17349-a064-466c-bccd-8b86fc8de8ae.png)
+![Pasted image 20230314110329](https://user-images.githubusercontent.com/50979196/229324275-8bc9fde8-a79a-43eb-9ebf-5a322f1bcc80.png)
+
+# FindandOpen
+Given password protected zip file and pcap. 
+
+
+# MSB
+Given .png.
+
+![Pasted image 20230315125251](https://user-images.githubusercontent.com/50979196/229324317-5bdbba3f-0554-4c61-a4f8-c27bea8d2f08.png)
+
+
+# Invisible WORDs
+Given .bmp.
+
+Early in the .bmp notice start of zip file PK. But the other half is seperated by a WORD (2 bytes). Remove every other WORD and use bin walk to extract the zip.
+![Pasted image 20230401110111](https://user-images.githubusercontent.com/50979196/229324388-c91ae9ee-bc1e-4f72-ae16-5e006e7d9814.png)
+
+# UnforgottenBits
+
+Given .img.
+This has essentially 2 parts. Each part is given a demonstartion of how to use the tool and the player is supposed to find another password or key to run the tools again on the flag file(7.bmp).
+First tool was steghide 2nd was openssl.
+
+## Mount
+![Pasted image 20230314180830](https://user-images.githubusercontent.com/50979196/229324466-91051d35-cd22-451b-aa88-d4060438ba49.png)
+![Pasted image 20230314120509](https://user-images.githubusercontent.com/50979196/229324472-4f8e1a85-dd7f-4798-b735-ccc6a2220b34.png)
+
+##  Find evidence + Steghide
+![Pasted image 20230314121446](https://user-images.githubusercontent.com/50979196/229324489-77f3c269-6cba-4cf7-9d02-e40b58de6685.png)
+![Pasted image 20230314121446](https://user-images.githubusercontent.com/50979196/229324509-fad1fede-a485-4185-adcf-485b92241f83.png)
+
+Wont work on 7
+![Pasted image 20230315091256](https://user-images.githubusercontent.com/50979196/229324559-d8c8c9d1-a094-4dfb-9616-0dc65160c83a.png)
+
+## Steghide on 7
+![Pasted image 20230315090616](https://user-images.githubusercontent.com/50979196/229324546-6d6ccc67-a343-407b-b6b4-c4fc5636624b.png)
