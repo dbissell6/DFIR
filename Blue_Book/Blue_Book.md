@@ -36,6 +36,37 @@ Before we start here is a high level view of concepts that will be seen and rela
 
 **File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
+## Encoding
+
+Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
+
+-    Base64 decoding: Base64 is a commonly used encoding technique that converts binary data into ASCII characters to make it more readable and transportable. Forensic analysts often encounter Base64-encoded data in email attachments or web traffic. Decoding Base64 involves converting the encoded data back into its original binary format.
+
+-    URL decoding: URLs often contain special characters, such as %20 (which represents a space), that are encoded to make them safe for transmission over the internet. Forensic analysts may encounter encoded URLs in web browser history or network traffic. URL decoding involves converting the encoded characters back into their original form.
+
+-    Unicode decoding: Unicode is a standard for encoding text in various writing systems, such as Chinese, Arabic, and Cyrillic. Forensic analysts may encounter Unicode-encoded text in emails, documents, or chat messages. Decoding Unicode involves converting the encoded text back into its original form.
+
+For instance the string 'hello@world.com' can be encoded these 5 ways
+
+-    Base64: "aGVsbG9Ad29ybGQuY29t"
+
+-    URL Encoding: "hello%40world.com"
+
+-    Hexadecimal Encoding: "68656c6c6f40776f726c642e636f6d"
+
+-    ASCII Encoding: "104 101 108 108 111 64 119 111 114 108 100 46 99 111 109"
+
+-    Unicode Encoding: "\u0068\u0065\u006c\u006c\u006f\u0040\u0077\u006f\u0072\u006c\u0064\u002e\u0063\u006f\u006d"
+
+To decode in linux  
+
+![image](https://user-images.githubusercontent.com/50979196/229380187-b3c34620-e19a-470f-a13f-f8c1d8eeb253.png)
+
+
+### Cyberchef  
+Useful for most decoding  
+https://gchq.github.io/CyberChef/
+
 ## Encryption
 
 Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
