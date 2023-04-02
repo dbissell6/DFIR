@@ -25,7 +25,7 @@ This was a nice touch that made the forensics category more approachable and wel
 One new tool we used was Chainsaw, which proved to be a useful tool for analyzing Windows logs. 
 I still need to explore its capabilities more to fully understand its potential.
 
-I also learned how to mount a Windows drive.
+I also learned how to mount a Windows drive. Relic maps used a .one file.
 
 One PICO challenge involved analyzing an .eml file to uncover the identity of the sender and using WHOIS data to trace the origin of a suspicious email.
 
@@ -45,11 +45,11 @@ we didn't find them to be particularly fun or engaging. In many cases, it felt l
 
 ## Struggles
 
-It was unfortnante the spring CTFs came so soon after the completion of the analysis. I predicted I would struggle deobfuscating windows executables and for the next 2 weeks I struggled with just that. Challenges that incorporate above medium difficulty cryptography, reversing... 
+It was unfortunate that the spring CTFs came so soon after completing the analysis. I predicted I would struggle deobfuscating windows executables and for the next 2 weeks I struggled with just that. Challenges that incorporate above medium difficulty cryptography, reversing, will become problematic.  
 
-Resources I used to finish
+### Resources I used to finish
 
-https://github.com/BlackAnon22/BlackAnon22.github.io/blob/main/posts/CTF%20Competitions/picoCTF_2023.md
+https://github.com/BlackAnon22/BlackAnon22.github.io/blob/main/posts/CTF%20Competitions/picoCTF_2023.md  
 https://forensicskween.com/ctf/hack-the-box/htb-cyber-apocalypse-2023-forensics/
 
 ## Success
