@@ -194,6 +194,17 @@ Rouge shows how to decrypt SMB2 traffic
 
 To learn a full wirehark tutorial chris greer
 
+### HID - USB
+
+Some pcaps are not of a network, but keyboard commands captured by a USB. There are a couple challenges(logger, deadly arthropod) that require you to decode these commands. Doing so typically yields the flag.
+There are some python scripts that will do the decoding, becareful with cases(A or a).  But they essentially map 
+![image](https://user-images.githubusercontent.com/50979196/229363610-efd7635b-9467-4550-8a1d-dd93362bea65.png)
+
+In wireshark
+
+![image](https://user-images.githubusercontent.com/50979196/229363428-52f23471-42d6-4f72-855e-4637ce652bee.png)
+Notice very bottom says usage and gives 2 symbols, those are the 2 options depending if shift or caps lock was used.
+
 ### Tshark
 Sometimes it is useful to extract data from wireshark, this can be done with tshark
 
