@@ -1,8 +1,8 @@
 # Everything All At Once
 
 The PICO and HTB CTFs both took place in spring 2023 and included approximately 17 forensics challenges that tested a wide range of skills,
-from steganography to memory forensics. In this review, we'll be taking a closer look at the forensics challenges in both CTFs,
-was the previous research useful.
+from steganography to memory forensics. In this review, we'll be exploring the forensics challenges in both CTFs, gathering new insights and trying to answer,
+'was the previous research useful?'
 
 ## Results
 ![image](https://user-images.githubusercontent.com/50979196/228352276-6d08169a-1763-4c04-81ae-6fc73bcc52c0.png)
@@ -23,10 +23,9 @@ This was a nice touch that made the forensics category more approachable and wel
 
 ## New Concepts + Lessons + Tools
 One new tool we used was Chainsaw, which proved to be a useful tool for analyzing Windows logs. 
-We still need to explore its capabilities more to fully understand its potential.
+I still need to explore its capabilities more to fully understand its potential.
 
-We also learned how to mount a Windows drive, which was particularly useful in some of the HTB challenges. 
-This skill is a fundamental one in digital forensics and provides an effective way to access data on a suspect's machine.
+I also learned how to mount a Windows drive.
 
 One PICO challenge involved analyzing an .eml file to uncover the identity of the sender and using WHOIS data to trace the origin of a suspicious email.
 
@@ -46,6 +45,13 @@ we didn't find them to be particularly fun or engaging. In many cases, it felt l
 
 ## Struggles
 
+It was unfortnante the spring CTFs came so soon after the completion of the analysis. I predicted I would struggle deobfuscating windows executables and for the next 2 weeks I struggled with just that. Challenges that incorporate above medium difficulty cryptography, reversing... 
+
+Resources I used to finish
+
+https://github.com/BlackAnon22/BlackAnon22.github.io/blob/main/posts/CTF%20Competitions/picoCTF_2023.md
+https://forensicskween.com/ctf/hack-the-box/htb-cyber-apocalypse-2023-forensics/
+
 ## Success
 I had several successes during the 2023 PICO and HTB forensics challenges. I was able to solve around 2/3 of the problems,
 which felt like a win, especially considering that I made significant progress on the challenges I couldn't complete.
@@ -53,7 +59,7 @@ Having some expectations going into the challenges was helpful, as it allowed us
 For example, the Relic Maps challenge was very similar to a previous HTB problem that involved getting a file from a netcat connection,
 so knowing this path helped us solve it more easily.
 
-Another significant success was being able to solve every challenge in the MISC category. 
+Another significant success was being able to solve every challenge in the MISC category for both CTFs. 
 This was the first time I was able to solve a hard problem in an HTB CTF.
 The Misc categorys easier challenges involved general container escapes, 
 the harder ones were more like questions on Hackerrank or Leetcode interview questions.
@@ -63,8 +69,12 @@ Writeup can be found here()
 
 ## Next Steps
 
-I like being good at the Misc category, not sure how to leverege that tho lol. Before the next HTB CTF I will venture into the ML category, that will be the next category I would like to excel in, should be a low hanging fruit. 
+For forensics the focus will be windows executables and getting volitility to work.  
+
+I like being good at the Misc category, not sure how to leverege that tho lol. Before the next HTB CTF I will venture into the ML category, should be a low hanging fruit. 
+
+I need to find a couple people or a team that specializes in my weaknesses(cyrpto,reversing,pwning,web).
 
 ## Updated Statistics
 Finally with the addition of new challenges the dataset becomes more robust and the relations become more refined. Moving forward I have decided to compute the stats
-of both CTF challenges together. 
+of both CTF challenges together. I feel confident of the overview so this will be the last graph. The devils in the details.
