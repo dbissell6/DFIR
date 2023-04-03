@@ -163,6 +163,62 @@ The second flavor is when every packet will be needed. This can be seen in somet
 
 Most often in level 3 challenges and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
 
+## Foundational Network Concepts
+
+### Ports
+
+In computer networking, a port is a communication endpoint that is used to identify a specific process or service running on a networked device. Ports are identified by a number between 0 and 65535, with the first 1024 reserved for well-known services and protocols.
+
+When data is transmitted over a network, it is sent to a specific port number on a device, which allows the operating system to identify the process or service that should receive the data. For example, when you browse the web, your web browser sends requests to port 80 (or 443 for HTTPS) on the server hosting the website you are accessing. The server then sends the web page data back to your browser on a different port number.
+
+Some common ports that are used for network services and applications include:
+
+-    Port 80: HTTP web traffic
+-    Port 443: HTTPS encrypted web traffic
+-    Port 25: SMTP email traffic
+-    Port 53: DNS traffic
+-    Port 21: FTP file transfer traffic
+-    Port 22: SSH secure shell traffic
+-    Port 3389: RDP remote desktop traffic
+
+### Protocols
+
+A protocol is a set of rules that govern how data is transmitted and received between devices on a network. Protocols are essential for ensuring that devices can communicate with each other effectively and efficiently. Common protocols typically operate on a specified port.
+
+The OSI (Open Systems Interconnection) model is a conceptual model that defines how communication between different computer systems should be implemented. It is a layered approach, with each layer performing specific functions and passing information to the next layer up or down the stack.
+
+The OSI model has seven layers, each of which has a specific function. These layers are:
+
+1    Physical Layer - This layer is responsible for transmitting raw bit streams over a physical medium, such as a wire or radio signal.
+
+2    Data Link Layer - This layer is responsible for providing reliable data transfer over a physical link, and includes protocols such as Ethernet and Wi-Fi.
+
+3    Network Layer - This layer is responsible for routing data packets between networks, and includes protocols such as IP.
+
+4    Transport Layer - This layer is responsible for providing reliable data transfer between applications running on different devices, and includes protocols such as TCP and UDP.
+
+5    Session Layer - This layer is responsible for managing the sessions between different applications, and includes protocols such as NetBIOS.
+
+6    Presentation Layer - This layer is responsible for the presentation and formatting of data, and includes protocols such as SSL and TLS.
+
+7    Application Layer - This layer is responsible for providing services to applications, and includes protocols such as HTTP, FTP, and SMTP.
+
+### Common protocols
+
+-    Transmission Control Protocol (TCP) - This is a reliable, connection-oriented protocol that provides error checking and flow control. It is used for applications that require a high level of reliability, such as web browsing, email, and file transfer. 
+
+-    User Datagram Protocol (UDP) - This is a connectionless, unreliable protocol that is often used for applications that prioritize speed over reliability, such as video streaming, online gaming, and voice over IP (VoIP) services.
+
+-    Internet Protocol (IP) - This is the primary protocol used for routing data across the internet. IP provides the addressing and routing information needed to ensure that data is sent to the correct destination.
+
+-    Hypertext Transfer Protocol (HTTP) - This is the protocol used by web browsers to request and receive web pages and other resources from web servers.
+
+-    Domain Name System (DNS) - This protocol is used to translate domain names (such as www.example.com) into IP addresses that computers can understand.
+
+-    Simple Mail Transfer Protocol (SMTP) - This protocol is used to send email messages between servers and clients.
+
+-    File Transfer Protocol (FTP) - This protocol is used to transfer files between computers on a network.
+
 ## Wireshark 
 
 Wireshark is a tool that allows you to analyze network traffic at the packet level and examine the contents of individual packets, including the source and destination addresses, protocols used, and any data transmitted. This can be extremely useful for troubleshooting network issues, identifying security threats, and developing and testing network protocols.
@@ -295,6 +351,41 @@ They can be parsed using evtx_dump.py or windows has a native program.
 ![image](https://user-images.githubusercontent.com/50979196/221738025-e0593c2b-363f-4f79-84ca-1efc09cf9345.png)
 
 Ok we have the txt but there a similar problem as with pcaps(lots of data) However there is no wireshark (use https://github.com/dbissell6/EVTX_analysis)
+
+### Common event id - description
+
+```
+    4624: An account was successfully logged on.
+    4625: An account failed to log on.
+    4720: A user account was created.
+    4722: A user account was enabled.
+    4723: An attempt was made to change an account's password.
+    4738: A user account was changed.
+    4771: Kerberos pre-authentication failed.
+    4648: A logon was attempted using explicit credentials.
+    4740: A user account was locked out.
+    4756: A user account was deleted.
+    4769: A Kerberos service ticket was requested.
+    4800: The workstation was locked.
+    4801: The workstation was unlocked.
+    4634: An account was logged off.
+    4635: The account was logged off and the logon session was terminated.
+    4657: A registry value was modified.
+    4703: A user right was assigned.
+    4704: A user right was removed.
+    4706: A new trust was created to a domain.
+    4707: A trust to a domain was removed.
+    4724: An attempt was made to reset an account's password.
+    4725: An account failed to log on.
+    4726: A user account was deleted.
+    4104: The Windows file protection deleted a system critical file
+    4728: A member was added to a security-enabled global group.
+    4729: A member was removed from a security-enabled global group.
+    4759: The cryptologic function has been executed.
+    5024: The Windows Firewall Service has started successfully.
+    5025: The Windows Firewall Service has been stopped.
+    5031: The Windows Firewall has blocked an application from accepting incoming connections on the network.
+```
 
 ## Registry
 
