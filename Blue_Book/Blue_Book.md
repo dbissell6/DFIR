@@ -331,7 +331,14 @@ Linux logs are an essential source of information for conducting digital forensi
 
 When analyzing Linux logs in a CTF DFIR competition, it is important to focus on specific entries that could indicate suspicious activity. These entries may include failed login attempts, unusual system behavior, and any unauthorized access attempts. Additionally, analyzing the logs in conjunction with other system artifacts (e.g., memory dumps, network traffic) can provide a more comprehensive picture of the incident and help to identify potential threat actors.
 
+### Sus Commands
+chmod, whoami, sudo, netstat ... typical exploit and elevate commands
 
+vim/nano can be used to make malicious changes to files.
+
+### Persistence using Cronjobs  
+
+In Linux, cron is a time-based job scheduler that runs commands at specified intervals. An attacker may use cron to maintain persistence on a compromised system by creating a cronjob to execute a malicious script at regular intervals. This script could be used to create backdoors, steal data, or perform other malicious activities.
 
 # Files/Executables
 ## Intro
