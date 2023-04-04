@@ -99,23 +99,27 @@ Original goal was to teach myself DFIR. Here are the outcomes from the SANS GIAC
 
  Exam Certification Objectives & Outcome Statements
 
-    Analyzing Volatile Malicious Event Artifacts
+-    Analyzing Volatile Malicious Event Artifacts
+```
     The candidate will demonstrate an understanding of abnormal activity within the structure of Windows memory and be able to identify artifacts such as malicious processes, suspicious drivers and malware techniques such as code injection and rootkits.
-    Analyzing Volatile Windows Event Artifacts
+```    
+-    Analyzing Volatile Windows Event Artifacts
+
+
     The candidate will demonstrate an understanding of normal activity within the structure of Windows memory and be able to identify artifacts such as network connections, memory resident command line artifacts and processes, handles and threads.
-    Enterprise Environment Incident Response
+-   Enterprise Environment Incident Response
     The candidate will demonstrate an understanding of the steps of the incident response process, attack progression, and adversary fundamentals and how to rapidly assess and analyze systems in an enterprise environment scaling tools to meet the demands of large investigations.
-    File System Timeline Artifact Analysis
+-   File System Timeline Artifact Analysis
     The candidate will demonstrate an understanding of the Windows filesystem time structure and how these artifacts are modified by system and user activity.
-    Identification of Malicious System and User Activity
+-   Identification of Malicious System and User Activity
     The candidate will demonstrate an understanding of the techniques required to identify and document indicators of compromise on a system, detect malware and attacker tools, attribute activity to events and accounts, and identify and compensate for anti-forensic actions using memory and disk resident artifacts.
-    Identification of Normal System and User Activity
+-   Identification of Normal System and User Activity
     The candidate will demonstrate an understanding of the techniques required to identify, document, and differentiate normal and abnormal system and user activity using memory and disk resident artifacts.
-    Introduction to File System Timeline Forensics
+-    Introduction to File System Timeline Forensics
     The candidate will demonstrate an understanding of the methodology required to collect and process timeline data from a Windows system.
-    Introduction to Memory Forensics
+-    Introduction to Memory Forensics
     The candidate will demonstrate an understanding of how and when to collect volatile data from a system and how to document and preserve the integrity of volatile evidence.
-    NTFS Artifact Analysis
+-    NTFS Artifact Analysis
     The candidate will demonstrate an understanding of core structures of the Windows filesystems, and the ability to identify, recover, and analyze evidence from any file system layer, including the data storage layer, metadata layer, and filename layer.
-    Windows Artifact Analysis
+-    Windows Artifact Analysis
     The candidate will demonstrate an understanding of Windows system artifacts and how to collect and analyze data such as system back up and restore data and evidence of application execution.
