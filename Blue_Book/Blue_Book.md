@@ -7,15 +7,15 @@ When completing DFIR CTFs understanding the story that the evidence is telling i
 
 Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 
 
-1) [Network traffic analysis](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#pcaps) 
+1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps) 
  
-2) [System logs analysis](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#logs)
+2) [System logs analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs)
  
-3) [Files/Executables](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#filesexecutables) 
+3) [Files/Executables](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#filesexecutables) 
 
-4) [Memory forensics](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#memory-dumps)
+4) [Memory forensics](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#memory-dumps)
  
-5) [Disk](https://github.com/dbissell6/DFIR/edit/main/Blue_Book/Blue_Book.md#Disk)
+5) [Disk](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Disk)
  
 
 
