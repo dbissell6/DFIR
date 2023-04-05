@@ -95,31 +95,73 @@ The graph provides a useful starting point for anyone interested in exploring th
 
 # Wrap up
 
-Original goal was to teach myself DFIR. Here are the outcomes from the SANS GIAC course.
+The original goal of these explorations was to teach myself DFIR. To check where we stand we can compare what we learned vs outcomes from the SANS GIAC course.
 
  Exam Certification Objectives & Outcome Statements
 
--    Analyzing Volatile Malicious Event Artifacts
+## Analyzing Volatile Malicious Event Artifacts
+
+The candidate will demonstrate an understanding of abnormal activity within the structure of Windows memory and be able to identify artifacts such as malicious processes, suspicious drivers and malware techniques such as code injection and rootkits.
+
+## Analyzing Volatile Windows Event Artifacts
+
+The candidate will demonstrate an understanding of normal activity within the structure of Windows memory and be able to identify artifacts such as network connections, memory resident command line artifacts and processes, handles and threads.
+
+## Enterprise Environment Incident Response
+   
+The candidate will demonstrate an understanding of the steps of the incident response process, attack progression, and adversary fundamentals and how to rapidly assess and analyze systems in an enterprise environment scaling tools to meet the demands of large investigations.
+
+## File System Timeline Artifact Analysis
+
+The candidate will demonstrate an understanding of the Windows filesystem time structure and how these artifacts are modified by system and user activity.
+
+## Identification of Malicious System and User Activity
+   
+The candidate will demonstrate an understanding of the techniques required to identify and document indicators of compromise on a system, detect malware and attacker tools, attribute activity to events and accounts, and identify and compensate for anti-forensic actions using memory and disk resident artifacts.
+
+## Identification of Normal System and User Activity
+
+The candidate will demonstrate an understanding of the techniques required to identify, document, and differentiate normal and abnormal system and user activity using memory and disk resident artifacts.
+
+## Introduction to File System Timeline Forensics
+
+The candidate will demonstrate an understanding of the methodology required to collect and process timeline data from a Windows system.
+
+## Introduction to Memory Forensics
+
+The candidate will demonstrate an understanding of how and when to collect volatile data from a system and how to document and preserve the integrity of volatile evidence.
+
+## NTFS Artifact Analysis
+
+The candidate will demonstrate an understanding of core structures of the Windows filesystems, and the ability to identify, recover, and analyze evidence from any file system layer, including the data storage layer, metadata layer, and filename layer.
+
+## Windows Artifact Analysis
+
+The candidate will demonstrate an understanding of Windows system artifacts and how to collect and analyze data such as system back up and restore data and evidence of application execution.
+
+
+
+## fi
+Looking over the list it seems we covered most topics. There are 2 that stick out as novel, the Timeline topic and the 'file system layers'. When in doubt GPT. 
+
+
+The Windows filesystem time structure includes a variety of timestamps, such as the creation time, modification time, and access time of files and folders.
+
+A difference in the way in which windows and linux file and directory attributes are stored. In Windows, file and directory attributes are stored in the Master File Table (MFT), which is a database that contains metadata for all files and directories on the system. In Linux, file and directory attributes are stored in the file system's inode data structure, which contains metadata about a file or directory. Sleuthkit is generally the recommended way to access the Master File Table (MFT) of a Windows disk on Linux.
+
 ```
-    The candidate will demonstrate an understanding of abnormal activity within the structure of Windows memory and be able to identify artifacts such as malicious processes, suspicious drivers and malware techniques such as code injection and rootkits.
-```    
--    Analyzing Volatile Windows Event Artifacts
+This will show you a list of files and directories on the mounted disk along with their metadata, including the timestamps.
+fls -m /path/to/mounted/windows/disk
+```
+
+### file system layers
 
 
-    The candidate will demonstrate an understanding of normal activity within the structure of Windows memory and be able to identify artifacts such as network connections, memory resident command line artifacts and processes, handles and threads.
--   Enterprise Environment Incident Response
-    The candidate will demonstrate an understanding of the steps of the incident response process, attack progression, and adversary fundamentals and how to rapidly assess and analyze systems in an enterprise environment scaling tools to meet the demands of large investigations.
--   File System Timeline Artifact Analysis
-    The candidate will demonstrate an understanding of the Windows filesystem time structure and how these artifacts are modified by system and user activity.
--   Identification of Malicious System and User Activity
-    The candidate will demonstrate an understanding of the techniques required to identify and document indicators of compromise on a system, detect malware and attacker tools, attribute activity to events and accounts, and identify and compensate for anti-forensic actions using memory and disk resident artifacts.
--   Identification of Normal System and User Activity
-    The candidate will demonstrate an understanding of the techniques required to identify, document, and differentiate normal and abnormal system and user activity using memory and disk resident artifacts.
--    Introduction to File System Timeline Forensics
-    The candidate will demonstrate an understanding of the methodology required to collect and process timeline data from a Windows system.
--    Introduction to Memory Forensics
-    The candidate will demonstrate an understanding of how and when to collect volatile data from a system and how to document and preserve the integrity of volatile evidence.
--    NTFS Artifact Analysis
-    The candidate will demonstrate an understanding of core structures of the Windows filesystems, and the ability to identify, recover, and analyze evidence from any file system layer, including the data storage layer, metadata layer, and filename layer.
--    Windows Artifact Analysis
-    The candidate will demonstrate an understanding of Windows system artifacts and how to collect and analyze data such as system back up and restore data and evidence of application execution.
+At the most basic level, the data storage layer contains the actual file data, while the metadata layer contains information about the file system and the files stored on it. The metadata layer includes information about the file attributes, permissions, timestamps, and other file system metadata. This metadata is used by the file system to keep track of the files and folders on the system, and to manage access to these files by different users and applications.
+
+The filename layer, on the other hand, contains information about the names and locations of files and folders on the file system. This layer also includes information about the directory structure and any symbolic links or shortcuts that may be present. The filename layer interacts with the metadata layer in that changes to the filename layer can impact the metadata layer. For example, if a file is renamed or moved to a different directory, the file system metadata will need to be updated to reflect the new file name and location.
+
+Similarly, changes to the metadata layer can impact the filename layer. For example, if the permissions on a file are changed, this may impact which users or applications are able to access the file, which can in turn impact the filename layer. If a user no longer has permission to access a file, they may not be able to see the file in their directory listing or file explorer.
+
+Overall, the different layers of the file system on Windows are tightly integrated and interact with each other in complex ways. Understanding these interactions and relationships is key to conducting effective digital forensics investigations on Windows systems. Digital forensics tools and techniques that can extract and analyze data from all layers of the file system can help investigators to build a more complete picture of what happened on a Windows system and how evidence may have been tampered with or deleted.
+
