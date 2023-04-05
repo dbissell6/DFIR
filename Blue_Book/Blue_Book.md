@@ -9,7 +9,7 @@ Throughout this handbook, we will cover the various challenges that blue teams m
 
 1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps) 
  
-2) [System logs analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs)
+2) [System logs analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry)
  
 3) [Files/Executables](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#filesexecutables) 
 
