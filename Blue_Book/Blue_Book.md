@@ -834,6 +834,14 @@ Dump windows registry hivelist
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw -o "dump" windows.registry.hivelist --dump
 ```
+File Scan
+```
+python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.filescan | grep 'rsteven\Desktop\vlc-win32\vlc.exe'
+```
+Extract file
+```
+$ python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.dumpfiles --virtaddr 0xad81ecda9910 --dump-dir .
+```
 Dump Windows user password hashes
 ![Pasted image 20221123074049](https://user-images.githubusercontent.com/50979196/221450622-46170f92-5a13-42dd-a7ff-4b9b1479f2b1.png)
 
