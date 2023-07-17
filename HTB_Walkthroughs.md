@@ -48,6 +48,32 @@ First answer can be found in the lnk. 2nd in the vbs, Rest can be found using ch
 
 ## Hypercraft
 
+Medium chall. Given .eml
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/83461ecf-8e65-441a-8e1c-207ff7969dcd)
+
+1st open eml, notice huge base64 encoded text, strip out the rest and decode.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/64e14b0a-c022-429f-a8e3-30acef1b596e)
+
+This yeilds a very long html with a javascript script in it
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/77be6789-05e5-48d3-8706-9bf914d11ca2)
+
+I notice this pbmbiaan function and put a console.log() to print its output every time it is called.
+Doing this and opening the file in firefox can find the zip in the the console. save and unzip to find a .pdf file that is really a .js similar to what we just decoded
+
+This file will create some hex to be decoded to reveal the last step. Base64 decode and inflate the text another obfuscated powershell script.
+
+
+![Pasted image 20230716150843](https://github.com/dbissell6/DFIR/assets/50979196/9844945c-f086-4bde-bb0a-78108832fcff)
+
+Same as before change print using Write-Host to print variable names. After printing a couple variables, find the flag.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4cd90bc7-de98-4561-a130-dee949480b49)
+
+
+
 ## Project RedLine
 
 ## No Start Where
