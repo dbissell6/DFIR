@@ -1092,3 +1092,7 @@ sudo fls -o 2048 -f ntfs win_image.dd
 
 
 also another htb challenge had it from cyberpocalypse
+
+## 
+
+Bulk_Extractor is a tool that will scan pcaps, mem.raw ...
