@@ -540,6 +540,16 @@ Olevba
 A Python module that allows for the analysis of Microsoft Office documents (e.g., Word, Excel, PowerPoint) to detect and extract any embedded VBA (Visual Basic for Applications) macros. It can be used for security assessments, forensics analysis, and malware analysis, as VBA macros can be used as a vector for malware infection and data exfiltration. Olevba is able to parse the VBA code, extract the embedded binaries, and detect any obfuscation techniques used in the macro. 
 ![Pasted image 20230212151320](https://user-images.githubusercontent.com/50979196/221450379-c3e6b586-0b8d-4146-b960-02865564b9ea.png)
 
+### xlsx
+
+Extract text from cells of xlsx by converting to csv 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4da65d21-2c65-46ae-bdbe-c045d6b7e6c4)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a3ad9950-2bfb-4ec4-ba21-798036a6bb58)
+
+
+
 ### Windows Executables (.exe, .dll, .so, .ps1)
 
 These files can contain malicious code that attackers may use to compromise a system. Analyzing these files can reveal information about how an attack was carried out. Often these will be obfuscated, it is a whole seperate art to bring light.
