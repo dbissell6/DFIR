@@ -457,7 +457,23 @@ This switch tells strings to look for strings in all sections of the file, inclu
     -n  
 This switch specifies the minimum length of the strings that strings will display. By default, strings will display all strings that are at least four characters long, but you can use the -n switch to adjust this minimum length to your liking.
 
-Overall, the strings command is a powerful tool for analyzing binary files and can be especially helpful in debugging and troubleshooting issues with programs and libraries.
+## Floss
+
+Can also be used to get static strings from binaries
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/30656dd6-a02a-46bd-9636-5ee644f7ec45)
+
+
+## Getting hashes 
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/fea9af7e-7d36-4ed1-a092-0301555e1a5e)
+
+### Imphash
+Works by concat the lowercase of import functions.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d77dc28e-9f11-48d0-a70f-07a272d04a82)
+
 
 Sandboxes
 ## Common file types
