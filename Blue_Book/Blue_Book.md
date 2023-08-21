@@ -466,8 +466,15 @@ Can also be used to get static strings from binaries
 
 ## Getting hashes 
 
+From linux
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/fea9af7e-7d36-4ed1-a092-0301555e1a5e)
+
+From Windows
+
+
+
+
 
 ### Imphash
 Works by concat the lowercase of import functions.
