@@ -472,6 +472,7 @@ From linux
 
 From Windows
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ffeac5ea-5d9a-4f65-b9a8-0c2556d463e4)
 
 
 
@@ -482,7 +483,7 @@ Works by concat the lowercase of import functions.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d77dc28e-9f11-48d0-a70f-07a272d04a82)
 
 
-Sandboxes
+
 ## Common file types
 
 Below are some of the most common files we might come across. Short recap here, more indepth reversing/pwning guide can be found SOMEWHERE ELSE
@@ -636,10 +637,6 @@ Information can be hidden in the frequency spectrum of the audio signal, in unus
 Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
 ## VirusTotal
 
-Virus total can be useful to get some information from  
-
-![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
-
 
 ## Decompressing
 
@@ -659,6 +656,22 @@ lzma -d -k flag2.lzma
 lzop -d -k flag2.lzop -o flag3
 lzip -d -k flag3
 ```
+
+Virus total can be useful to get some information from  
+
+![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
+
+
+
+## Sandboxes
+Noriben can be used for dynamic analysis monitoring creation of processes.
+
+Start from command line, run executable in question, when finihed stop Noriben, get output 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f3f80f0d-7a6b-4042-9219-187570dba020)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
 
 
 
