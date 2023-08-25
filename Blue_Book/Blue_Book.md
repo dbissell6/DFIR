@@ -336,6 +336,13 @@ The main types of Event Viewer (EVTX) logs in Windows are:
 
 5.  Forwarded Events: This log contains information about events that have been forwarded from other computers in the network to the local computer.
 
+## Getting logs from a windows machine
+
+Check available logs.
+```
+Get-WinEvent -ListLog * | Select-Object LogName, RecordCount, IsClassicLog, IsEnabled, LogMode, LogType | Format-Table -AutoSize
+```
+
 
 ### Common event id - description
 
@@ -408,6 +415,34 @@ The main types of Event Viewer (EVTX) logs in Windows are:
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e4afe9ed-8fca-4171-b88c-6a7d17f43bfd)
 
 
+## Powershell script to search for a keyword in a directory of evtxs
+
+```
+# Define the directory containing EVTX files
+$evtxDirectory = "C:\Tools\chainsaw\EVTX-ATTACK-SAMPLES\Lateral Movement"
+
+# Define the keyword filter for the network share path
+$keywordFilter = "\\*\PRINT"
+
+# Loop through each EVTX file in the directory
+Get-ChildItem -Path $evtxDirectory -Filter *.evtx | ForEach-Object {
+    $evtxFile = $_.FullName
+
+    # Search the EVTX file for events matching the keyword filter
+    $events = Get-WinEvent -Path $evtxFile | Where-Object { $_.Message -like "*$keywordFilter*" }
+
+    # If events are found, output the file name and event details
+    if ($events.Count -gt 0) {
+        Write-Host "Events found in $($evtxFile):"
+        $events | ForEach-Object {
+            Write-Host "File Name: $($evtxFile)"
+            Write-Host "Time: $($_.TimeCreated)"
+            Write-Host "Message: $($_.Message)"
+            Write-Host "---"
+        }
+    }
+}
+```
 
 ## Analyzing from Linux
 
