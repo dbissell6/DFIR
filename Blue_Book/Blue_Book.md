@@ -548,11 +548,13 @@ From linux
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/fea9af7e-7d36-4ed1-a092-0301555e1a5e)
 
-From Windows
+From Windows Powershell
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ffeac5ea-5d9a-4f65-b9a8-0c2556d463e4)
 
+From Windows cmd
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7adf7213-03ec-44a9-856b-e191d71952ca)
 
 
 ### Imphash
