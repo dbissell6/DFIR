@@ -936,6 +936,14 @@ See Process List
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.pslist
 ```
+See Process List + Hiddens
+```
+python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.psscan
+```
+See Process tree
+```
+python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.pstree
+```
 See all active network connections and listening programs
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.netscan
