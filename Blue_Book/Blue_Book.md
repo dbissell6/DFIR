@@ -308,7 +308,7 @@ Cracking wifi passwords
 
 # Logs + Registry
 ## Intro
-Logs are similar to pcaps in they are a long list of events, the main difference is logs tend to be local events(obviously not true for things like browser/apache/nginx logs).
+Logs are similar to pcaps in they are a long list of events.
 
 In some cases, logs may contain references to files or binary data, but the actual data is not stored within the log itself. For example, a security log might contain an entry that indicates that a file was created or deleted, but the actual file is not stored within the log. Here things like powershell commands are highly sus.
 
@@ -443,6 +443,12 @@ Get-ChildItem -Path $evtxDirectory -Filter *.evtx | ForEach-Object {
     }
 }
 ```
+
+### Master File Table (MFT)
+
+The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
+
+
 
 ## Analyzing from Linux
 
