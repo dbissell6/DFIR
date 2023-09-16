@@ -531,6 +531,15 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
 
+### .lnk (Windows Shortcut) Files
+
+.LNK files, also known as Windows shortcuts, are small files containing a reference to a target file or directory. When a user clicks on a .LNK file, it redirects them to the specified target, allowing for quick access to applications, files, or folders.
+
+On linux can use file and exiftool to see contents
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
+
+
 ## Linux logs
 
 Linux logs are an essential source of information for conducting digital forensics and incident response analysis in a CTF competition. There are several types of Linux logs that can be analyzed, including system logs (e.g., syslog), authentication logs (e.g., auth.log), and kernel logs (e.g., dmesg). Each of these logs provides valuable insights into the system's behavior and can help identify signs of intrusion or compromise.
