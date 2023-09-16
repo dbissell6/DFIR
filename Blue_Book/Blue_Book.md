@@ -444,10 +444,6 @@ Get-ChildItem -Path $evtxDirectory -Filter *.evtx | ForEach-Object {
 }
 ```
 
-### Master File Table (MFT)
-
-The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
-
 
 
 ## Analyzing from Linux
@@ -482,7 +478,7 @@ Attackers may use a variety of techniques to establish persistence via the regis
 For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
 ### Hive
-Hive files are an important component of the Windows Registry, containing critical system and user-specific information. During a forensic investigation or a Capture The Flag (CTF) challenge, analyzing these hive files can provide valuable insights into the activities performed on a system.
+Hive files are an important component of the Windows Registry, containing critical system and user-specific information.
 
 The SAM hive file contains user account information such as hashed passwords, login timestamps, and group information. The SYSTEM hive file provides information about file execution times, USB devices connected, and system information such as the local timezone and last shutdown time. The SOFTWARE hive file contains information about both user and system software, including the operating system version and build, network connections, and input/output devices. The SECURITY hive file contains information about security measures and policies in place for the system.
 
@@ -499,6 +495,25 @@ RegRipper is a popular open-source tool used for extracting and analyzing inform
 RegRipper operates by applying a series of pre-defined plugins or "rippers" to the registry, each of which is designed to extract specific types of information. This modular design allows users to easily customize and extend RegRipper's functionality, tailoring it to their specific forensic needs.
 
 For CTF participants, RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data, participants can gain valuable insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
+
+## Other Windows artifacts
+
+### Master File Table (MFT)
+
+The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
+
+### Windows prefetch(.pf)
+
+Windows Prefetch files are designed to improve the application startup process by preloading essential components into memory based on past usage patterns. The information they contain typically includes:
+
+   Name of the Executable: This is the main executable file associated with the application.
+
+   Unicode List of DLLs (Dynamic Link Libraries): DLLs are shared libraries containing code and data that multiple programs can use simultaneously. The prefetch file lists the DLLs associated with the executable.
+
+   Execution Count: This indicates how many times the executable has been run, helping the system understand the application's frequency of use.
+
+   Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
+
 
 ## Linux logs
 
