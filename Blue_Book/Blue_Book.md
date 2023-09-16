@@ -523,6 +523,13 @@ Windows Prefetch files are designed to improve the application startup process b
 
 * Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
 
+Can Examine using WindowsPrefetchView
+
+Files found in `C:\Windows\Prefetch`
+
+Can also import a folder of .pfs `Options -> Advanced_Options`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
 
 ## Linux logs
 
