@@ -498,6 +498,15 @@ For CTF participants, RegRipper can be a powerful tool for analyzing Windows sys
 
 ## Other Windows artifacts
 
+## Shellbags
+Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
+
+Found in registry at
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
+```
+
 ### Master File Table (MFT)
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
@@ -506,13 +515,13 @@ The NTFS file system includes a crucial component known as the Master File Table
 
 Windows Prefetch files are designed to improve the application startup process by preloading essential components into memory based on past usage patterns. The information they contain typically includes:
 
-   Name of the Executable: This is the main executable file associated with the application.
+* Name of the Executable: This is the main executable file associated with the application.
 
-   Unicode List of DLLs (Dynamic Link Libraries): DLLs are shared libraries containing code and data that multiple programs can use simultaneously. The prefetch file lists the DLLs associated with the executable.
+* Unicode List of DLLs (Dynamic Link Libraries): DLLs are shared libraries containing code and data that multiple programs can use simultaneously. The prefetch file lists the DLLs associated with the executable.
 
-   Execution Count: This indicates how many times the executable has been run, helping the system understand the application's frequency of use.
+* Execution Count: This indicates how many times the executable has been run, helping the system understand the application's frequency of use.
 
-   Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
+* Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
 
 
 ## Linux logs
