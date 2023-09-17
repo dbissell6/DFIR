@@ -553,6 +553,22 @@ WMI can be used to install event filters, providers, consumers, and bindings tha
 
 ![Pasted image 20221116224453](https://github.com/dbissell6/DFIR/assets/50979196/6491e06d-1f6c-4a25-8b09-cdaa9ada3fa8)
 
+WMI data is stored in
+`\Windows\System32\wbem\Repository`
+
+Interesting search terms
+.exe .vbs .ps1 .dll .eval ActiveXObject powershell CommandLineTemplate ScriptText
+
+use wmic for recon
+```
+wmic process get CSName, Description,ExecutablePath,ProcessId
+
+wmic useraccount list full
+
+wmic group list full
+
+wmic netuse list full
+```
 
 ## Linux logs
 
