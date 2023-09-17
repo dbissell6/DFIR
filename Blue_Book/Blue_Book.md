@@ -477,6 +477,10 @@ Attackers may use a variety of techniques to establish persistence via the regis
 
 For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
+### In windows open with 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/103b92ac-203b-4e51-b159-5d49e799be01)
+
+
 ### Hive
 Hive files are an important component of the Windows Registry, containing critical system and user-specific information.
 
