@@ -539,6 +539,20 @@ On linux can use file and exiftool to see contents
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
 
+### Windows Management Instrumentation Repository
+
+The WMI repository is a database that contains information about the Windows Management Instrumentation (WMI) classes installed on a computer, and it has the following structure:
+
+* OBJECTS.DATA: Objects managed by WMI
+
+* INDEX.BTR: Index of files imported into OBJECTS.DATA
+
+* MAPPING[1-3].MAP: Correlates data in OBJECTS.DATA and INDEX.BTR
+
+WMI can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Examples of events that may be subscribed to are the wall clock time, user logging, or the computer's uptime. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system.
+
+![Pasted image 20221116224453](https://github.com/dbissell6/DFIR/assets/50979196/6491e06d-1f6c-4a25-8b09-cdaa9ada3fa8)
+
 
 ## Linux logs
 
