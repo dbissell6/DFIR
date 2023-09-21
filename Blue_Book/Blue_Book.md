@@ -476,9 +476,11 @@ The SAM hive file contains user account information such as hashed passwords, lo
 
 User-specific hive files include the Amcache.hve file, which contains information about application executables(Recently ran), such as their full path, size, and SHA-1 hashes. The ntuser.dat file contains information about autostart applications, recently accessed files, and last execution times of applications. The UsrClass.dat file contains information about user-specific shellbags.
 
-One tool commonly used for extracting passwords from the SAM hive file is Mimikatz. It can also be used to extract other sensitive information from the hive files, such as cached credentials and stored certificates. By analyzing the hive files with tools such as Mimikatz, investigators or CTF participants can uncover important evidence that can be used to solve a challenge or provide insights into the activities performed on a system.
+One tool commonly used for extracting passwords from the SAM hive file is Mimikatz. It can also be used to extract other sensitive information from the hive files, such as cached credentials and stored certificates.
 
 To run Mimikatz successfully and extract sensitive information from hive files, administrative-level permissions are usually required. This is because Mimikatz works by injecting itself into the memory space of running processes and accessing sensitive information that is typically only available to privileged users.
+
+https://github.com/dbissell6/Shadow_Stone/blob/main/RedBook/5-Privilege%20Escalation/Windows.md#hklmsam
 
 ### AmcacheParser
 
