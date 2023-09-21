@@ -521,6 +521,8 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
 
 Shell Bags Explorer
 
+Looking at offline UsrClass.dat
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/c1776763-15d8-4437-afe1-222a6364ca12)
 
 
