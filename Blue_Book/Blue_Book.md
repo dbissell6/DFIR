@@ -522,7 +522,7 @@ Used on a live device to inspect registry and schd tasks and show processes that
 
 ## Other Windows artifacts
 
-## Shellbags
+### Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
 Found in registry at
