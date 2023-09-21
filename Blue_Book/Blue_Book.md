@@ -480,6 +480,15 @@ One tool commonly used for extracting passwords from the SAM hive file is Mimika
 
 To run Mimikatz successfully and extract sensitive information from hive files, administrative-level permissions are usually required. This is because Mimikatz works by injecting itself into the memory space of running processes and accessing sensitive information that is typically only available to privileged users.
 
+### AmcacheParser
+
+On windows make sure Amcache.hve and logs are all ttogether in same dir/folder
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1e138b9f-d729-4879-8f85-edc85db89a2b)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/09703637-4b75-4773-8bb1-4df6adbf822d)
+
 
 ### regshell
 
@@ -531,6 +540,17 @@ Looking at offline UsrClass.dat
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
 
+
+### MFTECmd.exe 
+Tool to parse MFT +($Boot...)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/65638932-3b22-4945-bec3-85c795ecb3bc)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f74b64ff-aeb7-4821-b224-62fd469e8d36)
+
+
+
 ### Windows prefetch(.pf)
 
 Windows Prefetch files are designed to improve the application startup process by preloading essential components into memory based on past usage patterns. The information they contain typically includes:
@@ -543,7 +563,7 @@ Windows Prefetch files are designed to improve the application startup process b
 
 * Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
 
-#### Can Examine using WindowsPrefetchView
+### Can Examine using WindowsPrefetchView
 
 Files found in `C:\Windows\Prefetch`
 
@@ -560,6 +580,11 @@ On linux can use file and exiftool to see contents
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
 
 ### Windows Management Instrumentation Repository
+
+Found at
+```
+C/Windows/System32/wbem/Repository
+```
 
 The WMI repository is a database that contains information about the Windows Management Instrumentation (WMI) classes installed on a computer, and it has the following structure:
 
