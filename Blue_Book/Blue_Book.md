@@ -424,7 +424,13 @@ Get-ChildItem -Path $evtxDirectory -Filter *.evtx | ForEach-Object {
 }
 ```
 
+## DeepBlue
 
+Open Source Framework to automatically parse evtx logs and look for evil.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6d318518-5edb-4b7d-ac55-1dd1c1248f99)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e48cc810-2e27-4b01-9524-b7875ad47fcc)
 
 ## Analyzing from Linux
 
