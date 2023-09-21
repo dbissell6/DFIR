@@ -535,7 +535,7 @@ Windows Prefetch files are designed to improve the application startup process b
 
 * Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
 
-### Can Examine using WindowsPrefetchView
+#### Can Examine using WindowsPrefetchView
 
 Files found in `C:\Windows\Prefetch`
 
