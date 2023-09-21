@@ -519,6 +519,12 @@ Found in registry at
 HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
 ```
 
+Shell Bags Explorer
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c1776763-15d8-4437-afe1-222a6364ca12)
+
+
+
 ### Master File Table (MFT)
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
