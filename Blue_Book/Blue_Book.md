@@ -344,7 +344,7 @@ Get-WinEvent -ListLog * | Select-Object LogName, RecordCount, IsClassicLog, IsEn
 ```
 
 
-### sysmon event id - description
+## sysmon event id - description
 
 ```
 Event ID 1: Process creation
