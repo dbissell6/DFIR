@@ -475,7 +475,7 @@ Persistence is a technique used by attackers to maintain access to a compromised
 
 Attackers may use a variety of techniques to establish persistence via the registry, including adding or modifying registry keys or values, creating scheduled tasks, or installing malicious services. By doing so, they can ensure that their malicious code will execute every time the system boots up, allowing them to maintain access and continue to carry out their objectives.
 
-For a CTF participant, identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
+Identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
 ### In windows open with 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/103b92ac-203b-4e51-b159-5d49e799be01)
@@ -492,13 +492,33 @@ One tool commonly used for extracting passwords from the SAM hive file is Mimika
 
 To run Mimikatz successfully and extract sensitive information from hive files, administrative-level permissions are usually required. This is because Mimikatz works by injecting itself into the memory space of running processes and accessing sensitive information that is typically only available to privileged users.
 
+
+### regshell
+
+Cli tool allows traverse the registry. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/53163a8d-9521-4638-a0be-d63985e80fa6)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dfeab73f-8a4b-4f38-a8e7-35710476c1f6)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/efd52960-936f-40bc-91d0-fefb696db125)
+
+
 ### RegRipper
 
 RegRipper is a popular open-source tool used for extracting and analyzing information from the Windows registry. RegRipper can be used to quickly and efficiently extract key artifacts from the registry, including user and account information, installed software, network settings, and much more.
 
 RegRipper operates by applying a series of pre-defined plugins or "rippers" to the registry, each of which is designed to extract specific types of information. This modular design allows users to easily customize and extend RegRipper's functionality, tailoring it to their specific forensic needs.
 
-For CTF participants, RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data, participants can gain valuable insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
+RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data,for insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
+
+### Autoruns
+
+Used on a live device to inspect registry and schd tasks and show processes that will run on startup.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
+
 
 ## Other Windows artifacts
 
