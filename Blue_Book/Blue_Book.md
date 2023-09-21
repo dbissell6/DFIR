@@ -344,68 +344,48 @@ Get-WinEvent -ListLog * | Select-Object LogName, RecordCount, IsClassicLog, IsEn
 ```
 
 
-### Common event id - description
+### sysmon event id - description
 
 ```
-    1074: System Shutdown/Restart
-    1102: The audit log was cleared
-    1116: Antivirus malware detection
-    1118: Antivirus remediation activity has started
-    1119: Antivirus remediation activity has succeeded
-    1120: Antivirus remediation activity has failed
-    4624: Successful Logon
-    4625: Failed Logon
-    4648: A logon was attempted using explicit credentials
-    4656: A handle to an object was requested
-    4672: Special Privileges Assigned to a New Logon
-    4698: A scheduled task was created
-    4700 & 4701: A scheduled task was enabled/disabled
-    4702: A scheduled task was updated
-    4719: System audit policy was changed
-    4738: A user account was changed
-    4771: Kerberos pre-authentication failed
-    4776: The domain controller attempted to validate the credentials for an account
-    5001: Antivirus real-time protection configuration has changed
-    5140: A network share object was accessed
-    5142: A network share object was added
-    5145: A network share object was checked to see whether the client can be granted desired access
-    5157: The Windows Filtering Platform has blocked a connection
-    7045: A service was installed in the system
-    4624: An account was successfully logged on.
-    4625: An account failed to log on.
-    4672: Special Logon
-    4720: A user account was created.
-    4722: A user account was enabled.
-    4723: An attempt was made to change an account's password.
-    4738: A user account was changed.
-    4771: Kerberos pre-authentication failed.
-    4648: A logon was attempted using explicit credentials.
-    4740: A user account was locked out.
-    4756: A user account was deleted.
-    4769: A Kerberos service ticket was requested.
-    4800: The workstation was locked.
-    4801: The workstation was unlocked.
-    4634: An account was logged off.
-    4635: The account was logged off and the logon session was terminated.
-    4657: A registry value was modified.
-    4703: A user right was assigned.
-    4704: A user right was removed.
-    4706: A new trust was created to a domain.
-    4707: A trust to a domain was removed.
-    4724: An attempt was made to reset an account's password.
-    4725: An account failed to log on.
-    4726: A user account was deleted.
-    4104: The Windows file protection deleted a system critical file
-    4728: A member was added to a security-enabled global group.
-    4729: A member was removed from a security-enabled global group.
-    4759: The cryptologic function has been executed.
-    5024: The Windows Firewall Service has started successfully.
-    5025: The Windows Firewall Service has been stopped.
-    5031: The Windows Firewall has blocked an application from accepting incoming connections on the network.
-    6005: The Event log service was started
-    6006: The Event log service was stopped
-    6013: Windows uptime
-    7040: Service status change
+Event ID 1: Process creation
+Event ID 2: A process changed a file creation time
+Event ID 3: Network connection
+Event ID 4: Sysmon service state changed
+Event ID 5: Process terminated
+Event ID 6: Driver loaded
+Event ID 7: Image loaded
+Event ID 8: CreateRemoteThread
+Event ID 9: RawAccessRead
+Event ID 10: ProcessAccess
+Event ID 11: FileCreate
+Event ID 12: RegistryEvent (Object create and delete)
+Event ID 13: RegistryEvent (Value Set)
+Event ID 14: RegistryEvent (Key and Value Rename)
+Event ID 15: FileCreateStreamHash
+Event ID 16: ServiceConfigurationChange
+Event ID 17: PipeEvent (Pipe Created)
+Event ID 18: PipeEvent (Pipe Connected)
+Event ID 19: WmiEvent (WmiEventFilter activity detected)
+Event ID 20: WmiEvent (WmiEventConsumer activity detected)
+Event ID 21: WmiEvent (WmiEventConsumerToFilter activity detected)
+Event ID 22: DNSEvent (DNS query)
+Event ID 23: FileDelete (File Delete archived)
+Event ID 24: ClipboardChange (New content in the clipboard)
+Event ID 25: ProcessTampering (Process image change)
+Event ID 26: FileDeleteDetected (File Delete logged)
+Event ID 27: FileBlockExecutable
+Event ID 28: FileBlockShredding
+Event ID 29: FileExecutableDetected
+Event ID 255: Error
+
+
+Sysmon uses abbreviated versions of Registry root key names, with the following mappings:
+Key name 	Abbreviation
+HKEY_LOCAL_MACHINE 	HKLM
+HKEY_USERS 	HKU
+HKEY_LOCAL_MACHINE\System\ControlSet00x 	HKLM\System\CurrentControlSet
+HKEY_LOCAL_MACHINE\Classes 	HKCR
+
 ```
 
 ## Analyzing from Windows
