@@ -577,6 +577,9 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
 
+### PECmd.exe
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
 
 
 ## .lnk (Windows Shortcut) Files
@@ -636,6 +639,13 @@ C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/2172d8e6-1844-409f-bfb4-ed18cba0f5d4)
 
+
+## AppCompatCacheParser 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/10942c11-789b-47c7-9ce0-c07be69df89c)
+
+
+## Timeline
 
 ## Linux logs
 
