@@ -621,6 +621,20 @@ wmic group list full
 wmic netuse list full
 ```
 
+### JumpLists
+
+Jump Lists in Windows offer quick access to recent files and common tasks for applications. From a cyber perspective, they can reveal user behavior patterns, recent file access, and priority actions. Analyzing them aids in understanding user activities and potential malicious actions associated with specific applications. Jump Lists are essential for creating a forensic timeline and identifying accessed files, making them valuable for security analysis.
+
+On Windows 10 stored at 
+```
+C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
+```
+
+### JLEcmd
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2172d8e6-1844-409f-bfb4-ed18cba0f5d4)
+
+
 ## Linux logs
 
 Linux logs are an essential source of information for conducting digital forensics and incident response analysis in a CTF competition. There are several types of Linux logs that can be analyzed, including system logs (e.g., syslog), authentication logs (e.g., auth.log), and kernel logs (e.g., dmesg). Each of these logs provides valuable insights into the system's behavior and can help identify signs of intrusion or compromise.
