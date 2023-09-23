@@ -518,11 +518,6 @@ RegRipper operates by applying a series of pre-defined plugins or "rippers" to t
 
 RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data,for insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
 
-### Autoruns
-
-Used on a live device to inspect registry and schd tasks and show processes that will run on startup.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
 
 
 # Other Windows artifacts
@@ -1430,6 +1425,12 @@ NirLauncher is a tool package created by NirSoft that offers a collection of sma
 Windows File Analyzer is a forensic tool designed to examine various Windows artifacts, such as registry hives, event logs, hibernation files and many more.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ebc48498-88b3-42aa-a219-4fcc84585b54)
+
+### Autoruns
+
+Used on a live device to inspect registry and schd tasks and show processes that will run on startup.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
 
 
 ##
