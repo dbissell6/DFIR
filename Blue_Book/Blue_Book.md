@@ -1354,6 +1354,50 @@ sudo fls -o 2048 -f ntfs win_image.dd
 
 also another htb challenge had it from cyberpocalypse
 
-## 
 
+# Infected host
+
+2 things to take from here 
+
+1) Extracting the artifacts
+2) Performing an analysis from (a copy) of the infected host machine
+
+
+## Extracting
+
+This may not come up often on a CTF, in this instance you are almost always provided with the artifacts to analyze. However it could happpen and more likly if you are here you are going to want a job
+in this domain and you really dont want to get into a job interview and know complex things like malware analysis and miss what they consider to be fundentamental questions like the  process of making a copy
+of a disk. `Crede experto`
+
+One question in this domain is if you are working on a site and someone thinks thier computer is compromised what should you do. Dont turn it off, this will elimiate the volatile memory. Do, Disconnect it from the network. 
+Make the copies of the artifacts you need.
+
+## Live analysis
+
+Analyzing a live system or a direct copy of a virtual machine (VM) rather than static artifacts like disk images offers numerous advantages in digital forensics and incident response (DFIR). These include real-time data analysis, dynamic state assessment, behavioral analysis, memory forensics, immediate triage, interaction with running services, malware detection and analysis, contextual understanding, reduced imaging time, and improved resource availability. While live analysis provides these benefits, it's essential to adhere to proper forensic procedures to minimize impact on the live system. A combined approach involving both live and artifact analysis ensures a comprehensive understanding of the incident and enhances the investigative process.
+
+One way to do this is to mount Caine in the vm. 
+
+On Virtual Box
+`Devices -> Optical Drives -> Caine.iso`
+
+In the VM
+`This PC -> CD Drive CAINE`
+
+### NirLauncher
+
+NirLauncher is a tool package created by NirSoft that offers a collection of small utilities for various purposes, including system analysis, network monitoring, password recovery, and more. 
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e10bc1f6-aea4-4ad3-96ab-f2fb69d74a4d)
+
+
+### Windows File Analyzer
+
+Windows File Analyzer is a forensic tool designed to examine various Windows artifacts, such as registry hives, event logs, hibernation files and many more.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ebc48498-88b3-42aa-a219-4fcc84585b54)
+
+
+##
 Bulk_Extractor is a tool that will scan pcaps, mem.raw ...
