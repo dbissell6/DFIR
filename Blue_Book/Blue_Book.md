@@ -16,7 +16,9 @@ Throughout this handbook, we will cover the various challenges that blue teams m
 4) [Memory forensics](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#memory-dumps)
  
 5) [Disk](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Disk)
- 
+
+6) [Live analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Live-analysis)
+
 
 
 ## Ideas That Will be encountered
