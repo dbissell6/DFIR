@@ -525,7 +525,7 @@ Used on a live device to inspect registry and schd tasks and show processes that
 
 # Other Windows artifacts
 
-### Shellbags
+## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
 Found in registry at
@@ -534,7 +534,7 @@ Found in registry at
 HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
 ```
 
-Shell Bags Explorer
+### Shell Bags Explorer
 
 Looking at offline UsrClass.dat
 
@@ -576,6 +576,8 @@ Files found in `C:\Windows\Prefetch`
 Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
+
+
 
 ## .lnk (Windows Shortcut) Files
 
