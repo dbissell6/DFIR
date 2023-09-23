@@ -523,7 +523,7 @@ Used on a live device to inspect registry and schd tasks and show processes that
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
 
 
-## Other Windows artifacts
+# Other Windows artifacts
 
 ### Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
@@ -542,7 +542,7 @@ Looking at offline UsrClass.dat
 
 
 
-### Master File Table (MFT)
+## Master File Table (MFT)
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
 
@@ -557,7 +557,7 @@ Tool to parse MFT +($Boot...)
 
 
 
-### Windows prefetch(.pf)
+## Windows prefetch(.pf)
 
 Windows Prefetch files are designed to improve the application startup process by preloading essential components into memory based on past usage patterns. The information they contain typically includes:
 
@@ -577,7 +577,7 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
 
-### .lnk (Windows Shortcut) Files
+## .lnk (Windows Shortcut) Files
 
 .LNK files, also known as Windows shortcuts, are small files containing a reference to a target file or directory. When a user clicks on a .LNK file, it redirects them to the specified target, allowing for quick access to applications, files, or folders.
 
@@ -585,7 +585,7 @@ On linux can use file and exiftool to see contents
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
 
-### Windows Management Instrumentation Repository
+## Windows Management Instrumentation Repository
 
 Found at
 ```
@@ -621,7 +621,7 @@ wmic group list full
 wmic netuse list full
 ```
 
-### JumpLists
+## JumpLists
 
 Jump Lists in Windows offer quick access to recent files and common tasks for applications. From a cyber perspective, they can reveal user behavior patterns, recent file access, and priority actions. Analyzing them aids in understanding user activities and potential malicious actions associated with specific applications. Jump Lists are essential for creating a forensic timeline and identifying accessed files, making them valuable for security analysis.
 
