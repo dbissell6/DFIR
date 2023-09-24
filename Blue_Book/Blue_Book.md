@@ -924,19 +924,49 @@ Foremost uses a technique called file carving to recover files from disk images 
 Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
 
 
-## Malware Analysis
+# Malware Analysis
+
+Please watch if first time doing this- https://www.youtube.com/watch?v=gjVmeKWOsEU
+
+Malware analysis is the process of dissecting malicious software to understand its functionality, behavior, and purpose. 
+
+We want to understand what the malware does. Does it encyrpt our files? Does it send a reverse shell? If so, how?
 
 
-[Please watch if first time doing this](https://www.youtube.com/watch?v=gjVmeKWOsEU)
+
+## static vs dynamic
+
+### Static
+disect the code to understand what will happen
+
+### Dynamic
+run the code to see what happened.
 
 
-Virus total can be useful to get some information from  
+## Changing the flow of the code
+
+reversing, debugging, decompiling, deobfuscating, decoding, decrypting, 
+
+
+## Windows malware
+
+### PE
+
+### unpacking
+
+Running strings before unpacking yields nothing interesting
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
+
+
+## Virus total 
+can be useful to get some information from  
 
 ![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
 
 
 
-### Sandboxes
+## Sandboxes
 Noriben can be used for dynamic analysis monitoring creation of processes.
 
 Start from command line, run executable in question, when finihed stop Noriben, get output 
