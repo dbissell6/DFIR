@@ -900,7 +900,7 @@ Compressed files are a common way of packaging and distributing multiple files o
 Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
 ### Video files (e.g., MP4, AVI)
 Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
-## VirusTotal
+
 
 
 ## Decompressing
@@ -983,7 +983,7 @@ run the code to see what happened.
 reversing, debugging, decompiling, deobfuscating, decoding, decrypting, 
 
 
-## Windows malware
+# Windows malware
 
 ### PE
 
@@ -1053,7 +1053,7 @@ Changing that eval to a print, then running the code will show us what would hav
 ![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
 
 
-## Stegnography 
+# Stegnography 
 ### Intro
 Steganography is a technique used to hide information within other files or data, making it difficult to detect without the use of special tools or techniques. This technique can be used to conceal sensitive information or to hide messages in plain sight.
 
