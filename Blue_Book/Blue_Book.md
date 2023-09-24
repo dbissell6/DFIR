@@ -977,8 +977,18 @@ disect the code to understand what will happen
 ### Dynamic
 run the code to see what happened.
 
+### IDA
 
-## Changing the flow of the code
+![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
+
+
+### Ghidra
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
+
+
+## Changing the flow of the code / debugging
 
 reversing, debugging, decompiling, deobfuscating, decoding, decrypting, 
 
