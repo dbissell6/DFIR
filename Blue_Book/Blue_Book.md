@@ -964,6 +964,10 @@ can be useful to get some information from
 
 ![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
 
+## PE Hashes
+
+### pestudio
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5aec7f41-5f58-4a94-a5aa-0762d91eba18)
 
 
 ## Sandboxes
