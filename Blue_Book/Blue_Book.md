@@ -519,6 +519,41 @@ RegRipper operates by applying a series of pre-defined plugins or "rippers" to t
 RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data,for insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
 
 
+### Important Registry Paths for Forensic Analysis
+
+| Registry Path                                                     | Description                                               |
+|-------------------------------------------------------------------|-----------------------------------------------------------|
+| HKLM\SYSTEM\CurrentControlSet\Control\ComputerName                 | Computer name                                             |
+| HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall          | Installed software                                        |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs | Recent documents                                          |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU | Recently opened/saved files           |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU    | Run history                                               |
+| HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters           | Network configuration                                    |
+| HKCU\Software\Microsoft\Internet Explorer\TypedURLs               | Typed URLs in Internet Explorer                           |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings  | Internet settings                                         |
+| HKLM\SYSTEM\CurrentControlSet\Services\bam\UserSettings          | Recently executed programs                               |
+| HKCU\Software\Microsoft\Office                                     | Microsoft Office usage                                   |
+| HKLM\SYSTEM\CurrentControlSet\Enum\USB                              | USB device history                                       |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 | Mounted devices                                        |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon       | Winlogon settings                                        |
+| HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation         | Time zone information                                    |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist | UserAssist data                                          |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList     | User profile paths                                       |
+| HKCU\Control Panel\Desktop                                         | Desktop settings                                         |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders | User-specific folders                                 |
+| HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy       | Group policy settings                                    |
+| HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management | Memory management settings                         |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows        | Windows folder paths                                     |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer   | User-specific policies                                  |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles | Network profiles                                      |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts   | File extension actions                                  |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Drivers32       | System drivers                                           |
+| HKCU\Software\Microsoft\Search Assistant\ACMru                    | Search Assistant history                                 |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug         | Debugger settings                                        |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit     | Last key viewed in Regedit                               |
+| HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot                    | Safe boot options                                        |
+
+https://redteamrecipe.com/Registry-Attack-Vectors/
 
 # Other Windows artifacts
 
