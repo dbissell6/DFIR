@@ -926,6 +926,10 @@ Foremost can be used in a variety of scenarios, such as when trying to recover d
 
 ## Malware Analysis
 
+
+[Please watch if first time doing this](https://www.youtube.com/watch?v=gjVmeKWOsEU)
+
+
 Virus total can be useful to get some information from  
 
 ![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
