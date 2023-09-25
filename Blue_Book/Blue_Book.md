@@ -1166,6 +1166,37 @@ Overall, understanding the kernel architecture and how it manages system resourc
 
 ### Windows Commands
 
+Windows is written in C and uses C structures. Some of these structures are Executive Objects. These executive objects are under the management (creation, protection, deletion, etc.) of the Windows Object Manager, a fundamental component of the kernel implemented through the NT module. Every executive object is preceded by a header in memory. Before an instance of an exectuve object is created, a memory block must be allocated. 
+
+| Object        | Description                                                                   |
+|---------------|-------------------------------------------------------------------------------|
+| Event         | Synchronization object used to signal events between processes.              |
+| Mutant        | Synchronization object, also known as a mutex, used for mutual exclusion.     |
+| Semaphore     | Synchronization object used to control access to a common resource.           |
+| Directory     | Represents a directory or folder in the file system.                          |
+| Key           | Represents a key in the Windows registry.                                    |
+| IoCompletion  | Used for asynchronous input/output (I/O) completion notifications.            |
+| File          | Represents a file in the file system.                                        |
+| WindowStation | Represents a window station used to manage windows, menus, atoms, and hooks.  |
+| Process       | Represents a running process in the operating system.                         |
+| Thread        | Represents a thread, the basic unit of execution within a process.            |
+| Desktop       | Represents a desktop object contained within a window station.                |
+| ALPC Port     | Represents an Advanced Local Procedure Call (ALPC) port.                      |
+| SymbolicLink  | Represents a symbolic link in the object namespace.                           |
+| Timer         | Represents a timer object used for scheduling timed notifications.            |
+| KeyedEvent    | Synchronization object used to signal events between processes.              |
+| Section       | Represents a memory section object, used for memory mapping and sharing.      |
+| Token         | Represents an access token containing security information for a logon session.|
+| Job           | Represents a job object, used to manage and track sets of processes.          |
+| EtwRegistration | Used for event tracing registration.                                        |
+| Type          | Represents an object type in the object manager namespace.                    |
+
+
+
+A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
+
+Userassist keys are registry artifacts used to see what programs the user ran, and when. Keys found in NTUSER.DAT. 
+
 Get image information
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.info   
@@ -1221,6 +1252,18 @@ Print dlls
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.dlllist
 ```
+PoolScanner
+
+Memory pools are regions of memory set aside for dynamic memory allocation during the execution of a program.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0f6f8df5-1462-4ff7-80b3-d03b8a6f196d)
+
+
+BigPools
+
+To print large kernel pools in a memory dump.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ba4baa77-84d8-4969-bfd6-0b653e39c6b6)
 
 
 
