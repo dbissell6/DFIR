@@ -988,16 +988,28 @@ run the code to see what happened.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
 
 
+
+
+reversing,  decompiling, deobfuscating, decoding, decrypting, 
+
 ## Changing the flow of the code / debugging
 
-reversing, debugging, decompiling, deobfuscating, decoding, decrypting, 
+Debugging enhances code analysis by providing a dynamic, interactive approach that offers a real-time view of malware behavior. Analysts can validate their findings, observe runtime effects, and deepen their understanding of program execution.
 
+Intro to debugging to bypass checks
+
+https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
 
 # Windows malware
 
-### PE
+### PE (Portable Executable)
 
-### unpacking
+PE  is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
+
+
+### Unpacking
+
+Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
 
 Running strings before unpacking yields nothing interesting
 
@@ -1519,7 +1531,7 @@ also another htb challenge had it from cyberpocalypse
 
 ## Extracting
 
-This may not come up often on a CTF, in this instance you are almost always provided with the artifacts to analyze. However it could happpen and more likly if you are here you are going to want a job
+This may not come up often on a CTF, in CTFs you are almost always provided with the artifacts to analyze. However it could happpen and more likly if you are here you are going to want a job
 in this domain and you really dont want to get into a job interview and know complex things like malware analysis and miss what they consider to be fundentamental questions like the  process of making a copy
 of a disk. `Crede experto`
 
