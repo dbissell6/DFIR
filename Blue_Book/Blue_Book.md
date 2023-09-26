@@ -1002,15 +1002,15 @@ https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
 
 # Windows malware
 
-### PE (Portable Executable)
+## PE (Portable Executable)
 
 PE  is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
 
-
-### Unpacking
+## Unpacking
 
 Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
 
+### upx
 Running strings before unpacking yields nothing interesting
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
