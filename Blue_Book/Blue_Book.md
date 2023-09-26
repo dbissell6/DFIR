@@ -1164,6 +1164,11 @@ Common File formats of memory dumps
 
 Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
 
+To see options
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cae9895d-1e7c-4c77-98b7-2e1627fccba5)
+
+
 ### Kernel 
 
 Kernels are responsible for managing system resources, such as memory, processes, and input/output operations. They provide a layer of abstraction between the hardware and the rest of the operating system, and allow applications to interact with the hardware without having to know the details of the underlying hardware.
@@ -1208,6 +1213,16 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
 
 Userassist keys are registry artifacts used to see what programs the user ran, and when. Keys found in NTUSER.DAT. 
+
+Two primary types of network artifacts are sockets and connections. 
+
+Kernel modules are pieces of code that can be dynamically loaded and unloaded into the operating system's kernel at runtime.
+
+Modules:
+The Modules plugin in Volatility examines the metadata structures linked through PsLoadedModuleList, a doubly linked list. When the operating system loads new modules, they are added to this list. By analyzing this list, the Modules plugin allows you to understand the relative temporal order of module loading. Essentially, you can determine the sequence in which modules were loaded into the system.
+
+Modscan:
+The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
 
 Get image information
 ```
