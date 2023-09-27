@@ -1664,16 +1664,81 @@ mount /dev/md0 /mnt/raid
 2) Performing an analysis from (a copy) of the infected host machine
 
 
-## Extracting
+# Extracting
 
 This may not come up often on a CTF, in CTFs you are almost always provided with the artifacts to analyze. However it could happpen and more likly if you are here you are going to want a job
 in this domain and you really dont want to get into a job interview and know complex things like malware analysis and miss what they consider to be fundentamental questions like the  process of making a copy
 of a disk. `Crede experto`
 
-One question in this domain is if you are working on a site and someone thinks thier computer is compromised what should you do. Dont turn it off, this will elimiate the volatile memory. Do, Disconnect it from the network. 
+One question in this domain is if you are working on a site and someone thinks thier computer is compromised what should you do. DO NOT TURN IT OFF, this will elimiate the volatile memory. DO, Disconnect it from the network. 
 Make the copies of the artifacts you need.
 
-## Live analysis
+
+## Disk
+
+
+
+## KAPE (Kroll Artifcat Parser and Extractor)
+
+KAPE extracts artifacts from a system, isnt open source. 
+
+### Velociraptor + KAPE
+
+Velociraptor is a robust EDR tool that allows for remote artifact collection and analysis at scale. Leveraging its Velociraptor Query Language (VQL) and Hunt capabilities, analysts can efficiently gather host-based information and artifacts, streamlining evidence collection and enabling rapid triage.
+
+Choose a host -> New Hunt -> Configure Hunt -> Select Artifacts -> Configure Parameters -> Launch -> Download results -> Available Downloads
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/792ce1c1-0bcd-4185-9633-5fab519615d2)
+
+Choose Windows.Kape
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/02e8611c-9109-44a4-85fd-93a224eed119)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/52c33979-1150-4571-b819-74bad1c94ec8)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/98ca346b-24c6-4161-87f0-9c99bf1bd50d)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e9115645-3670-4932-a064-e3c6a01e635e)
+
+
+
+Typical output/
+|-- Windows/
+|   |-- $Boot
+|   |-- $Extend
+|   |-- $LogFile
+|   |-- $MFT
+|   |-- $Recycle.Bin
+|   |-- ProgramData
+|   |-- Program Files
+|   |-- Users
+|   |-- System32
+|       |-- config
+|       |-- LogFiles
+|       |-- SleepStudy
+|       |-- sru
+|       |-- Tasks
+|       |-- wbem
+|       |-- WDI
+|       |-- winevt
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/026a5c02-b22e-479b-89dd-c8cf1ba4253f)
+
+
+## Memory
+
+### Velociraptor + memdump
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b632dc83-e695-47a1-9d14-f308190a9811)
+
+
+output will be our .raw
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1c6b9a6a-52a1-437e-b9ed-f202bc6e7a16)
+
+
+# Live analysis
 
 Analyzing a live system or a direct copy of a virtual machine (VM) rather than static artifacts like disk images offers numerous advantages. These include real-time data analysis, dynamic state assessment, behavioral analysis, memory forensics, immediate triage, interaction with running services, malware detection and analysis, contextual understanding, reduced imaging time, and improved resource availability. While live analysis provides these benefits, it's essential to adhere to proper forensic procedures to minimize impact on the live system. A combined approach involving both live and artifact analysis ensures a comprehensive understanding of the incident and enhances the investigative process.
 
@@ -1685,7 +1750,7 @@ On Virtual Box
 In the VM
 `This PC -> CD Drive CAINE`
 
-### NirLauncher
+## NirLauncher
 
 NirLauncher is a tool package created by NirSoft that offers a collection of small utilities for various purposes, including system analysis, network monitoring, password recovery, and more. 
 
@@ -1693,13 +1758,13 @@ NirLauncher is a tool package created by NirSoft that offers a collection of sma
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e10bc1f6-aea4-4ad3-96ab-f2fb69d74a4d)
 
 
-### Windows File Analyzer
+## Windows File Analyzer
 
 Windows File Analyzer is a forensic tool designed to examine various Windows artifacts, such as registry hives, event logs, hibernation files and many more.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ebc48498-88b3-42aa-a219-4fcc84585b54)
 
-### Autoruns
+## Autoruns
 
 Used on a live device to inspect registry and schd tasks and show processes that will run on startup.
 
@@ -1708,7 +1773,6 @@ Used on a live device to inspect registry and schd tasks and show processes that
 
 # move
 
-Before we start here is a high level view of concepts that will be seen and related domains that must be touched upon before entering forensics. 
 
 
 **Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
