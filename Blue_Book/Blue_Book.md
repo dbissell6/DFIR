@@ -1366,6 +1366,26 @@ To print large kernel pools in a memory dump.
 
 
 
+memmap
+
+Analyze memory mappings for a specific process (PID 8580) from the provided memory dump file (PhysicalMemory.raw) and extracts relevant details about these memory mappings.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/605b8d23-b56a-4b8c-a7f9-76a4b236a44f)
+
+
+## yara
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9c18bff0-267c-4830-85c4-bf7e3286b76f)
+
+
+Rules at
+```
+https://github.com/Yara-Rules/rules
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0db2eace-aa03-4359-abc3-c87d9d8ca107)
+
+
 https://readthedocs.org/projects/volatility3/downloads/pdf/latest/
 https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3
 
