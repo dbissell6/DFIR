@@ -27,17 +27,20 @@ The structure of this document is sectioned by type of evidence typically given.
 If completly new to CTFs and no idea what to do and good start would be to search for the file extention of artifact they gave you in the challenge. 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/788aa547-5faf-41b6-818b-051af6d80311)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d7d8cba0-01a6-4567-9a30-d76cb60130cd)
 
+If that isnt helpful sometimes the challenge is understanding what you have. Start with section 3 Files/Executables 
 
-The right side is helpful too
+Opening the view on the right side is helpful too
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a58f9e87-b510-4c23-bb0d-86a249e95396)
 
 
 ## Fundemental Ideas That Will be encountered
 
 
 
-### Encoding
+### Decoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
 
@@ -68,7 +71,7 @@ To decode in linux
 Useful for most decoding  
 https://gchq.github.io/CyberChef/
 
-### Encryption
+### Decryption
 
 Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
 
