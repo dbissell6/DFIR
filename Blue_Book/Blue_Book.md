@@ -1,11 +1,13 @@
 # The Blue Book
 ## Intro
 
-The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. It covers a wide range of topics including incident response, malware analysis, memory forensics, network forensics, and more. Overall the goal is to tie together the knowledge and tools learned from the various challenges. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a reference. Because the content and topics here are results from CTF challenges please remember that some of the info may not be as applicable to real DFIR. 
+The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a quick reference. 
 
+
+## DFIR
 When completing DFIR CTFs understanding the story that the evidence is telling is crucial. As a forensic analyst, you need to piece together the who, what, where, when, and how of an attack. A packet capture file (pcap) can reveal a lot about an attack, such as an IP address attempting to bruteforce a website. When the attacker finally gains access, this is a significant piece of the puzzle, and it could also be where a flag is located. Therefore, it's essential to keep detailed notes that reconstruct the timeline of critical events.
 
-Throughout this handbook, we will cover the various challenges that blue teams might encounter in a CTF. The structure of this document is sectioned by type of evidence given. 
+The structure of this document is sectioned by type of evidence typically given. 
 
 1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps) 
  
@@ -20,25 +22,22 @@ Throughout this handbook, we will cover the various challenges that blue teams m
 6) [Live analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Live-analysis)
 
 
+## How to use this
 
-## Ideas That Will be encountered
+If completly new to CTFs and no idea what to do and good start would be to search for the file extention of artifact they gave you in the challenge. 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/788aa547-5faf-41b6-818b-051af6d80311)
 
-Before we start here is a high level view of concepts that will be seen and related domains that must be touched upon before entering forensics. 
 
 
-**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
+The right side is helpful too
 
-**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
-**Fileless Malware**: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions. Detection and analysis of fileless malware requires a thorough understanding of the underlying system and its behavior.
 
-**Data Exfiltration Techniques**: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
+## Fundemental Ideas That Will be encountered
 
-**Advanced Obfuscation Techniques**: Advanced obfuscation techniques are used by malware authors to make their code more difficult to analyze and detect. Techniques like code obfuscation and packers can make malware more resilient to analysis. Detection and analysis of advanced obfuscation techniques requires a deep understanding of the underlying code and the ability to identify patterns and anomalies.
 
-**File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
-## Encoding
+### Encoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
 
@@ -69,7 +68,7 @@ To decode in linux
 Useful for most decoding  
 https://gchq.github.io/CyberChef/
 
-## Encryption
+### Encryption
 
 Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
 
@@ -140,8 +139,9 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
 
 
-# PCAPS
-## Intro
+# PCAPS (.pcap)
+## Intro 
+
 Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
 ```
 Bob -> Alice - Hi
@@ -1585,6 +1585,23 @@ Used on a live device to inspect registry and schd tasks and show processes that
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
 
+
+# move
+
+Before we start here is a high level view of concepts that will be seen and related domains that must be touched upon before entering forensics. 
+
+
+**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
+
+**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
+
+**Fileless Malware**: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions. Detection and analysis of fileless malware requires a thorough understanding of the underlying system and its behavior.
+
+**Data Exfiltration Techniques**: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
+
+**Advanced Obfuscation Techniques**: Advanced obfuscation techniques are used by malware authors to make their code more difficult to analyze and detect. Techniques like code obfuscation and packers can make malware more resilient to analysis. Detection and analysis of advanced obfuscation techniques requires a deep understanding of the underlying code and the ability to identify patterns and anomalies.
+
+**File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
 ##
 Bulk_Extractor is a tool that will scan pcaps, mem.raw ...
