@@ -347,7 +347,10 @@ Check available logs.
 ```
 Get-WinEvent -ListLog * | Select-Object LogName, RecordCount, IsClassicLog, IsEnabled, LogMode, LogType | Format-Table -AutoSize
 ```
-
+Also stored at
+```
+C:\Windows\System32\winevt\logs
+```
 
 ## sysmon event id - description
 
@@ -493,6 +496,12 @@ The UsrClass.dat file contains information about user-specific shellbags.
 
 ### AmcacheParser
 
+The Amcache is a repository that holds essential data about installed applications and executables. This data encompasses information such as file paths, sizes, digital signatures, and timestamps of the last execution of applications.
+
+Found at
+```
+C:\Windows\AppCompat\Programs\Amcache.hve
+```
 On windows make sure Amcache.hve and logs are all ttogether in same dir/folder
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1e138b9f-d729-4879-8f85-edc85db89a2b)
@@ -560,6 +569,13 @@ https://redteamrecipe.com/Registry-Attack-Vectors/
 
 # Other Windows artifacts
 
+## Schtasks
+
+Found at
+```
+C:\Windows\System32\Tasks
+```
+
 ## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
@@ -625,7 +641,7 @@ On linux can use file and exiftool to see contents
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
 
-## Windows Management Instrumentation Repository
+## Windows Management Instrumentation Repository (WMI)
 
 Found at
 ```
@@ -645,7 +661,9 @@ WMI can be used to install event filters, providers, consumers, and bindings tha
 ![Pasted image 20221116224453](https://github.com/dbissell6/DFIR/assets/50979196/6491e06d-1f6c-4a25-8b09-cdaa9ada3fa8)
 
 WMI data is stored in
-`\Windows\System32\wbem\Repository`
+```
+\Windows\System32\wbem\Repository
+```
 
 Interesting search terms
 .exe .vbs .ps1 .dll .eval ActiveXObject powershell CommandLineTemplate ScriptText
@@ -678,6 +696,23 @@ C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
 ## AppCompatCacheParser 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/10942c11-789b-47c7-9ce0-c07be69df89c)
+
+## Shimcache
+
+Maintains a log of program execution data to aid compatibility and performance improvements. It captures data like file paths, execution timestamps, and flags denoting program execution. For investigators, Shimcache is valuable in identifying recently run programs and their respective files.
+
+Found at
+```
+Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
+```
+
+## RunMRU Lists
+The RunMRU (Most Recently Used) lists in the Windows Registry store information about recently executed programs from various locations, such as the Run and RunOnce keys. These lists can indicate which programs were run, when they were executed, and potentially reveal user activity.
+
+Found at
+```
+Registry: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+```
 
 
 ## Timeline
