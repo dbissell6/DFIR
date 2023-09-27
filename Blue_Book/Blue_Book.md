@@ -34,6 +34,9 @@ Opening the view on the right side is helpful too
 ## DFIR
 When completing DFIR CTFs understanding the story that the evidence is telling is crucial. As a forensic analyst, you need to piece together the who, what, where, when, and how of an attack. A packet capture file (pcap) can reveal a lot about an attack, such as an IP address attempting to bruteforce a website. When the attacker finally gains access, this is a significant piece of the puzzle, and it could also be where a flag is located. Therefore, it's essential to keep detailed notes that reconstruct the timeline of critical events.
 
+Filtering. A commom theme here is there is too much data. It is not feasible to look through logs or a pcap manually. Instead of thinking I am going to do a thing that will find the flag like in a needle in a haystack, think
+I am going to remove a bunch of useless stuff.
+
 The structure of this document is sectioned by type of evidence typically given. 
 
 
