@@ -707,6 +707,13 @@ Found at
 Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
 ```
 
+## Userassist
+Userassist keys are registry artifacts used to see what programs the user ran, and when. 
+
+Keys found in 
+```
+NTUSER.DAT 
+```
 ## RunMRU Lists
 The RunMRU (Most Recently Used) lists in the Windows Registry store information about recently executed programs from various locations, such as the Run and RunOnce keys. These lists can indicate which programs were run, when they were executed, and potentially reveal user activity.
 
@@ -1199,9 +1206,23 @@ Common File formats of memory dumps
 -   Microsoft crash dump format (.dmp)
 
 
+## Strings
+It is possible to run strings on a memory dump to extract info
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/271f4112-a784-43e3-80cf-1338872e62ad)
+
+Grep for commands
+`
+strings PhysicalMemory.raw | grep -E "(cmd|powershell|bash)[^\s]+"
+`
+
 ## Volatility
 
 Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
+
+`
+https://volatility3.readthedocs.io/en/latest/index.html
+`
 
 To see options
 
@@ -1251,7 +1272,6 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 
 A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
 
-Userassist keys are registry artifacts used to see what programs the user ran, and when. Keys found in NTUSER.DAT. 
 
 Two primary types of network artifacts are sockets and connections. 
 
@@ -1272,6 +1292,7 @@ See Process List
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.pslist
 ```
 See Process List + Hiddens
+
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.psscan
 ```
