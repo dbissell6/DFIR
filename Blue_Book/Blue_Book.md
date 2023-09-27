@@ -1676,6 +1676,15 @@ Make the copies of the artifacts you need.
 
 ## Disk
 
+### FTK Imager
+
+File -> Create Disk Image - Physical Drive -> Add -> E01 -> fill info -> finish -> start
+
+Expert Witness Format (.e01) contains not only the raw disk image (similar to a .dd file) but also additional metadata and information related to the forensic image.
+
+This may take a while
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/84d4ecea-b863-4fb1-9d49-2070249e49a6)
 
 
 ## KAPE (Kroll Artifcat Parser and Extractor)
@@ -1727,6 +1736,20 @@ Typical output/
 
 
 ## Memory
+
+### FTK Imager
+
+Capture memory -> 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/38266a54-6d01-49f4-9ccd-02bc38807810)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b0f7dfd7-65f2-4d4d-872f-332ec0630322)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/20817b80-3e46-4bf1-b43c-ce5dd997d104)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8b4b221a-0646-4b66-bf23-315b6d6cabd2)
+
+output .mem
 
 ### Velociraptor + memdump
 
