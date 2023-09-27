@@ -1,4 +1,5 @@
 # The Blue Book
+
 ## Intro
 
 The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a quick reference. 
@@ -41,7 +42,7 @@ Opening the view on the right side is helpful too
 
 
 
-### Decoding
+## Decoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
 
@@ -72,7 +73,7 @@ To decode in linux
 Useful for most decoding  
 https://gchq.github.io/CyberChef/
 
-### Decryption
+## Decryption
 
 Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
 
