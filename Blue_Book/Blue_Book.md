@@ -453,6 +453,14 @@ Chainsaw is a command-line interface tool that can be used to analyze log files 
 
 ![Pasted image 20230320145917](https://user-images.githubusercontent.com/50979196/229359837-e8573f3a-9f92-4db4-9f16-75ae988cebcc.png)
 
+Using hunt(+ sigma, rules, mappings)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3ac4f54d-57a8-437a-b801-7e0b9b242342)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8262311b-64ac-4579-96a8-ffc5ebd80d77)
+
+
 ### .EVTX_dump
 
 They can be parsed using evtx_dump.py or windows has a native program. 
