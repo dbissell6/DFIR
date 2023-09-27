@@ -25,6 +25,7 @@ The structure of this document is sectioned by type of evidence typically given.
 ## How to use this
 
 If completly new to CTFs and no idea what to do and good start would be to search for the file extention of artifact they gave you in the challenge. 
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/788aa547-5faf-41b6-818b-051af6d80311)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d7d8cba0-01a6-4567-9a30-d76cb60130cd)
