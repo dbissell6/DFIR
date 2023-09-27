@@ -1431,6 +1431,53 @@ sudo ls -la root
 ![Pasted image 20230318133535](https://user-images.githubusercontent.com/50979196/229359015-4c1dd124-6f5e-4709-9168-335a1d6ea0cf.png)
 ![Pasted image 20230318133520](https://user-images.githubusercontent.com/50979196/229359026-40b14558-22fb-4a98-9e80-7e52a39465e3.png)
 
+## Autopsy
+
+GUI to look at disk.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0a786bbe-9ff6-496a-954d-9159ba36ae13)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f0b23d9c-2655-4529-8980-2b7df58535af)
+
+New Case -> Add Host -> Add Image -> Analyze -> File Analysis
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8c4d7c83-4111-41fe-8f79-e47c2f3b8c78)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a4fcf7a2-8897-41fc-af6a-b44c82f7ad74)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/36734528-4de2-4deb-bb42-52b0b577b6bf)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/08a2ecbe-2cc1-44e9-9357-e37bfa0d0837)
+
+In file analysis can browse directories and see All Deleted Files. 
+
+## SluethKit
+
+SleuthKit is another popular open-source digital forensic platform that provides a set of command-line tools for analyzing disk images. It supports a wide range of file systems, including FAT, NTFS, and EXT, and can be used to recover deleted files, view file metadata, and perform keyword searches.
+
+    mmls: The 'mmls' command is used to display the partition layout of a disk image. It identifies the start and end sectors of each partition and displays other information such as the partition type, size, and offset. This information is important for identifying the partition that contains the file system you're interested in.
+
+    fsstat: The 'fsstat' command is used to display information about a file system, such as its size, block size, and the number of allocated and unallocated blocks. It can also display information about the file system's metadata, such as the location of the Master File Table (MFT) in NTFS file systems.
+
+    fls: The 'fls' command is used to list the contents of a file system. It displays the files and directories in the file system along with their attributes and inode numbers. The 'fls' command can also display deleted files and directories, which can be important for recovering data that has been deleted by an attacker or lost due to a system crash.
+
+sudo mmls win_image.dd
+
+
+sudo fsstat -o 2048 win_image.dd
+
+Replace '2048' with the start sector of the partition you're interested in.
+
+Use the 'fls' command to list the contents of the file system:
+
+sudo fls -o 2048 -f ntfs win_image.dd
+
+
+also another htb challenge had it from cyberpocalypse
+
 
 ## RAID Disk recovery
 
@@ -1571,29 +1618,6 @@ mount /dev/md0 /mnt/raid
 
 
 ```
-### SluethKit
-
-SleuthKit is another popular open-source digital forensic platform that provides a set of command-line tools for analyzing disk images. It supports a wide range of file systems, including FAT, NTFS, and EXT, and can be used to recover deleted files, view file metadata, and perform keyword searches.
-
-    mmls: The 'mmls' command is used to display the partition layout of a disk image. It identifies the start and end sectors of each partition and displays other information such as the partition type, size, and offset. This information is important for identifying the partition that contains the file system you're interested in.
-
-    fsstat: The 'fsstat' command is used to display information about a file system, such as its size, block size, and the number of allocated and unallocated blocks. It can also display information about the file system's metadata, such as the location of the Master File Table (MFT) in NTFS file systems.
-
-    fls: The 'fls' command is used to list the contents of a file system. It displays the files and directories in the file system along with their attributes and inode numbers. The 'fls' command can also display deleted files and directories, which can be important for recovering data that has been deleted by an attacker or lost due to a system crash.
-
-sudo mmls win_image.dd
-
-
-sudo fsstat -o 2048 win_image.dd
-
-Replace '2048' with the start sector of the partition you're interested in.
-
-Use the 'fls' command to list the contents of the file system:
-
-sudo fls -o 2048 -f ntfs win_image.dd
-
-
-also another htb challenge had it from cyberpocalypse
 
 
 # Infected host
