@@ -463,6 +463,9 @@ Chainsaw is a command-line interface tool that can be used to analyze log files 
 
 ![Pasted image 20230320145917](https://user-images.githubusercontent.com/50979196/229359837-e8573f3a-9f92-4db4-9f16-75ae988cebcc.png)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/be6ed469-0ee9-4b40-80b4-a0068ad7a2d0)
+
+
 ### sigma
 
 Sigma is a generic and open standard for defining log and detection patterns. It provides a structured way to describe log patterns in a human-readable YAML format. These patterns can then be converted into various SIEM (Security Information and Event Management) tool queries or detection rules to identify potential security threats or incidents based on log data.
@@ -1674,7 +1677,7 @@ One question in this domain is if you are working on a site and someone thinks t
 Make the copies of the artifacts you need.
 
 
-## Disk
+## Dump Windows Disk
 
 ### FTK Imager
 
@@ -1735,7 +1738,14 @@ Typical output/
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/026a5c02-b22e-479b-89dd-c8cf1ba4253f)
 
 
-## Memory
+## Dump Linux Disk
+
+### dd
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7f79b088-69a1-4019-8cff-05ecdac38f33)
+
+
+## Dump Windows Memory
 
 ### FTK Imager
 
@@ -1760,6 +1770,9 @@ output will be our .raw
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1c6b9a6a-52a1-437e-b9ed-f202bc6e7a16)
 
+
+
+## Dump Linux Memory
 
 # Live analysis
 
