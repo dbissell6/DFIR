@@ -1790,18 +1790,18 @@ output will be our .raw
 
 ## Network (.pcap)
 
-Unlike logs, pcaps are not saved and kept by default. We will need to run something. This can be usefulk in conjuction when checking malwware to see if its reaching out.
+Unlike logs, pcaps are not saved and kept by default. We will need to run something. This can be useful in conjuction when checking malware to see if its reaching out.
 
 ### Capture pcaps on Linux
 
-### wireshark
+#### wireshark
 
 Wireshark -> pick interface -> let run -> Stop -> Save
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b48d4534-dd63-4df8-b7ca-e84903b1655d)
 
 
-### tcpdump
+#### tcpdump
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/3b8e7fd7-96b5-4702-81ae-dc13eb49a5d1)
 
