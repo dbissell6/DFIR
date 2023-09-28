@@ -1737,7 +1737,7 @@ Choose Windows.Kape
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e9115645-3670-4932-a064-e3c6a01e635e)
 
 
-
+```
 Typical output/
 |-- Windows/
 |   |-- $Boot
@@ -1758,7 +1758,7 @@ Typical output/
 |       |-- WDI
 |       |-- winevt
 |           |-- Logs
-
+```
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/026a5c02-b22e-479b-89dd-c8cf1ba4253f)
 
 
