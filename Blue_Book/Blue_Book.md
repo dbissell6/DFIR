@@ -1244,10 +1244,6 @@ Volatility 3 is an Open-Source memory forensics tool that allows analysts to ext
 https://volatility3.readthedocs.io/en/latest/index.html
 `
 
-To see options
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/cae9895d-1e7c-4c77-98b7-2e1627fccba5)
-
 
 ### Kernel 
 
@@ -1264,6 +1260,8 @@ Overall, understanding the kernel architecture and how it manages system resourc
 ### Windows Commands
 
 Windows is written in C and uses C structures. Some of these structures are Executive Objects. These executive objects are under the management (creation, protection, deletion, etc.) of the Windows Object Manager, a fundamental component of the kernel implemented through the NT module. Every executive object is preceded by a header in memory. Before an instance of an exectuve object is created, a memory block must be allocated. 
+
+Executive Objects
 
 | Object        | Description                                                                   |
 |---------------|-------------------------------------------------------------------------------|
@@ -1302,6 +1300,12 @@ The Modules plugin in Volatility examines the metadata structures linked through
 
 Modscan:
 The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
+
+To see options
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cae9895d-1e7c-4c77-98b7-2e1627fccba5)
+
+
 
 Get image information
 ```
@@ -1426,7 +1430,7 @@ There are many tools available to create and analyze disk images, including:
    
 3.  FTK Imager: A free tool developed by AccessData that can be used to create and analyze disk images.
    
-4.  Autopsy: An open-source digital forensics platform that includes a disk imaging tool(Can do Windows).
+4.  Autopsy: An open-source digital forensics platform that includes a disk imaging tool.
    
 5.  X-Ways Forensics: A commercial forensic software that includes a disk imaging tool.  
 
@@ -1434,7 +1438,7 @@ There are many tools available to create and analyze disk images, including:
 
 ## Example fdisk+Mount Linux
 
-Mounting a file system in Linux is similar to gaining access to a victim system on platforms like Hack The Box (HTB). However, there are some key differences. Unlike a live computer, the mounted system is just a file system, and you cannot run commands like netstat to view current connections. Despite this, the process of enumeration from a pentesting perspective is similar. The advantage of mounting a file system is that you can use sudo, which grants you root access to the mounted system, allowing for more comprehensive analysis and investigation. This is useful when looking for sensitive information or and intresting executable... Other times you may only need to extract logs.
+Mounting a file system in Linux is similar to gaining access to a victim system on platforms like Hack The Box (HTB). However, there are some key differences. Unlike a live computer, the mounted system is just a file system, and you cannot run commands like netstat to view current connections. You arnt on the system, just the file system like plugging in an external hardrive. Despite this, the process of enumeration from a pentesting perspective is similar. The advantage of mounting a file system is that you can use sudo, which grants you root access to the mounted system, allowing for more comprehensive analysis and investigation. This is useful when looking for sensitive information or and intresting executable... Other times you may only need to extract logs.
 
 In order to mount a filesystem, you typically need to first determine the offset or starting point of the filesystem within the disk image or device file. Once you have determined the offset, you can then use the "mount" command with the "-o loop" option to mount the filesystem at the specified location.
 
@@ -1454,7 +1458,9 @@ mkdir test
 ```
 ![Pasted image 20230216101009](https://user-images.githubusercontent.com/50979196/221450698-af50833b-dc66-47a8-96d9-01d5568a69e8.png)
 
-Just like pentesting we can use linpeas in the mount
+### automate search
+
+Just like pentesting we can use linpeas in the mount. This has helped me to find important files in CTFs.
 ```
  sudo /usr/share/peass/linpeas/linpeas.sh -f ~/PICO/Forensics/Orchid/test 
 ```
