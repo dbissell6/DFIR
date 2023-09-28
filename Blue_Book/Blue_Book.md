@@ -14,7 +14,7 @@ The handbook is written to be accessible to new forensic CTF players and is desi
  
 5) [Disk](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Disk)
 
-6) [Live analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Live-analysis)
+6) [Infected Host](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#infected-host)
 
 
 ## How to use this
