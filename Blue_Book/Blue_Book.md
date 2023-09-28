@@ -1776,6 +1776,27 @@ output will be our .raw
 ## Dump Linux Memory
 
 
+## Network (.pcap)
+
+Unlike logs, pcaps are not saved and kept by default. We will need to run something. This can be usefulk in conjuction when checking malwware to see if its reaching out.
+
+### Capture pcaps on Linux
+
+### wireshark
+
+Wireshark -> pick interface -> let run -> Stop -> Save
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b48d4534-dd63-4df8-b7ca-e84903b1655d)
+
+
+### tcpdump
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3b8e7fd7-96b5-4702-81ae-dc13eb49a5d1)
+
+
+### Capture pcaps on Windows
+
+
 # Live analysis
 
 Analyzing a live system or a direct copy of a virtual machine (VM) rather than static artifacts like disk images offers numerous advantages. These include real-time data analysis, dynamic state assessment, behavioral analysis, memory forensics, immediate triage, interaction with running services, malware detection and analysis, contextual understanding, reduced imaging time, and improved resource availability. While live analysis provides these benefits, it's essential to adhere to proper forensic procedures to minimize impact on the live system. A combined approach involving both live and artifact analysis ensures a comprehensive understanding of the incident and enhances the investigative process.
