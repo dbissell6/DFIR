@@ -196,19 +196,20 @@ The OSI (Open Systems Interconnection) model is a conceptual model that defines 
 
 The OSI model has seven layers, each of which has a specific function. These layers are:
 
-1    Physical Layer - This layer is responsible for transmitting raw bit streams over a physical medium, such as a wire or radio signal.
 
-2    Data Link Layer - This layer is responsible for providing reliable data transfer over a physical link, and includes protocols such as Ethernet and Wi-Fi.
+1.    Physical Layer - This layer is responsible for transmitting raw bit streams over a physical medium, such as a wire or radio signal.
 
-3    Network Layer - This layer is responsible for routing data packets between networks, and includes protocols such as IP.
+2.    Data Link Layer - This layer is responsible for providing reliable data transfer over a physical link, and includes protocols such as Ethernet and Wi-Fi.
 
-4    Transport Layer - This layer is responsible for providing reliable data transfer between applications running on different devices, and includes protocols such as TCP and UDP.
+3.    Network Layer - This layer is responsible for routing data packets between networks, and includes protocols such as IP.
 
-5    Session Layer - This layer is responsible for managing the sessions between different applications, and includes protocols such as NetBIOS.
+4.    Transport Layer - This layer is responsible for providing reliable data transfer between applications running on different devices, and includes protocols such as TCP and UDP.
 
-6    Presentation Layer - This layer is responsible for the presentation and formatting of data, and includes protocols such as SSL and TLS.
+5.    Session Layer - This layer is responsible for managing the sessions between different applications, and includes protocols such as NetBIOS.
 
-7    Application Layer - This layer is responsible for providing services to applications, and includes protocols such as HTTP, FTP, and SMTP.
+6.    Presentation Layer - This layer is responsible for the presentation and formatting of data, and includes protocols such as SSL and TLS.
+
+7.    Application Layer - This layer is responsible for providing services to applications, and includes protocols such as HTTP, FTP, and SMTP.
 
 ### Common protocols
 
