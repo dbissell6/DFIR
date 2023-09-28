@@ -1692,6 +1692,16 @@ This may take a while
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/84d4ecea-b863-4fb1-9d49-2070249e49a6)
 
 
+### Caine 
+
+Press F12 when booting select Caine
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ba313772-e911-414f-a851-8a8defd7e4d1)
+
+
+
+
+
 ## KAPE (Kroll Artifcat Parser and Extractor)
 
 KAPE extracts artifacts from a system, isnt open source. 
@@ -1736,6 +1746,7 @@ Typical output/
 |       |-- wbem
 |       |-- WDI
 |       |-- winevt
+|           |-- Logs
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/026a5c02-b22e-479b-89dd-c8cf1ba4253f)
 
