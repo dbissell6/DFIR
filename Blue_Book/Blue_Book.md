@@ -1141,6 +1141,18 @@ Changing that eval to a print, then running the code will show us what would hav
 ![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
 
 
+### Example base64 gzipped powershell script
+
+See base64strings and Decompress
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ca26ed70-b7d4-4f23-9298-26d66d5f4134)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/88e82ffa-fa0d-42cb-b628-a54204851c5a)
+
+Just to finish this off see another base64 and a xor
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1320d5bc-11b9-47e3-8b9c-e4d1d2544f4b)
+
+
 # Stegnography 
 ### Intro
 Steganography is a technique used to hide information within other files or data, making it difficult to detect without the use of special tools or techniques. This technique can be used to conceal sensitive information or to hide messages in plain sight.
