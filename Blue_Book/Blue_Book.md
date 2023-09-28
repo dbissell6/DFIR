@@ -1661,6 +1661,7 @@ mount /dev/md0 /mnt/raid
 
 # Infected host
 
+## Intro
 2 things to take from here 
 
 1) Extracting the artifacts
@@ -1773,6 +1774,7 @@ output will be our .raw
 
 
 ## Dump Linux Memory
+
 
 # Live analysis
 
