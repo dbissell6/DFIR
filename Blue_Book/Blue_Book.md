@@ -1221,6 +1221,10 @@ Memory dumps are a type of digital forensic artifact that can be used to analyze
 
 In digital forensics and incident response (DFIR), memory dumps are considered a valuable artifact because they can provide insight into the state of a system at the time of an event of interest, including information about running processes, open network connections, and any malicious activity that may have been occurring in memory. Memory dumps can be analyzed using a variety of tools, including those specifically designed for memory analysis, as well as more general-purpose digital forensics tools.
 
+Crash dump files will contain memory dump when system crashes
+
+Page files stores data when the RAM is low on space - not a memory file
+
 Common File formats of memory dumps 
 -   Raw binary format (.bin)
 -   Microsoft crash dump format (.dmp)
