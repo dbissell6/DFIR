@@ -1401,8 +1401,9 @@ https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3
 ## Intro
 Disk images are copies of an entire disk drive or a portion of it. In DFIR, disk images are an essential tool for preserving the evidence and state of the original disk. Analyzing disk images can reveal important information such as deleted files, hidden files, and other artifacts that can provide valuable insight into an incident.Some common forms of disk images include raw images, Encase images, and AFF4 images.
 
-Typically found as .img or dd
-Windows can be found as .img, .vmdk, .vhdx, .dd, .raw
+Typically found as: .img, .dd, .raw, ISO, EWF(Expert witness format. contains raw + metadata)
+
+Virtual Drive Formats: .vmdk, .vhdx
 
 Differences in the way that Linux and Windows handle disk drives, which can be relevant to forensic analysis in a CTF challenge.
 
