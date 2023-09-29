@@ -599,7 +599,11 @@ Shellbags, short for "shell folders and bagMRU," are a forensic artifact found i
 Found in registry at
 
 ```
-HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
+
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
+• NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
+• HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
 ```
 
 ### Shell Bags Explorer
@@ -1438,6 +1442,12 @@ Differences in the way that Linux and Windows handle disk drives, which can be r
 -    Forensic tools and techniques: Different forensic tools and techniques may be needed to analyze disk drives on Linux versus Windows. For example, some tools may be more effective at recovering data from a specific file system or partitioning scheme, while others may be better suited for analyzing permissions and ownership. It is important to understand the differences between Linux and Windows disk drives when selecting and using forensic tools and techniques for a CTF challenge.
 
 **File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
+
+
+Hard drive type
+
+-    The capacity to recover deleted files is influenced by the type of hard drive utilized. In the case of mechanical hard drives, it's advisable to refrain from deleting data directly from the disk, as marking it as deleted prompts the hard drive to overwrite the area with fresh data. Hence, deleting the data becomes an unnecessary action. On the other hand, Solid-State Drives (SSD) face limitations in writing new data to already occupied areas. Writing data to a marked-as-deleted area on an SSD involves two operations: first, erasing the old data, and then writing the new data. SSDs often implement techniques to periodically remove data marked for deletion, enhancing their speed. Consequently, the presence of deleted files is generally lower on an SSD compared to a mechanical disk.
+
 
 There are many tools available to create and analyze disk images, including:
 
