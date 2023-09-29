@@ -1042,11 +1042,10 @@ We want to understand what the malware does. Does it encyrpt our files? Does it 
 
 ## static vs dynamic
 
-### Static
-disect the code to understand what will happen
 
-### Dynamic
-run the code to see what happened.
+**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
+
+**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
 ### IDA
 
@@ -1232,6 +1231,9 @@ https://stegonline.georgeom.net/checklist
 Memory dumps are a type of digital forensic artifact that can be used to analyze the state of a computer's memory at the time of a crash or system failure. Memory dumps contain a complete snapshot of the memory contents of a computer, including the contents of volatile memory such as RAM, as well as the contents of any mapped physical memory pages. Memory dumps can be used to diagnose and troubleshoot system issues, as well as to recover and analyze digital evidence related to malicious activities or other incidents.
 
 In digital forensics and incident response (DFIR), memory dumps are considered a valuable artifact because they can provide insight into the state of a system at the time of an event of interest, including information about running processes, open network connections, and any malicious activity that may have been occurring in memory. Memory dumps can be analyzed using a variety of tools, including those specifically designed for memory analysis, as well as more general-purpose digital forensics tools.
+
+
+**Fileless Malware**: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions.
 
 Crash dump files will contain memory dump when system crashes
 
@@ -1436,7 +1438,7 @@ Differences in the way that Linux and Windows handle disk drives, which can be r
 
 -    Forensic tools and techniques: Different forensic tools and techniques may be needed to analyze disk drives on Linux versus Windows. For example, some tools may be more effective at recovering data from a specific file system or partitioning scheme, while others may be better suited for analyzing permissions and ownership. It is important to understand the differences between Linux and Windows disk drives when selecting and using forensic tools and techniques for a CTF challenge.
 
-
+**File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
 
 There are many tools available to create and analyze disk images, including:
 
@@ -1869,17 +1871,13 @@ Used on a live device to inspect registry and schd tasks and show processes that
 
 
 
-**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
 
-**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
-
-**Fileless Malware**: Fileless malware is a type of malware that operates entirely in memory, making it difficult to detect and analyze. It can be executed through legitimate processes, such as PowerShell or WMI, and can evade traditional antivirus solutions. Detection and analysis of fileless malware requires a thorough understanding of the underlying system and its behavior.
 
 **Data Exfiltration Techniques**: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
 
-**Advanced Obfuscation Techniques**: Advanced obfuscation techniques are used by malware authors to make their code more difficult to analyze and detect. Techniques like code obfuscation and packers can make malware more resilient to analysis. Detection and analysis of advanced obfuscation techniques requires a deep understanding of the underlying code and the ability to identify patterns and anomalies.
 
-**File Carving**: File carving is a technique used to extract data from a file or disk image without the use of a file system. This technique can be used to recover lost or deleted files or to analyze malware that may be hiding within a file. Some commonly used file carving tools include Scalpel, Foremost, and PhotoRec. It requires a deep understanding of the file structure and data recovery techniques.
+
+
 
 ##
 Bulk_Extractor is a tool that will scan pcaps, mem.raw ...
