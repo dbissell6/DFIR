@@ -139,10 +139,6 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 
 ```openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123```
 
-### Encryption in Wireshark
-
-Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
-
 
 # PCAPS (.pcap)
 ## Intro 
@@ -274,6 +270,9 @@ To access streams right click on a packet
 
 ![Pasted image 20230212123647](https://user-images.githubusercontent.com/50979196/221450181-2bbd9132-4d32-410a-a94e-67119e6d00fa.png)
 
+### Encryption in Wireshark
+
+Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
 
 ### Input RSA key to decrpyt TLS
 From G, but TLS instead of SSL
