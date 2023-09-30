@@ -1551,7 +1551,7 @@ sudo ls -la root
 ![Pasted image 20230318133535](https://user-images.githubusercontent.com/50979196/229359015-4c1dd124-6f5e-4709-9168-335a1d6ea0cf.png)
 ![Pasted image 20230318133520](https://user-images.githubusercontent.com/50979196/229359026-40b14558-22fb-4a98-9e80-7e52a39465e3.png)
 
-## Autopsy
+## Autopsy on Linux
 
 GUI to look at disk.
 
@@ -1573,6 +1573,26 @@ New Case -> Add Host -> Add Image -> Analyze -> File Analysis
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/08a2ecbe-2cc1-44e9-9357-e37bfa0d0837)
 
 In file analysis can browse directories and see All Deleted Files. 
+
+### Autopsy on Windows
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/95281b66-8ff0-4f22-8e5f-5f1796926074)
+
+
+Open Case -> Next -> Finish
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/19d0c14c-afda-418b-ad62-114874ab4ddf)
+
+Start analysis, this will take a while.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/59681d80-b5e6-4158-bcda-d5c73b038c6d)
+
+
+### Autopsy Timeline
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/31272248-c42d-4ec8-a2c9-f173a27f712c)
+
 
 ## SluethKit
 
