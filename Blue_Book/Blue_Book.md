@@ -405,6 +405,15 @@ HKEY_LOCAL_MACHINE\Classes 	HKCR
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e4afe9ed-8fca-4171-b88c-6a7d17f43bfd)
 
 
+### EvtxECmd
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/84b738a7-cfd0-4d46-ae75-dd55f3a7fcee)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b17ca80b-720b-4b98-8791-ae6049a2b96d)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f2ae4c77-a5da-4359-9ea8-5ea808b7e358)
+
+
 ### Powershell script 
 
 Search for a keyword in a directory of evtxs
