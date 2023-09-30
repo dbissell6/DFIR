@@ -734,6 +734,7 @@ Keys found in
 ```
 NTUSER.DAT 
 ```
+
 ## RunMRU Lists
 The RunMRU (Most Recently Used) lists in the Windows Registry store information about recently executed programs from various locations, such as the Run and RunOnce keys. These lists can indicate which programs were run, when they were executed, and potentially reveal user activity.
 
@@ -763,7 +764,7 @@ In Linux, cron is a time-based job scheduler that runs commands at specified int
 # Internet History artifacts
 
 ## Zone Identifier
-When a file is downloaded from the internet, Windows assigns it a Zone Identifier (ZoneId). This could be helpful to see a files orgins or if a files name has changed. Can be found in the $J(USN).
+When a file is downloaded from the internet, Windows assigns it a Zone Identifier (ZoneId). This could be helpful to see a files orgins or if a files name has changed. Can be found in the /mft/$J(USN).
 
 ### Using Powershell
 
@@ -771,6 +772,11 @@ When a file is downloaded from the internet, Windows assigns it a Zone Identifie
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/382385a4-2c6e-454f-b9e3-1e1b4ec580d9)
 
+### using MFT + Timeline
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1c80c672-10fe-4bca-9e5e-e884e67c6deb)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0b878258-8fb5-4ca0-a300-7dea564c9892)
 
 ## Browser artifacts
 
@@ -780,6 +786,8 @@ NirLauncher -> BrowsingHistoryView
 
 
 ## DNS
+Can give clues to sites visited.
+
 ipconfig /displaydns
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f04f22cc-5157-41fc-b7ce-fff8d74a53c5)
