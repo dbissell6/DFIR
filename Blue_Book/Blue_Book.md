@@ -760,6 +760,24 @@ vim/nano can be used to make malicious changes to files.
 
 In Linux, cron is a time-based job scheduler that runs commands at specified intervals. An attacker may use cron to maintain persistence on a compromised system by creating a cronjob to execute a malicious script at regular intervals. This script could be used to create backdoors, steal data, or perform other malicious activities.
 
+# Internet History artifacts
+
+## Browser artifacts
+
+NirLauncher -> BrowsingHistoryView
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ecbae68b-502e-43b6-8087-7d781c9373c0)
+
+
+## DNS
+ipconfig /displaydns
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f04f22cc-5157-41fc-b7ce-fff8d74a53c5)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/29036a98-4300-41da-aac6-cd32c8f515d5)
+
+
+
 # Files/Executables
 ## Intro
 When it comes to CTF challenges, file analysis is an essential skill for any blue team member. These challenges can range in complexity from a simple long text file that needs to be searched for a flag to a complex executable that requires reverse engineering. As a blue team member, you need to be equipped with the right tools and techniques to analyze any file you encounter during a CTF.
@@ -1042,6 +1060,7 @@ Malware analysis is the process of dissecting malicious software to understand i
 We want to understand what the malware does. Does it encyrpt our files? Does it send a reverse shell? If so, how?
 
 
+https://www.youtube.com/@jstrosch/featured
 
 ## static vs dynamic
 
@@ -1855,6 +1874,11 @@ On Virtual Box
 In the VM
 `This PC -> CD Drive CAINE`
 
+## get powershell history
+
+```
+type (Get-PSReadlineOption).HistorySavePath
+```
 ## NirLauncher
 
 NirLauncher is a tool package created by NirSoft that offers a collection of small utilities for various purposes, including system analysis, network monitoring, password recovery, and more. 
