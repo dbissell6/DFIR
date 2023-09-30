@@ -755,6 +755,15 @@ Registry: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\R
 
 ## Timeline
 
+Most of the tools that have been used to parse windows artifacts have been made by Zimmerman and can be found here.
+
+`
+https://ericzimmerman.github.io/#!index.md
+`
+Most of these tools create output that can be ingested into a timeline gui.
+
+
+
 # Linux logs
 
 Linux logs are an essential source of information for conducting digital forensics and incident response analysis in a CTF competition. There are several types of Linux logs that can be analyzed, including system logs (e.g., syslog), authentication logs (e.g., auth.log), and kernel logs (e.g., dmesg). Each of these logs provides valuable insights into the system's behavior and can help identify signs of intrusion or compromise.
@@ -793,15 +802,6 @@ NirLauncher -> BrowsingHistoryView
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ecbae68b-502e-43b6-8087-7d781c9373c0)
 
-
-## DNS
-Can give clues to sites visited.
-
-ipconfig /displaydns
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/f04f22cc-5157-41fc-b7ce-fff8d74a53c5)
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/29036a98-4300-41da-aac6-cd32c8f515d5)
 
 
 
@@ -1945,6 +1945,16 @@ Windows File Analyzer is a forensic tool designed to examine various Windows art
 Used on a live device to inspect registry and schd tasks and show processes that will run on startup.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8a1009af-3192-45dc-8d88-0bc531d91caa)
+
+## DNS
+Can give clues to sites visited.
+
+ipconfig /displaydns
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f04f22cc-5157-41fc-b7ce-fff8d74a53c5)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/29036a98-4300-41da-aac6-cd32c8f515d5)
+
 
 
 # move
