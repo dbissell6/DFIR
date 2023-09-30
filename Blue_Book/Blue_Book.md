@@ -762,6 +762,16 @@ In Linux, cron is a time-based job scheduler that runs commands at specified int
 
 # Internet History artifacts
 
+## Zone Identifier
+When a file is downloaded from the internet, Windows assigns it a Zone Identifier (ZoneId). This could be helpful to see a files orgins or if a files name has changed. Can be found in the $J(USN).
+
+### Using Powershell
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/50f0871d-71e0-45dc-bae6-ea1c3853a9c8)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/382385a4-2c6e-454f-b9e3-1e1b4ec580d9)
+
+
 ## Browser artifacts
 
 NirLauncher -> BrowsingHistoryView
