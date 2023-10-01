@@ -1,6 +1,6 @@
 # The Blue Book
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/eedbc6af-a1d0-4cf9-9472-ba6db7fe5ef6)
+
 
 
 ## Intro
@@ -146,6 +146,12 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 
 
 # PCAPS (.pcap)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/208b13b8-91a3-4387-adb4-8ab745aadff5)
+
+
+
+
 ## Intro 
 
 Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
