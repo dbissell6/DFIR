@@ -308,6 +308,7 @@ tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17
 
 ## Suricata
 
+Suricata excels at exhaustive dissection of network traffic, meticulously seeking potential signs of malicious activities within PCAP data. Its power lies in its ability to thoroughly evaluate our network's state and delve into the specifics of individual application-layer transactions in PCAP captures. The effectiveness of Suricata heavily depends on a finely tuned set of rules.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ba264e57-bcac-4868-9090-b0f69ff961d0)
 
@@ -322,6 +323,8 @@ https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
 
 
 ## Snort
+
+Operates as a packet logger or sniffer akin to Suricata, allowing a comprehensive inspection of network traffic. Snort's capability to identify and log all activities within the PCAP traffic provides an in-depth view of the situation and detailed logs of application layer transactions in PCAP data.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1759bfdf-92b8-4a5d-88fa-45b2e179c383)
 
@@ -351,6 +354,10 @@ sudo snort -c /root/snorty/etc/snort/snort.lua --daq-dir /usr/local/lib/daq -r c
 --daq data acquistion
 
 ## Zeek
+
+```
+In brief, Zeek is optimized for interpreting network traffic and generating logs based on that traffic. It is not optimized for byte matching, and users seeking signature detection approaches would be better served by trying intrusion detection systems such as Suricata. Zeek is also not a protocol analyzer in the sense of Wireshark, seeking to depict every element of network traffic at the frame level, or a system for storing traffic in packet capture (PCAP) form. Rather, Zeek sits at the “happy medium” representing compact yet high fidelity network logs, generating better understanding of network traffic and usage.
+```
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/60722e91-6894-49b6-a0a9-d43f7f8bbe44)
 
