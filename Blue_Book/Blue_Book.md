@@ -1200,6 +1200,10 @@ Just to finish this off see another base64 and a xor
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1320d5bc-11b9-47e3-8b9c-e4d1d2544f4b)
 
+### Example messy powershell
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6e68a218-1150-4bfe-acb6-fefb74d2900e)
+
 
 # Stegnography 
 ### Intro
@@ -1592,6 +1596,29 @@ Start analysis, this will take a while.
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/31272248-c42d-4ec8-a2c9-f173a27f712c)
+
+## Mount Windows on Windows
+
+```
+Mount-DiskImage -Access ReadOnly -ImagePath 'C:\Users\Blue\Desktop\Artifact Of Dangerous Sighting\HostEvidence_PANDORA\2023-03-09T132449_PANDORA.vhdx'
+```
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ce18f597-cff5-4bb5-b52f-c0791bd6ebc5)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b0ada041-cf64-43bf-8a49-25b5f11aeb1a)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2634f8f8-8e73-47ad-8c15-251a25da069a)
+
+### Alternate data streams
+
+NTFS has alternate streams
+
+![Pasted image 20230930155804](https://github.com/dbissell6/DFIR/assets/50979196/cb46efd3-4520-49cc-9719-6741da939656)
+
+![Pasted image 20230930160814](https://github.com/dbissell6/DFIR/assets/50979196/0a50308f-2a19-43d0-8d59-d264c0f66c5a)
+
+![Pasted image 20230930160904](https://github.com/dbissell6/DFIR/assets/50979196/368a57fb-5a68-402a-9c9c-8399380caf9f)
 
 
 ## SluethKit
