@@ -1,5 +1,8 @@
 # The Blue Book
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/eedbc6af-a1d0-4cf9-9472-ba6db7fe5ef6)
+
+
 ## Intro
 
 The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a quick reference. 
