@@ -318,8 +318,6 @@ We can find all the info we need in the session setup request
 
 ![Pasted image 20221121141412](https://github.com/dbissell6/DFIR/assets/50979196/fa86cfbd-5897-4a22-ab7e-141c78f8b2eb)
 
-![Pasted image 20221121141412](https://github.com/dbissell6/DFIR/assets/50979196/07e8f8ce-0140-4944-b04e-b05b168a26de)
-
 ![Pasted image 20221121141627](https://github.com/dbissell6/DFIR/assets/50979196/3deb3c1c-bb96-4d7c-8df0-bd8ef8965fc7)
 
 ![Pasted image 20221121115333](https://github.com/dbissell6/DFIR/assets/50979196/a24ef938-3ba3-4a1c-ac11-cbfbdb7db135)
