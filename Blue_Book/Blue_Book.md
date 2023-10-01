@@ -1317,8 +1317,20 @@ Changing that eval to a print, then running the code will show us what would hav
 ![image](https://user-images.githubusercontent.com/50979196/229360590-6be77a92-d4a9-474b-9b15-82386ab91033.png)
 ![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
 
+### Example 'static' powershell script 
+
+Here the light obfuscation allows us to not have to run the script. Instead we can make a simple python script to understand what would have executed.
+
+![Pasted image 20221101223940](https://github.com/dbissell6/DFIR/assets/50979196/928357ee-68f0-49eb-8d2f-588d5547287c)
+
+![Pasted image 20221101224024](https://github.com/dbissell6/DFIR/assets/50979196/18ad2c6d-ec83-43f4-8b86-14e79c2ca7e7)
+
+![Pasted image 20221101224154](https://github.com/dbissell6/DFIR/assets/50979196/b20807de-afde-4ad8-afac-be739149d321)
+
+
 
 ### Example base64 gzipped powershell script
+
 
 See base64strings and Decompress
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ca26ed70-b7d4-4f23-9298-26d66d5f4134)
