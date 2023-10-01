@@ -311,8 +311,39 @@ tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ba264e57-bcac-4868-9090-b0f69ff961d0)
 
+### Rules
+
+Sample rules
+```
+alert http any any -> any any (msg:"Investigate suspicious connections, possible Dridex infection"; sid:2200073; rev:2;)
+alert http any any -> any any (msg:"Suspicious JavaScript function, possible Dridex infection";  content:""; file_data;  sid:10000005;)
+```
+https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
+
+
 ## Snort
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1759bfdf-92b8-4a5d-88fa-45b2e179c383)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/77e0b1c2-cfb3-45d3-8032-a1f5609259bc)
+
+https://docs.snort.org/
+
+### Rules
+
+Can specify rules in
+```
+/root/snorty/etc/snort/snort.lua
+```
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b1c34229-6cea-4166-bbf4-1fe91b7c1821)
+
+
+```
+sudo snort -c /root/snorty/etc/snort/snort.lua --daq-dir /usr/local/lib/daq -r capture.pcapng
+```
+
+-c configuration file
+--daq data acquistion
 ## Zeek
 
 ## Aircrack-ng
