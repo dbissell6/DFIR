@@ -327,24 +327,46 @@ https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/77e0b1c2-cfb3-45d3-8032-a1f5609259bc)
 
+
 https://docs.snort.org/
 
 ### Rules
 
 Can specify rules in
+
 ```
 /root/snorty/etc/snort/snort.lua
 ```
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b1c34229-6cea-4166-bbf4-1fe91b7c1821)
 
+Similar to suricata, not the same.
+https://docs.suricata.io/en/latest/rules/differences-from-snort.html
 
 ```
 sudo snort -c /root/snorty/etc/snort/snort.lua --daq-dir /usr/local/lib/daq -r capture.pcapng
 ```
-
+`-A cmg` displays alert information along with packet headers and payload.
+`-R /home/ViviG/local.rules` Loads rules not found in .lua
 -c configuration file
 --daq data acquistion
+
 ## Zeek
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/60722e91-6894-49b6-a0a9-d43f7f8bbe44)
+
+
+```
+/usr/local/zeek/bin/zeek -C -r ../pcaps/psexec_pth_download_meterpreter.pcap
+```
+
+### Zeek Cut
+
+Get columns 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a7344d61-e8f4-4f4e-9fa0-d2edffc540cf)
+
+
+https://docs.zeek.org/en/stable/examples/index.html
 
 ## Aircrack-ng
 Aircrack-ng is a powerful tool for analyzing WiFi packet captures and can be used to crack various types of encryption keys used to protect WiFi network traffic. Some of the encryption keys that Aircrack-ng can crack include WEP (Wired Equivalent Privacy), WPA (Wi-Fi Protected Access), and WPA2 (Wi-Fi Protected Access II).  
