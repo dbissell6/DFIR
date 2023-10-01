@@ -42,6 +42,8 @@ The structure of this document is sectioned by type of evidence typically given.
 
 ## Fundemental Ideas That Will be encountered
 
+General tip. Most challenges medium and above require the player to create a python script.
+
 ## Decoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
@@ -144,25 +146,30 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 ## Intro 
 
 Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
+
+Sender | Receiver | Time | Messege
 ```
-Bob -> Alice - Hi
-Alice -> Bob - oh-hey.jpeg
-Bob -> Alice - What you doing tomorrow?
-Charles -> Bob - Dont text my girlfriend!
+Bob -> Alice - 5:00pm - Hi
+Alice -> Bob - 5:01pm - oh-hey.jpeg
+Bob -> Alice - 5:02pm - What you doing tomorrow?
+Charles -> Bob - 5:03pm - Dont text my girlfriend!
 ```
+
+
+### 2 Flavors of Challenges
 There are 2 flavors of pcaps and 4-5 different types of challenges regarding skill. 
 
-### 2 Flavors 
-The first flavor and most seen is a typical network catpure. These are large captures with the flag hidden in a single packet maybe containing html traffic. This can often be thought of as finding a needle in a haystack
+The first flavor and most seen is a typical network catpure. These are large captures with the flag hidden in a single packet maybe containing html traffic. This can often be thought of as finding a needle in a haystack.
 
-The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instalntly is a encrpytion problem.
+The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instantly is a encrpytion problem.
 
 ### 5 levels
-1) flag found plaintext 
-2) flag encoded in rot13 or base64
-3) flag hidden in encryption that needs credentials
-4) file found containing binary that needs to be reversed
-5)  something tough
+
+1) Flag found plaintext 
+2) Flag encoded in rot13 or base64
+3) Flag hidden in encryption that needs credentials
+4) File found containing binary that needs to be reversed
+5) Something tough
 
 Most often in level 3 challenges and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
 
@@ -284,9 +291,36 @@ From G, but TLS instead of SSL
 
 marshall in the middle Similar method used in but instead of a RSA to decrypt the TLS it is a secrets.log
 
-Rouge shows how to decrypt SMB2 traffic
 
-To learn a full wirehark tutorial chris greer
+### Decyrpt SMB2
+
+HTB Rouge shows how to decrypt SMB2 traffic.
+
+In order to decrypt SMB2 traffic in wireshark you need a session id and a session key.
+To get the session key we need a couple things.
+1) User's password or its md5 hash
+2) Username and domain
+3) Ntproofstr
+4) Initial SMB session key
+
+We can find all the info we need in the session setup request
+
+![Pasted image 20221121132110](https://github.com/dbissell6/DFIR/assets/50979196/6817bb8d-392c-4dca-9526-1d034c8adab9)
+
+![Pasted image 20221121141412](https://github.com/dbissell6/DFIR/assets/50979196/fa86cfbd-5897-4a22-ab7e-141c78f8b2eb)
+
+![Pasted image 20221121141412](https://github.com/dbissell6/DFIR/assets/50979196/07e8f8ce-0140-4944-b04e-b05b168a26de)
+
+![Pasted image 20221121141627](https://github.com/dbissell6/DFIR/assets/50979196/3deb3c1c-bb96-4d7c-8df0-bd8ef8965fc7)
+
+![Pasted image 20221121115333](https://github.com/dbissell6/DFIR/assets/50979196/a24ef938-3ba3-4a1c-ac11-cbfbdb7db135)
+
+```
+Edit > Preferences > Protocols > SMB2
+```
+
+![Pasted image 20221121131210](https://github.com/dbissell6/DFIR/assets/50979196/07dbef05-8cb1-4d22-b2d0-ff3632a58aff)
+
 
 ### HID - USB
 
@@ -298,6 +332,9 @@ In wireshark
 
 ![image](https://user-images.githubusercontent.com/50979196/229363428-52f23471-42d6-4f72-855e-4637ce652bee.png)
 Notice very bottom says usage and gives 2 symbols, those are the 2 options depending if shift or caps lock was used.
+
+
+To learn a full wirehark tutorial chris greer
 
 ## Tshark
 Sometimes it is useful to extract data from wireshark, this can be done with tshark
