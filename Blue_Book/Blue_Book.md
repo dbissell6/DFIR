@@ -78,6 +78,8 @@ To decode in linux
 Useful for most decoding  
 https://gchq.github.io/CyberChef/
 
+https://github.com/mattnotmax/cyberchef-recipes#
+
 ## Decryption
 
 Encryption is an idea that permeates all domains of digital forensics and incident response (DFIR), from incident triage to malware analysis and network forensics. In today's world, encryption is widely used to protect sensitive information, and it is often encountered in digital evidence. As such, understanding encryption is essential for any DFIR practitioner. Encryption can be used to protect data at rest, data in transit, or both, and can be implemented in various ways, from encryption of individual files to full-disk encryption of an entire computer system. Additionally, encryption can be encountered in various contexts, such as communication protocols, malware communication, or encryption of files stored in the cloud.
@@ -301,7 +303,7 @@ From G, but TLS instead of SSL
 marshall in the middle Similar method used in but instead of a RSA to decrypt the TLS it is a secrets.log
 
 
-### Decyrpt SMB2
+### Decrypt SMB2
 
 HTB Rouge shows how to decrypt SMB2 traffic.
 
@@ -328,7 +330,17 @@ Edit > Preferences > Protocols > SMB2
 
 ![Pasted image 20221121131210](https://github.com/dbissell6/DFIR/assets/50979196/07dbef05-8cb1-4d22-b2d0-ff3632a58aff)
 
+### Decrypt winrm
 
+![Pasted image 20221125081327](https://github.com/dbissell6/DFIR/assets/50979196/49eeb941-f7fe-4452-b875-62de9dd1719c)
+
+![Pasted image 20221125080137](https://github.com/dbissell6/DFIR/assets/50979196/ab3841a4-1dfd-426f-9f67-9c33ae3138ca)
+
+```
+python3 winrm_decrypt.py capture.pcap -n 8bb1f8635e5708eb95aedf142054fc95 > decrypted
+```
+
+HTB keep the steam going
 ### HID - USB
 
 Some pcaps are not of a network, but keyboard commands captured by a USB. There are a couple challenges(logger, deadly arthropod) that require you to decode these commands. Doing so typically yields the flag.
