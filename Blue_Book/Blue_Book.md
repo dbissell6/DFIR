@@ -228,7 +228,7 @@ The OSI model has seven layers, each of which has a specific function. These lay
 Wireshark is a tool that allows you to analyze network traffic at the packet level and examine the contents of individual packets, including the source and destination addresses, protocols used, and any data transmitted. This can be extremely useful for troubleshooting network issues, identifying security threats, and developing and testing network protocols.
 
 
-Most Pcaps are too long to look through packet by packet. So opening up wireshark you should have a plan and be looking out for some things(also use Pcap-analysis https://github.com/dbissell6/PCAP_Analysis). 
+Most Pcaps are too long to look through packet by packet. So opening up wireshark you should have a plan and be looking out for some things.
 
 To open wireshark, open up a terminal, navigate to the pcap
 ```
@@ -305,6 +305,15 @@ Sometimes it is useful to extract data from wireshark, this can be done with tsh
 ```
 tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17.0.2 && ip.src!=172.17.0.3" > output 
 ```
+
+## Suricata
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ba264e57-bcac-4868-9090-b0f69ff961d0)
+
+## Snort
+
+## Zeek
 
 ## Aircrack-ng
 Aircrack-ng is a powerful tool for analyzing WiFi packet captures and can be used to crack various types of encryption keys used to protect WiFi network traffic. Some of the encryption keys that Aircrack-ng can crack include WEP (Wired Equivalent Privacy), WPA (Wi-Fi Protected Access), and WPA2 (Wi-Fi Protected Access II).  
