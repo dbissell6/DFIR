@@ -1020,6 +1020,8 @@ Information can be hidden in the frequency spectrum of the audio signal, in unus
 ### Video files (e.g., MP4, AVI)
 Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
 
+### Email (.eml)
+
 
 
 ## Decompressing
