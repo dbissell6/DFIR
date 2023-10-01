@@ -1610,6 +1610,7 @@ Mount-DiskImage -Access ReadOnly -ImagePath 'C:\Users\Blue\Desktop\Artifact Of D
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/2634f8f8-8e73-47ad-8c15-251a25da069a)
 
+
 ### Alternate data streams
 
 NTFS has alternate streams
@@ -1620,6 +1621,8 @@ NTFS has alternate streams
 
 ![Pasted image 20230930160904](https://github.com/dbissell6/DFIR/assets/50979196/368a57fb-5a68-402a-9c9c-8399380caf9f)
 
+
+Example HTB Artifact Of Dangerous Sighting
 
 ## SluethKit
 
@@ -1829,7 +1832,7 @@ Press F12 when booting select Caine
 
 
 
-## KAPE (Kroll Artifcat Parser and Extractor)
+## KAPE (Kroll Artifact Parser and Extractor)
 
 KAPE extracts artifacts from a system, isnt open source. 
 
