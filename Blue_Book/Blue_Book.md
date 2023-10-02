@@ -939,12 +939,7 @@ C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/2172d8e6-1844-409f-bfb4-ed18cba0f5d4)
 
-
-## AppCompatCacheParser 
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/10942c11-789b-47c7-9ce0-c07be69df89c)
-
-## Shimcache
+## Application Compatibility Cache (Shimcache)
 
 Maintains a log of program execution data to aid compatibility and performance improvements. It captures data like file paths, execution timestamps, and flags denoting program execution. For investigators, Shimcache is valuable in identifying recently run programs and their respective files.
 
@@ -952,6 +947,14 @@ Found at
 ```
 Registry: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
 ```
+### AppCompatCacheParser 
+
+AppCompatCacheParser is another forensic tool developed by Eric Zimmerman, and it's specifically designed to parse the Application Compatibility Cache. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/10942c11-789b-47c7-9ce0-c07be69df89c)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ac479b6b-7fb6-4b1b-bf67-7806cf557b29)
+
 
 ## Userassist
 Userassist keys are registry artifacts used to see what programs the user ran, and when. 
@@ -970,13 +973,14 @@ Registry: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\R
 ```
 
 
-## Timeline
+## Timeline Explorer
 
 Most of the tools that have been used to parse windows artifacts have been made by Zimmerman and can be found here.
 
 `
 https://ericzimmerman.github.io/#!index.md
 `
+
 Most of these tools create output that can be ingested into a timeline gui.
 
 
