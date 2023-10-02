@@ -728,6 +728,14 @@ User-specific hive files include the Amcache.hve file, which contains informatio
 The ntuser.dat file contains information about autostart applications, recently accessed files, and last execution times of applications. 
 The UsrClass.dat file contains information about user-specific shellbags.
 
+### Registry Explorer
+
+Registry Explorer is a tool developed by Eric Zimmerman. It allows users to examine the contents of Windows registry files in a comprehensive manner. 
+
+Using Tools -> Find
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0893e121-3aee-4152-bb2e-0455306faa56)
+
 
 ### AmcacheParser
 
@@ -737,7 +745,7 @@ Found at
 ```
 C:\Windows\AppCompat\Programs\Amcache.hve
 ```
-On windows make sure Amcache.hve and logs are all ttogether in same dir/folder
+On windows make sure Amcache.hve and logs are all together in same dir/folder
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1e138b9f-d729-4879-8f85-edc85db89a2b)
 
