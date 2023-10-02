@@ -1,7 +1,6 @@
 # The Blue Book
 
-
-
+![image](https://github.com/dbissell6/DFIR/assets/50979196/01043023-47b7-44dc-87f8-fa31247b9b1d)
 
 ## Intro
 
