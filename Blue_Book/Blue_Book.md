@@ -949,6 +949,50 @@ Linux logs are an essential source of information for conducting digital forensi
 
 When analyzing Linux logs in a CTF DFIR competition, it is important to focus on specific entries that could indicate suspicious activity. These entries may include failed login attempts, unusual system behavior, and any unauthorized access attempts. Additionally, analyzing the logs in conjunction with other system artifacts (e.g., memory dumps, network traffic) can provide a more comprehensive picture of the incident and help to identify potential threat actors.
 
+
+| Name of Log               | Location                                | Purpose                                           | Key Information                                          |
+|---------------------------|-----------------------------------------|---------------------------------------------------|----------------------------------------------------------|
+| System Logs               | `/var/log/syslog` & `/var/log/messages` | General system activity logging.                   | - System boot-up and shutdown messages.                  |
+|                           |                                         |                                                   | - Informational, warning, and error messages from system services. |
+| Authentication Logs       | `/var/log/auth.log`                     | Track user authentication activities.              | - Successful and failed login attempts.                  |
+|                           |                                         |                                                   | - Use of sudo commands.                                  |
+|                           |                                         |                                                   | - SSH logins.                                           |
+| Daemon Logs               | `/var/log/daemon.log`                  | Logs from background services (daemons).           | - Service start/stop messages.                           |
+|                           |                                         |                                                   | - Service-specific messages.                             |
+| Kernel Logs               | `/var/log/kern.log`                    | Logs from the Linux kernel.                        | - Hardware-related messages.                             |
+|                           |                                         |                                                   | - Driver issues.                                         |
+|                           |                                         |                                                   | - Kernel panics.                                        |
+| DPKG Logs                 | `/var/log/dpkg.log`                    | Software packages (Debian-based distributions).    | - Installed, upgraded, or removed software.              |
+| YUM Logs                  | `/var/log/yum.log`                     | Software packages (RedHat-based distributions).    | - Installed or removed software.                         |
+| Cron Logs                 | `/var/log/cron`                        | Logs from the cron daemon.                         | - Scheduled tasks execution logs.                        |
+| Mail Logs                 | `/var/log/maillog` or `/var/log/mail.log` | Mail server logs.                                | - Sent and received email messages.                      |
+|                           |                                         |                                                   | - SMTP, POP3, and IMAP messages.                         |
+| Apache Access and Error Logs | `/var/log/apache2/access.log` & `/var/log/apache2/error.log` | Apache web server logs. | - Client requests.                                       |
+|                           |                                         |                                                   | - Server errors.                                         |
+| Boot Log                  | `/var/log/boot.log`                    | System boot messages.                              | - Messages during system startup.                        |
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/962852b7-cbc8-4613-a551-e9d7dc9be510)
+
+
+## Useful Greps
+
+New User Creation
+
+`
+sudo grep 'new user' /var/log/auth.log
+`
+Failed Login Attempts
+
+`
+sudo grep 'Failed password' /var/log/auth.log
+`
+IPs connected SSH
+`
+sudo grep 'sshd.*Accepted' /var/log/auth.log | awk '{print $(NF-3)}'
+`
+
+
 ## Sus Commands
 chmod, whoami, sudo, netstat ... typical exploit and elevate commands
 
