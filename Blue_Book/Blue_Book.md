@@ -470,6 +470,7 @@ The main types of Event Viewer (EVTX) logs in Windows are:
 
 5.  Forwarded Events: This log contains information about events that have been forwarded from other computers in the network to the local computer.
 
+   6. SYSMON: Not all hosts generate these by default, if they do, a good place to start.
 ## Getting logs from a windows machine
 
 Check available logs.
@@ -481,7 +482,63 @@ Also stored at
 C:\Windows\System32\winevt\logs
 ```
 
-## sysmon event id - description
+## Windows Logs EventId - Description
+
+| EventId | Description |
+|---------------|-------------|
+| **4104** | PowerShell script block logging |
+| **4624** | Successful account logon |
+| **4625** | Failed account logon |
+| **4648** | Logon using explicit credentials |
+| **4634** | An account was logged off |
+| **4688** | A new process was created |
+| **4670** | Permissions on an object were changed |
+| **4697** | A service was installed on the system |
+| **4698** | A scheduled task was created |
+| **4699** | A scheduled task was deleted |
+| **4700** | A scheduled task was enabled |
+| **4701** | A scheduled task was disabled |
+| **4702** | A scheduled task was updated |
+| **4719** | System audit policy was changed |
+| **4720** | A user account was created |
+| **4722** | A user account was enabled |
+| **4723** | A user attempted to change an account's password |
+| **4724** | An attempt was made to reset an account's password |
+| **4725** | A user account was disabled |
+| **4726** | A user account was deleted |
+| **4727** | A security-enabled global group was created |
+| **4728** | A member was added to a security-enabled global group |
+| **4729** | A member was removed from a security-enabled global group |
+| **4732** | A member was added to a security-enabled local group |
+| **4733** | A member was removed from a security-enabled local group |
+| **4738** | A user account was changed |
+| **4740** | A user account was locked out |
+| **4767** | A user account was unlocked |
+| **4771** | Kerberos pre-authentication failed |
+| **4776** | The domain controller attempted to validate the credentials for an account (NTLM authentication) |
+| **4798** | A user's local group membership was enumerated |
+| **4799** | A security-enabled local group membership was enumerated |
+| **4826** | Boot configuration data loaded |
+| **4902** | The Per-user audit policy table was created |
+| **4904** | An attempt was made to register a security event source |
+| **4905** | An attempt was made to unregister a security event source |
+| **4912** | Per-user audit policy was changed |
+| **4964** | Special groups have been assigned to a new logon |
+| **5024** | The Windows Firewall Service started |
+| **5025** | The Windows Firewall Service stopped |
+| **5033** | The Windows Firewall Driver started |
+| **5037** | The Windows Firewall Driver detected critical runtime error, terminating |
+| **5058** | Key file operation |
+| **5059** | Key migration operation |
+| **5061** | Cryptographic operation |
+| **5062** | A kernel-mode cryptographic self-test was performed |
+| **5095** | The Windows Firewall setting to allow or deny an application changed |
+| **5124** | A security setting was updated on the OCSP Responder Service |
+| **5156** | The Windows Filtering Platform allowed a connection |
+| **5157** | The Windows Filtering Platform blocked a connection |
+
+
+## Sysmon EventId - Description
 
 ```
 Event ID 1: Process creation
