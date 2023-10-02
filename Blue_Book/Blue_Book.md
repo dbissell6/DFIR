@@ -149,10 +149,6 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 
 # PCAPS (.pcap)
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/208b13b8-91a3-4387-adb4-8ab745aadff5)
-
-
-
 
 ## Intro 
 
