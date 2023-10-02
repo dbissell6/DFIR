@@ -581,10 +581,40 @@ HKEY_LOCAL_MACHINE\Classes 	HKCR
 
 ### Event Viewer
 
+Windows Event Viewer is a built-in administrative tool in Microsoft Windows operating systems that provides a consolidated view of event logs generated 
+by system components and applications. 
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e4afe9ed-8fca-4171-b88c-6a7d17f43bfd)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8f0e2554-91f2-4210-a9dc-a9c20826673b)
+
+Filter Current Log.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/19dd3dc2-13f7-4016-a436-b8447bcbc95f)
+
+XML query
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cf24cb3a-35e1-4e22-8bdb-e2a324f9334e)
+
+
+```
+<QueryList>
+  <Query Id="0" Path="file://C:\Users\Blue\htb_interview\Microsoft-Windows-Sysmon%254Operational.evtx">
+    <Select Path="file://C:\Users\Blue\htb_interview\Microsoft-Windows-Sysmon%254Operational.evtx">
+      *[System[(EventID=1 or EventID=3)]]
+    </Select>
+  </Query>
+</QueryList>
+```
+
+Find. Search for strings
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dc88619d-12c1-4789-b756-69e232d5b933)
 
 
 ### EvtxECmd
+
+Event Log Explorer Command
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/84b738a7-cfd0-4d46-ae75-dd55f3a7fcee)
 
