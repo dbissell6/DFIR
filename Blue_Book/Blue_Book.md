@@ -1057,6 +1057,11 @@ This switch tells strings to look for strings in all sections of the file, inclu
     -n  
 This switch specifies the minimum length of the strings that strings will display. By default, strings will display all strings that are at least four characters long, but you can use the -n switch to adjust this minimum length to your liking.
 
+
+`strings -el -n 12 winfile.doc `
+
+-el: This option specifies the encoding of the strings to search for. The l stands for "little-endian". This means strings will search for 16-bit little-endian encoded characters. This is particularly useful when dealing with files from Windows systems, as some files (like those from the Windows Registry/.doc) might store strings in UTF-16 little-endian encoding.
+
 ## Floss
 
 Can also be used to get static strings from binaries
