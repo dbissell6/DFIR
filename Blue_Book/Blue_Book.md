@@ -982,12 +982,15 @@ New User Creation
 `
 sudo grep 'new user' /var/log/auth.log
 `
+
 Failed Login Attempts
 
 `
 sudo grep 'Failed password' /var/log/auth.log
 `
+
 IPs connected SSH
+
 `
 sudo grep 'sshd.*Accepted' /var/log/auth.log | awk '{print $(NF-3)}'
 `
