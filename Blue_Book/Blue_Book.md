@@ -1399,7 +1399,7 @@ Just to finish this off see another base64 and a xor
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/6e68a218-1150-4bfe-acb6-fefb74d2900e)
 
 
-# Stegnography 
+# Steganography 
 ### Intro
 Steganography is a technique used to hide information within other files or data, making it difficult to detect without the use of special tools or techniques. This technique can be used to conceal sensitive information or to hide messages in plain sight.
 
