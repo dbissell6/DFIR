@@ -1916,11 +1916,13 @@ PowerForensics is a powerful and flexible tool for digital forensic investigatio
 `
 Get-ForensicFileRecord -VolumeName E:
 `
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/3d04b74f-3f55-4891-84b3-986f5906cf8c)
 
 `
 Get-ForensicAlternateDataStream -VolumeName E:
 `
+
 Alternate Data Stream
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/55ff5415-8af6-4a4b-9880-bb600afa9528)
