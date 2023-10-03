@@ -1940,19 +1940,30 @@ SleuthKit is another popular open-source digital forensic platform that provides
 
     fls: The 'fls' command is used to list the contents of a file system. It displays the files and directories in the file system along with their attributes and inode numbers. The 'fls' command can also display deleted files and directories, which can be important for recovering data that has been deleted by an attacker or lost due to a system crash.
 
-sudo mmls win_image.dd
+`sudo mmls dds1-alpine.flag.img `
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ed23a38f-35e9-417d-9ab4-fdc8b938a3e8)
 
 
-sudo fsstat -o 2048 win_image.dd
+`sudo fsstat -o 2048 dds1-alpine.flag.img `
 
 Replace '2048' with the start sector of the partition you're interested in.
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c05f3d8e-583e-4b4f-90d4-7973659a280e)
+
+
 Use the 'fls' command to list the contents of the file system:
 
-sudo fls -o 2048 -f ntfs win_image.dd
+`sudo fls -o 2048 -f ext3 dds1-alpine.flag.img `
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/775bd734-5a20-4edd-930b-a70508643dab)
 
 
-also another htb challenge had it from cyberpocalypse
+Search a folder recursivly by specifying inode
+
+`sudo fls -r -o 2048 dds1-alpine.flag.img 20324`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/48d7d6f5-e553-45d9-a253-f9c8e4a1ed2c)
 
 
 ## RAID Disk recovery
