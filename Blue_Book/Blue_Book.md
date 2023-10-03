@@ -1900,7 +1900,7 @@ Mount-DiskImage -Access ReadOnly -ImagePath 'C:\Users\Blue\Desktop\Artifact Of D
 
 ### Alternate data streams
 
-NTFS has alternate streams
+Alternate Data Streams are a feature of the NTFS file system that allows multiple data streams to be associated with a single file. While the primary data stream contains the file's actual content, these additional streams can store metadata or even other files discreetly, often going unnoticed by standard file browsing tools, making them a potential avenue for concealing data or malicious activity.
 
 ![Pasted image 20230930155804](https://github.com/dbissell6/DFIR/assets/50979196/cb46efd3-4520-49cc-9719-6741da939656)
 
