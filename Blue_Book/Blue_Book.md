@@ -812,33 +812,6 @@ https://redteamrecipe.com/Registry-Attack-Vectors/
 
 # Other Windows artifacts
 
-## Schtasks
-
-Found at
-```
-C:\Windows\System32\Tasks
-```
-
-## Shellbags
-Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
-
-Found in registry at
-
-```
-
-• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
-• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
-• NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
-• HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
-```
-
-### Shell Bags Explorer
-
-Looking at offline UsrClass.dat
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/c1776763-15d8-4437-afe1-222a6364ca12)
-
-
 
 ## Master File Table (MFT)
 
@@ -852,7 +825,6 @@ Tool to parse MFT +($Boot...)
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f74b64ff-aeb7-4821-b224-62fd469e8d36)
-
 
 
 ## Windows prefetch(.pf)
@@ -878,6 +850,32 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 ### PECmd.exe
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
+
+## Schtasks
+
+Found at
+```
+C:\Windows\System32\Tasks
+```
+
+## Shellbags
+Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
+
+Found in registry at
+
+```
+
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
+• NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
+• HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
+```
+
+### Shell Bags Explorer
+
+Looking at offline UsrClass.dat
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c1776763-15d8-4437-afe1-222a6364ca12)
 
 
 ## .lnk (Windows Shortcut) Files
@@ -935,7 +933,9 @@ On Windows 10 stored at
 C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
 ```
 
-### JLEcmd
+### JLEcmd (Jump List Explorer Command Line)
+
+JLECmd is tailored for extracting and interpreting data from Jump List files, which can provide valuable information regarding a user's activity, including recently or frequently accessed documents, pictures, and more.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/2172d8e6-1844-409f-bfb4-ed18cba0f5d4)
 
