@@ -1317,43 +1317,10 @@ lzip -d -k flag3
 ```
 
 
-## Reconstructing 
-
-Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
-### Binwalk
-Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
-
-Binwalk is particularly useful when analyzing firmware images and other embedded systems. It can identify and extract individual components of a firmware image, such as the boot loader, kernel, and file system, making it easier for analysts to understand and work with the firmware image.
-
-One common use case for binwalk in a cybersecurity context is reverse engineering. By analyzing a binary file with binwalk, analysts can identify hidden features, vulnerabilities, or other types of security risks that may be present in the file.
-
-Two popular switches used with binwalk are:
-
-    -e  
-This switch tells binwalk to extract the identified file systems from the binary file. This is useful when you want to extract and analyze the file system components of a firmware image.
-
-    -y 
-This switch tells binwalk to suppress confirmation prompts during extraction. This can be useful when you want to automate the extraction process and don't want to be prompted for confirmation every time.
-
-Overall, binwalk is a powerful and flexible tool that can be used to analyze and extract information from a wide variety of binary files. In a cybersecurity context, it can be particularly useful for reverse engineering and identifying potential security risks in firmware images and other embedded systems.
-### xxd
-xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
-
-![Pasted image 20230213121602](https://user-images.githubusercontent.com/50979196/221450472-5829ddc8-15a5-4b61-ac00-240bd1ea7346.png)
-
-### Hexedit
-Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
-
-### foremost
-
-Foremost is a tool that is used for file recovery and reconstruction. It can be used to recover deleted files, carve out files from disk images, and extract files from various file formats. Foremost is particularly useful for recovering files from damaged or corrupted disks, or for recovering files that have been deleted or lost.
-
-Foremost uses a technique called file carving to recover files from disk images or other sources. It scans through the input data looking for specific file headers and footers, and then extracts the data between them. Foremost supports a wide range of file types, including images, audio files, videos, documents, and archives.
-
-Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
 
 
-## Malware Analysis
+
+# Malware Analysis
 
 Please watch if first time doing this- https://www.youtube.com/watch?v=gjVmeKWOsEU
 
@@ -1363,6 +1330,15 @@ We want to understand what the malware does. Does it encyrpt our files? Does it 
 
 
 https://www.youtube.com/@jstrosch/featured
+
+
+
+## Virus total 
+can be useful to get some information from  
+
+![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
+
+
 
 ## static vs dynamic
 
@@ -1382,6 +1358,15 @@ https://www.youtube.com/@jstrosch/featured
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
 
 
+## Sandboxes
+Noriben can be used for dynamic analysis monitoring creation of processes.
+
+Start from command line, run executable in question, when finihed stop Noriben, get output 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f3f80f0d-7a6b-4042-9219-187570dba020)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
 
 
 reversing,  decompiling, deobfuscating, decoding, decrypting, 
@@ -1410,25 +1395,10 @@ Running strings before unpacking yields nothing interesting
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
 
 
-## Virus total 
-can be useful to get some information from  
-
-![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
-
-
-## Sandboxes
-Noriben can be used for dynamic analysis monitoring creation of processes.
-
-Start from command line, run executable in question, when finihed stop Noriben, get output 
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/f3f80f0d-7a6b-4042-9219-187570dba020)
-
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
 
 ## Deobfuscation
 
-Deobfuscation is the process of removing obfuscation from code or data, making it more readable and easier to understand. Obfuscation is often used by malware authors to hide their malicious code from analysis or detection, which makes deobfuscation a critical skill for digital forensics and incident response (DFIR) professionals. Deobfuscation techniques can range from simple string decoding to complex disassembly and reverse engineering, and require a deep understanding of programming languages and software architectures. This section will cover some of the most common deobfuscation techniques used in DFIR, and provide practical examples and tools to help you improve your deobfuscation skills.
+Deobfuscation is the process of removing obfuscation from code or data, making it more readable and easier to understand. The key distinction between this and decoding or decrypting is that the computer can already comprehend the code; it's only you who can't.  Obfuscation is often used by malware authors to hide their malicious code from analysis or detection, which makes deobfuscation a critical skill for digital forensics and incident response (DFIR) professionals. Deobfuscation techniques can range from simple string decoding to complex disassembly and reverse engineering, and require a deep understanding of programming languages and software architectures. This section will cover some of the most common deobfuscation techniques used in DFIR, and provide practical examples and tools to help you improve your deobfuscation skills.
 
 This can be dealt with live or static methods. 
 
@@ -1490,6 +1460,61 @@ Just to finish this off see another base64 and a xor
 ### Example messy powershell
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/6e68a218-1150-4bfe-acb6-fefb74d2900e)
+
+
+
+## Reconstructing 
+
+Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
+
+### Intro
+
+Before diving into tools like hexedit, it's essential to grasp what you're seeing in a hex editor. Every file on your computer, from an image to an executable, is essentially a collection of bytes. These bytes are stored in binary format – sequences of ones and zeros – which are not easily readable by humans. Hexadecimal representation provides a more human-readable format for these sequences.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f4ffc9ff-0954-4d19-b8a6-75b87fe0244c)
+
+
+Offset: On the leftmost column, you'll often see the "offset." This represents the location of the byte in the file. It helps you identify where you are, especially in extensive files.
+
+Hexadecimal Values: The next broad section shows the file's content in hexadecimal format(Base 16, 0-255 int). Each two-character hex value corresponds to a byte in the file. This is where modifications are often made when correcting corrupted files or altering binary data.
+
+ASCII Representation: On the right side, many hex editors provide an ASCII representation of the file's bytes. While not all bytes translate to visible characters (some might show as dots or other symbols), this view can help you spot strings or familiar patterns in the file.
+
+Example/Reminder one value represented 4 ways
+
+```
+Decimal: 90
+Binary: 01011010
+Hexadecimal: 5A
+ASCII: 'Z'
+```
+
+### Binwalk
+
+Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/34c98f59-bb60-465e-b80e-b26d627b1986)
+
+Two popular switches used with binwalk are:
+
+    -e  
+This switch tells binwalk to extract the identified file systems from the binary file. This is useful when you want to extract and analyze the file system components of a firmware image.
+
+    -y 
+This switch tells binwalk to suppress confirmation prompts during extraction. This can be useful when you want to automate the extraction process and don't want to be prompted for confirmation every time.
+
+
+
+### xxd
+
+xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
+
+![Pasted image 20230213121602](https://user-images.githubusercontent.com/50979196/221450472-5829ddc8-15a5-4b61-ac00-240bd1ea7346.png)
+
+### Hexedit
+Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5f1f63c2-8013-4d1d-a28a-5c1112ab3f88)
 
 
 # Steganography 
@@ -1964,6 +1989,17 @@ Search a folder recursivly by specifying inode
 `sudo fls -r -o 2048 dds1-alpine.flag.img 20324`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/48d7d6f5-e553-45d9-a253-f9c8e4a1ed2c)
+
+
+
+## foremost
+
+Foremost is a tool that is used for file recovery and reconstruction. It can be used to recover deleted files, carve out files from disk images, and extract files from various file formats. Foremost is particularly useful for recovering files from damaged or corrupted disks, or for recovering files that have been deleted or lost.
+
+Foremost uses a technique called file carving to recover files from disk images or other sources. It scans through the input data looking for specific file headers and footers, and then extracts the data between them. Foremost supports a wide range of file types, including images, audio files, videos, documents, and archives.
+
+Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
+
 
 
 ## RAID Disk recovery
