@@ -1909,6 +1909,11 @@ NTFS has alternate streams
 ![Pasted image 20230930160904](https://github.com/dbissell6/DFIR/assets/50979196/368a57fb-5a68-402a-9c9c-8399380caf9f)
 
 
+PowerForensics
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/55ff5415-8af6-4a4b-9880-bb600afa9528)
+
+
 Example HTB Artifact Of Dangerous Sighting
 
 ## SluethKit
