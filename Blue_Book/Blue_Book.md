@@ -1152,68 +1152,46 @@ Below are some of the most common files we might come across. Short recap here, 
 ### File Type Key
 Files are typically determined by thier magic bytes or headers.
 If you have a file that has a wrong extentions, no extentions, or corrputed you can check the magic bytes in something like hexedit.
-```
--   PDF (.pdf) - %PDF-
--   ZIP (.zip) - PK
--   GZIP (.gz) - \x1f\x8b
--   TAR (.tar) - \x75\x73\x74\x61\x72
--   RAR (.rar) - Rar!
--   PNG (.png) - \x89\x50\x4e\x47\x0d\x0a\x1a\x0a
--   JPEG (.jpg, .jpeg) - \xff\xd8\xff
--   GIF (.gif) - GIF87a or GIF89a
--   BMP (.bmp) - BM
--   WAV (.wav) - RIFF
--   MP3 (.mp3) - ID3
--   AVI (.avi) - RIFF
--   EXE (.exe) - MZ
--   DOC (.doc) - \xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1
--   DOCX (.docx) - PK
--   XLS (.xls) - \xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1
--   XLSX (.xlsx) - PK
--   PPT (.ppt) - \xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1
--   PPTX (.pptx) - PK
--   ELF (.elf) - \x7fELF
--   Shell script (.sh) - #!/bin/sh
--   Java Archive (.jar) - PK
--   Python script (.py) - #!/usr/bin/env python
--   PHP script (.php) - <?php
--   HTML (.html) - <!DOCTYPE html>
 
-File Type	Hex Signature	ASCII Signature
-ani	52 49 46 46	RIFF
-au	2E 73 6E 64	.snd
-bmp	42 4D F8 A9	BM..
-bmp	42 4D 62 25	BM%
-bmp	42 4D 76 03	BMv
-cab	4D 53 43 46	MSCF
-dll	4D 5A 90 00	MZ..
-Excel	D0 CF 11 E0	...
-exe	4D 5A 50 00	MZP.
-exe	4D 5A 90 00	MZ..
-flv	46 4C 56 01	FLV.
-gif	47 49 46 38 39 61	GIF89a
-gif	47 49 46 38 37 61	GIF87a
-gz	1F 8B 08 08	..
-ico	00 00 01 00	....
-jpeg	FF D8 FF E1	..
-jpeg	FF D8 FF E0	JFIF
-jpeg	FF D8 FF FE	JFIF
-Linux bin	7F 45 4C 46	.ELF
-png	89 50 4E 47	.PNG
-msi	D0 CF 11 E0	...
-mp3	49 44 33 2E	ID3.
-mp3	49 44 33 03	ID3.
-OFT	4F 46 54 32	OFT2
-PPT	D0 CF 11 E0	...
-PDF	25 50 44 46	%PDF
-rar	52 61 72 21	Rar!
-sfw	43 57 53 06/08	CWS..
-tar	1F 8B 08 00	..
-tgz	1F 9D 90 70	..p
-Word	D0 CF 11 E0	...
-wmv	30 26 B2 75	0&.u
-zip	50 4B 03 04	PK..
-```
+| File Type     | Hex Signature                    | ASCII Signature  |
+|---------------|----------------------------------|------------------|
+| ani           | 52 49 46 46                      | RIFF             |
+| au            | 2E 73 6E 64                      | .snd             |
+| bmp           | 42 4D F8 A9                      | BM..             |
+| bmp           | 42 4D 62 25                      | BM%              |
+| bmp           | 42 4D 76 03                      | BMv              |
+| cab           | 4D 53 43 46                      | MSCF             |
+| DOC (.doc)    | d0 cf 11 e0 a1 b1 1a e1          | ...              |
+| DOCX (.docx)  |                                  | PK               |
+| dll           | 4D 5A 90 00                      | MZ..             |
+| Excel         | D0 CF 11 E0                      | ...              |
+| exe           | 4D 5A 50 00                      | MZP.             |
+| exe           | 4D 5A 90 00                      | MZ..             |
+| flv           | 46 4C 56 01                      | FLV.             |
+| gif           | 47 49 46 38 39 61                | GIF89a           |
+| gif           | 47 49 46 38 37 61                | GIF87a           |
+| gz            | 1F 8B 08 08                      | ..               |
+| ico           | 00 00 01 00                      | ....             |
+| jpeg          | FF D8 FF E1                      | ..               |
+| jpeg          | FF D8 FF E0                      | JFIF             |
+| jpeg          | FF D8 FF FE                      | JFIF             |
+| Linux bin     | 7F 45 4C 46                      | .ELF             |
+| mp3           | 49 44 33 2E                      | ID3.             |
+| mp3           | 49 44 33 03                      | ID3.             |
+| msi           | D0 CF 11 E0                      | ...              |
+| OFT           | 4F 46 54 32                      | OFT2             |
+| PDF           | 25 50 44 46                      | %PDF             |
+| PNG (.png)    | 89 50 4e 47                 | .PNG             |
+| PPT           | D0 CF 11 E0                      | ...              |
+| rar           | 52 61 72 21                      | Rar!             |
+| sfw           | 43 57 53 06/08                   | CWS..            |
+| tar           | 1F 8B 08 00                      | ..               |
+| tgz           | 1F 9D 90 70                      | ..p              |
+| Word          | D0 CF 11 E0                      | ...              |
+| wmv           | 30 26 B2 75                      | 0&.u             |
+| XLS (.xls)    | d0 cf 11 e0 a1 b1 1a e1          | ...              |
+| XLSX (.xlsx)  |                                  | PK               |
+| zip           | 50 4B 03 04                      | PK..             |
 
 https://www.garykessler.net/library/file_sigs.html
 
@@ -1239,6 +1217,10 @@ Extract text from cells of xlsx by converting to csv
 ### Windows Executables (.exe, .dll, .so, .ps1)
 
 These files can contain malicious code that attackers may use to compromise a system. Analyzing these files can reveal information about how an attack was carried out. Often these will be obfuscated, it is a whole seperate art to bring light.
+
+
+.psm1 -	The *.psm1 file extension represents a PowerShell module file. It defines what the module is and what is contained within it.
+.psd1 -	The *.psd1 is a PowerShell data file detailing the contents of a PowerShell module in a table of key/value pairs.
 
 ### Linux Executables (.sh, .bin, .elf)   
 
