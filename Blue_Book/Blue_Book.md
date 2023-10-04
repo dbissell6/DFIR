@@ -623,7 +623,7 @@ Event Log Explorer Command
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f2ae4c77-a5da-4359-9ea8-5ea808b7e358)
 
 
-### Powershell script 
+### Powershell scripts
 
 Search for a keyword in a directory of evtxs
 
@@ -653,6 +653,11 @@ Get-ChildItem -Path $evtxDirectory -Filter *.evtx | ForEach-Object {
     }
 }
 ```
+
+Get-WinEvent filter on ID
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/71f6c55d-ecca-4132-82c5-ef460a147bb7)
+
 
 ### DeepBlue
 
@@ -2304,11 +2309,36 @@ On Virtual Box
 In the VM
 `This PC -> CD Drive CAINE`
 
-## get powershell history
+## Some manual enumeration
+
+get powershell history
 
 ```
 type (Get-PSReadlineOption).HistorySavePath
 ```
+Check loaded modules
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2d3c6f37-cca1-42c9-bd55-531c4f4381f1)
+
+filtering on properties
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0db2a4ad-7a0d-460e-a6ed-c7e1227eeefc)
+
+sorting
+
+`Get-Service | Sort-Object -Property Status`
+
+Finding/fitering with where
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2533415e-ecaf-4919-b9ad-eb800ca9ffc9)
+
+
+Get registry
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4ce4bb02-38c3-4fee-ad0a-0bfe20c4f347)
+
+
+
 ## NirLauncher
 
 NirLauncher is a tool package created by NirSoft that offers a collection of small utilities for various purposes, including system analysis, network monitoring, password recovery, and more. 
