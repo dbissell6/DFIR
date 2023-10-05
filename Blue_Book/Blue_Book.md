@@ -1596,26 +1596,7 @@ Common File formats of memory dumps
 -   Microsoft crash dump format (.dmp)
 -   RAW (.raw)
 
-## Strings
-It is possible to run strings on a memory dump to extract info
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/271f4112-a784-43e3-80cf-1338872e62ad)
-
-Grep for commands
-`
-strings PhysicalMemory.raw | grep -E "(cmd|powershell|bash)[^\s]+"
-`
-
-## Volatility
-
-Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
-
-`
-https://volatility3.readthedocs.io/en/latest/index.html
-`
-
-
-### Kernel 
+## Kernel 
 
 Kernels are responsible for managing system resources, such as memory, processes, and input/output operations. They provide a layer of abstraction between the hardware and the rest of the operating system, and allow applications to interact with the hardware without having to know the details of the underlying hardware.
 
@@ -1627,9 +1608,7 @@ In terms of memory forensics, the differences between Windows and Linux kernels 
 
 Overall, understanding the kernel architecture and how it manages system resources is an important aspect of memory forensics analysis, and can help analysts to correctly interpret and analyze the data in memory. The differences between Windows and Linux kernels are important to consider when using memory forensics tools on different operating systems.
 
-
-
-### Executive Objects
+## Executive Objects
 
 Windows is written in C and uses C structures. Some of these structures are Executive Objects. These executive objects are under the management (creation, protection, deletion, etc.) of the Windows Object Manager, a fundamental component of the kernel implemented through the NT module. Every executive object is preceded by a header in memory. Before an instance of an exectuve object is created, a memory block must be allocated. 
 
@@ -1657,19 +1636,33 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 | Type          | Represents an object type in the object manager namespace.                    |
 
 
-### Fix
-A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
 
+## Strings
+It is possible to run strings on a memory dump to extract info
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/271f4112-a784-43e3-80cf-1338872e62ad)
+
+Grep for commands
+`
+strings PhysicalMemory.raw | grep -E "(cmd|powershell|bash)[^\s]+"
+`
+
+## Volatility
+
+Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
+
+`
+https://volatility3.readthedocs.io/en/latest/index.html
+`
+
+
+### Fix
 
 Two primary types of network artifacts are sockets and connections. 
 
 Kernel modules are pieces of code that can be dynamically loaded and unloaded into the operating system's kernel at runtime.
 
-Modules:
-The Modules plugin in Volatility examines the metadata structures linked through PsLoadedModuleList, a doubly linked list. When the operating system loads new modules, they are added to this list. By analyzing this list, the Modules plugin allows you to understand the relative temporal order of module loading. Essentially, you can determine the sequence in which modules were loaded into the system.
 
-Modscan:
-The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. Does not follow the EPROCESS list which can be useful to find hidden processes. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
 
 ### General Steps
 
@@ -1708,7 +1701,8 @@ See all active network connections and listening programs
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.netscan
 ```
-Find all handles opened by process 3424
+Find all handles opened by process 3424. A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
+
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.handles --pid 3424
 ```
@@ -1757,7 +1751,6 @@ To print large kernel pools in a memory dump.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ba4baa77-84d8-4969-bfd6-0b653e39c6b6)
 
 
-
 memmap
 
 Analyze memory mappings for a specific process (PID 8580) from the provided memory dump file (PhysicalMemory.raw) and extracts relevant details about these memory mappings.
@@ -1770,6 +1763,38 @@ envars
 Display the environment variables for processes running in the memory image
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b9d4d2f8-1ba9-4bba-9093-32e2691e16e0)
+
+
+Modules:
+The Modules plugin in Volatility examines the metadata structures linked through PsLoadedModuleList, a doubly linked list. When the operating system loads new modules, they are added to this list. By analyzing this list, the Modules plugin allows you to understand the relative temporal order of module loading. Essentially, you can determine the sequence in which modules were loaded into the system.
+
+Modscan:
+The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. Does not follow the EPROCESS list which can be useful to find hidden processes. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c4645d8c-9dc8-444a-8f72-1d8885987acf)
+
+
+
+### Vol Extras
+
+https://readthedocs.org/projects/volatility3/downloads/pdf/latest/
+https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3
+
+## VolShell
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/89a51b9d-eb60-4465-83b1-72ec863f77ad)
+
+### Running plugins
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/eb22bc11-3146-481e-823d-ca07a7e4d3ae)
+
+Module requirement
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8ed04277-6635-44c6-813a-25a9a448031e)
+
+### help
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e49999cb-7467-4a1a-a86d-49939ca463a6)
 
 
 ## yara
@@ -1785,8 +1810,6 @@ https://github.com/Yara-Rules/rules
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0db2eace-aa03-4359-abc3-c87d9d8ca107)
 
 
-https://readthedocs.org/projects/volatility3/downloads/pdf/latest/
-https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3
 
 # Disk
 
