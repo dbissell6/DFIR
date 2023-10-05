@@ -1330,19 +1330,31 @@ can be useful to get some information from
 ## static vs dynamic
 
 
-**Static Analysis Techniques**: Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
+## **Static Analysis Techniques**
+ Static analysis techniques involve analyzing the code of a program without actually executing it. Some techniques include disassembly, decompilation, and string analysis. Disassembly involves translating machine code into assembly code to better understand the program's behavior. Decompilation involves converting compiled code back into its original source code. String analysis involves analyzing the strings contained within a program to identify potential malicious behavior.
 
-**Dynamic Analysis Techniques**: Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
+### Example simple .sh 
 
-### IDA
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
+![image](https://github.com/dbissell6/DFIR/assets/50979196/38c4f389-be45-40da-849f-ff7f42103656)
 
+Run strings on file, notice base64 encoded text 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dc126fe4-5ded-40ba-82cd-34f5df32c16e)
 
 ### Ghidra
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
+
+
+## **Dynamic Analysis Techniques**
+Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
+
+### IDA
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
+
 
 
 ## Sandboxes
@@ -1354,33 +1366,6 @@ Start from command line, run executable in question, when finihed stop Noriben, 
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
-
-
-reversing,  decompiling, deobfuscating, decoding, decrypting, 
-
-## Changing the flow of the code / debugging
-
-Debugging enhances code analysis by providing a dynamic, interactive approach that offers a real-time view of malware behavior. Analysts can validate their findings, observe runtime effects, and deepen their understanding of program execution.
-
-Intro to debugging to bypass checks
-
-https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
-
-# Windows malware
-
-## PE (Portable Executable)
-
-PE  is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
-
-## Unpacking
-
-Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
-
-### upx
-Running strings before unpacking yields nothing interesting
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
-
 
 
 ## Deobfuscation
@@ -1419,6 +1404,41 @@ Changing that eval to a print, then running the code will show us what would hav
 
 ![image](https://user-images.githubusercontent.com/50979196/229360590-6be77a92-d4a9-474b-9b15-82386ab91033.png)
 ![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
+
+
+
+
+
+reversing,  decompiling, deobfuscating, decoding, decrypting, 
+
+## Changing the flow of the code / debugging
+
+Debugging enhances code analysis by providing a dynamic, interactive approach that offers a real-time view of malware behavior. Analysts can validate their findings, observe runtime effects, and deepen their understanding of program execution.
+
+Intro to debugging to bypass checks
+
+https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
+
+# Windows malware
+
+## PE (Portable Executable)
+
+PE  is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
+
+## Unpacking
+
+Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
+
+### upx
+Running strings before unpacking yields nothing interesting
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
+
+
+
+## Deobfuscation Windows
+
+OLEBA should be here
 
 ### Example 'static' powershell script 
 
