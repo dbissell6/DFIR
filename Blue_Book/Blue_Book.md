@@ -1594,7 +1594,7 @@ Page files stores data when the RAM is low on space - not a memory file
 Common File formats of memory dumps 
 -   Raw binary format (.bin)
 -   Microsoft crash dump format (.dmp)
-
+-   RAW (.raw)
 
 ## Strings
 It is possible to run strings on a memory dump to extract info
@@ -1627,11 +1627,11 @@ In terms of memory forensics, the differences between Windows and Linux kernels 
 
 Overall, understanding the kernel architecture and how it manages system resources is an important aspect of memory forensics analysis, and can help analysts to correctly interpret and analyze the data in memory. The differences between Windows and Linux kernels are important to consider when using memory forensics tools on different operating systems.
 
-### Windows Commands
+
+
+### Executive Objects
 
 Windows is written in C and uses C structures. Some of these structures are Executive Objects. These executive objects are under the management (creation, protection, deletion, etc.) of the Windows Object Manager, a fundamental component of the kernel implemented through the NT module. Every executive object is preceded by a header in memory. Before an instance of an exectuve object is created, a memory block must be allocated. 
-
-Executive Objects
 
 | Object        | Description                                                                   |
 |---------------|-------------------------------------------------------------------------------|
@@ -1657,7 +1657,7 @@ Executive Objects
 | Type          | Represents an object type in the object manager namespace.                    |
 
 
-
+### Fix
 A handle represents an active instance of a kernel object that is currently open, like a file, registry key, mutex, process, or thread.
 
 
@@ -1669,12 +1669,22 @@ Modules:
 The Modules plugin in Volatility examines the metadata structures linked through PsLoadedModuleList, a doubly linked list. When the operating system loads new modules, they are added to this list. By analyzing this list, the Modules plugin allows you to understand the relative temporal order of module loading. Essentially, you can determine the sequence in which modules were loaded into the system.
 
 Modscan:
-The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
+The Modscan plugin employs pool tag scanning across the physical address space, even including memory that has been freed or deallocated. Does not follow the EPROCESS list which can be useful to find hidden processes. It specifically searches for MmLd, which is the pool tag associated with module metadata. This plugin is valuable for identifying both unlinked modules and modules that were previously loaded. By scanning the pool tags, it helps uncover module-related information, contributing to a comprehensive analysis of the system's module activities.
+
+### General Steps
+
+1.    Processes
+2.    DLL and Handles
+3.    Network
+4.    Code Injection
+5.    Rootkits
+6.    Dump
+
+### Windows Commands
 
 To see options
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/cae9895d-1e7c-4c77-98b7-2e1627fccba5)
-
 
 
 Get image information
@@ -1753,6 +1763,13 @@ memmap
 Analyze memory mappings for a specific process (PID 8580) from the provided memory dump file (PhysicalMemory.raw) and extracts relevant details about these memory mappings.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/605b8d23-b56a-4b8c-a7f9-76a4b236a44f)
+
+
+envars
+
+Display the environment variables for processes running in the memory image
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b9d4d2f8-1ba9-4bba-9093-32e2691e16e0)
 
 
 ## yara
