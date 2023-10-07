@@ -2340,7 +2340,7 @@ Wireshark -> pick interface -> let run -> Stop -> Save
 ### Capture pcaps on Windows
 
 
-# Live analysis
+# Live analysis Windows
 
 Analyzing a live system or a direct copy of a virtual machine (VM) rather than static artifacts like disk images offers numerous advantages. These include real-time data analysis, dynamic state assessment, behavioral analysis, memory forensics, immediate triage, interaction with running services, malware detection and analysis, contextual understanding, reduced imaging time, and improved resource availability. While live analysis provides these benefits, it's essential to adhere to proper forensic procedures to minimize impact on the live system. A combined approach involving both live and artifact analysis ensures a comprehensive understanding of the incident and enhances the investigative process.
 
@@ -2411,6 +2411,28 @@ ipconfig /displaydns
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/29036a98-4300-41da-aac6-cd32c8f515d5)
 
+
+
+
+
+# Live analysis Linux
+
+Can nc into host to extract info to ensure nothing is put on disk.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4ecb6bf4-012f-4c39-937c-417a460a217b)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/27159179-1119-411e-9bb2-0274c9922fc2)
+
+
+lsof can be better than ps
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bdedec95-c780-402f-b9ad-e0ad3e229083)
+
+
+## LinuxRescueCD
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9ac766ff-56a3-4304-88ca-fc1c5327b777)
 
 
 # move
