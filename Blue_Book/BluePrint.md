@@ -1,7 +1,8 @@
+# BluePrint
+
+Quick way to find similar DFIR challenges to find references for inspiration.
 
 # Chart
-
-If lost start with looking at walkthroughs from similar previous challenges
 
 |                              |   pcap |   .png |   .img |   docm |   mem.dmp |   Windows_logs |   .bmp |   .jpg |   .php |   Registry |   .txt |   .eml |   .pdf |   .sh |   .vbs |   Browser_logs |   .bat |   .one |   .html |   dd.sda1 |   .vhdx |   .net |   Docker |   javascript |   .exe |   wordpress |   .svg |   bcache24.bmc |   Corr_disk |   .pptm |   elf |   .ar |   bundle.pem |   Cache0000.bin |   id_rsa |   .evtx |   .iso |   secrets.log |   .tar |
 |:-----------------------------|-------:|-------:|-------:|-------:|----------:|---------------:|-------:|-------:|-------:|-----------:|-------:|-------:|-------:|------:|-------:|---------------:|-------:|-------:|--------:|----------:|--------:|-------:|---------:|-------------:|-------:|------------:|-------:|---------------:|------------:|--------:|------:|------:|-------------:|----------------:|---------:|--------:|-------:|--------------:|-------:|
@@ -92,3 +93,33 @@ If lost start with looking at walkthroughs from similar previous challenges
 | SideChannel                  |      0 |      0 |      0 |      0 |         0 |              0 |      0 |      0 |      0 |          0 |      0 |      0 |      0 |     0 |      0 |              0 |      0 |      0 |       0 |         0 |       0 |      0 |        0 |            0 |      0 |           0 |      0 |              0 |           0 |       0 |     1 |     0 |            0 |               0 |        0 |       0 |      0 |             0 |      0 |
 | like1000                     |      0 |      0 |      0 |      0 |         0 |              0 |      0 |      0 |      0 |          0 |      0 |      0 |      0 |     0 |      0 |              0 |      0 |      0 |       0 |         0 |       0 |      0 |        0 |            0 |      0 |           0 |      0 |              0 |           0 |       0 |     0 |     0 |            0 |               0 |        0 |       0 |      0 |             0 |      1 |
 | AlienCradle                  |      0 |      0 |      0 |      0 |         0 |              0 |      0 |      0 |      0 |          0 |      0 |      0 |      0 |     0 |      0 |              0 |      0 |      0 |       0 |         0 |       0 |      0 |        0 |            0 |      0 |           0 |      0 |              0 |           0 |       0 |     0 |     0 |            0 |               0 |        0 |       0 |      0 |             0 |      0 |
+
+
+
+
+# Graph
+Not all Challenges can be found on graph
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7cc079bd-382d-4e43-95d9-16aec546d424)
+
+
+# How to use
+
+Open up a new challenge and see pcap and mem.dmp
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3dd58c1f-083a-4df8-976f-5c40d6e02a85)
+
+
+Find on chart 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6c169c4e-b5e8-4117-9ddc-25300df2202a)
+
+Find on graph
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5fef0bf9-2948-4b61-a8c5-f23cbd5c0835)
+
+Notice that these 3 challenges contain a pcap and .dmp and they are between the group of just pcaps and just .dmps.
+
+Finally look at these walkthroughs.
+
+
