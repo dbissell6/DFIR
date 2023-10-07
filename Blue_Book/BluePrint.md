@@ -1,6 +1,6 @@
 # BluePrint
 
-Quick way to find similar DFIR challenges to find references for inspiration.
+Quick way to find similar DFIR challenges to find references/walkthroughs for inspiration.
 
 # Chart
 
