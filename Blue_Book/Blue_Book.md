@@ -1464,10 +1464,11 @@ Just to finish this off see another base64 and a xor
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1320d5bc-11b9-47e3-8b9c-e4d1d2544f4b)
 
-### Example messy powershell
+### Example messy powershell "Dynamic"
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/6e68a218-1150-4bfe-acb6-fefb74d2900e)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b4fab743-6fa3-46c3-8bfb-f3fc592a6cde)
 
 
 ## Reconstructing 
