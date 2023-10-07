@@ -9,7 +9,7 @@ https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md
 
 ## BluePrint
 
-BluePrint is a resource to search for similar DFIR challenges. This is most useful if you are stuck and need a qucik suggestion to read a walkthrough from a previous challenge.
+BluePrint is a resource to search for similar DFIR challenges. This is most useful if you are stuck and need a qucik suggestion to read a walkthrough from a previous challenge. https://github.com/dbissell6/DFIR/blob/main/Blue_Book/BluePrint.md
 
 ## For Act I of the journey
 
