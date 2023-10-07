@@ -2,7 +2,16 @@
 
 This is a repository dedicated to the DFIR journey. Contains notes, reflections, walkthroughs and links to tools.
 
-## For Act I of the journey please visit
+## BlueBook
+
+BlueBook is aimed to be a noob friendly hacktricks type resource for Forensics CTF challenges. The culmination of the previous analyses.
+https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md
+
+## BluePrint
+
+BluePrint is a resource to search for similar DFIR challenges. This is most useful if you are stuck and need a qucik suggestion to read a walkthrough from a previous challenge.
+
+## For Act I of the journey
 
 Explorations+Reflections ~*~
 https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections.md
@@ -21,11 +30,6 @@ https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections3.md
 ## Walkthroughs
 
 PICO - https://github.com/dbissell6/DFIR/blob/main/PICO_Walkthroughs.md
-
-## BlueBook
-
-BlueBook is aimed to be a noob friendly hacktricks type resource for Forensics CTF challenges. The culmination of the previous analyses.
-https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md
 
 ## Tools
 https://github.com/dbissell6/PCAP_Analysis
