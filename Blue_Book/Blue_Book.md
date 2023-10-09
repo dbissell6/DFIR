@@ -700,8 +700,9 @@ Using hunt(+ sigma, rules, mappings)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8262311b-64ac-4579-96a8-ffc5ebd80d77)
 
+#### sigmac
 
-
+something
 
 ## Registry
 
