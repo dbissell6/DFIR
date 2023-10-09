@@ -669,9 +669,47 @@ Open Source Framework to automatically parse evtx logs and look for evil.
 
 ## Analyzing from Linux
 
-### .EVTX_dump
+### evtx_dump 
 
-They can be parsed using evtx_dump.py or windows has a native program. 
+Outputs a json
+
+https://github.com/omerbenamram/evtx
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9b232f8a-a3ab-4734-8924-bab9d41bb8a6)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7e688bb3-fc1f-42d8-b690-9ffb0a0a818c)
+
+#### Using jq to surf
+
+The jq tool is extremely versatile for parsing and manipulating JSON data.
+
+See first record
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ca487e30-c370-4c57-af3f-cdc214ce3a78)
+
+
+Filter for records with eventID 4624
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3e2d8c45-9ff0-4d67-8345-3f6a63fa68e7)
+
+
+Check total occurences
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/54b0afbb-c314-4bf3-8b1a-ee02c72471f6)
+
+
+See occurences of target usernames after filtering
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5e3fbe3a-db19-40fb-905b-a75d0de284dd)
+
+Last example
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/740e5000-f176-40e9-9fec-65a657f5eebc)
+
+
+### .EVTX_dump python
+
+They can be parsed using evtx_dump.py to output a xml.
 
 
 ![Pasted image 20221029120345](https://user-images.githubusercontent.com/50979196/221450336-c3adc6da-3d0c-4d3d-8c7a-25fd5a349135.png)
