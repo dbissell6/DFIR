@@ -702,7 +702,21 @@ Using hunt(+ sigma, rules, mappings)
 
 #### sigmac
 
-something
+Sigmac takes Sigma rules as input and converts them into query formats for various Tools, log management solutions and security information and event management (SIEM) systems.
+
+
+Generate a query for powershell from a sigma rule.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/88c95b5c-53a0-4f4a-a3af-e6013e28c1d7)
+
+```
+python sigmac -t powershell 'C:\Tools\chainsaw\sigma\rules\windows\file\file_access\file_access_win_credential_manager_stealing.yml'
+```
+
+Same query for splunk
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1096596d-b79e-47a5-b82b-0ae1db3ea5aa)
+
 
 ## Registry
 
