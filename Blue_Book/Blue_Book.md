@@ -1001,9 +1001,11 @@ Most of the tools that have been used to parse windows artifacts have been made 
 https://ericzimmerman.github.io/#!index.md
 `
 
-Most of these tools create output that can be ingested into a timeline gui.
+Most of these tools create output that can be ingested into a spreadsheet gui similar to excel. 
 
 
+
+https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer/
 
 # Linux logs
 
