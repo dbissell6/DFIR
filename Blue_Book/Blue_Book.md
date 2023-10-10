@@ -1042,8 +1042,27 @@ https://ericzimmerman.github.io/#!index.md
 Most of these tools create output that can be ingested into a spreadsheet gui similar to excel. 
 
 
+Dark mode
 
+Tools -> Skins -> Ofiice 2019 Black
+
+Easy Filtering
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/530378ee-6bec-4c92-b3ce-59f53c80c449)
+
+Column Chooser
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e27fe806-5d89-4640-990c-ae54b2182347)
+
+Drag columns to remove from table
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d1214aa0-b97a-4f54-a7a5-68ff715db23b)
+
+
+`
 https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer/
+`
+
 
 # Linux logs
 
