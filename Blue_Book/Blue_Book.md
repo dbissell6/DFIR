@@ -623,6 +623,27 @@ Event Log Explorer Command
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f2ae4c77-a5da-4359-9ea8-5ea808b7e358)
 
 
+### Log Parser 2.2
+
+Log Parser 2.2 is a powerful, versatile tool developed by Microsoft that allows users to extract pertinent information from a variety of log files using a SQL-like syntax. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/17bbf96f-132e-4e0e-8350-5c9f6f702cae)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b2f4e3d0-5203-4894-862b-c8223483d953)
+
+
+### Log Lizard
+
+Log Lizard is an advanced log analysis tool designed to simplify the process of browsing, searching, and analyzing log files. With its intuitive graphical user interface and robust processing backend, Log Lizard makes it easy for users to dive deep into complex log data. Can create visualizations.
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/eb1feb17-9acb-4723-b25e-74fe91ced55e)
+
+Similar query for Log Parser 2.2
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f533d1f1-6078-4351-8b38-b7420ac0cb98)
+
+
 ### Powershell scripts
 
 Search for a keyword in a directory of evtxs
