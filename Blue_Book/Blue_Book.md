@@ -1774,6 +1774,8 @@ https://volatility3.readthedocs.io/en/latest/index.html
 
 ### Fix
 
+
+
 Two primary types of network artifacts are sockets and connections. 
 
 Kernel modules are pieces of code that can be dynamically loaded and unloaded into the operating system's kernel at runtime.
@@ -1879,6 +1881,44 @@ envars
 Display the environment variables for processes running in the memory image
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b9d4d2f8-1ba9-4bba-9093-32e2691e16e0)
+
+vadinfo
+
+![Pasted image 20231011051428](https://github.com/dbissell6/DFIR/assets/50979196/250c46f8-c94a-47be-a1af-a565eb183210)
+Virtual Address Descriptors (VAD):
+
+The VAD tree in Windows provides metadata about the virtual memory regions allocated by a process. Each node in this tree represents a block of committed virtual memory, a memory-mapped file, or a reserved block of addresses.
+
+1. **Memory Analysis**: It helps forensic analysts understand what regions of memory a process was using, how it was using them, and what permissions were set.
+2. **Find Hidden or Injected Code**: Malware might inject code into a process's address space. By analyzing the VAD tree, you can identify anomalous or unexpected memory regions which might indicate such injections.
+3. **Memory-Mapped Files**: These are areas of virtual memory that are mapped to a physical file on disk. This is common for shared libraries/DLLs. A malware might map a malicious DLL into a process's memory.
+4. **Discover Protection Mechanisms**: Some software might employ anti-debugging or anti-analysis techniques, such as self-modifying code. Understanding the memory permissions can give insights into such behaviors.
+
+
+Memory Permissions:
+
+Memory permissions determine how a certain region of memory can be accessed.
+- **PAGE_EXECUTE**: The memory can be executed as code. This is often seen in regions where the actual binary code of a process resides.
+- **PAGE_EXECUTE_READ**: The memory can be executed as code, and can be read.
+- **PAGE_EXECUTE_READWRITE**: The memory can be executed as code, read from, and written to. This permission can be concerning, as it might indicate a region where malicious shellcode could be inserted and executed.
+- **PAGE_EXECUTE_WRITECOPY**: Similar to the above but can be written to if a process attempts to modify it. A new private copy is made for the process.
+
+
+
+
+ldrmodules
+
+The ldrmodules plugin in Volatility is used to list the loaded modules (DLLs) for a specific process. It is particularly valuable for detecting unlinked or hidden DLLs which can be indicative of malicious activity. 
+
+Each module will have three columns: InLoad, InInit, and InMem. These indicate whether the module is:
+
+    Loaded into memory (InLoad)
+    Initialized (InInit)
+    Present in the process memory (InMem)
+
+If all three columns for a specific module are False, it might suggest the operation of a rootkit or malicious software trying to conceal its activities.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8f738a78-e847-4c06-9cdb-ccc0eade7acc)
 
 
 Modules:
