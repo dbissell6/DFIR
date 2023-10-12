@@ -34,6 +34,8 @@ https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections/Explorati
 
 PICO - https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/PICO_Walkthroughs.md
 
+## CTFS
+
 ## Tools
 https://github.com/dbissell6/PCAP_Analysis
 
@@ -42,9 +44,14 @@ https://github.com/dbissell6/EVTX_analysis
 ## Videos
 https://www.youtube.com/@digitaldeductions
 
+
 ## Outside Resources
 https://github.com/cugu/awesome-forensics#ctfs-and-challenges  
 https://github.com/apsdehal/awesome-ctf/blob/master/README.md#forensics
 
 https://www.sans.org/posters/hunt-evil/   
 https://sansorg.egnyte.com/dl/cOBcwZSosv  ## Zimmermans Tools cheatsheet
+
+## Reading List
+
+https://icdt.osu.edu/cybercanon/bookreviews
