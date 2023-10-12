@@ -34,7 +34,13 @@ https://github.com/dbissell6/DFIR/blob/main/Explorations%2BReflections/Explorati
 
 PICO - https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/PICO_Walkthroughs.md
 
-## CTFS
+## CTF Challenges
+
+https://play.picoctf.org/practice
+
+https://app.hackthebox.com/challenges/retired
+
+https://cyberdefenders.org/blueteam-ctf-challenges/
 
 ## Tools
 https://github.com/dbissell6/PCAP_Analysis
