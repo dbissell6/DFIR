@@ -1811,6 +1811,15 @@ See Process List + Hiddens
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.psscan
 ```
+
+Can sort by create time
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e2e3fa0d-75bc-45c5-bc1c-7b594af3cbf9)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9ccae185-d43b-461d-ae0e-c30a6050b466)
+
+
 See Process tree
 ```
 python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.pstree
