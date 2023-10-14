@@ -287,11 +287,15 @@ To access streams right click on a packet
 
 Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
 
-### Input RSA key to decrpyt TLS
+###  Decrpyt TLS
+
+Input RSA key
 From G, but TLS instead of SSL
 
 ![Pasted image 20230113164502](https://user-images.githubusercontent.com/50979196/221450214-77e163e3-dc62-4555-b15c-811c27d5f114.png)
+
 ![Pasted image 20230113164429](https://user-images.githubusercontent.com/50979196/221450223-9ff74041-c577-41ee-9c5a-88688848ee6c.png)
+
 ![Pasted image 20230113164557](https://user-images.githubusercontent.com/50979196/221450269-c795cfa1-5921-44ce-9aa6-a33de361632f.png)
 
 
@@ -1462,6 +1466,12 @@ Start from command line, run executable in question, when finihed stop Noriben, 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
 
+
+### Alien Vault
+
+Can check hashes and run in sandboxes
+
+https://otx.alienvault.com
 
 ## Deobfuscation
 
