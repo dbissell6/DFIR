@@ -1668,6 +1668,14 @@ https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
 
 PE is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
 
+### Essential PE File Sections
+
+* .text  - contains DLLs used by the program
+* .rdata - read only data
+* .data  - contains static variables
+* .rsrc  - Resource information
+
+
 ### Unpacking
 
 Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
@@ -1676,16 +1684,6 @@ Packing can hinder string analysis since references to strings are usually obscu
 Running strings before unpacking yields nothing interesting
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
-
-
-
-
-### Essential PE File Sections
-
-* .text  - contains DLLs used by the program
-* .rdata - read only data
-* .data  - contains static variables
-* .rsrc  - Resource information
 
 
 ### PE-Bear
@@ -1702,6 +1700,19 @@ CFF Explorer(Compact File Format Explorer), is a popular tool for analyzing and 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/2c0f3518-d02b-4d37-a553-a2918204e8c9)
 
+
+### Depdendecy Walker
+
+Dependency Walker is a free utility that scans any 32-bit or 64-bit Windows module (exe, dll, ocx, sys, etc.) and builds a hierarchical tree diagram of all dependent modules. It provides valuable information about module functions, entry points, and other internal details useful for debugging and troubleshooting.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b39eb9a2-a7ac-46f5-a97e-b5542fda4e40)
+
+
+### Resource Hacker
+
+Resource Hacker is a utility to view, modify, rename, add, delete, and extract resources in 32-bit and 64-bit Windows executables and resource files (*.res)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/38225c42-64d4-4249-a91a-3f3281e9bc78)
 
 
 
