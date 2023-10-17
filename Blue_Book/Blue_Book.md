@@ -1299,18 +1299,33 @@ https://www.garykessler.net/library/file_sigs.html
 
 can sometimes using unzip or 7z on word files can reveal hidden content.
 
-Olevba
+#### Olevba Tools
 A Python module that allows for the analysis of Microsoft Office documents (e.g., Word, Excel, PowerPoint) to detect and extract any embedded VBA (Visual Basic for Applications) macros. It can be used for security assessments, forensics analysis, and malware analysis, as VBA macros can be used as a vector for malware infection and data exfiltration. Olevba is able to parse the VBA code, extract the embedded binaries, and detect any obfuscation techniques used in the macro. 
+
 ![Pasted image 20230212151320](https://user-images.githubusercontent.com/50979196/221450379-c3e6b586-0b8d-4146-b960-02865564b9ea.png)
 
+#### oledump.py
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/01f81fb5-b474-4758-aa4c-13f6cbf6b015)
+
+To get single stream
+
+```
+python3 oledump.py ~/Desktop/MalDoc101/sample.bin -s 16
+```
+
 ### xlsx
+
+Use exiftool to get info
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/65b8dfcf-8444-46bb-ac23-02ad34a1a038)
+
 
 Extract text from cells of xlsx by converting to csv 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/4da65d21-2c65-46ae-bdbe-c045d6b7e6c4)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a3ad9950-2bfb-4ec4-ba21-798036a6bb58)
-
 
 
 ### Windows Executables (.exe, .dll, .so, .ps1)
@@ -1320,6 +1335,20 @@ These files can contain malicious code that attackers may use to compromise a sy
 
 .psm1 -	The *.psm1 file extension represents a PowerShell module file. It defines what the module is and what is contained within it.
 .psd1 -	The *.psd1 is a PowerShell data file detailing the contents of a PowerShell module in a table of key/value pairs.
+.dll - A Windows file containg code that can be used by another program(.exe)
+
+#### Important DLLs
+
+| DLL Name     | Description                                         |
+|--------------|-----------------------------------------------------|
+| User32.dll   | All user interface and interaction functions.       |
+| Kernel32.dll | Basic functions for the operating system.           |
+| WSock32.dll  | Basic networking functions.                         |
+| Gdi32.dll    | Functions responsible for graphics management.      |
+| Advapi32.dll | Advanced user functionality.                        |
+| Ws2_32.dll   | Functions responsible for managing network sockets. |
+| Ntdll32.dll  | Crucial functions for proper kernel operation.      |
+| Msvcrt.dll   | Standard “lib C” library functions.                 |
 
 ### Linux Executables (.sh, .bin, .elf)   
 
@@ -1403,6 +1432,58 @@ lzip -d -k flag3
 ```
 
 
+# Reconstructing 
+
+Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
+
+## Intro
+
+Before diving into tools like hexedit, it's essential to grasp what you're seeing in a hex editor. Every file on your computer, from an image to an executable, is essentially a collection of bytes. These bytes are stored in binary format – sequences of ones and zeros – which are not easily readable by humans. Hexadecimal representation provides a more human-readable format for these sequences.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f4ffc9ff-0954-4d19-b8a6-75b87fe0244c)
+
+
+Offset: On the leftmost column, you'll often see the "offset." This represents the location of the byte in the file. It helps you identify where you are, especially in extensive files.
+
+Hexadecimal Values: The next broad section shows the file's content in hexadecimal format(Base 16, 0-255 int). Each two-character hex value corresponds to a byte in the file. This is where modifications are often made when correcting corrupted files or altering binary data.
+
+ASCII Representation: On the right side, many hex editors provide an ASCII representation of the file's bytes. While not all bytes translate to visible characters (some might show as dots or other symbols), this view can help you spot strings or familiar patterns in the file.
+
+Example/Reminder one value represented 4 ways
+
+```
+Decimal: 90
+Binary: 01011010
+Hexadecimal: 5A
+ASCII: 'Z'
+```
+
+## Binwalk
+
+Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/34c98f59-bb60-465e-b80e-b26d627b1986)
+
+Two popular switches used with binwalk are:
+
+    -e  
+This switch tells binwalk to extract the identified file systems from the binary file. This is useful when you want to extract and analyze the file system components of a firmware image.
+
+    -y 
+This switch tells binwalk to suppress confirmation prompts during extraction. This can be useful when you want to automate the extraction process and don't want to be prompted for confirmation every time.
+
+
+
+## xxd
+
+xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
+
+![Pasted image 20230213121602](https://user-images.githubusercontent.com/50979196/221450472-5829ddc8-15a5-4b61-ac00-240bd1ea7346.png)
+
+## Hexedit
+Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5f1f63c2-8013-4d1d-a28a-5c1112ab3f88)
 
 
 
@@ -1425,6 +1506,7 @@ can be useful to get some information from
 ![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
 
 
+To add: Malware dropping files,
 
 ## static vs dynamic
 
@@ -1457,6 +1539,9 @@ Dynamic analysis techniques involve analyzing the behavior of a program as it ex
 
 
 ## Sandboxes
+
+### Noriben
+
 Noriben can be used for dynamic analysis monitoring creation of processes.
 
 Start from command line, run executable in question, when finihed stop Noriben, get output 
@@ -1528,9 +1613,9 @@ https://github.com/dbissell6/DFIR/blob/main/Malware_Analysis_Debug.md
 
 ## PE (Portable Executable)
 
-PE  is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
+PE is the standard file format for executable programs in Windows, encompassing both standalone executables (EXE) and dynamic link libraries (DLLs). It's a structured file format that includes information necessary for the operating system to load, manage, and execute the program.
 
-## Unpacking
+### Unpacking
 
 Packing can hinder string analysis since references to strings are usually obscured or removed. Additionally, it replaces or disguises conventional PE sections with a compact loader stub that retrieves the original code from a compressed data section.
 
@@ -1538,6 +1623,31 @@ Packing can hinder string analysis since references to strings are usually obscu
 Running strings before unpacking yields nothing interesting
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/08701348-f896-4283-9878-5f0bfdb5c612)
+
+
+
+
+### Essential PE File Sections
+
+* .text  - contains DLLs used by the program
+* .rdata - read only data
+* .data  - contains static variables
+* .rsrc  - Resource information
+
+
+### PE-Bear
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/59e977c8-d7cf-4bce-a862-272630775f2e)
+
+
+### CFF Explorer
+
+CFF Explorer(Compact File Format Explorer), is a popular tool for analyzing and manipulating PE files.
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2c0f3518-d02b-4d37-a553-a2918204e8c9)
+
 
 
 
@@ -1576,58 +1686,6 @@ Just to finish this off see another base64 and a xor
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b4fab743-6fa3-46c3-8bfb-f3fc592a6cde)
 
 
-## Reconstructing 
-
-Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
-
-### Intro
-
-Before diving into tools like hexedit, it's essential to grasp what you're seeing in a hex editor. Every file on your computer, from an image to an executable, is essentially a collection of bytes. These bytes are stored in binary format – sequences of ones and zeros – which are not easily readable by humans. Hexadecimal representation provides a more human-readable format for these sequences.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/f4ffc9ff-0954-4d19-b8a6-75b87fe0244c)
-
-
-Offset: On the leftmost column, you'll often see the "offset." This represents the location of the byte in the file. It helps you identify where you are, especially in extensive files.
-
-Hexadecimal Values: The next broad section shows the file's content in hexadecimal format(Base 16, 0-255 int). Each two-character hex value corresponds to a byte in the file. This is where modifications are often made when correcting corrupted files or altering binary data.
-
-ASCII Representation: On the right side, many hex editors provide an ASCII representation of the file's bytes. While not all bytes translate to visible characters (some might show as dots or other symbols), this view can help you spot strings or familiar patterns in the file.
-
-Example/Reminder one value represented 4 ways
-
-```
-Decimal: 90
-Binary: 01011010
-Hexadecimal: 5A
-ASCII: 'Z'
-```
-
-### Binwalk
-
-Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/34c98f59-bb60-465e-b80e-b26d627b1986)
-
-Two popular switches used with binwalk are:
-
-    -e  
-This switch tells binwalk to extract the identified file systems from the binary file. This is useful when you want to extract and analyze the file system components of a firmware image.
-
-    -y 
-This switch tells binwalk to suppress confirmation prompts during extraction. This can be useful when you want to automate the extraction process and don't want to be prompted for confirmation every time.
-
-
-
-### xxd
-
-xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
-
-![Pasted image 20230213121602](https://user-images.githubusercontent.com/50979196/221450472-5829ddc8-15a5-4b61-ac00-240bd1ea7346.png)
-
-### Hexedit
-Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/5f1f63c2-8013-4d1d-a28a-5c1112ab3f88)
 
 
 # Steganography 
