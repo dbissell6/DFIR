@@ -1637,6 +1637,7 @@ Running strings before unpacking yields nothing interesting
 
 ### PE-Bear
 
+PE-Bear designed for static analysis of (primarily) Windows PE (Portable Executable) files.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/59e977c8-d7cf-4bce-a862-272630775f2e)
 
