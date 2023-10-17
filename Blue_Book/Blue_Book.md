@@ -1511,6 +1511,59 @@ can be useful to get some information from
 
 To add: Malware dropping files,
 
+
+## Assembly 
+
+Registers
+
+| Description               | 64-bit Register | 32-bit Register |
+|---------------------------|-----------------|-----------------|
+| **Data/Arguments**        |                 |                 |
+| Syscall/Return            | rax             | eax             |
+| Saved Register            | rbx             | ebx             |
+| Destination Operand       | rdi             | edi             |
+| Source Operand            | rsi             | esi             |
+| 3rd Argument              | rdx             | edx             |
+| Loop Counter              | rcx             | ecx             |
+| 5th Argument              | r8              | r8d             |
+| 6th Argument              | r9              | r9d             |
+| **Pointer Registers**     |                 |                 |
+| Base Stack                | rbp             | ebp             |
+| Current Stack             | rsp             | esp             |
+| Instruction (Call only)   | rip             | eip             |
+
+
+Instructions
+| Instruction | Description                                              |
+|-------------|----------------------------------------------------------|
+| `cmp`       | Compare two operands and set flags based on the result.  |
+| `jne`       | Jump if not equal (based on the zero flag).              |
+| `je`        | Jump if equal (based on the zero flag).                  |
+| `mov`       | Move data between registers or between a register and memory. |
+| `add`       | Add two operands and store the result.                   |
+| `sub`       | Subtract two operands and store the result.              |
+| `mul`       | Multiply two operands.                                   |
+| `div`       | Divide two operands.                                     |
+| `lea`	      | Load effective address of source into destination register. | 
+
+What this looks like in gdb
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5b22ff89-ec23-4c0d-b93b-9e1a18d0b7eb)
+
+
+The cmp instruction is comparing the value located at memory address [rbp-0x4] to 0x0 (which is just 0).
+
+The jne instruction checks the result of that comparison:
+
+>    If the value at [rbp-0x4] is NOT equal to 0: The program will "jump" to the instruction at the memory address 0x555555552ec (which we can label as <main+307> based on your provided image).
+
+>    If the value at [rbp-0x4] IS equal to 0: The program will not jump and instead will continue executing the next instruction in sequence, which in this case is the lea rax, [rip+0x2e2b] instruction.
+
+$rbp-0x4: This indicates the memory address you want to inspect. $rbp refers to the base pointer register, which usually points to the base of the current function's stack frame. Subtracting 0x4 from it offsets the address by 4 bytes (or 32 bits).
+
+
+
+
 ## static vs dynamic
 
 
@@ -1539,31 +1592,6 @@ Dynamic analysis techniques involve analyzing the behavior of a program as it ex
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
-
-### Assembly 
-
-| Description               | 64-bit Register | 32-bit Register |
-|---------------------------|-----------------|-----------------|
-| **Data/Arguments**        |                 |                 |
-| Syscall/Return            | rax             | eax             |
-| Saved Register            | rbx             | ebx             |
-| Destination Operand       | rdi             | edi             |
-| Source Operand            | rsi             | esi             |
-| 3rd Argument              | rdx             | edx             |
-| Loop Counter              | rcx             | ecx             |
-| 5th Argument              | r8              | r8d             |
-| 6th Argument              | r9              | r9d             |
-| **Pointer Registers**     |                 |                 |
-| Base Stack                | rbp             | ebp             |
-| Current Stack             | rsp             | esp             |
-| Instruction (Call only)   | rip             | eip             |
-
-What this looks like in gdb
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/5b22ff89-ec23-4c0d-b93b-9e1a18d0b7eb)
-
-
-$rbp-0x4: This indicates the memory address you want to inspect. $rbp refers to the base pointer register, which usually points to the base of the current function's stack frame. Subtracting 0x4 from it offsets the address by 4 bytes (or 32 bits).
 
 
 ## Sandboxes
