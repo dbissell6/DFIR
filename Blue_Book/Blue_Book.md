@@ -1581,6 +1581,7 @@ Run strings on file, notice base64 encoded text
 
 ### Ghidra
 
+Ghidra is an open-source reverse engineering framework developed by the National Security Agency, offering a suite of capabilities to analyze compiled code and decompile it into higher-level representations.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
 
@@ -1589,6 +1590,8 @@ Run strings on file, notice base64 encoded text
 Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
 ### IDA
+
+IDA is a leading disassembler and debugger used in software reverse engineering, renowned for its in-depth binary analysis capabilities and interactive interface.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
