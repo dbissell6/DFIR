@@ -1243,6 +1243,9 @@ pestudio
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/5aec7f41-5f58-4a94-a5aa-0762d91eba18)
 
+## Sigcheck
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bc61f562-b9f7-4012-bf47-94e5abfc410f)
 
 
 ## Common file types
@@ -1537,6 +1540,31 @@ Dynamic analysis techniques involve analyzing the behavior of a program as it ex
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
 
+### Assembly 
+
+| Description               | 64-bit Register | 32-bit Register |
+|---------------------------|-----------------|-----------------|
+| **Data/Arguments**        |                 |                 |
+| Syscall/Return            | rax             | eax             |
+| Saved Register            | rbx             | ebx             |
+| Destination Operand       | rdi             | edi             |
+| Source Operand            | rsi             | esi             |
+| 3rd Argument              | rdx             | edx             |
+| Loop Counter              | rcx             | ecx             |
+| 5th Argument              | r8              | r8d             |
+| 6th Argument              | r9              | r9d             |
+| **Pointer Registers**     |                 |                 |
+| Base Stack                | rbp             | ebp             |
+| Current Stack             | rsp             | esp             |
+| Instruction (Call only)   | rip             | eip             |
+
+What this looks like in gdb
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5b22ff89-ec23-4c0d-b93b-9e1a18d0b7eb)
+
+
+$rbp-0x4: This indicates the memory address you want to inspect. $rbp refers to the base pointer register, which usually points to the base of the current function's stack frame. Subtracting 0x4 from it offsets the address by 4 bytes (or 32 bits).
+
 
 ## Sandboxes
 
@@ -1594,9 +1622,6 @@ Changing that eval to a print, then running the code will show us what would hav
 
 ![image](https://user-images.githubusercontent.com/50979196/229360590-6be77a92-d4a9-474b-9b15-82386ab91033.png)
 ![image](https://user-images.githubusercontent.com/50979196/229360633-63def415-8df9-478c-bd7a-bff3b24d5648.png)
-
-
-
 
 
 reversing,  decompiling, deobfuscating, decoding, decrypting, 
