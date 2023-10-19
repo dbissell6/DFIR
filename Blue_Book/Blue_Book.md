@@ -1595,7 +1595,28 @@ IDA is a leading disassembler and debugger used in software reverse engineering,
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
+## Procmon
 
+Process Monitor, commonly referred to as ProcMon, is a monitoring tool from the Sysinternals suite. It combines the features of two legacy Sysinternals utilities – Filemon and Regmon. ProcMon provides real-time file system, Registry, and process/thread activity monitoring. 
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7a91f502-25ba-4fa1-b681-e03380bebb6d)
+
+Can filter with process name or pid...
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/857658bd-6246-4826-b8e9-1b435c9cf810)
+
+Can filter type of activity (Registry, filesystem, network)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7c2711d4-5f0c-4391-a62c-05322251b5f7)
+
+## Process Explorer
+
+Process Explorer is another tool from the Sysinternals suite, and it provides detailed information about which handles and DLLs processes have opened or loaded. It offers a more in-depth view than the standard Windows Task Manager.
+
+
+
+## Regshot
 
 ## Sandboxes
 
@@ -1611,9 +1632,17 @@ Start from command line, run executable in question, when finihed stop Noriben, 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a3718827-65db-4f74-8afa-b5a53e902430)
 
 
+### hybrid-analysis
+
+Web based
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/926cf34b-9543-4a80-b394-d95ee0d9fa27)
+
+
+
 ### Alien Vault
 
-Can check hashes and run in sandboxes
+Web bases, can check hashes and run in sandboxes
 
 https://otx.alienvault.com
 
