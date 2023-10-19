@@ -2166,7 +2166,7 @@ https://github.com/Yara-Rules/rules
 ## Intro
 Disk images are copies of an entire disk drive or a portion of it. In DFIR, disk images are an essential tool for preserving the evidence and state of the original disk. Analyzing disk images can reveal important information such as deleted files, hidden files, and other artifacts that can provide valuable insight into an incident.Some common forms of disk images include raw images, Encase images, and AFF4 images.
 
-Typically found as: .img, .dd, .raw, ISO, EWF(Expert witness format. contains raw + metadata)
+Typically found as: .img, .dd, .raw, ISO, EWF(Expert witness format. contains raw + metadata), .ad1
 
 Virtual Drive Formats: .vmdk, .vhdx
 
@@ -2188,18 +2188,17 @@ Hard drive type
 -    The capacity to recover deleted files is influenced by the type of hard drive utilized. In the case of mechanical hard drives, it's advisable to refrain from deleting data directly from the disk, as marking it as deleted prompts the hard drive to overwrite the area with fresh data. Hence, deleting the data becomes an unnecessary action. On the other hand, Solid-State Drives (SSD) face limitations in writing new data to already occupied areas. Writing data to a marked-as-deleted area on an SSD involves two operations: first, erasing the old data, and then writing the new data. SSDs often implement techniques to periodically remove data marked for deletion, enhancing their speed. Consequently, the presence of deleted files is generally lower on an SSD compared to a mechanical disk.
 
 
-There are many tools available to create and analyze disk images, including:
 
-1.  dd: A Unix tool that is commonly used to create raw disk images.
+## FTK Imager to extract a .ad1
 
-2.  EnCase: A proprietary forensic software that is widely used in the industry to create and analyze disk images.
-   
-3.  FTK Imager: A free tool developed by AccessData that can be used to create and analyze disk images.
-   
-4.  Autopsy: An open-source digital forensics platform that includes a disk imaging tool.
-   
-5.  X-Ways Forensics: A commercial forensic software that includes a disk imaging tool.  
+File -> Add Evidence Item -> Image -> source path -> Finish
 
+
+Evidence Tree -> right click on root -> Export Files
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e16c1e2c-2de0-46bd-9d08-0763019635d3)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a6837611-5839-421e-acfb-54c8d00bbb10)
 
 
 ## Example fdisk+Mount Linux
