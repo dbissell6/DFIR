@@ -1618,6 +1618,26 @@ Process Explorer is another tool from the Sysinternals suite, and it provides de
 
 ## Regshot
 
+Regshot is an open-source (GNU GPL) tool that allows users to take a snapshot of the system registry and then compare it with a second one, made after doing system changes or installing a new software product.
+
+Take first shot 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6369f784-fabb-4267-a876-b7d0f9d1fc94)
+
+Run malware
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/808e22dd-29ad-4f6a-864e-58898c4cb208)
+
+Take second shot
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d7c69dfb-5a69-4bef-b71a-84ba460065b9)
+
+Compare
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
+
+
+
 ## Sandboxes
 
 ### Noriben
