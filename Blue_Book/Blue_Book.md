@@ -241,12 +241,34 @@ The OSI model has seven layers, each of which has a specific function. These lay
 Wireshark is a tool that allows you to analyze network traffic at the packet level and examine the contents of individual packets, including the source and destination addresses, protocols used, and any data transmitted. This can be extremely useful for troubleshooting network issues, identifying security threats, and developing and testing network protocols.
 
 
-Most Pcaps are too long to look through packet by packet. So opening up wireshark you should have a plan and be looking out for some things.
+Most Pcaps are too long to look through packet by packet. So opening up wireshark you should have a plan and be looking out for some things. Look for anamolies. 
 
 To open wireshark, open up a terminal, navigate to the pcap
 ```
 wireshark sus_file.pcp
 ```
+
+### Statistics
+
+Useful to get a quick big picture of the pcap.
+
+
+#### I/O Graph
+
+Can be useful to see frequency of packets sent or the size of packets sent over time. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/006d18e6-e023-417f-9011-100e0cc3143c)
+
+
+#### Conversations
+
+Conversations are bidirectional traffic flow between two specific endpoints. An endpoint can be a combination of an IP address and a port number. Thus, for TCP/UDP traffic, a conversation is uniquely identified by both source and destination IP addresses and port numbers.
+
+Duration & Activity: Conversations that last for an unusually long or short time could be sus.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/66593d3e-146b-48a4-aa63-58974bfe6af2)
+
+
 ### Helpful Queries
 
 ![Pasted image 20230212122101](https://user-images.githubusercontent.com/50979196/221450082-f592ae4c-daef-4035-a0f5-aed4e3c256b4.png)
@@ -2662,7 +2684,7 @@ Wireshark -> pick interface -> let run -> Stop -> Save
 
 #### tcpdump
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/3b8e7fd7-96b5-4702-81ae-dc13eb49a5d1)
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0feb1122-9cd6-49c7-b63b-0569521986e0)
 
 
 ### Capture pcaps on Windows
