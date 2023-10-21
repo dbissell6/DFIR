@@ -254,14 +254,14 @@ Useful to get a quick big picture of the pcap.
 
 
 #### I/O Graph
-
+---
 Can be useful to see frequency of packets sent or the size of packets sent over time. 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/006d18e6-e023-417f-9011-100e0cc3143c)
 
 
 #### Conversations
-
+---
 Conversations are bidirectional traffic flow between two specific endpoints. An endpoint can be a combination of an IP address and a port number. Thus, for TCP/UDP traffic, a conversation is uniquely identified by both source and destination IP addresses and port numbers.
 
 Duration & Activity: Conversations that last for an unusually long or short time could be sus.
