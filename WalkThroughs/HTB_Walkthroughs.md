@@ -1,5 +1,66 @@
 # HTB Forensics Walkthroughs
 
+
+
+
+
+## Spooky Phising
+
+Phishing attacks often utilize obfuscation techniques to hide their malicious intent. In the "Spooky Phishing" challenge, we are presented with a snippet of HTML that seems to employ both Base64 and Hex encoding methods to obscure its true purpose.
+
+
+![Pasted image 20231023075326](https://github.com/dbissell6/DFIR/assets/50979196/01992ce2-729b-49f8-bdbf-64b149b6c53a)
+
+
+![Pasted image 20231023075404](https://github.com/dbissell6/DFIR/assets/50979196/664a91f4-6b25-4fee-89b1-e6382443801d)
+
+
+![Pasted image 20231023075451](https://github.com/dbissell6/DFIR/assets/50979196/f6f58c1f-68f1-423b-9693-612eed24e125)
+
+
+## Bat Problems
+
+Given .bat, the set commands are defining environment variables with obfuscated values.
+
+![Pasted image 20231023074201](https://github.com/dbissell6/DFIR/assets/50979196/b81738d0-4528-48c2-98c5-d53cb4a797ca)
+
+Created a python script to print the command
+
+![Pasted image 20231023074445](https://github.com/dbissell6/DFIR/assets/50979196/b0dac85b-393d-4898-aded-947f4c5deb5d)
+
+
+![Pasted image 20231023073509](https://github.com/dbissell6/DFIR/assets/50979196/ae201313-5d4a-4aff-be56-0941bc2c24f5)
+
+
+## Vulnerable Season
+
+Challenge starts with Linux access logs.
+
+Search for evidence of commands being executed.
+
+![Pasted image 20231023075008](https://github.com/dbissell6/DFIR/assets/50979196/80c911b6-eaf2-4111-ab09-92c733c5f5d0)
+
+
+
+![Pasted image 20231023075033](https://github.com/dbissell6/DFIR/assets/50979196/29f05cc6-fa8c-4da7-976f-29dee66332e9)
+
+Looks like a reverse shell command that tries to establish a connection to an external IP address using TCP on port 7331 and some additional obfuscated code.
+
+```
+Nz=Eg1n;az=5bDRuQ;Mz=fXIzTm;Kz=F9nMEx;Oz=7QlRI;Tz=4xZ0Vi;Vz=XzRfdDV
+```
+
+Put these in order
+
+![Pasted image 20231023075126](https://github.com/dbissell6/DFIR/assets/50979196/f39236af-a060-4212-9724-630b19b8f3f9)
+
+yields
+```
+fXIzTm4xZ0ViXzRfdDV5bDRuQF9nMEx7QlRI
+```
+
+![Pasted image 20231023075054](https://github.com/dbissell6/DFIR/assets/50979196/eef4d6eb-84e6-4b65-b896-4a3a02d15ade)
+
 ## Red Miner
 
 Very Easy chall. Given .sh
