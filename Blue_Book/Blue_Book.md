@@ -1648,7 +1648,7 @@ GDB, short for the GNU Debugger, is the standard debugger for the GNU software s
 
 Radare2 powerful open-source tool used for reverse engineering, forensics, and binary analysis.
 
-First run aaa. Then can run commands, here listing functions.
+First run aaa(analyze all). Then can run commands, here listing functions.
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/24c8de02-9a0f-499a-a126-92261bcad6c4)
@@ -1658,6 +1658,8 @@ First run aaa. Then can run commands, here listing functions.
 |-------------------------|-----------------------------------------------|
 | `db 0x004008cf`         | Sets a breakpoint at the specified address.   |
 | `afl`                   | Lists all functions in the binary.            |
+| `iz`                    | Displays all strings in binary.               |
+| `iE`                    | Displays information about binarys entrypoint.|
 | `pdf @ main`            | Displays the assembly code of the main function.|
 | `dc`                    | Starts the program being debugged.            |
 | `dc`                    | Continues the program after a breakpoint.     |
@@ -1670,9 +1672,15 @@ First run aaa. Then can run commands, here listing functions.
 | `db`                    | Lists all breakpoints.                        |
 | `db-0x004008cf`         | Deletes breakpoint at `0x004008cf`.           |
 | `dm`                    | Displays memory maps. Similar to GDB's `info proc mappings`.|
+| `V` |                   | Enters visual mode, which allows you to interactively navigate through the binary using a graphical interface. |
+| `VV`|                   | Enters graph mode, which displays the control flow graph of the current function. |
 | `q`                     | Exits Radare2.                                |
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1f710d08-62b9-4bcb-a7b6-17d29fd92023)
+
+`v` example
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6f944a0f-c94d-4110-baf8-1223914d8cfb)
 
 
 ### IDA
