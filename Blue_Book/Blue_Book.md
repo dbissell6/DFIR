@@ -1611,6 +1611,70 @@ Ghidra is an open-source reverse engineering framework developed by the National
 ## **Dynamic Analysis Techniques**
 Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
+
+### gdb
+
+GDB, short for the GNU Debugger, is the standard debugger for the GNU software system.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7860cc07-f9bb-424b-918f-387b24414304)
+
+| Command                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| `b *0x00000000004008cf` | Sets a breakpoint at the specified address.   |
+| `info functions`        | Displays information about functions.         |
+| `disassemble main`                 | Displays the assembly code of the main function.|
+| `run`                   | Starts the program being debugged.            |
+| `c`                     | Continues the program after a breakpoint.     |
+| `n`                     | Executes the next line of code.               |
+| `s`                     | Steps into functions.                         |
+| `list`                  | Shows the source code.                        |
+| `info registers`        | Displays the CPU registers.                   |
+| `x/10x $esp`            | Examines memory. Here, it shows 10 words in hexadecimal starting from the ESP register. |
+| `print $eax`                  | Displays the value of the EAX register.            |
+| `set $eax=0x12345678`         | Sets the EAX register to the value `0x12345678`.   |
+| `x/s $rdi`                    | Displays the string pointed to by the RDI register.|
+| `watch *0x004005f0`           | Sets a watchpoint at the given memory address.     |
+| `info breakpoints`            | Lists all breakpoints and watchpoints.             |
+| `delete 1`                    | Deletes breakpoint number 1.   |
+| `info proc mappings`          |  Detailed view of the memory layout of the running process. |
+| `quit`                  | Exits GDB.                                    |
+
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0475b88d-aa76-4ba9-8943-344b5d4a0247)
+
+
+### r2
+
+Radare2 powerful open-source tool used for reverse engineering, forensics, and binary analysis.
+
+First run aaa. Then can run commands, here listing functions.
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/24c8de02-9a0f-499a-a126-92261bcad6c4)
+
+
+| Command                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| `db 0x004008cf`         | Sets a breakpoint at the specified address.   |
+| `afl`                   | Lists all functions in the binary.            |
+| `pdf @ main`            | Displays the assembly code of the main function.|
+| `dc`                    | Starts the program being debugged.            |
+| `dc`                    | Continues the program after a breakpoint.     |
+| `ds`                    | Executes the next instruction.                |
+| `dr`                    | Displays the CPU registers.                   |
+| `px 10 @ rsp`           | Examines memory. Shows 10 bytes from RSP.     |
+| `dr eax`                | Displays the value of the EAX register.       |
+| `dr eax=0x12345678`     | Sets the EAX register to `0x12345678`.        |
+| `psz @ rdi`             | Displays the string pointed to by RDI.        |
+| `db`                    | Lists all breakpoints.                        |
+| `db-0x004008cf`         | Deletes breakpoint at `0x004008cf`.           |
+| `dm`                    | Displays memory maps. Similar to GDB's `info proc mappings`.|
+| `q`                     | Exits Radare2.                                |
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1f710d08-62b9-4bcb-a7b6-17d29fd92023)
+
+
 ### IDA
 
 IDA is a leading disassembler and debugger used in software reverse engineering, renowned for its in-depth binary analysis capabilities and interactive interface.
