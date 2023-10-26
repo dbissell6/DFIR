@@ -1361,6 +1361,7 @@ These files can contain malicious code that attackers may use to compromise a sy
 .psm1 -	The *.psm1 file extension represents a PowerShell module file. It defines what the module is and what is contained within it.
 .psd1 -	The *.psd1 is a PowerShell data file detailing the contents of a PowerShell module in a table of key/value pairs.
 .dll - A Windows file containg code that can be used by another program(.exe)
+.NET -  .NET files are essentially assemblies, primarily comprising of DLLs (Dynamic Link Libraries) and EXEs (Executable Files). These assemblies are built from the source code using .NET languages such as C#, VB.NET, and F#.
 
 #### Important DLLs
 
@@ -1688,6 +1689,15 @@ First run aaa(analyze all). Then can run commands, here listing functions.
 IDA is a leading disassembler and debugger used in software reverse engineering, renowned for its in-depth binary analysis capabilities and interactive interface.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
+
+
+### dnSpy
+
+dnSpy is a debugger and .NET assembly editor, which can be used to inspect, debug, and edit .NET assemblies. One of its powerful features is the ability to decompile .NET assemblies back to C# or VB.NET source code, providing insights into the underlying functionality of the software. dnSpy allows users to set breakpoints, step through code, and inspect variables and objects, making it a valuable tool for reverse engineering and debugging .NET applications.
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8881de65-03e0-437e-811c-31693517365b)
+
 
 ## Procmon
 
