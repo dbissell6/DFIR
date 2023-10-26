@@ -6,8 +6,8 @@
 
 The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a quick reference. 
 
-1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps) 
- 
+1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps-pcap) 
+
 2) [Logs + Registry](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry)
  
 3) [Files/Executables](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#filesexecutables) 
