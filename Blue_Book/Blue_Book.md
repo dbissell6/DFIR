@@ -1320,9 +1320,15 @@ If you have a file that has a wrong extentions, no extentions, or corrputed you 
 https://www.garykessler.net/library/file_sigs.html
 
 ### Windows/Macros(.docm, .doc, .bin, .vba, .pptm, .one)
-.docm .doc .bin .vba .pptm .one
+.docm .doc .bin .vba .pptm .one .rtf
 
 can sometimes using unzip or 7z on word files can reveal hidden content.
+
+#### .rtf
+
+The Rich Text Format (RTF) is a document file format developed by Microsoft, primarily used for cross-platform document interchange. While RTF files don't support macros (a common vector for malware in .doc or .docx formats), they are not inherently safe. RTF documents can embed OLE (Object Linking and Embedding) objects. In the context of this vulnerability, a maliciously crafted RTF document can embed a tainted OLE object related to the Equation Editor, thereby triggering the exploit(Cve-2017-11882).
+
+
 
 #### Olevba Tools
 A Python module that allows for the analysis of Microsoft Office documents (e.g., Word, Excel, PowerPoint) to detect and extract any embedded VBA (Visual Basic for Applications) macros. It can be used for security assessments, forensics analysis, and malware analysis, as VBA macros can be used as a vector for malware infection and data exfiltration. Olevba is able to parse the VBA code, extract the embedded binaries, and detect any obfuscation techniques used in the macro. 
@@ -1339,7 +1345,7 @@ To get single stream
 python3 oledump.py ~/Desktop/MalDoc101/sample.bin -s 16
 ```
 
-### xlsx
+#### xlsx
 
 Use exiftool to get info
 
@@ -1763,10 +1769,16 @@ Web based
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/926cf34b-9543-4a80-b394-d95ee0d9fa27)
 
 
+### any.run
+
+Any.Run is an interactive online sandbox service designed for the analysis of suspicious files and URLs. Any.Run provides real-time feedback, including network traffic, file system changes, and other system behaviors
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5ecd943c-278e-42e8-9499-ae86540a3d2d)
+
 
 ### Alien Vault
 
-Web bases, can check hashes and run in sandboxes
+Web based, can check hashes and run in sandboxes
 
 https://otx.alienvault.com
 
