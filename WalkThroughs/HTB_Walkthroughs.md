@@ -1,10 +1,12 @@
 # HTB Forensics Walkthroughs
 
+Some of the Difficulties might not match up, Ive noticed if a chall is a medium in the ctf, if it gets loaded to the site it will be as an easy.
 
 
 
+## Spooky Phishing
 
-## Spooky Phising
+Very Easy chall. Given .html
 
 Phishing attacks often utilize obfuscation techniques to hide their malicious intent. In the "Spooky Phishing" challenge, we are presented with a snippet of HTML that seems to employ both Base64 and Hex encoding methods to obscure its true purpose.
 
@@ -20,7 +22,9 @@ Phishing attacks often utilize obfuscation techniques to hide their malicious in
 
 ## Bat Problems
 
-Given .bat, the set commands are defining environment variables with obfuscated values.
+Very Easy chall. Given .bat. 
+
+The set commands are defining environment variables with obfuscated values.
 
 ![Pasted image 20231023074201](https://github.com/dbissell6/DFIR/assets/50979196/b81738d0-4528-48c2-98c5-d53cb4a797ca)
 
@@ -34,7 +38,7 @@ Created a python script to print the command
 
 ## Vulnerable Season
 
-Challenge starts with Linux access logs.
+Very Easy chall. Given Linux access logs.
 
 Search for evidence of commands being executed.
 
@@ -60,6 +64,49 @@ fXIzTm4xZ0ViXzRfdDV5bDRuQF9nMEx7QlRI
 ```
 
 ![Pasted image 20231023075054](https://github.com/dbissell6/DFIR/assets/50979196/eef4d6eb-84e6-4b65-b896-4a3a02d15ade)
+
+
+## Trick or Treat
+
+Easy Chall. Given .lnk and pcap
+
+Use exiftool to parse .lnk. Notice there is a command to download a file and decrypt it with hex and xor.
+
+![Pasted image 20231026070107](https://github.com/dbissell6/DFIR/assets/50979196/6ea3fac3-aa36-40b2-88c8-367aaa4b0a47)
+
+
+Get the file in question from wireshark.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4f4ff8df-7fe9-4298-b806-8ccf73a3d400)
+
+
+![Pasted image 20231026070930](https://github.com/dbissell6/DFIR/assets/50979196/10c51edc-a047-4c02-81d5-382d93fc3d4f)
+
+Take to cyber chef and use the decryption found in the .lnk
+
+![Pasted image 20231026070953](https://github.com/dbissell6/DFIR/assets/50979196/8cd70090-4315-4043-8e55-71a5770e467b)
+
+
+## Valhalloween
+
+Medium Chall. Given Windows Logs
+
+I was able to use Chainsaw + Sigma to do ~90% of it. 
+
+![Pasted image 20231028035926](https://github.com/dbissell6/DFIR/assets/50979196/585f71e6-e869-40b8-97f8-59431ed49504)
+
+![Pasted image 20231028035830](https://github.com/dbissell6/DFIR/assets/50979196/1ca9d7de-f3e1-41c8-a391-2a102401c04e)
+
+![Pasted image 20231028040210](https://github.com/dbissell6/DFIR/assets/50979196/f92f9fe2-a2b7-4303-9e3b-db83813f36b2)
+
+![Pasted image 20231028040035](https://github.com/dbissell6/DFIR/assets/50979196/293ef886-3af0-4160-978d-570516b9df5a)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1255a99c-2184-47d4-913a-5c2000dcfe50)
+
+![Pasted image 20231028034450](https://github.com/dbissell6/DFIR/assets/50979196/6098521b-556f-4219-ba55-290caee87529)
+
+![Pasted image 20231028034507](https://github.com/dbissell6/DFIR/assets/50979196/74ee9021-25a4-4b9f-b5b6-9316eff953fb)
+
 
 ## Red Miner
 
