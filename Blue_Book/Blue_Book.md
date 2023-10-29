@@ -1328,6 +1328,13 @@ can sometimes using unzip or 7z on word files can reveal hidden content.
 
 The Rich Text Format (RTF) is a document file format developed by Microsoft, primarily used for cross-platform document interchange. While RTF files don't support macros (a common vector for malware in .doc or .docx formats), they are not inherently safe. RTF documents can embed OLE (Object Linking and Embedding) objects. In the context of this vulnerability, a maliciously crafted RTF document can embed a tainted OLE object related to the Equation Editor, thereby triggering the exploit(Cve-2017-11882).
 
+rtfdump.py
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e6719690-7d28-4a56-b681-350c61e94d14)
+
+Extract and display object at index 7 in hex format.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8735d324-0ed9-4bed-8798-8066dfbefcf3)
 
 
 #### Olevba Tools
