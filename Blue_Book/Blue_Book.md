@@ -398,6 +398,28 @@ alert http any any -> any any (msg:"Suspicious JavaScript function, possible Dri
 ```
 https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
 
+## Network Miner
+
+NetworkMiner is a renowned network forensic analysis tool, specifically designed to parse and interpret network traffic encapsulated in PCAP files. It excels at extracting files from network traffic, identifying hosts, and offers passive OS fingerprinting capabilities. With its user-friendly interface, it provides a comprehensive view of network interactions, making it a favorite among digital forensics and incident response professionals.
+
+Getting info for files from the transfer
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ad029d04-3e6c-46c1-8e73-340c97f2c01b)
+
+
+## Zui 
+
+The "Zui" desktop application, a part of Brim, allows users to efficiently navigate and manipulate their super-structured data lakes, promoting a more intuitive and streamlined data experience.
+
+Zed is a new kind of data model and format that combines the best of logs, Avro, and columnar data. Rather than being strictly row-based or columnar, Zed provides a super-structured format that allows users to effectively query and analyze data
+
+Query by alert number
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4970333b-86bf-4254-9ab7-2e87a8b0a3a1)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/be9cea62-88cd-403e-addb-4f3d8fce0bbf)
+
 
 ## Snort
 
