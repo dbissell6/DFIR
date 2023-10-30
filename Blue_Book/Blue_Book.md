@@ -1195,6 +1195,12 @@ vim/nano can be used to make malicious changes to files.
 
 In Linux, cron is a time-based job scheduler that runs commands at specified intervals. An attacker may use cron to maintain persistence on a compromised system by creating a cronjob to execute a malicious script at regular intervals. This script could be used to create backdoors, steal data, or perform other malicious activities.
 
+```/var/spool/cron```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b011015a-c38a-4e41-825b-f0e564f6d422)
+
+
+
 # Internet History artifacts
 
 ## Zone Identifier
