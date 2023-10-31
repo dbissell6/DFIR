@@ -18,6 +18,8 @@ The handbook is written to be accessible to new forensic CTF players and is desi
 
 6) [Infected Host](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#infected-host)
 
+7) [SIEMS](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#siems)
+
 
 ## How to use this
 
@@ -2912,6 +2914,8 @@ lsof can be better than ps
 ## LinuxRescueCD
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/9ac766ff-56a3-4304-88ca-fc1c5327b777)
+
+# SIEMS
 
 
 # move
