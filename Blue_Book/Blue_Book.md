@@ -837,7 +837,10 @@ Attackers may use a variety of techniques to establish persistence via the regis
 
 Identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
-### In windows open with 
+### Registry Editor
+
+Native windows application to view registry. 
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/103b92ac-203b-4e51-b159-5d49e799be01)
 
 
