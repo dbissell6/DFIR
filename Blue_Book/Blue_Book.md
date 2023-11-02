@@ -163,13 +163,16 @@ Bob -> Alice - 5:02pm - What you doing tomorrow?
 Charles -> Bob - 5:03pm - Dont text my girlfriend!
 ```
 
+Pcaps are the most encountered DFIR artifact encountered in challenges. The issue/challenge with pcapcs is they can contain hundreds of thousands of packets. It is not practical to look at the log packet by packet, therefor the typical work flow will be use something like zeek to find something intresting and manually investigate the packet further in wireshark.
+
 
 ### 2 Flavors of Challenges
+
 There are 2 flavors of pcaps and 4-5 different types of challenges regarding skill. 
 
 The first flavor and most seen is a typical network catpure. These are large captures with the flag hidden in a single packet maybe containing html traffic. This can often be thought of as finding a needle in a haystack.
 
-The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instantly is a encrpytion problem.
+The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instantly is an encoding or encrpytion problem.
 
 ### 5 levels
 
@@ -181,7 +184,42 @@ The second flavor is when every packet will be needed. This can be seen in somet
 
 Most often in level 3 challenges and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
 
+There is a transisiton from putting a flag in the pcap to having players answer 5-10 questions about the attack seen in the pcap to get the flag. This means easy challenges will never contain a flag in the pcap, making easy wins like grep impossible.
+
 ## Foundational Network Concepts
+
+
+### Protocols
+
+A protocol is a set of rules that govern how data is transmitted and received between devices on a network. Protocols are essential for ensuring that devices can communicate with each other effectively and efficiently. Common protocols typically operate on a specified port.
+
+The OSI (Open Systems Interconnection) model is a conceptual model that defines how communication between different computer systems should be implemented. It is a layered approach, with each layer performing specific functions and passing information to the next layer up or down the stack.
+
+The OSI model has seven layers, each of which has a specific function. These layers are:
+
+
+| Layer Number | Layer Name         | Responsibilities and Protocols |
+|--------------|--------------------|--------------------------------|
+| 1            | Physical Layer     | Transmitting raw bit streams over a physical medium, such as a wire or radio signal. |
+| 2            | Data Link Layer    | Reliable data transfer over a physical link; protocols such as Ethernet and Wi-Fi. |
+| 3            | Network Layer      | Routing data packets between networks; protocols like IP. |
+| 4            | Transport Layer    | Reliable data transfer between applications on different devices; protocols like TCP and UDP. |
+| 5            | Session Layer      | Managing sessions between applications; protocols like NetBIOS. |
+| 6            | Presentation Layer | Presentation and formatting of data; protocols such as SSL and TLS. |
+| 7            | Application Layer  | Providing services to applications; protocols like HTTP, FTP, and SMTP. |
+
+
+### Common protocols
+
+| Protocol Name                        | Acronym | Description |
+|-------------------------------------|---------|-------------|
+| Transmission Control Protocol       | TCP     | This is a reliable, connection-oriented protocol that provides error checking and flow control. It is used for applications that require a high level of reliability, such as web browsing, email, and file transfer. |
+| User Datagram Protocol              | UDP     | This is a connectionless, unreliable protocol that is often used for applications that prioritize speed over reliability, such as video streaming, online gaming, and voice over IP (VoIP) services. |
+| Internet Protocol                   | IP      | This is the primary protocol used for routing data across the internet. IP provides the addressing and routing information needed to ensure that data is sent to the correct destination. |
+| Hypertext Transfer Protocol         | HTTP    | This is the protocol used by web browsers to request and receive web pages and other resources from web servers. |
+| Domain Name System                  | DNS     | This protocol is used to translate domain names (such as www.example.com) into IP addresses that computers can understand. |
+| Simple Mail Transfer Protocol       | SMTP    | This protocol is used to send email messages between servers and clients. |
+| File Transfer Protocol              | FTP     | This protocol is used to transfer files between computers on a network. |
 
 ### Ports
 
@@ -198,45 +236,6 @@ Some common ports that are used for network services and applications include:
 -    Port 21: FTP file transfer traffic
 -    Port 22: SSH secure shell traffic
 -    Port 3389: RDP remote desktop traffic
-
-### Protocols
-
-A protocol is a set of rules that govern how data is transmitted and received between devices on a network. Protocols are essential for ensuring that devices can communicate with each other effectively and efficiently. Common protocols typically operate on a specified port.
-
-The OSI (Open Systems Interconnection) model is a conceptual model that defines how communication between different computer systems should be implemented. It is a layered approach, with each layer performing specific functions and passing information to the next layer up or down the stack.
-
-The OSI model has seven layers, each of which has a specific function. These layers are:
-
-
-1.    Physical Layer - This layer is responsible for transmitting raw bit streams over a physical medium, such as a wire or radio signal.
-
-2.    Data Link Layer - This layer is responsible for providing reliable data transfer over a physical link, and includes protocols such as Ethernet and Wi-Fi.
-
-3.    Network Layer - This layer is responsible for routing data packets between networks, and includes protocols such as IP.
-
-4.    Transport Layer - This layer is responsible for providing reliable data transfer between applications running on different devices, and includes protocols such as TCP and UDP.
-
-5.    Session Layer - This layer is responsible for managing the sessions between different applications, and includes protocols such as NetBIOS.
-
-6.    Presentation Layer - This layer is responsible for the presentation and formatting of data, and includes protocols such as SSL and TLS.
-
-7.    Application Layer - This layer is responsible for providing services to applications, and includes protocols such as HTTP, FTP, and SMTP.
-
-### Common protocols
-
--    Transmission Control Protocol (TCP) - This is a reliable, connection-oriented protocol that provides error checking and flow control. It is used for applications that require a high level of reliability, such as web browsing, email, and file transfer. 
-
--    User Datagram Protocol (UDP) - This is a connectionless, unreliable protocol that is often used for applications that prioritize speed over reliability, such as video streaming, online gaming, and voice over IP (VoIP) services.
-
--    Internet Protocol (IP) - This is the primary protocol used for routing data across the internet. IP provides the addressing and routing information needed to ensure that data is sent to the correct destination.
-
--    Hypertext Transfer Protocol (HTTP) - This is the protocol used by web browsers to request and receive web pages and other resources from web servers.
-
--    Domain Name System (DNS) - This protocol is used to translate domain names (such as www.example.com) into IP addresses that computers can understand.
-
--    Simple Mail Transfer Protocol (SMTP) - This protocol is used to send email messages between servers and clients.
-
--    File Transfer Protocol (FTP) - This protocol is used to transfer files between computers on a network.
 
 ## Wireshark 
 
