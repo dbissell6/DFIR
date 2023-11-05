@@ -18,7 +18,9 @@ The handbook is written to be accessible to new forensic CTF players and is desi
 
 6) [Infected Host](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#infected-host)
 
-7) [SIEMS](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#siems)
+7) [Cloud](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#cloud)
+
+8) [SIEMS](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#siems)
 
 
 ## How to use this
