@@ -40,6 +40,8 @@ https://play.picoctf.org/practice
 
 https://app.hackthebox.com/challenges/retired
 
+https://www.sans.org/mlp/holiday-hack-challenge-2023/
+
 https://cyberdefenders.org/blueteam-ctf-challenges/
 
 ## Tools
