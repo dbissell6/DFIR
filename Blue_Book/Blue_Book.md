@@ -2990,9 +2990,19 @@ eval isOutlier=if(NetworkConnections > (avg + (0.5*stdev)), 1, 0) | search isOut
 
 ## ELK
 
+The ELK Stack, consisting of Elasticsearch, Logstash, and Kibana, is a robust suite of tools that collectively enable organizations to efficiently search, analyze, and visualize vast volumes of data in real-time.
 
 
+### Discover
 
+### controling columns
+
+On left side can search for a feature and add it as a column by clickling blue + . 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1267c1b4-aee8-44a3-9c36-159fda7eefc6)
+
+
+#### Useful queries examples
 
 
 
