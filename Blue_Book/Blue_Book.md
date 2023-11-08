@@ -1483,7 +1483,12 @@ Information can be hidden within the individual frames of the video, in unused s
 
 ### Email (.eml)
 
+### PDF (.pdf)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b3728cc7-9fe3-4828-a6c2-97a49ab30d85)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e3a1e84d-65d7-4742-a908-002392fcab53)
 
 ## Decompressing
 
