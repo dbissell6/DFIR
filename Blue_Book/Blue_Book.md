@@ -195,6 +195,8 @@ There is a transisiton from putting a flag in the pcap to having players answer 
 
 A protocol is a set of rules that govern how data is transmitted and received between devices on a network. Protocols are essential for ensuring that devices can communicate with each other effectively and efficiently. Common protocols typically operate on a specified port.
 
+#### OSI
+
 The OSI (Open Systems Interconnection) model is a conceptual model that defines how communication between different computer systems should be implemented. It is a layered approach, with each layer performing specific functions and passing information to the next layer up or down the stack.
 
 The OSI model has seven layers, each of which has a specific function. These layers are:
@@ -202,7 +204,6 @@ The OSI model has seven layers, each of which has a specific function. These lay
 
 | Layer Number | Layer Name         | Responsibilities and Protocols |
 |--------------|--------------------|--------------------------------|
-
 | 7            | Application Layer  | Providing services to applications; protocols like HTTP, FTP, and SMTP. |
 | 6            | Presentation Layer | Presentation and formatting of data; protocols such as SSL and TLS. |
 | 5            | Session Layer      | Managing sessions between applications; protocols like NetBIOS. |
@@ -215,7 +216,6 @@ Examples
 
 | Layer        | Examples                                              |
 |--------------|-------------------------------------------------------|
-
 | Application  | DNS, DHCP, SSH, HTTPS, FTP, SNMP, SMTP, POP3          |
 | Presentation | Encryption, Encoding, SSL, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI |
 | Session      | NFS, NetBios names, RPC, SQL                          |
@@ -223,6 +223,16 @@ Examples
 | Network      | IPv4, IPv6, ICMPv4, ICMPv6, IPX                       |
 | Data Link    | Ethernet, PPP, FDDI, ATM, IEEE 802.5/802.2, HDLC, Frame Relay |
 | Physical     | Ethernet (IEEE802.3), Wi-Fi (IEEE 802.11), FDDI, B8ZS, V.35, V.24, RJ45 |
+
+
+#### TCP/IP Layers
+
+| Layer |
+|-------|
+| Application |
+| Transport |
+| Internet |
+| Network Access |
 
 
 ### Common protocols
