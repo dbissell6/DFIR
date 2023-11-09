@@ -202,26 +202,27 @@ The OSI model has seven layers, each of which has a specific function. These lay
 
 | Layer Number | Layer Name         | Responsibilities and Protocols |
 |--------------|--------------------|--------------------------------|
-| 1            | Physical Layer     | Transmitting raw bit streams over a physical medium, such as a wire or radio signal. |
-| 2            | Data Link Layer    | Reliable data transfer over a physical link; protocols such as Ethernet and Wi-Fi. |
-| 3            | Network Layer      | Routing data packets between networks; protocols like IP. |
-| 4            | Transport Layer    | Reliable data transfer between applications on different devices; protocols like TCP and UDP. |
-| 5            | Session Layer      | Managing sessions between applications; protocols like NetBIOS. |
-| 6            | Presentation Layer | Presentation and formatting of data; protocols such as SSL and TLS. |
-| 7            | Application Layer  | Providing services to applications; protocols like HTTP, FTP, and SMTP. |
 
+| 7            | Application Layer  | Providing services to applications; protocols like HTTP, FTP, and SMTP. |
+| 6            | Presentation Layer | Presentation and formatting of data; protocols such as SSL and TLS. |
+| 5            | Session Layer      | Managing sessions between applications; protocols like NetBIOS. |
+| 4            | Transport Layer    | Reliable data transfer between applications on different devices; protocols like TCP and UDP. |
+| 3            | Network Layer      | Routing data packets between networks; protocols like IP. |
+| 2            | Data Link Layer    | Reliable data transfer over a physical link; protocols such as Ethernet and Wi-Fi. |
+| 1            | Physical Layer     | Transmitting raw bit streams over a physical medium, such as a wire or radio signal. |
+
+Examples
 
 | Layer        | Examples                                              |
 |--------------|-------------------------------------------------------|
-| Physical     | Ethernet (IEEE802.3), Wi-Fi (IEEE 802.11), FDDI, B8ZS, V.35, V.24, RJ45 |
-| Data Link    | Ethernet, PPP, FDDI, ATM, IEEE 802.5/802.2, HDLC, Frame Relay |
-| Network      | IPv4, IPv6, ICMPv4, ICMPv6, IPX                       |
-| Transport    | TCP, UDP, RTP, SCTP                                   |
-| Session      | NFS, NetBios names, RPC, SQL                          |
-| Presentation | Encryption, Encoding, SSL, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI |
+
 | Application  | DNS, DHCP, SSH, HTTPS, FTP, SNMP, SMTP, POP3          |
-
-
+| Presentation | Encryption, Encoding, SSL, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI |
+| Session      | NFS, NetBios names, RPC, SQL                          |
+| Transport    | TCP, UDP, RTP, SCTP                                   |
+| Network      | IPv4, IPv6, ICMPv4, ICMPv6, IPX                       |
+| Data Link    | Ethernet, PPP, FDDI, ATM, IEEE 802.5/802.2, HDLC, Frame Relay |
+| Physical     | Ethernet (IEEE802.3), Wi-Fi (IEEE 802.11), FDDI, B8ZS, V.35, V.24, RJ45 |
 
 
 ### Common protocols
