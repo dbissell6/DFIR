@@ -213,13 +213,14 @@ The OSI model has seven layers, each of which has a specific function. These lay
 
 | Layer        | Examples                                              |
 |--------------|-------------------------------------------------------|
-| Application  | DNS, DHCP, SSH, HTTPS, FTP, SNMP, SMTP, POP3          |
-| Presentation | Encryption, Encoding, SSL, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI |
-| Session      | NFS, NetBios names, RPC, SQL                          |
-| Transport    | TCP, UDP, RTP, SCTP                                   |
-| Network      | IPv4, IPv6, ICMPv4, ICMPv6, IPX                       |
-| Data Link    | Ethernet, PPP, FDDI, ATM, IEEE 802.5/802.2, HDLC, Frame Relay |
 | Physical     | Ethernet (IEEE802.3), Wi-Fi (IEEE 802.11), FDDI, B8ZS, V.35, V.24, RJ45 |
+| Data Link    | Ethernet, PPP, FDDI, ATM, IEEE 802.5/802.2, HDLC, Frame Relay |
+| Network      | IPv4, IPv6, ICMPv4, ICMPv6, IPX                       |
+| Transport    | TCP, UDP, RTP, SCTP                                   |
+| Session      | NFS, NetBios names, RPC, SQL                          |
+| Presentation | Encryption, Encoding, SSL, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI |
+| Application  | DNS, DHCP, SSH, HTTPS, FTP, SNMP, SMTP, POP3          |
+
 
 
 
