@@ -1195,6 +1195,37 @@ When analyzing Linux logs in a CTF DFIR competition, it is important to focus on
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/962852b7-cbc8-4613-a551-e9d7dc9be510)
 
 
+## access logs stats
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4ca95ef1-d9e1-4fae-9550-827c5586e757)
+
+
+Get stats of resources accesed. Assumes url is 7th entry
+
+`
+awk '{print $7}' access.log | sort | uniq -c | sort -rn
+`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e14ed95f-e178-4d77-bfb5-e072f8b4fa45)
+
+Same thing but for the client IP that is accessing the server
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/72df384a-86b8-4adf-8eeb-78c0e06119c0)
+
+
+Stats for resource accessed excluding client IPs
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c81ba0be-2ce6-4513-9b40-06b18db03ab5)
+
+Same thing as above, this time just looking for specific IP
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/230261aa-1c70-4d35-96f5-16e39bbb2d38)
+
+With bytes >= 10000
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d8400a8c-8ec0-4fff-a0d7-2c57ae05cfc5)
+
+
 ## Useful Greps
 
 New User Creation
