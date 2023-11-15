@@ -983,6 +983,12 @@ Tool to parse MFT +($Boot...)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f74b64ff-aeb7-4821-b224-62fd469e8d36)
 
+### MTF Explorer
+
+Can load raw MFT. Useful but takes 45 minutes to load
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/298cb258-b113-4aee-85b8-e9d9e76bf540)
+
 
 ## Windows prefetch(.pf)
 
