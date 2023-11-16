@@ -1597,6 +1597,8 @@ Hexadecimal: 5A
 ASCII: 'Z'
 ```
 
+https://www.ibm.com/support/pages/decimal-hexadecimal-ebcdic-ascii-bit-conversion-tables
+
 ## Binwalk
 
 Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
