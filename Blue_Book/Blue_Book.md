@@ -2990,13 +2990,55 @@ lsof can be better than ps
 
 # Cloud
 
+## AWS (Amazon Web Services)
 
+Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform that offers over 200 fully featured services from data centers globally. AWS provides services including computing power, storage options, networking, and databases, delivered as scalable cloud computing.
 
+### Forensic Investigation Tips on AWS
+- **AWS CloudTrail**: Logs all API calls, crucial for a trail of user and resource activity.
+- **AWS Config**: Provides inventory and configuration changes of AWS resources.
+- **Access and Analyze Logs**: Use services like Amazon S3 and AWS Lambda for log storage and analysis.
 
-## AWS
+### Artifacts of Interest
+- **EC2 Artifacts**: Instances, snapshots, AMIs, security groups.
+- **S3 Buckets**: Data, access logs, bucket policies.
+- **IAM Logs**: User, group, role, and policy details.
+- **VPC Flow Logs**: IP traffic information.
+- **RDS Snapshots**: Database backups.
+
+### Useful Commands & Tools
+- **AWS CLI**: Command line tool for AWS services. Example: Listing S3 buckets with `aws s3 ls`.
+- **EC2 Snapshots**: Create snapshots with `aws ec2 create-snapshot`.
+- **CloudTrail Logs**: Access with AWS Console or `aws cloudtrail lookup-events`.
+- **S3 Data Access**: Download files using `aws s3 cp s3://bucket-name/path/to/object localpath`.
+
 
 
 ## Azure
+
+Azure is Microsoft’s cloud computing platform offering services for computing, analytics, storage, and networking. Users can develop new applications or run existing ones in the public cloud.
+
+### Forensic Investigation Tips on Azure
+- **Azure Activity Log**: Provides data on operations performed on resources.
+- **Azure Monitor**: Collects and analyzes performance metrics and operational data.
+- **Azure AD Investigation**: Logs sign-in activity and user account changes.
+- **Azure Blob Storage**: Securely stores forensic data in the cloud.
+- **Network Security Group Flow Logs**: Provides IP traffic data for network forensic investigations.
+- **Disk Snapshots**: Analyze the state of VMs at specific points in time.
+- **Azure Backup**: Protects data from accidental deletion or corruption.
+
+### Artifacts of Interest
+- **VM Artifacts**: Disks, snapshots, networking info.
+- **Azure AD Logs**: Sign-in, audit logs, user/group info.
+- **Storage Account Logs**: Blob, Queue, Table, File storage logs.
+- **NSG Flow Logs**: Network traffic logs.
+- **SQL Database Auditing**: Database auditing logs.
+
+### Useful Commands & Tools
+- **Azure CLI**: Azure's command line interface. Example: `az vm list` for listing VMs.
+- **Disk Snapshots**: Create VM disk snapshots with `az snapshot create`.
+- **NSG Flow Logs**: Manage with `az network watcher flow-log`.
+- **Blob Storage Access**: Download blobs with `az storage blob download`.
 
 
 
