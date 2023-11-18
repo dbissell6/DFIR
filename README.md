@@ -38,6 +38,8 @@ PICO - https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/PICO_Walkthrough
 
 https://play.picoctf.org/practice
 
+https://app.hackthebox.com/sherlocks
+
 https://app.hackthebox.com/challenges/retired
 
 https://www.sans.org/mlp/holiday-hack-challenge-2023/
