@@ -823,7 +823,8 @@ Chainsaw is a command-line interface tool that can be used to analyze log files 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/be6ed469-0ee9-4b40-80b4-a0068ad7a2d0)
 
 
-### sigma
+
+#### sigma
 
 Sigma is a generic and open standard for defining log and detection patterns. It provides a structured way to describe log patterns in a human-readable YAML format. These patterns can then be converted into various SIEM (Security Information and Event Management) tool queries or detection rules to identify potential security threats or incidents based on log data.
 
@@ -833,6 +834,11 @@ Using hunt(+ sigma, rules, mappings)
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/3ac4f54d-57a8-437a-b801-7e0b9b242342)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8262311b-64ac-4579-96a8-ffc5ebd80d77)
+
+Output to csv
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e030de8f-7ba8-44d5-b602-84644db9c256)
+
 
 #### sigmac
 
