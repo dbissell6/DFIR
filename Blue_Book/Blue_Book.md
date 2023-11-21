@@ -835,6 +835,11 @@ Using hunt(+ sigma, rules, mappings)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8262311b-64ac-4579-96a8-ffc5ebd80d77)
 
+Using from and to(filtering time)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/296b4957-0f93-4db2-a27a-eb19333d16ed)
+
+
 Output to csv
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e030de8f-7ba8-44d5-b602-84644db9c256)
