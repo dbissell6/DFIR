@@ -1147,6 +1147,16 @@ Registry: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\R
 ```
 
 
+## .apmx
+
+File type for API Monitor, a tool for monitoring and analyzing API calls made by applications on Windows systems. These files contain a record of API calls, including details such as the calling process, the APIs invoked, parameters, return values, and any errors that occurred.
+
+
+In `Monitored Processes` pane, can hover over cmd and powershell processes to see commandline. In Summary pane bionoculars to find something from the strings and we can get it in the Parameters pane.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e47ab520-9d30-436b-b8e0-6ae3e166e463)
+
+
 ## Timeline Explorer
 
 Most of the tools that have been used to parse windows artifacts have been made by Zimmerman and can be found here.
