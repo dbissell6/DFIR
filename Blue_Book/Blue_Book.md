@@ -510,6 +510,18 @@ Cracking wifi passwords
 
 ![Pasted image 20230222082539](https://user-images.githubusercontent.com/50979196/221450312-2ecdfc1e-9086-4434-b7c8-e82bfee254ca.png)
 
+
+## JA3
+
+JA3 is a method for creating fingerprints of SSL/TLS clients based on the specific attributes of the TLS handshake process. It generates an MD5 hash of the concatenation of SSL version, accepted ciphers, list of extensions, elliptic curves, and elliptic curve point formats, creating a unique identifier for a client's SSL/TLS profile. This fingerprinting technique is useful for identifying, tracking, and correlating malicious clients or malware communications over encrypted channels.
+
+https://github.com/salesforce/ja3
+
+Input pcap search for IP in question.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/36583c54-2682-4e33-8f25-748c874f1fe8)
+
+
 # Logs + Registry
 ## Intro
 Logs are similar to pcaps in they are a long list of events.
