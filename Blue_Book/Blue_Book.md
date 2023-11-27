@@ -1047,15 +1047,19 @@ C:\Windows\System32\Tasks
 ## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
+It's important to note that shellbags are focused on the user's interactions with the GUI, and not all file system interactions are reflected in this data, thus shellbags would typically be relevant when a user is using Remote Desktop Protocol (RDP).
+
 Found in registry at
 
 ```
-
 • USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
 • USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
 • NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
 • HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
 ```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f416e2e0-ee2e-4737-8310-f265b043bc66)
+
 
 ### Shell Bags Explorer
 
