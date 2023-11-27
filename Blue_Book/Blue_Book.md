@@ -1162,6 +1162,24 @@ Found at
 Registry: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
 ```
 
+## SRUM
+
+SRUM, which stands for System Resource Usage Monitor, is a Windows artifact that records detailed system resource usage by each application and user. It provides information about network connectivity, data usage, and application resource consumption over time.
+
+```
+C:\Windows\System32\sru\srudb.dat
+```
+
+```
+C:\Windows\System32\config\SOFTWARE
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d9e968ae-f410-4aec-ba00-6c5b424ef138)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ebfde46c-3d6b-4649-80e3-9a818db17dc0)
+
+
 
 ## .apmx
 
