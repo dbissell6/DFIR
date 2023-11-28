@@ -1871,7 +1871,7 @@ dnSpy is a debugger and .NET assembly editor, which can be used to inspect, debu
 
 ## Procmon
 
-Process Monitor, commonly referred to as ProcMon, is a monitoring tool from the Sysinternals suite. It combines the features of two legacy Sysinternals utilities – Filemon and Regmon. ProcMon provides real-time file system, Registry, and process/thread activity monitoring. 
+Process Monitor, commonly referred to as ProcMon, is a monitoring tool from the Sysinternals suite. It combines the features of two legacy Sysinternals utilities – Filemon and Regmon. ProcMon provides real-time file system, Registry, and process/thread activity monitoring. May also get .pml log files as forensic evidence.
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/7a91f502-25ba-4fa1-b681-e03380bebb6d)
