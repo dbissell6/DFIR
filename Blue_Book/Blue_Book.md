@@ -3096,6 +3096,21 @@ Azure is Microsoft’s cloud computing platform offering services for computing,
 - **NSG Flow Logs**: Manage with `az network watcher flow-log`.
 - **Blob Storage Access**: Download blobs with `az storage blob download`.
 
+#### Useful search queries
+
+
+Select all logs with a username
+
+```
+find . -name "*.json" -exec jq -r '.Records[] | select(.userIdentity.userName == "forela-ec2-automation")' {} +
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dbebc661-cd57-4523-88c9-fabbcbf63951)
+
+
+Select event names from user `forela-ec2-automation` sorted by time
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d566a21f-d9dd-463d-a2e2-567fe83dac5f)
 
 
 # SIEMS
