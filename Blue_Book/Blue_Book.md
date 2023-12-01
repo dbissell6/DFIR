@@ -3051,6 +3051,7 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform t
 
 ### Forensic Investigation Tips on AWS
 - **AWS CloudTrail**: Logs all API calls, crucial for a trail of user and resource activity.
+- **CloudTrail-Digest**: Automatically created to help you ensure the integrity of your CloudTrail logs.
 - **AWS Config**: Provides inventory and configuration changes of AWS resources.
 - **Access and Analyze Logs**: Use services like Amazon S3 and AWS Lambda for log storage and analysis.
 
