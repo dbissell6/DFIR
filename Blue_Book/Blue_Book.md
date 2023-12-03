@@ -8,7 +8,7 @@ The handbook is written to be accessible to new forensic CTF players and is desi
 
 1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps-pcap) 
 
-2) [Logs + Registry](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry)
+2) [Logs + Registry](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry--artifacts)
  
 3) [Files/Executables](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#filesexecutables) 
 
@@ -522,7 +522,7 @@ Input pcap search for IP in question.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/36583c54-2682-4e33-8f25-748c874f1fe8)
 
 
-# Logs + Registry
+# Logs + Registry + Artifacts
 ## Intro
 Logs are similar to pcaps in they are a long list of events.
 
