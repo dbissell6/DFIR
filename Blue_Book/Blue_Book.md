@@ -8,7 +8,7 @@ The handbook is written to be accessible to new forensic CTF players and is desi
 
 1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps-pcap) 
 
-2) [Logs + Registry](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry--artifacts)
+2) [Logs + Registry + Artifacts](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry--artifacts)
  
 3) [Files/Executables](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#filesexecutables) 
 
