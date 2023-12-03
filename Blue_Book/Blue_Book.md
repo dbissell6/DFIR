@@ -1800,7 +1800,8 @@ GDB, short for the GNU Debugger, is the standard debugger for the GNU software s
 | `s`                     | Steps into functions.                         |
 | `list`                  | Shows the source code.                        |
 | `info registers`        | Displays the CPU registers.                   |
-| `x/10x $esp`            | Examines memory. Here, it shows 10 words in hexadecimal starting from the ESP register. |
+| `x/10x $esp`            | Examines memory, x = hexadecimal. Here, it shows 10 words starting from the ESP register. |
+| `x/6gx $rsi`            | The g specifies that the memory displayed in giant words (64-bits) |
 | `print $eax`                  | Displays the value of the EAX register.            |
 | `set $eax=0x12345678`         | Sets the EAX register to the value `0x12345678`.   |
 | `x/s $rdi`                    | Displays the string pointed to by the RDI register.|
@@ -1813,6 +1814,9 @@ GDB, short for the GNU Debugger, is the standard debugger for the GNU software s
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0475b88d-aa76-4ba9-8943-344b5d4a0247)
+
+
+
 
 
 ### r2
