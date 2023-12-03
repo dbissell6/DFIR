@@ -1350,6 +1350,9 @@ NirLauncher -> BrowsingHistoryView
 
 
 # Files/Executables
+
+[Malware Analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#malware-analysis)
+
 ## Intro
 When it comes to CTF challenges, file analysis is an essential skill for any blue team member. These challenges can range in complexity from a simple long text file that needs to be searched for a flag to a complex executable that requires reverse engineering. As a blue team member, you need to be equipped with the right tools and techniques to analyze any file you encounter during a CTF.
 
