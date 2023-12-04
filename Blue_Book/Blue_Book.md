@@ -1699,14 +1699,6 @@ https://www.youtube.com/@jstrosch/featured
 
 
 
-## Virus total 
-can be useful to get some information from  
-
-![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
-
-
-To add: Malware dropping files,
-
 
 ## Assembly 
 
@@ -1920,6 +1912,15 @@ Compare
 
 
 ## Sandboxes
+
+### Virus total 
+
+More than a sandbox, can be useful to get some information from.  
+
+![Pasted image 20230212170655](https://user-images.githubusercontent.com/50979196/221450418-70e59b66-d291-4a83-9540-d71735b7e4a5.png)
+
+
+To add: Malware dropping files,
 
 ### Noriben
 
