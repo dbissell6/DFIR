@@ -3079,6 +3079,8 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform t
 - **S3 Data Access**: Download files using `aws s3 cp s3://bucket-name/path/to/object localpath`.
 
 
+![Pasted image 20231130123929](https://github.com/dbissell6/DFIR/assets/50979196/f931dcb4-0e65-4b04-af48-5a78e1456c96)
+
 
 ## Azure
 
