@@ -1949,7 +1949,10 @@ Any.Run is an interactive online sandbox service designed for the analysis of su
 
 ### Alien Vault
 
-Web based, can check hashes and run in sandboxes
+Web based, can check hashes and run in sandboxes. Crucial for linux binaries. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/45f165da-48ba-4868-91ec-00c11aeb3432)
+
 
 https://otx.alienvault.com
 
