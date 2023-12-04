@@ -3078,6 +3078,23 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform t
 - **CloudTrail Logs**: Access with AWS Console or `aws cloudtrail lookup-events`.
 - **S3 Data Access**: Download files using `aws s3 cp s3://bucket-name/path/to/object localpath`.
 
+#### Useful search queries
+
+
+Select all logs with a username
+
+```
+find . -name "*.json" -exec jq -r '.Records[] | select(.userIdentity.userName == "forela-ec2-automation")' {} +
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dbebc661-cd57-4523-88c9-fabbcbf63951)
+
+
+Select event names from user `forela-ec2-automation` sorted by time
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d566a21f-d9dd-463d-a2e2-567fe83dac5f)
+
+
 
 ![Pasted image 20231130123929](https://github.com/dbissell6/DFIR/assets/50979196/f931dcb4-0e65-4b04-af48-5a78e1456c96)
 
@@ -3107,22 +3124,6 @@ Azure is Microsoft’s cloud computing platform offering services for computing,
 - **Disk Snapshots**: Create VM disk snapshots with `az snapshot create`.
 - **NSG Flow Logs**: Manage with `az network watcher flow-log`.
 - **Blob Storage Access**: Download blobs with `az storage blob download`.
-
-#### Useful search queries
-
-
-Select all logs with a username
-
-```
-find . -name "*.json" -exec jq -r '.Records[] | select(.userIdentity.userName == "forela-ec2-automation")' {} +
-```
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/dbebc661-cd57-4523-88c9-fabbcbf63951)
-
-
-Select event names from user `forela-ec2-automation` sorted by time
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/d566a21f-d9dd-463d-a2e2-567fe83dac5f)
 
 
 # SIEMS
