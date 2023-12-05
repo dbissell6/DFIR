@@ -1912,7 +1912,7 @@ Compare
 
 ## Auditd
 
-Linux Audit daemon, part of a system that captures detailed system-level events for monitoring and security analysis. It logs system calls, file accesses, and security changes, based on rules defined by the system administrator.
+Linux Audit daemon, part of a system that captures detailed system-level events for monitoring and security analysis. It logs system calls, file accesses, and security changes, based on rules defined by the system administrator. Auditd does not attach to the process and will not trigger anti-debugging checking for tracerpid /prc/self/status.
 
 
 Can add rules of what to monitor. In this instance I am preparing to run malware which I know will interact with the following file and direcotry.
@@ -1936,8 +1936,13 @@ Rule to track malware with all system calls tracked.
 ## strace
 
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a78351bb-570d-4373-b19e-99060f47c312)
+
+
 ## ltrace
 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f5e4a286-df78-4c4c-9808-944be1c2af0f)
 
 
 ## Sandboxes
