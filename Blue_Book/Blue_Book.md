@@ -1868,7 +1868,7 @@ dnSpy is a debugger and .NET assembly editor, which can be used to inspect, debu
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8881de65-03e0-437e-811c-31693517365b)
 
 
-## Procmon
+### Procmon
 
 Process Monitor, commonly referred to as ProcMon, is a monitoring tool from the Sysinternals suite. It combines the features of two legacy Sysinternals utilities – Filemon and Regmon. ProcMon provides real-time file system, Registry, and process/thread activity monitoring. May also get .pml log files as forensic evidence.
 
@@ -1883,34 +1883,14 @@ Can filter type of activity (Registry, filesystem, network)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/7c2711d4-5f0c-4391-a62c-05322251b5f7)
 
-## Process Explorer
+### Process Explorer
 
 Process Explorer is another tool from the Sysinternals suite, and it provides detailed information about which handles and DLLs processes have opened or loaded. It offers a more in-depth view than the standard Windows Task Manager.
 
 
 
-## Regshot
 
-Regshot is an open-source (GNU GPL) tool that allows users to take a snapshot of the system registry and then compare it with a second one, made after doing system changes or installing a new software product.
-
-Take first shot 
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/6369f784-fabb-4267-a876-b7d0f9d1fc94)
-
-Run malware
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/808e22dd-29ad-4f6a-864e-58898c4cb208)
-
-Take second shot
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/d7c69dfb-5a69-4bef-b71a-84ba460065b9)
-
-Compare
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
-
-
-## Auditd
+### Auditd
 
 Linux Audit daemon, part of a system that captures detailed system-level events for monitoring and security analysis. It logs system calls, file accesses, and security changes, based on rules defined by the system administrator. Auditd does not attach to the process and will not trigger anti-debugging checking for tracerpid /prc/self/status.
 
@@ -1933,16 +1913,42 @@ Rule to track malware with all system calls tracked.
 ```
 
 
-## strace
+### strace
 
+strace is a diagnostic, debugging, and instructional utility for Linux that is used to monitor interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state. 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a78351bb-570d-4373-b19e-99060f47c312)
 
 
-## ltrace
+### ltrace
 
+ltrace is a  utility that intercepts and records dynamic library calls (calls to shared libraries) which are executed by user-space applications.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f5e4a286-df78-4c4c-9808-944be1c2af0f)
+
+
+
+### Regshot
+
+Regshot is an open-source (GNU GPL) tool that allows users to take a snapshot of the system registry and then compare it with a second one, made after doing system changes or installing a new software product.
+
+Take first shot 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6369f784-fabb-4267-a876-b7d0f9d1fc94)
+
+Run malware
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/808e22dd-29ad-4f6a-864e-58898c4cb208)
+
+Take second shot
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d7c69dfb-5a69-4bef-b71a-84ba460065b9)
+
+Compare
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
+
+
 
 
 ## Sandboxes
