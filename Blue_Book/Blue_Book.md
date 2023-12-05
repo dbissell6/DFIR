@@ -1910,7 +1910,7 @@ Compare
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
 
 
-### Auditd
+## Auditd
 
 Linux Audit daemon, part of a system that captures detailed system-level events for monitoring and security analysis. It logs system calls, file accesses, and security changes, based on rules defined by the system administrator.
 
@@ -1931,6 +1931,14 @@ Rule to track malware with all system calls tracked.
 ```
 -a always,exit -F path=/home/kali/Desktop/download.elf -F arch=b64 -S all -k VIVIG
 ```
+
+
+## strace
+
+
+## ltrace
+
+
 
 ## Sandboxes
 
