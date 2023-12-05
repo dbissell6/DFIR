@@ -1910,6 +1910,27 @@ Compare
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
 
 
+### Auditd
+
+Linux Audit daemon, part of a system that captures detailed system-level events for monitoring and security analysis. It logs system calls, file accesses, and security changes, based on rules defined by the system administrator.
+
+
+Can add rules of what to monitor. In this instance I am preparing to run malware which I know will interact with the following file and direcotry.
+
+`-k` is used to create a tag to search for
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b3027095-5eda-40f9-90d3-ed7c4fff1a0b)
+
+Run the malware, wait till completion. 
+
+`ausearch`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3cd6d70a-d076-475b-bb94-4a7eeb3680ff)
+
+Rule to track malware with all system calls tracked.
+```
+-a always,exit -F path=/home/kali/Desktop/download.elf -F arch=b64 -S all -k VIVIG
+```
 
 ## Sandboxes
 
