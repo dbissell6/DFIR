@@ -1694,10 +1694,13 @@ Malware analysis is the process of dissecting malicious software to understand i
 
 We want to understand what the malware does. Does it encyrpt our files? Does it send a reverse shell? If so, how?
 
+General rules
+    * Dont get stuck in the weeds, you will never understand every detail of complex malware. Always start with the big picture, zoom in as needed, dont fall down a rabbit whole.
 
 https://www.youtube.com/@jstrosch/featured
 
 
+## static vs dynamic
 
 
 ## Assembly 
@@ -1752,7 +1755,6 @@ $rbp-0x4: This indicates the memory address you want to inspect. $rbp refers to 
 
 
 
-## static vs dynamic
 
 
 ## **Static Analysis Techniques**
@@ -1777,6 +1779,12 @@ Ghidra is an open-source reverse engineering framework developed by the National
 ## **Dynamic Analysis Techniques**
 Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
 
+
+### debuggers
+
+steps
+
+Breakpoints
 
 ### gdb
 
