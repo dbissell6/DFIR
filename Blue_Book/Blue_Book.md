@@ -3253,6 +3253,30 @@ On left side can search for a feature and add it as a column by clickling blue +
 
 
 
+## Azure Data Explorer
+
+Azure Data Explorer (ADX) uses a query language known as Kusto Query Language (KQL).Not really a SIEM, but a resource to filter data. 
+
+
+show tables
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cf656fd2-acc8-4aa4-9045-fa0d12d240e7)
+
+Show columns for the tables.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d1f6e081-a7fa-4254-b539-da77326a1608)
+
+
+Getting a sample of data
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7262ae39-7674-4710-93f6-beaf6ab90fb7)
+
+
+https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-reference
+
+summarize 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c296d631-9a22-41db-b431-87821a63b0b2)
 
 
 # move
