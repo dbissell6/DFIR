@@ -62,6 +62,8 @@ https://github.com/apsdehal/awesome-ctf/blob/master/README.md#forensics
 https://www.sans.org/posters/hunt-evil/   
 https://sansorg.egnyte.com/dl/cOBcwZSosv  ## Zimmermans Tools cheatsheet
 
+https://vx-underground.org/ ## Malware repo with writeups
+
 ## Reading List
 
 https://icdt.osu.edu/cybercanon/bookreviews
