@@ -191,6 +191,22 @@ There is a transisiton from putting a flag in the pcap to having players answer 
 ## Foundational Network Concepts
 
 
+### Ports
+
+In computer networking, a port is a communication endpoint that is used to identify a specific process or service running on a networked device. Ports are identified by a number between 0 and 65535, with the first 1024 reserved for well-known services and protocols.
+
+When data is transmitted over a network, it is sent to a specific port number on a device, which allows the operating system to identify the process or service that should receive the data. For example, when you browse the web, your web browser sends requests to port 80 (or 443 for HTTPS) on the server hosting the website you are accessing. The server then sends the web page data back to your browser on a different port number.
+
+Some common ports that are used for network services and applications include:
+
+-    Port 80: HTTP web traffic
+-    Port 443: HTTPS encrypted web traffic
+-    Port 25: SMTP email traffic
+-    Port 53: DNS traffic
+-    Port 21: FTP file transfer traffic
+-    Port 22: SSH secure shell traffic
+-    Port 3389: RDP remote desktop traffic
+
 ### Protocols
 
 A protocol is a set of rules that govern how data is transmitted and received between devices on a network. Protocols are essential for ensuring that devices can communicate with each other effectively and efficiently. Common protocols typically operate on a specified port.
@@ -247,21 +263,25 @@ Examples
 | Simple Mail Transfer Protocol       | SMTP    | This protocol is used to send email messages between servers and clients. |
 | File Transfer Protocol              | FTP     | This protocol is used to transfer files between computers on a network. |
 
-### Ports
 
-In computer networking, a port is a communication endpoint that is used to identify a specific process or service running on a networked device. Ports are identified by a number between 0 and 65535, with the first 1024 reserved for well-known services and protocols.
 
-When data is transmitted over a network, it is sent to a specific port number on a device, which allows the operating system to identify the process or service that should receive the data. For example, when you browse the web, your web browser sends requests to port 80 (or 443 for HTTPS) on the server hosting the website you are accessing. The server then sends the web page data back to your browser on a different port number.
+#### DNS
 
-Some common ports that are used for network services and applications include:
+DNS is scrutinized for evidence of tunneling, a technique attackers use to bypass security measures for data theft or command execution. Detecting irregular DNS requests helps identify such breaches.
 
--    Port 80: HTTP web traffic
--    Port 443: HTTPS encrypted web traffic
--    Port 25: SMTP email traffic
--    Port 53: DNS traffic
--    Port 21: FTP file transfer traffic
--    Port 22: SSH secure shell traffic
--    Port 3389: RDP remote desktop traffic
+| Record Type | Purpose                                                                 |
+|-------------|-------------------------------------------------------------------------|
+| A           | Maps a domain to an IPv4 address.                                       |
+| AAAA        | Maps a domain to an IPv6 address.                                       |
+| CNAME       | Maps a domain to another domain name (aliasing).                        |
+| MX          | Specifies mail exchange servers for the domain.                         |
+| TXT         | Allows the domain admin to insert any text into the DNS record.         |
+| NS          | Specifies the authoritative name servers for the domain.                 |
+| PTR         | Provides a domain name in reverse-IP lookups.                           |
+| SOA         | Contains administrative information about the domain, such as the primary name server and contact details for the domain administrator. |
+| SRV         | Specifies the location of services like VOIP, SIP, and XMPP.            |
+
+
 
 ## Wireshark 
 
