@@ -1719,6 +1719,11 @@ We want to understand what the malware does. Does it encyrpt our files? Does it 
 General rules
     * Dont get stuck in the weeds, you will never understand every detail of complex malware. Always start with the big picture, zoom in as needed, dont fall down a rabbit whole.
 
+
+
+
+https://docs.remnux.org/ - VM Focused on malware analysis
+
 https://www.youtube.com/@jstrosch/featured
 
 
