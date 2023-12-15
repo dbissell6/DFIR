@@ -22,6 +22,8 @@ The handbook is written to be accessible to new forensic CTF players and is desi
 
 8) [SIEMS](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#siems)
 
+9) [OSINT](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#osint)
+
 
 ## How to use this
 
@@ -3297,6 +3299,37 @@ https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-refe
 summarize 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/c296d631-9a22-41db-b431-87821a63b0b2)
+
+
+# OSINT
+
+Open Source Intelligence (OSINT) involves gathering evidence from sources like websites, social media, domain records, and other internet-based platforms.
+
+
+
+https://dfir.blog/unfurl/
+
+https://osintframework.com/
+
+## Google
+
+Google is your friend.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4d1fd8aa-9b69-41fe-8585-8dbe554cab69)
+
+
+### email unique identifier
+
+## Discord
+
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/42da7d72-e5bc-4440-86ca-8fb53bc55559)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/65475bb4-4241-4620-aa97-58bf3a6d71f3)
+
+
 
 
 # move
