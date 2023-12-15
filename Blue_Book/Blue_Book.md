@@ -1411,6 +1411,11 @@ Can also be used to get static strings from binaries
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/30656dd6-a02a-46bd-9636-5ee644f7ec45)
 
+## Detect It Easy (DIE)
+
+Detect It Easy, or abbreviated "DIE" is a program for determining types of files
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/354a1f97-d5b8-4e05-afbd-b6955cbc86b0)
 
 ## Getting hashes 
 Useful to make sure file hasnt been altered and to submit to virustotal.
@@ -1443,6 +1448,7 @@ pestudio
 ## Sigcheck
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/bc61f562-b9f7-4012-bf47-94e5abfc410f)
+
 
 
 ## Common file types
@@ -1631,6 +1637,11 @@ Information can be hidden within the individual frames of the video, in unused s
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e3a1e84d-65d7-4742-a908-002392fcab53)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/47d5b3fd-30d8-449f-b418-150ce7f86103)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9367c509-cb76-45b5-90a9-eead548ca73c)
+
+
 ## Decompressing
 
 Files may be compressed in all sorts of ways to avoid detection. Some of the most common decompressing tools + commands.
@@ -1796,6 +1807,22 @@ Run strings on file, notice base64 encoded text
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/dc126fe4-5ded-40ba-82cd-34f5df32c16e)
 
+
+
+
+## objdump
+
+Disassemble binary files.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/67590727-a16a-4f67-b74c-7b9058f3c6f9)
+
+## ldd
+
+ldd is a Unix and Linux command-line utility that stands for "List Dynamic Dependencies." It's used to display the shared libraries that a binary program requires to run.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/11f1a938-6b99-404e-b265-e20c398a547f)
+
+
 ### Ghidra
 
 Ghidra is an open-source reverse engineering framework developed by the National Security Agency, offering a suite of capabilities to analyze compiled code and decompile it into higher-level representations.
@@ -1957,9 +1984,21 @@ strace is a diagnostic, debugging, and instructional utility for Linux that is u
 
 ### ltrace
 
-ltrace is a  utility that intercepts and records dynamic library calls (calls to shared libraries) which are executed by user-space applications.
+ltrace is a utility that intercepts and records dynamic library calls (calls to shared libraries) which are executed by user-space applications.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f5e4a286-df78-4c4c-9808-944be1c2af0f)
+
+
+### sysdig
+
+What does sysdig do and why should I use it?
+
+Think about sysdig as strace + tcpdump + htop + iftop + lsof + ...awesome sauce.
+
+
+Start sysdig, run malware, stop sysdig, read
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/957f9e6a-002a-4d77-8ab1-f25c44aef764)
 
 
 
