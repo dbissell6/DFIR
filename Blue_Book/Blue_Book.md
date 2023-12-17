@@ -1988,10 +1988,21 @@ ltrace is a utility that intercepts and records dynamic library calls (calls to 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f5e4a286-df78-4c4c-9808-944be1c2af0f)
 
+### LD_PRELOAD Trick
+
+The LD_PRELOAD technique leverages the dynamic linker, which is part of the Linux operating system. When a dynamically linked executable runs, the linker is responsible for loading all shared libraries that the program requires. The LD_PRELOAD environment variable specifies a list of additional, user-specified, shared libraries to be loaded before all others. This method allows us to inject custom code, such as function hooks, into a program's runtime environment.
+
+Use case, run ltrace and see variables you want, like a key and iv?
+
+![289154479-793444e0-b33d-44fe-899b-d557c4bec9a8](https://github.com/dbissell6/DFIR/assets/50979196/4d1e3c1a-c44e-4e73-9046-8e8f54fc7697)
+
+Create a hook and run with preload. Capture key and IV.
+
+![288989558-1e05dbd8-e262-495a-9396-4e3b834a4309](https://github.com/dbissell6/DFIR/assets/50979196/41428800-4e61-48a5-a299-8d9dbb9fba5b)
+
+
 
 ### sysdig
-
-What does sysdig do and why should I use it?
 
 Think about sysdig as strace + tcpdump + htop + iftop + lsof + ...awesome sauce.
 
