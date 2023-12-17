@@ -1368,6 +1368,12 @@ NirLauncher -> BrowsingHistoryView
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ecbae68b-502e-43b6-8087-7d781c9373c0)
 
+### Chrome history
+
+appdata/local/google/chrome/User Data/default/History
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d6d87ba5-73eb-421c-b208-273fe7c90a2a)
+
 
 
 
