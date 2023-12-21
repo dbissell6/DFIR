@@ -2067,7 +2067,7 @@ Start from command line, run executable in question, when finihed stop Noriben, 
 
 ### hybrid-analysis
 
-Web based
+Web based, uses Crowdstrike Falcon Sandbox.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/926cf34b-9543-4a80-b394-d95ee0d9fa27)
 
