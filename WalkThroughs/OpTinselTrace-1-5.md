@@ -232,6 +232,10 @@ Crack with hashcat.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/9789f570-198d-420a-a38b-4132a826db08)
 
 
+## Discussion 
+
+This challenge didnt require us to investigate too deep into the binary. I did anyway. Luckliy it paid off and lots of the information was useful in the 2nd challenge. I will share results there.
+
 # OpTinselTrace-2
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/130ef1be-1cf8-4269-923d-f4c53f2c4c5f)
@@ -376,6 +380,10 @@ Given memory dump
 
 ![Pasted image 20231220130351](https://github.com/dbissell6/PWN_Practice/assets/50979196/a554ce08-6e5f-4430-b5bf-3ccbe79ffbed)
 
+Dump file
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/012f9ad1-36a7-4e39-8f4a-659dffea2cef)
+
 
 ## Task 2
 
@@ -400,7 +408,7 @@ Given memory dump
 
 ### Explanation 
 
-look before
+See Task 2
 
 ## Task 4
 
