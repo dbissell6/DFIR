@@ -303,6 +303,10 @@ Remember from the first challenge.
 
 We found this in challenge one reversing the
 
+Find bucket in main..
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5282e9e0-17d1-41af-899e-ee3c8e938400)
+
 ![Pasted image 20231218014244](https://github.com/dbissell6/DFIR/assets/50979196/210d6bb7-a98f-4b08-b389-8b43b3847955)
 
 ![Pasted image 20231218020254](https://github.com/dbissell6/DFIR/assets/50979196/be1fad0f-9ecd-404b-945a-ec23afe135c4)
