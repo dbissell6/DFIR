@@ -16,7 +16,7 @@ Hack The Box Sherlocks.
 
 [OpTinselTrace-4](https://github.com/dbissell6/PWN_Practice/blob/main/OpTinselTrace-1-5.md#optinseltrace-4)
 
-[OpTinselTrace-5](https://github.com/dbissell6/PWN_Practice/blob/main/OpTinselTrace-1-5.md#optinseltrace-5)
+[OpTinselTrace-5](https://github.com/dbissell6/DFIR/blob/main/OpTinselTrace-1-5.md#optinseltrace-5)
 
 
 
