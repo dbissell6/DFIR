@@ -686,8 +686,6 @@ Find key in same stream as before.
 
 `2023-12-08 12:18:14`
 
-## Discussion
-
 ### Explanation
 
 Looking for FSDELETE
@@ -698,6 +696,8 @@ Convert to UTC
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/93438eb8-7ca0-4be8-96eb-acc6164adedf)
 
+
+## Discussion
 
 # OpTinselTrace-5
 
@@ -827,7 +827,7 @@ Looking at png
 
 ### Explanation
 
-Search for the process that encrypted the files by focusing on and searching for the file extentsion.
+Search for the process that encrypted the files by focusing on and searching for the file extentsion of encrypted files (.xmax).
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/ae80e8dc-a645-40d6-848a-7e6f90b73573)
 
