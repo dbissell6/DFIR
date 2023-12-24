@@ -723,6 +723,7 @@ Given
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/787a2d0e-4270-4f86-8bd6-8441ce05ac54)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cfcec3a0-9b46-4078-a7ca-8b947cd7e1e0)
 
 
 ## Task 1
