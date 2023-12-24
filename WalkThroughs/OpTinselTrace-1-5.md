@@ -304,6 +304,10 @@ Oh no! Our IT admin is a bit of a cotton-headed ninny-muggins, ByteSparkle left 
 
 ## Abstract
 
+Given memory dump
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e34e8499-87e4-4e4d-86f9-7d74d4b9e55a)
+
 
 
 ## Task 1
@@ -322,8 +326,14 @@ Oh no! Our IT admin is a bit of a cotton-headed ninny-muggins, ByteSparkle left 
 
 ### Question
 `What is the file name used to trigger the attack (including the file extension)?`
+
 ### Answer
 `click_for_present.lnk`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/880f9cf9-a22b-487b-b470-5f272a850e99)
+
 
 ## Task 3
 
@@ -332,6 +342,10 @@ Oh no! Our IT admin is a bit of a cotton-headed ninny-muggins, ByteSparkle left 
 
 ### Answer
 `present.vbs`
+
+### Explanation 
+
+look before
 
 ## Task 4
 
