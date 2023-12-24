@@ -313,6 +313,10 @@ Remember from the first challenge.
 
 ## Discussion
 
+
+
+
+
 # OpTinselTrace-3
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/271c475d-d7b2-4c1c-833c-7c186fcb65e3)
@@ -453,6 +457,9 @@ From wine + wireshark
 ## Discussion
 
 
+
+
+
 # OpTinselTrace-4
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/0dd0e014-56c4-42b3-a789-de449ea32f48)
@@ -464,6 +471,11 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 ## Abstract
 
+Given pcapng
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a0c822c3-ed68-47b0-8dad-eb2797a65336)
+
+
 
 ## Task 1
 
@@ -473,6 +485,18 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 ### Answer
 `172.17.79.133`
+
+### Explanation
+
+See packets explode mid way through pcap
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3be0faf8-99e0-42b7-8f59-f52424d68edb)
+
+See this in wireshark
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/41c1df4b-a0f1-4332-a4e4-5f33c2a3b1b7)
+
+
 
 ## Task 2
 
@@ -484,6 +508,13 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 `9100`
 
+### Explanation
+
+Knowing printer default is 9100 we can start looking there, follow tcp stream, notice printer and enumeration
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3f45043d-f123-42a0-9926-2acc3df66129)
+
+
 ## Task 3
 
 ### Question
@@ -493,6 +524,10 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 ### Answer
 
 `Northpole HP LaserJet 4200n`
+
+### Explanation
+
+Look above
 
 ## Task 4
 
@@ -504,6 +539,13 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 `Douglas Price`
 
+### Explanation
+
+Same place as last 2 questions.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/15ab1358-ef96-45bf-85d0-84cf08e9615e)
+
+
 ## Task 5
 
 ### Question
@@ -513,6 +555,13 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 ### Answer
 
 `The addressed employee is confirmed to be working with grinch and team. According to Clause 69 , This calls for an immediate expulsion.`
+
+### Explanation
+
+Same Stream as before
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a9fe700c-2da6-4460-a889-cdcd3d99ad4a)
+
 
 ## Task 6
 
@@ -524,6 +573,13 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 `MerryChristmas+BonusAnnouncment`
 
+### Explanation
+
+Stream 46 Notice path contains 'ScheduledJobs'.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/364d7c7d-a58f-4045-960f-44166c6f9622)
+
+
 ## Task 7
 
 ### Question
@@ -533,6 +589,13 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 ### Answer
 
 `/Administration/securitykeys/ssh_systems/id_rsa`
+
+### Explanation
+
+Find key in same stream as before.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5884c6c5-196f-484f-bb95-f1165a73c1e6)
+
 
 ## Task 8
 
@@ -544,6 +607,11 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 `1914`
 
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1eead743-ba25-4ee1-ae30-1bde8425e80d)
+
+
 ## Task 9
 
 ### Question
@@ -553,6 +621,11 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 ### Answer
 
 `christmas.gifts`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/08cd82ee-020d-4eca-aaf5-1a91059a1b65)
+
 
 ## Task 10
 
@@ -566,6 +639,15 @@ Printers are important in Santa’s workshops, but we haven’t really tried to 
 
 ## Discussion
 
+### Explanation
+
+Looking for FSDELETE
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9226fa2f-d2bb-474b-8d81-a264c3f6a69f)
+
+Convert to UTC
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/93438eb8-7ca0-4be8-96eb-acc6164adedf)
 
 
 # OpTinselTrace-5
