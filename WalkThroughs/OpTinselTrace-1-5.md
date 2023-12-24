@@ -197,6 +197,10 @@ We saw this answering the first question.
 ### Answer
 `Greece`
 
+### Explanation
+
+We can see this in question9.
+
 ## Task 15
 
 ### Question
@@ -231,6 +235,11 @@ Use impacket to get hashes. Crack with hashcat.
 It seems our precious technology has been leaked to the threat actor. Our head Elf, PixelPepermint, seems to think that there were some hard-coded sensitive URLs within the technology sent. Please audit our Sparky Cloud logs and confirm if anything was stolen! PS - Santa likes his answers in UTC...
 
 ## Abstract
+
+Given Cloudtrail logs.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/320c52d0-f174-486e-a569-ede7304257db)
+
 
 ## Task 1
 
@@ -278,6 +287,21 @@ Remember from the first challenge.
 
 ### Answer
 `claus.py`
+
+### Explanation
+
+We found this in challenge one reversing the
+
+![Pasted image 20231218014244](https://github.com/dbissell6/DFIR/assets/50979196/210d6bb7-a98f-4b08-b389-8b43b3847955)
+
+![Pasted image 20231218020254](https://github.com/dbissell6/DFIR/assets/50979196/be1fad0f-9ecd-404b-945a-ec23afe135c4)
+
+
+Looking at previous commits we can see the ACCESS_KEY and SECRET_KEY were uploaded.
+
+![Pasted image 20231218020214](https://github.com/dbissell6/DFIR/assets/50979196/e718f85d-a150-4f14-a6b8-86c1eccced6a)
+
+In the current challenge we can this by  .
 
 ## Task 6
 
@@ -375,6 +399,7 @@ look before
 
 ### Question
 `What is the name of the program used by the vbs script to execute the next stage?`
+
 ### Answer
 `powershell.exe`
 
@@ -393,6 +418,13 @@ look before
 
 ### Answer
 `http://77.74.198.52/destroy_christmas/evil_present.jpg`
+
+### Explanation
+
+Runnin in any.run we can see the url the powershell tries to reach out to.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/fc44daa8-2148-4a50-ae59-c6d416f59df2)
+
 
 ## Task 7
 
@@ -421,6 +453,13 @@ From wine + wireshark
 ### Answer
 `724`
 
+### Explanation
+
+Using Volatility and malfind
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/fe2ea2cb-40a0-4725-aa0f-9a6895adac9f)
+
+
 ## Task 9
 
 ### Question
@@ -428,6 +467,11 @@ From wine + wireshark
 
 ### Answer
 `Get-EventLog -List | ForEach-Object { Clear-EventLog -LogName $_.Log }`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/524d8c0c-09b2-4c1e-8787-ba43404199a0)
+
 
 ## Task 10
 
@@ -455,8 +499,6 @@ From wine + wireshark
 
 
 ## Discussion
-
-
 
 
 
