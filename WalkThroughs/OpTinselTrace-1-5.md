@@ -717,6 +717,12 @@ You'll notice a lot of our critical server infrastructure was recently transferr
 
 ## Abstract
 
+Given
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c9232de8-0608-4157-8815-357f6e22a96e)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/787a2d0e-4270-4f86-8bd6-8441ce05ac54)
+
 
 
 ## Task 1
