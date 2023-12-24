@@ -156,6 +156,11 @@ Google History
 ### Answer
 `Joost Minnaar`
 
+### Explanation
+
+Follow the google link.
+
+
 ## Task 11
 
 ### Question
@@ -208,6 +213,14 @@ We saw this answering the first question.
 ### Answer
 `Santaknowskungfu`
 
+### Explanation
+
+Use impacket to get hashes. Crack with hashcat.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/04b40b45-caf2-48f8-abf8-c672caa9e77f)
+
+
+
 # OpTinselTrace-2
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/130ef1be-1cf8-4269-923d-f4c53f2c4c5f)
@@ -226,6 +239,13 @@ It seems our precious technology has been leaked to the threat actor. Our head E
 
 ### Answer
 `62d5c1f1f9020c98f97d8085b9456b05`
+
+### Explanation
+
+Remember from the first challenge.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/080da319-8164-47e7-8013-52be001beb15)
+
 
 ## Task 2
 
