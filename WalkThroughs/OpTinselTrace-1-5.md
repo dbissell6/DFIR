@@ -223,10 +223,13 @@ We can see this in question9.
 
 ### Explanation
 
-Use impacket to get hashes. Crack with hashcat.
+Use impacket to get hashes. 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/04b40b45-caf2-48f8-abf8-c672caa9e77f)
 
+Crack with hashcat.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9789f570-198d-420a-a38b-4132a826db08)
 
 
 # OpTinselTrace-2
