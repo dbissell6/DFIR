@@ -177,6 +177,10 @@ Follow the google link.
 ### Answer
 `2023-11-28 17:01:29`
 
+### Explanation
+
+Opening up the MFT in MFTExplorer will give you the answer.
+
 ## Task 13
 
 ### Question
