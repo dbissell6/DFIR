@@ -433,6 +433,12 @@ See Task 2
 ### Answer
 `WrapPresent`
 
+### Explanation
+
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ed12516e-7f64-435d-bce9-67806ea294e8)
+
 ## Task 6
 
 ### Question
@@ -443,7 +449,7 @@ See Task 2
 
 ### Explanation
 
-Runnin in any.run we can see the url the powershell tries to reach out to.
+Running in any.run we can see the url the powershell tries to reach out to.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/fc44daa8-2148-4a50-ae59-c6d416f59df2)
 
@@ -591,7 +597,7 @@ Knowing printer default is 9100 we can start looking there, follow tcp stream, n
 
 ### Explanation
 
-Look above
+Same as question 2
 
 ## Task 4
 
@@ -639,7 +645,7 @@ Same Stream as before
 
 ### Explanation
 
-Stream 46 Notice path contains 'ScheduledJobs'.
+Stream 46, Notice path contains 'ScheduledJobs'.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/364d7c7d-a58f-4045-960f-44166c6f9622)
 
