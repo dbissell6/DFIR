@@ -181,6 +181,9 @@ Follow the google link.
 
 Opening up the MFT in MFTExplorer will give you the answer.
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/50963e67-c3e2-49d0-90fc-6ed08b3f79d1)
+
+
 ## Task 13
 
 ### Question
