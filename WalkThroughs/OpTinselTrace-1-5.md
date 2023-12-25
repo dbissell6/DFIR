@@ -255,6 +255,14 @@ Given Cloudtrail logs.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/320c52d0-f174-486e-a569-ede7304257db)
 
 
+Basic enumeration, get a handle, names, ips, bucketnames
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f63ff3f0-4d16-4fb9-8de4-74dc6f8b382e)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c8f4af13-d625-4691-8fd8-33cd393b8b14)
+
+
+
 ## Task 1
 
 ### Question
@@ -277,6 +285,12 @@ Remember from the first challenge.
 
 ### Answer
 `2023-11-29 08:24:07`
+
+### Explanation
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e09c90c9-b8c7-425d-bbf3-338854bc7424)
+
 
 ## Task 3
 
@@ -337,6 +351,11 @@ In the current challenge we can this by  .
 ### Answer
 `bytesparkle.ovpn, 2023-11-29 10:16:53`
 
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/82510b43-8fee-49b3-8e13-f1608384faec)
+
+
 ## Task 8
 
 ### Question
@@ -345,6 +364,13 @@ In the current challenge we can this by  .
 ### Answer
 `elfadmin`
 
+### Explanation
+
+We knew this from the login creds of the binary from the first challenge.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/31f912de-89fc-42b5-b911-d73fc4552903)
+
+
 ## Task 9
 
 ### Question
@@ -352,6 +378,11 @@ In the current challenge we can this by  .
 
 ### Answer
 `arn:aws:s3:::papa-noel`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6372bf8a-53cf-4b32-8fbf-552a95d33862)
+
 
 ## Discussion
 
