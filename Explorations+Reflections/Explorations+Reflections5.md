@@ -7,6 +7,8 @@ Full reflection on cyberdefenders.
 
 Compare to whative seen in sherlocks.
 
+Fell down malware analysis rabbit hole dynamic analysis, anti-anti-debugging
+
 Since this time last year(compare to what i wrote about this time last year)
 
 Short commings? Successess? Desires? Predictions?
