@@ -10,9 +10,10 @@ holiday challs. SANS kringlecon released.
 ## Full reflection on cyberdefenders. 
 
 Cyberdefenders is a site to learn DFIR. Contains a large set of diverse challenges. One of this types of chalenges it excels in compared to HTB is giving
-the player a SIEM. Other than that the site contains content in the form you would expect. I dont like how it forces the player to use a web broswer on each challenge. I spend so much time and money getting my environment ready for analysis, dont force me to use a lagging environment with no tools.
+the player a SIEM. Other than that the site contains content in the form you would expect(with the exeption of E01s). I dont like how it forces the player to use a web broswer on each challenge. I spend so much time and money getting my environment ready for analysis, dont force me to use a lagging environment with no tools.
 
 Cyberdefenders differed from the original ctfs in that they clearly labeled the evidence that was to be analyzed in the description. Was nice to just filter challs that had pcaps or whatever. Decresed utility of graph. 
+
 
 ## Compare to what I've seen in sherlocks.
 
@@ -62,6 +63,10 @@ During the next week I started to get doubts. Was it a fluke? Getting blood that
 
 The bloods felt good but they were on cyberdefenders, I think there are more and better players on HTB. I anticipate i will get that same rush again if I get a blood on HTB. 
 
+### Veni, Vidi, Vivi in the box
+
+When i began i had set a goal of being able to do the easys year one, med year 2, hard 3, insane 4. The year began with me meeting my goal, and exceeding it sometimes. It hasnt been easy, but i have been able to complete every sherlocks. During the tinsel challenge I was close to blooding 2 of the challs. My confidence is higher, still not 100% tho, similar to the week after I got the first blood, has it been a fluke? 
+
 ### Help 
 
 #### no jq
@@ -72,6 +77,8 @@ I need a better way to parse these sherlocks aws cloudtrail logs. I feel like I 
 
 bulkextractor can do well here but i need more. At the very least a command to run to see the user/roaming/.../powershell for each user would be nice. Does yara work for these files? 
 
-#### 
+#### Doing it on windows
+
+I still hate it, although for now i have to do it. There are windows artifacts like MTF and prefetch that i have not been able to do on linux. I like zimmermans tools with the execption of mftexplorer taking 2 hours to load. The other issue i have is alternate data streams. I cant find these when analyzing from linux. I am still unsure difference in this realm from getting the disk image and that KAPE output. Sort of noobish like when i didnt understand mounting the drive wasnt actually being on that host. 
 
 
