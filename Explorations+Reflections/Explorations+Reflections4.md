@@ -1,6 +1,6 @@
 # Explorations and Reflections: Part 4
 
-Winter 2023
+Fall 2023
 
 It feels like a lifetime since our last update(Spring 2023). Let's dive into what transpired and reflect upon it.
 
