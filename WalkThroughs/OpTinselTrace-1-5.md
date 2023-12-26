@@ -832,12 +832,21 @@ Google
 ### Answer 2
 `2023-12-13 09:24:23`
 
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c92b29ab-a7ae-4c82-b817-4b72dec9f334)
+
+
 ## Task 3
 `What is the name of the executable related to the unusual service installed on the system around the time of the CVE exploitation?`
 
 ### Answer 3
 
 `hAvbdksT.exe`
+
+### Explanation
+
+Can be seen in ImagePath of question 2.
 
 ## Task 4 
 `What date & time was the unusual service start?`
