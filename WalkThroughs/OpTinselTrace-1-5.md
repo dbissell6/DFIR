@@ -466,6 +466,10 @@ See Task 2
 ### Answer
 `powershell.exe`
 
+### Explanation
+
+We can see this running the script in any.run in question 6.
+
 ## Task 5
 
 ### Question
@@ -475,8 +479,6 @@ See Task 2
 `WrapPresent`
 
 ### Explanation
-
-
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ed12516e-7f64-435d-bce9-67806ea294e8)
 
