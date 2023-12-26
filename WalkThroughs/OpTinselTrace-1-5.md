@@ -63,6 +63,10 @@ A little annoying because i was going back between `conversations.dat` and `mail
 ### Answer
 `definitelynotthegrinch@gmail.com`
 
+### Explanation
+
+Is an explanation needed? 
+
 ## Task 3
 
 ### Question
@@ -97,6 +101,15 @@ We can see elfuttin refered to a couple times in emails. This screenshot is nice
 
 ### Answer
 `Re: work`
+
+### Explanation
+
+Notice docid = 29
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1cff688f-29ca-4991-89e3-2840ef643c88)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b2cb1068-2c32-4632-9685-8100dcc8e56f)
+
 
 ## Task 6
 
@@ -163,7 +176,11 @@ Google History
 
 ### Explanation
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cc7c7324-c43d-4f0a-9563-cc3c0a11be64)
+
 Follow the google link.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9d21c05f-e395-4818-a5e7-c22bff2c5d37)
 
 
 ## Task 11
@@ -204,7 +221,8 @@ Opening up the MFT in MFTExplorer will give you the answer.
 
 ### Explantion 
 
-We saw this answering the first question.
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9ef74d78-3bd0-4bd0-a2b8-f30f50bd9234)
+
 
 ## Task 14
 
@@ -216,7 +234,7 @@ We saw this answering the first question.
 
 ### Explanation
 
-We can see this in question9.
+We can see this in question 9.
 
 ## Task 15
 
