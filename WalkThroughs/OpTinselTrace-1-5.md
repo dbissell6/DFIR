@@ -252,7 +252,29 @@ Crack with hashcat.
 
 ## Discussion 
 
-This challenge didnt require us to investigate too deep into the binary. I did anyway. Luckliy it paid off and lots of the information was useful in the 2nd challenge. I will share results there.
+This challenge didnt require us to investigate too deep into the binary. I did anyway. Luckliy it paid off and lots of the information was useful in the 2nd challenge. Going down this rabbit hole allows us to simulate the attack path.
+
+
+Find bucket in main..
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5282e9e0-17d1-41af-899e-ee3c8e938400)
+
+We can see the contents of the bucket
+
+![Pasted image 20231218014244](https://github.com/dbissell6/DFIR/assets/50979196/210d6bb7-a98f-4b08-b389-8b43b3847955)
+
+![Pasted image 20231218020254](https://github.com/dbissell6/DFIR/assets/50979196/be1fad0f-9ecd-404b-945a-ec23afe135c4)
+
+
+Looking at previous commits we can see the ACCESS_KEY and SECRET_KEY were uploaded.
+
+![Pasted image 20231218020214](https://github.com/dbissell6/DFIR/assets/50979196/e718f85d-a150-4f14-a6b8-86c1eccced6a)
+
+Find login creds
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/31f912de-89fc-42b5-b911-d73fc4552903)
+
+At this point we know the compromised user + password, the bucket, the ACCESS_KEY and SECRET_KEY. Again knowing these going into #2 will be very useful.
 
 # OpTinselTrace-2
 
@@ -342,22 +364,9 @@ Look where question 2 ends
 
 ### Explanation
 
-We found this in challenge one reversing the
+We found this in challenge one reversing the binary.
 
-Find bucket in main..
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/5282e9e0-17d1-41af-899e-ee3c8e938400)
-
-![Pasted image 20231218014244](https://github.com/dbissell6/DFIR/assets/50979196/210d6bb7-a98f-4b08-b389-8b43b3847955)
-
-![Pasted image 20231218020254](https://github.com/dbissell6/DFIR/assets/50979196/be1fad0f-9ecd-404b-945a-ec23afe135c4)
-
-
-Looking at previous commits we can see the ACCESS_KEY and SECRET_KEY were uploaded.
-
-![Pasted image 20231218020214](https://github.com/dbissell6/DFIR/assets/50979196/e718f85d-a150-4f14-a6b8-86c1eccced6a)
-
-In the current challenge we can this by looking at GetObject Event Names .
+In the current challenge we can this by looking at GetObject Event Names.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/a55676b8-c723-4d10-8ad0-58046864e3e9)
 
@@ -395,7 +404,7 @@ In the current challenge we can this by looking at GetObject Event Names .
 
 We knew this from the login creds of the binary from the first challenge.
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/31f912de-89fc-42b5-b911-d73fc4552903)
+
 
 
 ## Task 9
