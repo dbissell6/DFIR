@@ -252,6 +252,8 @@ Crack with hashcat.
 
 ## Discussion 
 
+Overall doing this in sqlitebrowser was annoying. Elfin deleting emails and alter timestamps(maybe corrupted?) was annoying too.  
+
 This challenge didnt require us to investigate too deep into the binary. I did anyway. Luckliy it paid off and lots of the information was useful in the 2nd challenge. Going down this rabbit hole allows us to simulate the attack path.
 
 
@@ -405,8 +407,6 @@ In the current challenge we can this by looking at GetObject Event Names.
 We knew this from the login creds of the binary from the first challenge.
 
 
-
-
 ## Task 9
 
 ### Question
@@ -422,6 +422,7 @@ We knew this from the login creds of the binary from the first challenge.
 
 ## Discussion
 
+We were able to answer most the questions from the inital analysis of the binary. Similar to the last challenge manually going through logs with jq was annoying, even when we knew what we were looking for. Must automate...
 
 
 # OpTinselTrace-3
@@ -786,6 +787,8 @@ Convert to UTC
 
 
 ## Discussion
+
+Overall pretty straight forward. Once the correct streams were identified most of the answers were found there in plaintext.
 
 # OpTinselTrace-5
 
