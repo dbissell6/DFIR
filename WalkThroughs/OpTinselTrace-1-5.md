@@ -133,6 +133,11 @@ We can see elfuttin refered to a couple times in emails. This screenshot is nice
 ### Answer
 `2023-11-28 16:56:13`
 
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/328f96e1-a717-49b7-9af6-3a1edaa67db9)
+
+
 ## Task 9
 
 ### Question
@@ -168,6 +173,11 @@ Follow the google link.
 
 ### Answer
 `santa_deliveries.zip`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d47323f9-dd99-46db-9b25-6c5c0fd312f1)
+
 
 ## Task 12
 
@@ -215,6 +225,11 @@ We can see this in question9.
 
 ### Answer
 `Santa.claus@gmail.com`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4093ace8-196e-4f81-b0cd-7c237ebdb6d9)
+
 
 ## Task 16
 
