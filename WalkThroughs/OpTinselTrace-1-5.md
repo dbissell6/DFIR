@@ -628,9 +628,9 @@ Given pcapng
 
 See packets explode mid way through pcap
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/3be0faf8-99e0-42b7-8f59-f52424d68edb)
+![image](https://github.com/dbissell6/DFIR/assets/50979196/788acce2-82d7-40be-a35b-f6ff08559944)
 
-See this in wireshark
+![image](https://github.com/dbissell6/DFIR/assets/50979196/fc3b3c3d-33fc-40ef-9b94-66c3b7ffef8d)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/41c1df4b-a0f1-4332-a4e4-5f33c2a3b1b7)
 
