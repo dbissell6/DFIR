@@ -300,6 +300,10 @@ Remember from the first challenge.
 ### Answer
 `2023-11-29 08:24:16`
 
+### Explanation
+
+Look where question 2 ends
+
 ## Task 4
 
 ### Question
@@ -307,6 +311,11 @@ Remember from the first challenge.
 
 ### Answer
 `python`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6b347468-3517-4558-9ebd-6eb1dd6a3e53)
+
 
 ## Task 5
 
@@ -333,7 +342,10 @@ Looking at previous commits we can see the ACCESS_KEY and SECRET_KEY were upload
 
 ![Pasted image 20231218020214](https://github.com/dbissell6/DFIR/assets/50979196/e718f85d-a150-4f14-a6b8-86c1eccced6a)
 
-In the current challenge we can this by  .
+In the current challenge we can this by looking at GetObject Event Names .
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a55676b8-c723-4d10-8ad0-58046864e3e9)
+
 
 ## Task 6
 
@@ -385,8 +397,6 @@ We knew this from the login creds of the binary from the first challenge.
 
 
 ## Discussion
-
-
 
 
 
