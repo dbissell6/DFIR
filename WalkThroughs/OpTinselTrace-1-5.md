@@ -632,7 +632,10 @@ See packets explode mid way through pcap
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/fc3b3c3d-33fc-40ef-9b94-66c3b7ffef8d)
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/41c1df4b-a0f1-4332-a4e4-5f33c2a3b1b7)
+Look at the IP in wireshark
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5887c58d-bf32-4832-8e5c-55408214143b)
+
 
 
 
