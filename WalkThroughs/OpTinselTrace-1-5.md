@@ -702,7 +702,7 @@ Same as question 2
 
 Same place as last 2 questions.
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/15ab1358-ef96-45bf-85d0-84cf08e9615e)
+![image](https://github.com/dbissell6/DFIR/assets/50979196/94f2f167-746c-440d-b305-873807464be2)
 
 
 ## Task 5
