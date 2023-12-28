@@ -605,6 +605,14 @@ Using Volatility and malfind
 ### Answer
 `procdump.exe`
 
+### Explanation
+
+Alien Valut shows hint
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cae068e8-05da-416a-8ab2-ae6cb79b8937)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ab4c7a7e-670b-4247-b3a0-7739af44d20e)
+
+
 ## Task 12
 
 ### Question
@@ -612,6 +620,12 @@ Using Volatility and malfind
 
 ### Answer
 `lsass.exe`
+
+### Explanation 
+
+Looking for commands using PresentForNaughtyChild.exe we see lsass.exe.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e679c9f8-ee0d-490d-9b8b-b6dabbe37f29)
 
 
 ## Discussion
