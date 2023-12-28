@@ -664,7 +664,8 @@ See packets explode mid way through pcap
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/788acce2-82d7-40be-a35b-f6ff08559944)
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/fc3b3c3d-33fc-40ef-9b94-66c3b7ffef8d)
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2c6a5b8b-a473-4a8c-8213-7cbd477f3682)
+
 
 Look at the IP in wireshark
 
@@ -926,12 +927,24 @@ Using chainsaw + sigma...
 
 `Administrator, Bytesparkle`
 
+### Explanation
+
+We saw bytesparkle before from the same IP using rdp earlier
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/afa310bd-835a-4bf4-9454-2febe158388d)
+
+
 ## Task 7
 `What was the name of the scheduled task created by the TA?`
 
 ### Answer 7
 
 `svc_vnc`
+
+### Explanation
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9a8d0240-43e1-4b98-9af9-8d148d985040)
+
 
 ## Task 8
 `Santa's memory is a little bad recently! He tends to write a lot of stuff down, but all our critical files have been encrypted! Which creature is Santa's new sleigh design planning to use?`
