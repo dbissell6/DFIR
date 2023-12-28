@@ -38,7 +38,9 @@ Given
 
 ![image](https://github.com/dbissell6/PWN_Practice/assets/50979196/210762b8-2b37-40b1-a930-a41c2b0a405c)
 
-A little annoying because i was going back between `conversations.dat` and `mail_fti.dat`.
+
+Given this evidence my first steps are to start running chainsaw on the logs and look into powershell commands ran by the user. These didnt help, luckily the powershell commands are near  
+Appdata chrome and em client, most of the evidence needed was in this vicicnity. A little annoying because i was going back between `conversations.dat` and `mail_fti.dat`.
 
 ## Task 1
 
