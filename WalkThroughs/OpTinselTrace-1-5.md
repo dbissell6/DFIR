@@ -411,6 +411,9 @@ In the current challenge we can this by looking at GetObject Event Names.
 
 ### Explanation
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9f1c981a-76e8-49da-8a7b-36e24465fd20)
+
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/82510b43-8fee-49b3-8e13-f1608384faec)
 
 
