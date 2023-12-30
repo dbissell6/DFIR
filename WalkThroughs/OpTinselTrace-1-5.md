@@ -447,6 +447,12 @@ We knew this from the login creds of the binary from the first challenge.
 
 We were able to answer most the questions from the inital analysis of the binary. Similar to the last challenge manually going through logs with jq was annoying, even when we knew what we were looking for. Must automate...
 
+Edit: I built a tool to visualize aws cloud logs
+
+https://github.com/dbissell6/Thundaga/blob/main/README.md
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/995544d4-59ff-4a10-9a33-efbbe67aec75)
+
 
 # OpTinselTrace-3
 
