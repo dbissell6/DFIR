@@ -40,7 +40,7 @@ Given
 
 
 Given this evidence my first steps are to start running chainsaw on the logs and look into powershell commands ran by the user. These didnt help, luckily the powershell commands are near  
-Appdata chrome and em client, most of the evidence needed was in this vicicnity. A little annoying because i was going back between `conversations.dat` and `mail_fti.dat`.
+Appdata chrome and em client, most of the evidence needed was in this vicinity. A little annoying because i was going back between `conversations.dat` and `mail_fti.dat`.
 
 ## Task 1
 
@@ -272,7 +272,7 @@ Crack with hashcat.
 
 ## Discussion 
 
-Overall doing this in sqlitebrowser was annoying. Elfin deleting emails and alter timestamps(maybe corrupted?) was annoying too.  
+Overall doing this in sqlitebrowser was annoying. Elfin deleting emails and altering timestamps(maybe corrupted?) was annoying too.  
 
 This challenge didnt require us to investigate too deep into the binary. I did anyway. Luckliy it paid off and lots of the information was useful in the 2nd challenge. Going down this rabbit hole allows us to simulate the attack path.
 
@@ -469,7 +469,7 @@ Given memory dump
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e34e8499-87e4-4e4d-86f9-7d74d4b9e55a)
 
-
+Given memory dumps I will typically look for users, thier files, cmdline and malfind.
 
 ## Task 1
 
@@ -616,7 +616,7 @@ Using Volatility and malfind
 
 ### Explanation
 
-Alien Valut shows hint
+Alien Vault shows hint
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/cae068e8-05da-416a-8ab2-ae6cb79b8937)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ab4c7a7e-670b-4247-b3a0-7739af44d20e)
