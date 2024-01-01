@@ -53,25 +53,31 @@ Its hard to imagine what the journey looks like without the navigator.
 
 ## Short commings? Successess? Desires? Goals? Predictions?
 
-I beleive the Blue Book has been a success. Both in the utility it provides as a reference and the way it forced me to orgaize these concepts mentally to create it. 
 
-### Bloods
+### Success
 
-I got my first bloods on a site. After a couple weeks grinding on Cyberdefenders i decided to try and got one. I was so juiced. I said something changed in me when i did the malware analysis anti-anti-debugging, this was an instance of that too. I explained earlier how each CTF it felt nice to finish harder and harder challenges. This was like that * 10000. It was a validation the work was paying off
+#### Bloods
+I got my first bloods on a site. After a couple weeks grinding on Cyberdefenders i decided to try and got one. I was so juiced, sooo juiced. I said something changed in me when i did the malware analysis anti-anti-debugging, this was an instance of that too. I explained earlier how each CTF it felt nice to finish harder and harder challenges. This was like that * 10000. It was a validation the work was paying off.
 
-During the next week I started to get doubts. Was it a fluke? Getting blood that week for the second time in a row helped to solidy some things internally. I was really close the 3rd week, felt some disapointement but no doubt. After that HTB dropped sherlocks and havent been back to cyberdefender since.
+But... during the next week I started to get doubts. Was it a fluke? Getting blood that week for the second time in a row helped to solidy some things internally. I was really close the 3rd week, felt some disapointment, but no doubt. 
 
-The bloods felt good but they were on cyberdefenders, I think there are more and better players on HTB. I anticipate i will get that same rush again if I get a blood on HTB. 
+The bloods felt good but they were on cyberdefenders, I think there are more and better players on HTB. I anticipate i will get that same rush again if I get a blood on HTB. After that HTB dropped sherlocks and havent been back to cyberdefender since.
+
+#### Submitted first walkthrough
+At the end of the year HTB sherlocks released 5 christmas themed challenges. Each blood got a prize and the best write up will get one too. Idk why but i decided to submit. 
 
 ### Veni, Vidi, Vivi in the box
 
-When i began i had set a goal of being able to do the easys year one, med year 2, hard 3, insane 4. The year began with me meeting my goal, and exceeding it sometimes. It hasnt been easy, but i have been able to complete every sherlocks. During the tinsel challenge I was close to blooding 2 of the challs. My confidence is higher, still not 100% tho, similar to the week after I got the first blood, has it been a fluke? 
+When i began i had set a goal of being able to do the easys year one, med year 2, hard 3, insane 4. The year began with me meeting my goal, and exceeding it sometimes. It hasnt been easy, but i have been able to complete every sherlock. During the tinsel challenge I was close to blooding 2 of the challs. My confidence is higher, still not 100% tho, similar to the week after I got the first blood, has it been a fluke? 
 
 ### Help 
 
 #### no jq
 
 I need a better way to parse these sherlocks aws cloudtrail logs. I feel like I did with pcaps and evtx, at least i had wireshark for pcaps tho. I um under the impression that i could set up an ELK stack, but part of me whats to start with a python program. 
+
+UPDATE: It took a day or two but i started a tool to vizualize AWS logs, started to apply it to chainsaw sigma output too, we will see where it goes
+
 
 #### KAPE file dump
 
@@ -81,4 +87,20 @@ bulkextractor can do well here but i need more. At the very least a command to r
 
 I still hate it, although for now i have to do it. There are windows artifacts like MTF and prefetch that i have not been able to do on linux. I like zimmermans tools with the execption of mftexplorer taking 2 hours to load. The other issue i have is alternate data streams. I cant find these when analyzing from linux. I am still unsure difference in this realm from getting the disk image and that KAPE output. Sort of noobish like when i didnt understand mounting the drive wasnt actually being on that host. 
 
+## Goals
 
+### complete every sherlock + Writeups
+
+I imagine ~50 over the year. 
+
+abstracts should have evidence given, expectations, 
+
+discussions summary of attack, what was learned, 
+
+### Research + Create
+
+I want to do research on new malware and create content showcasing the findings. I also have some ideas for a red box. 
+
+### The BlueBook 
+
+The BlueBook has come a long way but needs some work. As a quick reference it provides tools for most files/binaries but it does so at a very superficial level. sections need better overviews. Tools could have installs. The malware analysis section needs to be restructured. It is getting too big, Each section of evidence should become its own file. 
