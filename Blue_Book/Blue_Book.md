@@ -178,17 +178,7 @@ The first flavor and most seen is a typical network catpure. These are large cap
 
 The second flavor is when every packet will be needed. This can be seen in something like a usb logger and almost instantly is an encoding or encrpytion problem.
 
-### 5 levels
 
-1) Flag found plaintext 
-2) Flag encoded in rot13 or base64
-3) Flag hidden in encryption that needs credentials
-4) File found containing binary that needs to be reversed
-5) Something tough
-
-Most often in level 3 challenges and above the pcap will be just one piece of evidence and will need to combine it with something else(find creds in a .evtx to decyrpt something in wireshark)
-
-There is a transisiton from putting a flag in the pcap to having players answer 5-10 questions about the attack seen in the pcap to get the flag. This means easy challenges will never contain a flag in the pcap, making easy wins like grep impossible.
 
 ## Foundational Network Concepts
 
