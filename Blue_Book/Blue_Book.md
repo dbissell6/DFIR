@@ -2729,6 +2729,8 @@ Alternate Data Streams are a feature of the NTFS file system that allows multipl
 
 PowerForensics is a powerful and flexible tool for digital forensic investigations on Windows systems. Can use on mounted systems or live systems. PowerForensics offers a suite of cmdlets that can extract a variety of forensic artifacts, such as the Master File Table (MFT), Volume Boot Record (VBR), Event Logs, and more.
 
+Docs - https://powerforensics.readthedocs.io/en/latest/#cmdlets
+
 `
 Get-ForensicFileRecord -VolumeName E:
 `
