@@ -1009,6 +1009,7 @@ https://redteamrecipe.com/Registry-Attack-Vectors/
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
 
+https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table
 
 ### MFTECmd.exe 
 Tool to parse MFT +($Boot...)
