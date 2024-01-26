@@ -498,6 +498,8 @@ sudo snort -c /root/snorty/etc/snort/snort.lua --daq-dir /usr/local/lib/daq -r c
 
 In brief, Zeek is optimized for interpreting network traffic and generating logs based on that traffic. It is not optimized for byte matching, and users seeking signature detection approaches would be better served by trying intrusion detection systems such as Suricata. Zeek is also not a protocol analyzer in the sense of Wireshark, seeking to depict every element of network traffic at the frame level, or a system for storing traffic in packet capture (PCAP) form. Rather, Zeek sits at the “happy medium” representing compact yet high fidelity network logs, generating better understanding of network traffic and usage.
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/32b3af92-cb32-4e1d-a12b-7dff2aa98f48)
+
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/60722e91-6894-49b6-a0a9-d43f7f8bbe44)
 
