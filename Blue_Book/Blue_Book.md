@@ -1271,6 +1271,13 @@ When analyzing Linux logs in a CTF DFIR competition, it is important to focus on
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/962852b7-cbc8-4613-a551-e9d7dc9be510)
 
 
+## system.journal
+
+Holds logged system events and messages.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/735ae9c5-d3b1-4906-98e2-62f27e7870ab)
+
+
 ## access logs stats
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/4ca95ef1-d9e1-4fae-9550-827c5586e757)
