@@ -2370,7 +2370,7 @@ Grep for commands
 strings PhysicalMemory.raw | grep -E "(cmd|powershell|bash)[^\s]+"
 `
 
-## Volatility
+## Volatility 3
 
 Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
 
@@ -2571,7 +2571,32 @@ Module requirement
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e49999cb-7467-4a1a-a86d-49939ca463a6)
 
+## Volatility 2
 
+I hate that I have to do this, but here we are. Long story short, vol2 has some features that vol3 doesnt. There are rumors of differences 
+between python2 and python3 leading to the plugins we get for each version of vol.  Some plugins of interest are cmdscan(better than cmdline), clipboard, consoles.
+
+Download
+
+```
+git clone https://github.com/volatilityfoundation/volatility.git
+cd volatility
+sudo python2 setup.py install
+```
+
+First need to run info on the image. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2e5bb1c5-8aaa-43af-a01d-8413cda3c29d)
+
+Vol3 will automatically give us a profile, in vol2 we have to explicitly state it, we can see suggested profiles loaded above.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2bb7fc8d-0a8a-4c86-8537-28242a66e8e1)
+
+
+For all available plugins
+```
+python2 vol.py -f /home/kali/Desktop/recollection.bin --profile=Win7SP1x64 --help
+```
 ## yara
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/9c18bff0-267c-4830-85c4-bf7e3286b76f)
@@ -2584,6 +2609,18 @@ https://github.com/Yara-Rules/rules
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0db2eace-aa03-4359-abc3-c87d9d8ca107)
 
+
+## Bulk_Extractor
+
+Bulk_Extractor is a tool that will scan various types of evidence including pcaps, files, disk images but I probably get the most use from memory dumps. Computationally + Time intensive, must create an output dir.  
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2c7253c5-4be2-4ec2-ac98-d3fcaf248930)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1edae5d4-d897-40da-83f9-6f3d0ef67d45)
+
+Useful to find, emails, browser search terms, logs... 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8ac97e75-26f9-4a41-a658-2b6ea059d5ba)
 
 
 # Disk
@@ -3435,5 +3472,4 @@ You can add an image or a code block, too.
 
 
 
-##
-Bulk_Extractor is a tool that will scan pcaps, mem.raw ...
+
