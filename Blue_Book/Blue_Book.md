@@ -3080,6 +3080,30 @@ Typical output/
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/7f79b088-69a1-4019-8cff-05ecdac38f33)
 
+## Catscale (Dump linux artifacts)
+
+Linux CatScale is a bash script that uses live of the land tools to collect extensive data from Linux based hosts. The data aims to help DFIR professionals triage and scope incidents. An Elk Stack instance also is configured to consume the output and assist the analysis process. Note that the script will likely alter artefacts on endpoints. Care should be taken when using the script. This is not meant to take forensically sound disk images of the remote endpoints.
+
+What does it collect?
+`https://labs.f-secure.com/tools/cat-scale-linux-incident-response-collection/`
+
+source code
+`https://github.com/WithSecureLabs/LinuxCatScale/tree/master`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cff36786-077e-4d47-bfdb-fcec9d32be40)
+
+
+
+### Misc
+
+Use `exec-perm-files.txt` to cross reference hashes on VT.
+
+`full-timeline.csv` Can be very useful.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cac3c933-bea5-4a2e-b9fe-c78a50ba9af8)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/11226904-f3f8-4f11-a358-2daa18e07516)
+
 
 ## Dump Windows Memory
 
