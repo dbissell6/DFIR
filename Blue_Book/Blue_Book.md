@@ -1006,6 +1006,8 @@ https://redteamrecipe.com/Registry-Attack-Vectors/
 
 # Other Windows artifacts
 
+https://www.sans.org/posters/windows-forensic-analysis/
+https://www.sans.org/gated-content?resource=/Shared/Website%20Public%20Content/Posters%20and%20Cheat%20Sheets/SANS_DFPS_FOR500_v4.17_02-23.pdf
 
 ## Master File Table (MFT)
 
