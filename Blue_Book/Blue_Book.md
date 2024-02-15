@@ -140,20 +140,19 @@ The binary representations are:
     A = 65 = 01000001 in binary.
     K = 75 = 01001011 in binary.
 
+Encrypt A with key (K)
 ```
   01000001  (A)
 ⊕ 01001011  (K)
 -----------
   00001010  (Result)
-
 ```
-
+Decrypt encrypted A with key (K)
 ```
   00001010  (Encrypted A/Result)
 ⊕ 01001011  (K)
 -----------
   01000001  (A)
-
 ```
 
 <details>
@@ -180,7 +179,6 @@ decrypted_text = xor_encrypt_decrypt(ciphertext, key).decode()
 print(f"Plaintext: {plaintext}")
 print(f"Ciphertext (hex): {ciphertext.hex()}")
 print(f"Decrypted text: {decrypted_text}")
-
 ```
 </details>
 
