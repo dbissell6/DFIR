@@ -122,6 +122,39 @@ ASymmetric - One key for encryption, another key for decryption.
 
 XOR (exclusive OR) is a fundamental operation used in cryptography and data obfuscation.
 
+Key Points
+
+    Binary Operation: XOR operates on the binary representations of the numeric codes for characters.
+    Reversibility: XORing the ciphertext with the same key reverses the operation, revealing the original plaintext.
+    Encryption of Letters: The process is the same for any character; what matters are the binary representations of those characters and the key.
+
+Example
+
+Suppose we want to encrypt the letter A using the key K. In ASCII:
+
+    A is represented by the number 65.
+    K is represented by the number 75.
+
+The binary representations are:
+
+    A = 65 = 01000001 in binary.
+    K = 75 = 01001011 in binary.
+
+```
+  01000001  (A)
+⊕ 01001011  (K)
+-----------
+  00001010  (Result)
+
+```
+
+```
+  00001010  (Encrypted A/Result)
+⊕ 01001011  (K)
+-----------
+  01000001  (A)
+
+```
 
 <details>
 <summary> Code: Python code to mess arount with xor </summary>
