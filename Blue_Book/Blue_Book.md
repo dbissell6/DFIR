@@ -95,6 +95,12 @@ Furthermore, encryption may also be encountered in forensic artifacts such as lo
 
 In summary, understanding encryption and its use cases is essential for any DFIR practitioner. Encryption can pose significant challenges to investigations, but it can also provide valuable insights into an incident or investigation. As such, DFIR practitioners should be familiar with the basics of encryption and the common encryption tools and techniques used in digital investigations.
 
+### symmetric vs asymmetric
+
+Symmetric - Uses one(same) key for both encryption and decryption.
+
+ASymmetric - One key for encryption, another key for decryption.
+
 ### Common types
 
 
@@ -111,6 +117,43 @@ In summary, understanding encryption and its use cases is essential for any DFIR
 -    Twofish: This is a symmetric encryption algorithm that uses block ciphers with a key size of 128, 192, or 256 bits. It is designed to be faster and more secure than AES.
 
 -    ChaCha20: This is a symmetric encryption algorithm that is designed to be fast and secure. It uses a 256-bit key and can be used for data encryption, password hashing, and other applications.
+
+### XOR
+
+XOR (exclusive OR) is a fundamental operation used in cryptography and data obfuscation.
+
+
+<details>
+<summary> Code: Python code to mess arount with xor </summary>
+
+
+```
+def xor_encrypt_decrypt(input_string, key):
+    # Convert the input string to bytes if it's not already
+    input_bytes = input_string.encode() if isinstance(input_string, str) else input_string
+    key_bytes = key.encode() if isinstance(key, str) else key
+    
+    # Perform XOR operation between each byte of the input and the key
+    output_bytes = bytes([b ^ key_bytes[i % len(key_bytes)] for i, b in enumerate(input_bytes)])
+    
+    return output_bytes
+
+# Example usage
+key = "secret"
+plaintext = "Hello, XOR!"
+ciphertext = xor_encrypt_decrypt(plaintext, key)
+decrypted_text = xor_encrypt_decrypt(ciphertext, key).decode()
+
+print(f"Plaintext: {plaintext}")
+print(f"Ciphertext (hex): {ciphertext.hex()}")
+print(f"Decrypted text: {decrypted_text}")
+
+```
+</details>
+
+Cyberchef example
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ca5d693d-b14c-4498-afa4-16eee91ece0c)
 
 
 ### OpenSSL
