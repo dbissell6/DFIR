@@ -101,3 +101,28 @@ r.interactive()
 Running Final pwntools output
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52eb2bf7-8fc4-46c7-b30b-37c89862fd0d)
+
+
+# Notes from Reversing with ghidra
+
+https://youtu.be/Y2qd0m4_4ZM?si=E65mh0bnvHduyUKw
+
+## Loops
+
+```
+x86_64-w64-mingw32-gcc loop_prac.c -o loop_prac.exe
+```
+
+Flow chart is useful to identify loops
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d56c5516-4772-4a9b-88fe-e8c796874c1d)
+
+right click to update variable names and hex-dec rep of values
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4774e90e-5f8a-40ab-99f4-f0fcbc08a6e7)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/54d5b167-411b-4ada-9ba2-c4d9fa5acc51)
+
+
