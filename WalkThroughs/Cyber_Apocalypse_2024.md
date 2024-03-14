@@ -591,6 +591,45 @@ foreach (string message in messages)
 
 </details>
 
+
+## Containment - hard
+
+Given .ad1
+
+Use ftkimager to open it. UlTIMATUM.hta shows ransom note. encrypted extentions is .korp.
+
+![Pasted image 20240309225450](https://github.com/dbissell6/DFIR/assets/50979196/8f6d3fc8-dbd4-4fba-b6c5-63abfd952c27)
+
+Find a sus .bat
+
+![Pasted image 20240309230640](https://github.com/dbissell6/DFIR/assets/50979196/ebdbebba-8277-49f0-b4e5-d2eeadb4d483)
+
+
+Start of powershell commands
+
+![Pasted image 20240309232143](https://github.com/dbissell6/DFIR/assets/50979196/ce9bb33b-98f2-4262-aec7-eb76cb751e1a)
+
+sus execution of intel.exe
+
+![Pasted image 20240309232239](https://github.com/dbissell6/DFIR/assets/50979196/8ae07657-989d-44d6-86f5-e763ab9514ef)
+
+Here is the issue, the exe was deleted, i spent a while trying to recover it. The challenge name 'containment', maybe defender quarentined it? Looking at the logs there is also some evidence this is the case, becsaue commands were ran, then after scripts that turn off denfender were used, then the same command ran again.
+
+![Pasted image 20240310001519](https://github.com/dbissell6/DFIR/assets/50979196/d3102569-ab75-48ce-b81b-e96816e44e45)
+
+
+When Dfender quarentines its encryptes the file and stores it
+
+```
+C:\ProgramData\Microsoft\Windows Defender\Quarantine\entries
+```
+
+
+convert the file back
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/aa511ac3-b0d4-4a06-9afd-60b6dcc6324e)
+
+
 # Reversing 
 
 ## Packed Away
