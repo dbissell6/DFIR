@@ -40,7 +40,7 @@ Given .eml
 
 Given mft
 
-Used a mix of mft explorer and MFTcmd? -> timeline explorer. 
+Used a mix of mft explorer and MFTEcmd -> timeline explorer. 
 
 ![Pasted image 20240309220155](https://github.com/dbissell6/DFIR/assets/50979196/97993d71-b64a-4a99-8ca8-eaad13a7adcb)
 
