@@ -430,7 +430,7 @@ In the Base64 commands were a powershell command holding the 3rd part of the fla
 
 ![Pasted image 20240309085421](https://github.com/dbissell6/DFIR/assets/50979196/4da50832-fb08-4228-8790-6912ef1918a6)
 
-Taking the exe to dnspy (dotnet .net)we find the binary uses encryption to transfer data. rfc2898DeriveBytes.
+Taking the exe to dnspy (dotnet .net)we find the binary uses encryption to transfer data. EZRAT. rfc2898DeriveBytes.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/967e6cdf-f5b8-4b3e-8f3b-c026b06b1f8b)
 
