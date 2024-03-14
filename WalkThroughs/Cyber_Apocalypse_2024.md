@@ -418,6 +418,179 @@ Get encrypted message
 
 </details>
 
+## Data seige - medium
+
+Given pcap
+
+Started by running strings on pcap. 2 things stand out AQacaZ.exe and the base64 commands
+
+![Pasted image 20240309085332](https://github.com/dbissell6/DFIR/assets/50979196/68e9eaa4-34ea-49cb-bb46-07eee4d4e0f8)
+
+In the Base64 commands were a powershell command holding the 3rd part of the flag.
+
+![Pasted image 20240309085421](https://github.com/dbissell6/DFIR/assets/50979196/4da50832-fb08-4228-8790-6912ef1918a6)
+
+Taking the exe to dnspy (dotnet .net)we find the binary uses encryption to transfer data. rfc2898DeriveBytes.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/967e6cdf-f5b8-4b3e-8f3b-c026b06b1f8b)
+
+
+The key can be found in constantes
+
+![Pasted image 20240309092218](https://github.com/dbissell6/DFIR/assets/50979196/d2a4548c-7b1d-4b85-b917-96b5693bad9e)
+
+
+Plan is to take the function the decrypts in the exe and insert those base64 commands into it
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d343f38b-9915-4270-b9e4-3ab341e9ed09)
+
+tshark to extract stream of base64s
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/685559b6-4b13-46e9-8137-3efcacdd1e4b)
+
+```
+tshark -r capture.pcap -q -z follow,tcp,ascii,5 | sed 's/\./§/g' > output.txt
+```
+
+note: for whatever reason we see . in the base64. Stole this code, had to convert to special character(added file output read instead of the strings). also had to strip out first couple lines of output file. https://github.com/D13David/ctf-writeups/blob/main/cyber_apocalypse24/forensics/data_siege/decrypt.cs
+
+Find first part of flag
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c66afc50-ac3e-4069-96c7-adafc111c4d1)
+
+
+Find second part of flag
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a369aa5c-18b8-4c83-a81a-19b56190517b)
+
+
+<details>
+<summary> Program.cs </summary>
+
+```
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
+
+static string Decrypt(string cipherText)
+{
+    string result;
+    try
+    {
+        string encryptKey = "VYAemVeO3zUDTL6N62kVA";
+        byte[] array = Convert.FromBase64String(cipherText);
+        using (Aes aes = Aes.Create())
+        {
+            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(encryptKey, new byte[]
+            {
+                        86,
+                        101,
+                        114,
+                        121,
+                        95,
+                        83,
+                        51,
+                        99,
+                        114,
+                        51,
+                        116,
+                        95,
+                        83
+            });
+            aes.Key = rfc2898DeriveBytes.GetBytes(32);
+            aes.IV = rfc2898DeriveBytes.GetBytes(16);
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                using (CryptoStream cryptoStream = new CryptoStream(memoryStream, aes.CreateDecryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(array, 0, array.Length);
+                    cryptoStream.Close();
+                }
+                cipherText = Encoding.Default.GetString(memoryStream.ToArray());
+            }
+        }
+        result = cipherText;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+        Console.WriteLine("Cipher Text: " + cipherText);
+        result = "error";
+    }
+    return result;
+}
+
+static string[] GetCommands(string rawData)
+{
+    List<string> list = new List<string>();
+    int num = 0;
+    for (int i = 0; i < rawData.Length; i++)
+    {
+        char c = rawData[i];
+        bool flag = c == '§';
+        if (flag)
+        {
+            int num2 = int.Parse(rawData.Substring(num, i - num));
+            string item = rawData.Substring(i + 1, num2);
+            i += 1 + num2;
+            num = i;
+            list.Add(item);
+        }
+    }
+    return list.ToArray();
+}
+
+// Read the lines from the output file
+string[] messages;
+try
+{
+    messages = File.ReadAllLines("output.txt"); // Make sure this is the correct path to your output file
+}
+catch (IOException ex)
+{
+    Console.WriteLine("An IO exception occurred while reading the file: " + ex.Message);
+    return;
+}
+catch (Exception ex)
+{
+    Console.WriteLine("An exception occurred: " + ex.Message);
+    return;
+}
+
+bool downloadFile = false;
+
+
+foreach (string message in messages)
+{
+    if (downloadFile)
+    {
+        downloadFile = false;
+    }
+
+    if (message.Contains("§"))
+    {
+        Console.Write("\n>>> ");
+        foreach (string msg in GetCommands(message))
+        {
+            string cmd = Decrypt(msg);
+            Console.WriteLine(cmd);
+            if (cmd.StartsWith("upfile"))
+            {
+                downloadFile = true;
+            }
+        }
+    }
+    else
+    {
+        Console.Write("\n<<< ");
+        Console.WriteLine(Decrypt(message));
+    }
+}
+                 
+```
+
+</details>
+
 # Reversing 
 
 ## Packed Away
