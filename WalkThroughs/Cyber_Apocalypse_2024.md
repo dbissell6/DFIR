@@ -1,4 +1,4 @@
-![Pasted image 20240309220155](https://github.com/dbissell6/DFIR/assets/50979196/9d8c99b0-8952-4bda-8493-9384e0672cd0)# Cyber_Apocalypse_2024 - Hack The Box(HTB)
+# Cyber_Apocalypse_2024 - Hack The Box(HTB)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f773fc8d-3c31-42f3-b955-ca52a8eba356)
 
