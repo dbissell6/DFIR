@@ -1,4 +1,4 @@
-# Cyber_Apocalypse_2024 - Hack The Box(HTB)
+# Cyber Apocalypse 2024 - Hack The Box(HTB)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f773fc8d-3c31-42f3-b955-ca52a8eba356)
 
