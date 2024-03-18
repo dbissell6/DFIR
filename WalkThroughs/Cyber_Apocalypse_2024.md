@@ -634,4 +634,20 @@ convert the file back
 
 ## Packed Away
 
+![Pasted image 20240309124658](https://github.com/dbissell6/DFIR/assets/50979196/b01d0c09-e5cc-4929-9ef9-2155b047fb75)
+
+![Pasted image 20240309124638](https://github.com/dbissell6/DFIR/assets/50979196/2ffc64ae-b932-433d-854b-8a03a6005a4e)
+
+![Pasted image 20240309124623](https://github.com/dbissell6/DFIR/assets/50979196/d0ca7bf1-7721-4b7d-b5d5-388e3f8e51a2)
+
 ## Boxcutter
+
+![Pasted image 20240309123916](https://github.com/dbissell6/DFIR/assets/50979196/023f8d40-6027-47eb-99c8-67726de4ae2f)
+
+Can see with ltrace 
+
+![Pasted image 20240309123858](https://github.com/dbissell6/DFIR/assets/50979196/d53ce4dc-9878-40d6-9678-6df2ac0df500)
+
+or in gdb
+
+![Pasted image 20240309123833](https://github.com/dbissell6/DFIR/assets/50979196/85d9e326-b299-4c93-9d2e-73a698868f15)
