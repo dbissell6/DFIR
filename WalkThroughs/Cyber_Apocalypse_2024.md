@@ -322,7 +322,12 @@ while True:
 </details>
 
 
-## Character
+## Unbreakable
+
+Python jail break using eval
+
+![Pasted image 20240313200958](https://github.com/dbissell6/DFIR/assets/50979196/88cb8112-e368-417d-864e-a3d3251b9e5d)
+
 
 # Forensics
 
@@ -398,10 +403,48 @@ Get encrypted message
 
 ## Phreaky - medium 
 
-<details>
+<details>![Pasted image 20240309080919](https://github.com/dbissell6/DFIR/assets/50979196/691f307c-2631-423b-8eeb-988f4fb1e9e1)
+
 <summary> Python code </summary>
 
 ```
+import base64
+import re
+from zipfile import ZipFile
+import os
+
+# Path to the file that contains the stream data
+file_path = '/home/kali/Desktop/pass_base64.txt'  # Replace with your actual file path
+
+# Regex pattern to extract the password and the subsequent base64 string
+pattern = re.compile(r'Password: (\S+)\n([\s\S]+?)(?=\n\n)', re.MULTILINE)
+
+# Prepare the directory for extracted contents
+extracted_dir = 'extracted_contents'
+if not os.path.exists(extracted_dir):
+    os.makedirs(extracted_dir)
+
+# Process the file
+with open(file_path, 'r') as file:
+    matches = pattern.findall(file.read())
+
+# Process each match
+for index, (password, base64_str) in enumerate(matches):
+    # Decode the base64 string
+    zip_data = base64.b64decode(base64_str.strip())
+
+    # Write the decoded data to a zip file
+    zip_filename = f'{extracted_dir}/attachment_{index}.zip'
+    with open(zip_filename, 'wb') as zip_file:
+        zip_file.write(zip_data)
+
+    # Attempt to unzip the file using the password
+    try:
+        with ZipFile(zip_filename, 'r') as zip_file:
+            zip_file.extractall(f'{extracted_dir}/extracted_{index}', pwd=password.encode())
+        print(f'Successfully extracted {zip_filename}')
+    except (RuntimeError, zipfile.BadZipFile) as e:
+        print(f'An error occurred while extracting {zip_filename}: {e}')
 
      
 ```
@@ -412,7 +455,31 @@ Get encrypted message
 <summary> Python code </summary>
 
 ```
+import os
 
+def concatenate_extracted_files(extracted_dir, output_file):
+    concatenated_content = b''  # Using bytes to handle non-text files as well
+
+    # Assume the directories are named 'extracted_0' to 'extracted_14'
+    for i in range(15):  # Adjust the range if there are more or fewer directories
+        dir_path = os.path.join(extracted_dir, f'extracted_{i}')
+        # Make sure the directory exists
+        if os.path.exists(dir_path):
+            # Iterate over all files in the directory
+            for filename in os.listdir(dir_path):
+                file_path = os.path.join(dir_path, filename)
+                # Make sure we're only concatenating files, not directories
+                if os.path.isfile(file_path):
+                    with open(file_path, 'rb') as f:
+                        concatenated_content += f.read()
+
+    # Write the concatenated content to the output file
+    with open(output_file, 'wb') as f:
+        f.write(concatenated_content)
+    print(f'Concatenated content saved to {output_file}')
+
+# Call the function with the path to the directory containing the extracted folders
+concatenate_extracted_files('/home/kali/Desktop/extracted_contents', 'final_output_file.pdf')
      
 ```
 
