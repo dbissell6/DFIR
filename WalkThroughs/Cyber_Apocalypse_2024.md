@@ -405,6 +405,16 @@ Get encrypted message
 
 <details>![Pasted image 20240309080919](https://github.com/dbissell6/DFIR/assets/50979196/691f307c-2631-423b-8eeb-988f4fb1e9e1)
 
+
+```
+tshark -r phreaky.pcap -Y "tcp contains \"Password:\"" -T fields -e tcp.stream
+```
+```
+for x in $(cat to_stream.txt); do
+    tshark -r phreaky.pcap -q -z "follow,tcp,ascii,$x"
+done > total_stream
+```
+
 <summary> Python code </summary>
 
 ```
