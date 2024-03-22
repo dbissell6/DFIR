@@ -1420,6 +1420,11 @@ In Linux, cron is a time-based job scheduler that runs commands at specified int
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b011015a-c38a-4e41-825b-f0e564f6d422)
 
 
+```/var/spool/cron/crontabs```
+
+![Pasted image 20231122204056](https://github.com/dbissell6/DFIR/assets/50979196/ec65d879-dc6f-4703-ab6c-3ac81f2de8d8)
+
+
 
 # Internet History artifacts
 
