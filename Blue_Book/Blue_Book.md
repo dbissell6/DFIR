@@ -1697,6 +1697,33 @@ To summarize, each chunk in a PNG file contains 4 fields in the following order:
 -    Chunk data (variable length): the actual data contained in the chunk.
 -    CRC (4 bytes): a checksum used to verify the integrity of the chunk data.
 
+### Email (.eml)
+
+### PDF (.pdf)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b3728cc7-9fe3-4828-a6c2-97a49ab30d85)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e3a1e84d-65d7-4742-a908-002392fcab53)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/47d5b3fd-30d8-449f-b418-150ce7f86103)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9367c509-cb76-45b5-90a9-eead548ca73c)
+
+### Database files 
+
+#### SQLite (.sqlite, .db, .sqlite3)
+
+#### MySQL Database (.sql)
+
+#### keepass (.kdbx)
+
+Keepass is a password manager to allow users to securely store their passwords in a single database, which is locked with one master key or a key file.
+Typically need a pawword to read it, can be cracked with keepass2john + john.
+
+Open with
+
+![Pasted image 20240323011307](https://github.com/dbissell6/DFIR/assets/50979196/30907313-2a87-4db4-a7da-a1994cc302a1)
 
 ### Compressed Files (.zip, .rar, .tar.gz, .7z, .bz2, .cab, ...)
 
@@ -1727,19 +1754,6 @@ Compressed files are a common way of packaging and distributing multiple files o
 Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
 ### Video files (e.g., MP4, AVI)
 Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
-
-### Email (.eml)
-
-### PDF (.pdf)
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/b3728cc7-9fe3-4828-a6c2-97a49ab30d85)
-
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/e3a1e84d-65d7-4742-a908-002392fcab53)
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/47d5b3fd-30d8-449f-b418-150ce7f86103)
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/9367c509-cb76-45b5-90a9-eead548ca73c)
 
 
 ## Decompressing
