@@ -225,8 +225,21 @@ For example, to decrypt a file named file.des3 using the password supersecretpas
 
 ```openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123```
 
+### TrueCrypt
+
+TrueCrypt was a popular disk encryption software that could encrypt whole drives, partition volumes, or create a virtual encrypted disk within a file. Discontinued in 2014 Veracrypt currently is the alternative. Still sometimes seen as forensic evidence with .tc extention.   
+
+Volatility 2 is able to retrieve password if cached. 
+
+![Pasted image 20240322203048](https://github.com/dbissell6/DFIR/assets/50979196/60cd5602-a22b-4c9e-af5e-05563510f67a)
+
+Can mount 
+![Pasted image 20240322203437](https://github.com/dbissell6/DFIR/assets/50979196/9d2fe88c-b3b3-4e31-abd5-8b4e58e9febc)
+
+![Pasted image 20240322203715](https://github.com/dbissell6/DFIR/assets/50979196/fc87352f-762b-4086-9577-4069ab956101)
 
 # PCAPS (.pcap)
+
 
 
 ## Intro 
