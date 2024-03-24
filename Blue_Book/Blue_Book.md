@@ -1725,6 +1725,13 @@ Open with
 
 ![Pasted image 20240323011307](https://github.com/dbissell6/DFIR/assets/50979196/30907313-2a87-4db4-a7da-a1994cc302a1)
 
+### Audio files (e.g., MP3, WAV)
+Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
+### Video files (e.g., MP4, AVI)
+Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
+
+
+
 ### Compressed Files (.zip, .rar, .tar.gz, .7z, .bz2, .cab, ...)
 
 Compressed files are a common way of packaging and distributing multiple files or directories as a single archive. In a CTF, compressed files may contain clues or important information that can aid in solving challenges. Here are some common types of compressed files:
@@ -1750,13 +1757,8 @@ Compressed files are a common way of packaging and distributing multiple files o
 
 -    .iso: This is a file format used for creating disc images of CDs or DVDs. It is commonly used for distributing operating system installation media. To extract the contents of an .iso file, one can mount the image as a virtual drive or use a file archiver software in Windows.
 
-### Audio files (e.g., MP3, WAV)
-Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
-### Video files (e.g., MP4, AVI)
-Information can be hidden within the individual frames of the video, in unused space within the file, or by modifying the motion vectors of the video stream.
 
-
-## Decompressing
+#### Decompressing
 
 Files may be compressed in all sorts of ways to avoid detection. Some of the most common decompressing tools + commands.
 ```
@@ -1774,6 +1776,22 @@ lzma -d -k flag2.lzma
 lzop -d -k flag2.lzop -o flag3
 lzip -d -k flag3
 ```
+#### Unzipping ZipCrypto
+
+ZipCrypto is one of the encryption methods used in ZIP file formats. It's been around for a while and is considered weak because it uses a stream cipher that's not cryptographically strong by modern standards. The algorithm's design flaws, such as the way encryption keys are derived and the cipher's susceptibility to known-plaintext attacks, make it vulnerable.
+
+Known Plaintext: The attacker must have some portion of the plaintext of one of the files in the encrypted ZIP archive. This could be a standard file header, any predictable content, or previously extracted unencrypted files from the archive.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1b06beb8-581d-459b-bd66-11cdd779dec1)
+
+To exploit 
+
+1) Reconstruct file (svg).
+2) Run bkcrack to get keys
+3) Recreate zip with password of your choice
+4) Open
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c4cc4f94-474a-4b1a-89b9-88d813532014)
 
 
 # Reconstructing 
