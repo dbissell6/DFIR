@@ -2730,6 +2730,16 @@ Useful to find, emails, browser search terms, logs...
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8ac97e75-26f9-4a41-a658-2b6ea059d5ba)
 
+## LSASS (.DMP)
+
+LSASS (Local Security Authority Subsystem Service) is a crucial Windows system process responsible for enforcing the security policy on the system. It handles user logins, password changes, and creates access tokens. It's essentially the gatekeeper for the security realm within Windows, dealing with authentication and locally stored credentials.
+
+LSASS Dump
+
+An LSASS dump involves capturing the memory contents of the LSASS process. This memory can contain active credentials, such as plaintext passwords, hashed passwords, and Kerberos tickets, depending on the system's configuration and the user's state. Malware and attackers often target LSASS to extract credentials that can be used for lateral movement within a network. (can do the dumping with task manager or procdump)
+
+![Pasted image 20240323140017](https://github.com/dbissell6/DFIR/assets/50979196/02c874cd-6bce-4a79-af05-cafc756eea68)
+
 
 # Disk
 
