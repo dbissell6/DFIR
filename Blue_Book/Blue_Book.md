@@ -2752,7 +2752,7 @@ Useful to find, emails, browser search terms, logs...
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/bddd5970-296d-4ba7-8484-e108a8b08153)
 
-binwalk can also be used to identify, should see Certificate or private key in DER format, mcrypt encryptdated data...
+binwalk can also be used to identify, should see Certificate or private key in DER format, mcrypt encrypt,...
 
 LSASS (Local Security Authority Subsystem Service) is a crucial Windows system process responsible for enforcing the security policy on the system. It handles user logins, password changes, and creates access tokens. It's essentially the gatekeeper for the security realm within Windows, dealing with authentication and locally stored credentials.
 
@@ -2762,6 +2762,14 @@ An LSASS dump involves capturing the memory contents of the LSASS process. This 
 
 ![Pasted image 20240323140017](https://github.com/dbissell6/DFIR/assets/50979196/02c874cd-6bce-4a79-af05-cafc756eea68)
 
+## hiberfil.sys
+
+magic bytes + Ascii
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8f7516a5-759c-48e9-856c-70cbbd357bdf)
+
+
+https://github.com/hackthebox/cyber-apocalypse-2024/tree/main/forensics/%5BInsane%5D%20Oblique%20Final
 
 # Disk
 
