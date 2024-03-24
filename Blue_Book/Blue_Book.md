@@ -2732,6 +2732,10 @@ Useful to find, emails, browser search terms, logs...
 
 ## LSASS (.DMP)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bddd5970-296d-4ba7-8484-e108a8b08153)
+
+binwalk can also be used to identify, should see Certificate or private key in DER format, mcrypt encryptdated data...
+
 LSASS (Local Security Authority Subsystem Service) is a crucial Windows system process responsible for enforcing the security policy on the system. It handles user logins, password changes, and creates access tokens. It's essentially the gatekeeper for the security realm within Windows, dealing with authentication and locally stored credentials.
 
 LSASS Dump
