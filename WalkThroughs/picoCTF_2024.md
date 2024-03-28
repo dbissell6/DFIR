@@ -274,6 +274,7 @@ break main; run; dissassemble main; b *0x0000555555555956; c
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/351213db-1db5-4872-aa68-1823162b764d)
 
+![Pasted image 20240313015640](https://github.com/dbissell6/DFIR/assets/50979196/a148bdc4-d0a7-4a0f-83a2-c757ff32790a)
 
 ### WinAntiDbg0x100 - 200
 
