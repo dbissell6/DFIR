@@ -305,7 +305,11 @@ Given .exe, .pdb, config.bin
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/084afef3-ad1d-4f99-a8ac-00de81067b4e)
 
+Not sure what happened, unpacked and changed on linux, broke it. Spent all 2 weeks trying to figure this out. 
 
+![Pasted image 20240321121151](https://github.com/dbissell6/DFIR/assets/50979196/6ad0e5b7-627e-4d0e-8a99-5c9fd9155cd5)
+
+Also learned to unpack with the same version tool that was used to do the packing.
 
 ### Classic Crackme 0x100 - 300
 
