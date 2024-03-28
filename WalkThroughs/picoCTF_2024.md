@@ -294,6 +294,19 @@ I also flipped like 15 up top looking for admin permissions.
 ![Pasted image 20240313152845](https://github.com/dbissell6/DFIR/assets/50979196/f68b4a8d-65ae-487b-93f9-ab87d6a4b00d)
 
 
+
+### WinAntiDbg0x300 - 400
+
+Given .exe, .pdb, config.bin
+
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3117f401-e17e-43a0-8e77-dea0dc503bda)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/084afef3-ad1d-4f99-a8ac-00de81067b4e)
+
+
+
 ### Classic Crackme 0x100 - 300
 
 given elf dynamically linked
