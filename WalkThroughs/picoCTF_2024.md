@@ -299,17 +299,48 @@ I also flipped like 15 up top looking for admin permissions.
 
 Given .exe, .pdb, config.bin
 
+I solved the problem pretty fast with ghidra, for whatever reason the flag was crrpoted. I did the same thing in windows and IDA and it worked?
 
+
+Unpack it
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/3117f401-e17e-43a0-8e77-dea0dc503bda)
 
+Knowing what we know from the ghidra exploration find this part quick.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c2e6ec12-f8a4-4728-8b83-88a3e405570b)
+
+
+To patch in IDA, click the area. edit -> Patch program -> Assemble
+
+
+Instead of jumping if 0, we just want to jump to the flag.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6594f1af-2610-423e-a83d-49a4ec39768a)
+
+We cant start the program in the debugger so we will need to change the file then run it.
+
+edit -> Patch program -> Apply patches to input file
+
+Open the file with admin 
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/084afef3-ad1d-4f99-a8ac-00de81067b4e)
 
-Not sure what happened, unpacked and changed on linux, broke it. Spent all 2 weeks trying to figure this out. 
+So overall this should have been fun but it was annoying. Im still not sure why doing it in ghidra broke it. But I did learn some other things.
 
-![Pasted image 20240321121151](https://github.com/dbissell6/DFIR/assets/50979196/6ad0e5b7-627e-4d0e-8a99-5c9fd9155cd5)
+First couple days I was really stuck with the unpacking not working, so I learned to unpack with the same version of the tool that was used to do the packing.
 
-Also learned to unpack with the same version tool that was used to do the packing.
+.pdb Files
+
+A .pdb file, short for Program Database, is primarily used in the Windows environment for storing debugging information about a program or DLL (Dynamic Link Library). When you compile an application with debug information enabled, the compiler generates a .pdb file along with the executable (.exe) or DLL. This debug info includes data like function names, variable names, and file paths, which are crucial for debugging because they map the executable's compiled state back to your source code. Without a .pdb file, a debugger might only show raw memory addresses and disassembled code, making debugging much harder.
+
+Ghidra and Idapro can take in .pdb to help with debugging.
+
+config.bin
+
+A config.bin file (or similarly named files) often serves as an external configuration file for an application, including malware. The "bin" in config.bin suggests it's in a binary format, which might be chosen for compactness or to make it less straightforward to read or edit compared to a text-based format like XML or JSON. For malware, external configuration files can specify command and control (C&C) server addresses, encryption keys, targeted file types for ransomware, or other operational parameters.
+
+
 
 ### Classic Crackme 0x100 - 300
 
