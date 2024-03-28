@@ -301,6 +301,21 @@ Given .exe, .pdb, config.bin
 
 I solved the problem pretty fast with ghidra, for whatever reason the flag was crrpoted. I did the same thing in windows and IDA and it worked?
 
+So what i did and noticed in ghidra, first is getting the main. Notice the ChallengeThreadFunction
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/26e7eff1-5987-4226-ac38-4f6a0a0cd33b)
+
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/46b9e71b-a473-4f49-8d76-5cdf28203679)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/2c8cd8d9-7cea-4424-aa68-11cb80d8b12e)
+
+Change the logic of the jump and we can see the flag
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/92259495-f6b6-44d8-8443-8c6e24acbc0e)
+
+So again, this didnt work so had to go to IDA.
 
 Unpack it
 
