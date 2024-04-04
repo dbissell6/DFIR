@@ -1100,6 +1100,10 @@ https://www.sans.org/gated-content?resource=/Shared/Website%20Public%20Content/P
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
 
+Each MFT record is 1024 bytes in size. Files smaller than 1024 bytes are stored directly in the MFT file itself, known as MFT Resident files. During Windows filesystem investigations, it's crucial to search for any malicious or suspicious files that may be resident in the MFT. This can reveal the contents of malicious files/scripts. 
+
+Zone Identifier - to see where a file was downloaded from
+
 https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table
 
 ### MFTECmd.exe 
