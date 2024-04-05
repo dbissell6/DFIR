@@ -1370,6 +1370,12 @@ Holds logged system events and messages.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/735ae9c5-d3b1-4906-98e2-62f27e7870ab)
 
+# wtmp
+
+The wtmp file in Unix-like operating systems is a binary file that logs all logins, logouts,  reboots, and shutdowns. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6e204c99-ee16-4601-85f4-8decf2712465)
+
 
 ## access logs stats
 
