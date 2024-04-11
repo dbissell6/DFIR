@@ -3438,7 +3438,12 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform t
 - **CloudTrail Logs**: Access with AWS Console or `aws cloudtrail lookup-events`.
 - **S3 Data Access**: Download files using `aws s3 cp s3://bucket-name/path/to/object localpath`.
 
-#### Useful search queries
+#### Using AWS CLI
+
+![292685469-210d6bb7-a98f-4b08-b389-8b43b3847955](https://github.com/dbissell6/DFIR/assets/50979196/2cdd7876-075f-49a4-8cfe-9587e91a638f)
+
+
+#### Useful search queries for json logs
 
 
 Select all logs with a username
@@ -3453,7 +3458,6 @@ find . -name "*.json" -exec jq -r '.Records[] | select(.userIdentity.userName ==
 Select event names from user `forela-ec2-automation` sorted by time
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d566a21f-d9dd-463d-a2e2-567fe83dac5f)
-
 
 
 ![Pasted image 20231130123929](https://github.com/dbissell6/DFIR/assets/50979196/f931dcb4-0e65-4b04-af48-5a78e1456c96)
@@ -3484,6 +3488,33 @@ Azure is Microsoft’s cloud computing platform offering services for computing,
 - **Disk Snapshots**: Create VM disk snapshots with `az snapshot create`.
 - **NSG Flow Logs**: Manage with `az network watcher flow-log`.
 - **Blob Storage Access**: Download blobs with `az storage blob download`.
+
+### Azure Data Explorer
+
+Azure Data Explorer (ADX) uses a query language known as Kusto Query Language (KQL).Not really a SIEM, but a resource to filter data. 
+
+
+show tables
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/cf656fd2-acc8-4aa4-9045-fa0d12d240e7)
+
+Show columns for the tables.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d1f6e081-a7fa-4254-b539-da77326a1608)
+
+
+Getting a sample of data
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7262ae39-7674-4710-93f6-beaf6ab90fb7)
+
+
+https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-reference
+
+summarize 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c296d631-9a22-41db-b431-87821a63b0b2)
+
+
 
 
 # SIEMS
@@ -3564,30 +3595,6 @@ On left side can search for a feature and add it as a column by clickling blue +
 
 
 
-## Azure Data Explorer
-
-Azure Data Explorer (ADX) uses a query language known as Kusto Query Language (KQL).Not really a SIEM, but a resource to filter data. 
-
-
-show tables
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/cf656fd2-acc8-4aa4-9045-fa0d12d240e7)
-
-Show columns for the tables.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/d1f6e081-a7fa-4254-b539-da77326a1608)
-
-
-Getting a sample of data
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/7262ae39-7674-4710-93f6-beaf6ab90fb7)
-
-
-https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-reference
-
-summarize 
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/c296d631-9a22-41db-b431-87821a63b0b2)
 
 
 # OSINT
