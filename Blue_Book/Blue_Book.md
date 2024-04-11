@@ -1482,7 +1482,15 @@ appdata/local/google/chrome/User Data/default/History
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d6d87ba5-73eb-421c-b208-273fe7c90a2a)
 
+## .git
 
+Not really internet artifact, Where is better tho?
+
+The .git directory is a goldmine of information for forensic analysts. It is the hidden folder within a Git repository that contains the entire version control history. This includes details about every commit, configuration settings, branches, and the objects that represent the filesystem of the project at every recorded point in time.
+
+![316927808-b9eaedbe-5de4-4596-9632-846b17e4d665](https://github.com/dbissell6/DFIR/assets/50979196/89b6c490-d21f-4747-9965-09b79a765fba)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bf4f2466-26a3-41f8-9d06-f33f1db83c07)
 
 
 # Files/Executables
