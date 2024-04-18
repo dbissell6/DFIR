@@ -1736,6 +1736,22 @@ To summarize, each chunk in a PNG file contains 4 fields in the following order:
 
 #### SQLite (.sqlite, .db, .sqlite3)
 
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0bbda057-e6fa-463b-b1f4-fab95ed736fa)
+
+#### sqlite3
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/103752c1-7247-4ad5-be01-e0fb226c4a7f)
+
+
+#### sqliteBrowser
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e68043f9-c3f3-44c3-a41a-d6d9a9407873)
+
+Browse data
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6e9338ef-3f88-4228-9431-6bf87e5f85a3)
+
+
 #### MySQL Database (.sql)
 
 #### keepass (.kdbx)
