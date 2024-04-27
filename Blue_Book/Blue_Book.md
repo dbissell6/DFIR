@@ -1180,6 +1180,11 @@ Looking at offline UsrClass.dat
 
 .LNK files, also known as Windows shortcuts, are small files containing a reference to a target file or directory. When a user clicks on a .LNK file, it redirects them to the specified target, allowing for quick access to applications, files, or folders.
 
+Found at 
+```
+C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\
+```
+
 On linux can use file and exiftool to see contents
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
@@ -1224,11 +1229,14 @@ wmic netuse list full
 
 ## JumpLists
 
-Jump Lists in Windows offer quick access to recent files and common tasks for applications. From a cyber perspective, they can reveal user behavior patterns, recent file access, and priority actions. Analyzing them aids in understanding user activities and potential malicious actions associated with specific applications. Jump Lists are essential for creating a forensic timeline and identifying accessed files, making them valuable for security analysis.
+Collection of .lnk files.
+
+Jump Lists in Windows offer quick access to recent files and common tasks for applications. From a cyber perspective, they can reveal user behavior patterns, recent file access, and priority actions. Analyzing them aids in understanding user activities and potential malicious actions associated with specific applications. Jump Lists are essential for creating a forensic timeline and identifying accessed files, making them valuable for security analysis. 
 
 On Windows 10 stored at 
 ```
 C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\AutomaticDestinations
+C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\CustomDestinations
 ```
 
 ### JLEcmd (Jump List Explorer Command Line)
@@ -1239,7 +1247,7 @@ JLECmd is tailored for extracting and interpreting data from Jump List files, wh
 
 ## Application Compatibility Cache (Shimcache)
 
-Maintains a log of program execution data to aid compatibility and performance improvements. It captures data like file paths, execution timestamps, and flags denoting program execution. For investigators, Shimcache is valuable in identifying recently run programs and their respective files.
+Maintains a log of program execution(before windows 10) data to aid compatibility and performance improvements. It captures data like file paths, execution timestamps, and flags denoting program execution. For investigators, Shimcache is valuable in identifying recently run programs and their respective files. Stored in the SYSTEM registry hive. Only writes on reboot or shutdown(might be able to extract current with volatility).
 
 Found at
 ```
@@ -1255,9 +1263,9 @@ AppCompatCacheParser is another forensic tool developed by Eric Zimmerman, and i
 
 
 ## Userassist
-Userassist keys are registry artifacts used to see what programs the user ran, and when. 
+Userassist keys are registry artifacts used to see what GUI-based programs the user ran, and when. 
 
-Keys found in 
+Keys found in and ROT-13 encoded
 ```
 NTUSER.DAT 
 ```
@@ -1472,15 +1480,27 @@ When a file is downloaded from the internet, Windows assigns it a Zone Identifie
 
 ## Browser artifacts
 
+Browser artifacts are crucial for profiling user activity on a system. They include history, cookies, cache, sessions, and configurations. Notably, browsers track local file access in their history, such as when viewing local PDFs or SVGs. These accesses can also be found in %LocalAppData%\Microsoft\Windows\WebCache\WebCacheV01.dat with entries like file:///X:/path/to/file, where "X" denotes the drive letter.
+
 NirLauncher -> BrowsingHistoryView
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ecbae68b-502e-43b6-8087-7d781c9373c0)
+
+Most databases use sqlite. Can also use bulkextract
 
 ### Chrome history
 
 appdata/local/google/chrome/User Data/default/History
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d6d87ba5-73eb-421c-b208-273fe7c90a2a)
+
+### Firefox
+
+\Mozilla\Firefox\ Profiles\xxxxxxxx.default-release\*
+
+### Edge
+
+appdata\local\Microsoft\Edge\UserData\[Default|ProfileX]\*
 
 ## .git
 
@@ -1898,7 +1918,7 @@ Malware analysis is the process of dissecting malicious software to understand i
 We want to understand what the malware does. Does it encyrpt our files? Does it send a reverse shell? If so, how?
 
 General rules
-    * Dont get stuck in the weeds, you will never understand every detail of complex malware. Always start with the big picture, zoom in as needed, dont fall down a rabbit whole.
+    * Dont get stuck in the weeds, you will never understand every detail of complex malware. Always start with the big picture, zoom in as needed, dont fall down a rabbit hole.
 
 
 
