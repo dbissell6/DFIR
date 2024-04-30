@@ -1152,6 +1152,35 @@ Found at
 C:\Windows\System32\Tasks
 ```
 
+## Appdata
+
+The C:\Users\$USER\AppData directory in Windows operating systems is a central hub for storing user-specific application data. This hidden folder is critical for both application functionality and forensic investigations, as it contains data that applications do not want exposed to regular user browsing, which might alter or delete sensitive information unintentionally.
+
+The AppData folder is subdivided into three key subdirectories:
+
+```Roaming:``` This folder contains data that moves with a user profile from one computer to another in environments where user profiles are managed on a network. Applications store configuration data here, like user settings and profiles that need to be consistent across multiple workstations.
+```Local:``` Stores data that is specific to a single computer, used for data that doesn’t need to be with the user’s profile as they move to different machines. This includes cached data and larger files that don’t need to roam.
+```LocalLow:``` Used by applications that run with lower security settings than the normal user context, such as Internet Explorer when operating in protected mode.
+
+### ActivitiesCache.db
+
+Shows execution times of programs and might hold Clipboard payloads.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5943ec9e-eeed-4b94-9796-b3182d55724a)
+
+
+### Powershell history
+
+```
+C:\Users\htb-student\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1bc4e7eb-1e18-4310-8533-913342e6bbb7)
+
+### Browser history 
+
+Most browser artifcats are found here. Has its own section below.
+
 ## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
