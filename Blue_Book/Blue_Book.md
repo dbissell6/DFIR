@@ -3052,7 +3052,7 @@ Replace '2048' with the start sector of the partition you're interested in.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/c05f3d8e-583e-4b4f-90d4-7973659a280e)
 
 
-Use the 'fls' command to list the contents of the file system:
+Use the 'fls' command to list the contents of the file system: 
 
 `sudo fls -o 2048 -f ext3 dds1-alpine.flag.img `
 
@@ -3067,11 +3067,15 @@ Search a folder recursivly by specifying inode
 
 ## Photorec
 
-On linux - Select the drive -> file system type -> where to save
+Photorec is part of the TestDisk suite and is designed to recover lost files, including documents, archives, and multimedia files, from hard disks, CD-ROMs, and lost pictures (hence the name) from digital camera memory.
+
+On linux - Select the disk -> file system type -> where to save
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/037aae50-8f97-4d71-b785-30852c960d54)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e79a68d4-78b2-4968-8203-8c6b7747f781)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/3f603828-4d70-44c5-be70-7b24e7ad5da6)
 
 
 ## foremost
