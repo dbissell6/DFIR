@@ -3065,6 +3065,13 @@ Search a folder recursivly by specifying inode
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/48d7d6f5-e553-45d9-a253-f9c8e4a1ed2c)
 
+## Photorec
+
+On linux - Select the drive -> file system type -> where to save
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/037aae50-8f97-4d71-b785-30852c960d54)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e79a68d4-78b2-4968-8203-8c6b7747f781)
 
 
 ## foremost
@@ -3317,7 +3324,7 @@ Typical output/
 
 ## Catscale (Dump linux artifacts)
 
-Linux CatScale is a bash script that uses live of the land tools to collect extensive data from Linux based hosts. The data aims to help DFIR professionals triage and scope incidents. An Elk Stack instance also is configured to consume the output and assist the analysis process. Note that the script will likely alter artefacts on endpoints. Care should be taken when using the script. This is not meant to take forensically sound disk images of the remote endpoints.
+Linux CatScale is a bash script that uses live off the land tools to collect extensive data from Linux based hosts. The data aims to help DFIR professionals triage and scope incidents. An Elk Stack instance also is configured to consume the output and assist the analysis process. Note that the script will likely alter artefacts on endpoints. Care should be taken when using the script. This is not meant to take forensically sound disk images of the remote endpoints.
 
 What does it collect?
 `https://labs.f-secure.com/tools/cat-scale-linux-incident-response-collection/`
