@@ -1751,6 +1751,35 @@ In Linux, executable files don't necessarily have a specific file extension like
 .run (installer script)
 .out (object file)
 
+### Python (.py, .pyc)
+
+py Files: .py files are Python source code files. These files contain human-readable code written in the Python programming language. They can include scripts, modules, or complete applications.
+
+
+Compiled Python Files: .pyc files are the result of compiling Python source code (.py files) into bytecode. 
+This bytecode is a low-level, platform-independent representation of your source code that the Python interpreter can execute.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0212d7ac-46fb-42da-8087-0d42d9cd3406)
+
+```https://github.com/extremecoders-re/pyinstxtractor```
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/6f9df92c-bb81-44d3-a337-82809eee430c)
+
+```
+# Clone the repository
+git clone https://github.com/zrax/pycdc.git
+
+# Change directory to the cloned repository
+cd pycdc
+
+# Build the tool
+mkdir build
+cd build
+cmake ..
+make
+```
+
 ### Image files (.jpg, .png, .bmp)
 
 These files can contain hidden messages or steganography, where data is hidden within the image.
