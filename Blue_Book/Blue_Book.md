@@ -2839,6 +2839,31 @@ For all available plugins
 ```
 python2 vol.py -f /home/kali/Desktop/recollection.bin --profile=Win7SP1x64 --help
 ```
+
+## What did they see?
+
+Dumping process can sometimes allow us to see what was on the screen, or that processes display.
+
+Take for instance this process mspaint pid 5116.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/063f0517-75c3-4bed-ad4d-27377eafe4b6)
+
+Dump the memmap
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/93041d19-ffcd-411c-9eab-edf3f4c82c5a)
+
+Change the extention to .data. Open file with GIMP 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/44bf3026-6db2-4075-8765-b2cb6f7b6cde)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/33159526-fe16-4a50-8a8f-5e43ae0610e0)
+
+
+Guess the width,height,offset
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bbdf5fc6-7816-470b-968d-9c4b012fe48e)
+
+
 ## yara
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/9c18bff0-267c-4830-85c4-bf7e3286b76f)
