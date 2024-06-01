@@ -2600,7 +2600,29 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 | EtwRegistration | Used for event tracing registration.                                        |
 | Type          | Represents an object type in the object manager namespace.                    |
 
+### Processes
 
+A process is an instance of a running program, containing the program's code, data, heap, stack, and other resources. Each process operates in its own isolated memory space, ensuring stability and security.
+
+Key Components of a Process:
+
+Executable Code (Text Segment): Contains the machine instructions for the process.
+Data Segment: Holds global and static variables.
+Heap: Used for dynamic memory allocation.
+Stack: Contains local variables, function parameters, and return addresses.
+Memory-Mapped Files: Regions of memory mapped to files, including shared libraries (DLLs).
+Process Control Block (PCB): Contains metadata about the process, such as the process ID (PID), state, memory management information, and open files.
+Volatility 3 Commands:
+
+### Threads
+
+A thread is the smallest unit of execution within a process. Each process has at least one thread (the main thread), and many processes create additional threads to perform tasks concurrently.
+
+Key Components of a Thread:
+
+Thread Context: The state of the thread, including CPU registers and the program counter.
+Thread Stack: Contains local variables, function parameters, and control information.
+Thread Control Block (TCB): Contains metadata about the thread, such as the thread ID (TID), state, and pointers to the stack and thread-specific data.
 
 ## Strings
 It is possible to run strings on a memory dump to extract info
