@@ -2604,19 +2604,19 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 
 A process is an instance of a running program, containing the program's code, data, heap, stack, and other resources. Each process operates in its own isolated memory space, ensuring stability and security.
 
-Key Components of a Process:
+**Key Components of a Process:**
 
-Executable Code (Text Segment): Contains the machine instructions for the process.
+- Executable Code (Text Segment): Contains the machine instructions for the process.
 
-Data Segment: Holds global and static variables.
+- Data Segment: Holds global and static variables.
 
-Heap: Used for dynamic memory allocation.
+- Heap: Used for dynamic memory allocation.
 
-Stack: Contains local variables, function parameters, and return addresses.
+- Stack: Contains local variables, function parameters, and return addresses.
 
-Memory-Mapped Files: Regions of memory mapped to files, including shared libraries (DLLs).
+- Memory-Mapped Files: Regions of memory mapped to files, including shared libraries (DLLs).
 
-Process Control Block (PCB): Contains metadata about the process, such as the process ID (PID), state, memory management information, and open files.
+- Process Control Block (PCB): Contains metadata about the process, such as the process ID (PID), state, memory management information, and open files.
 
 
 #### Process Memory
@@ -2635,6 +2635,8 @@ Process Control Block (PCB): Contains metadata about the process, such as the pr
 | **PCB**              | Kernel-mode address space      | Contains process state information      | PID, process state, scheduling information                     |
 
 
+**Process Environment Block (PEB):** An extremely useful structure that tells you where to find several of the other items in this list, including the DLLs, heaps, and environment variables.
+
 Using windbg to view process dump of peb.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f0098402-efd6-443d-842b-09fcb7319b56)
@@ -2643,6 +2645,7 @@ Also holds environment variables.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f276e21b-ea68-4107-bad1-674dfc386026)
 
+**Process heaps:** Where you can find a majority of the dynamic input that the process receives. For example, variable-length text that you type into e-mail or documents is often placed on the heap, as is data sent or received over network sockets.
 Heap
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1674676e-ee3e-4fe7-89fe-57014bf60f79)
@@ -2653,14 +2656,19 @@ Heap
 
 A thread is the smallest unit of execution within a process. Each process has at least one thread (the main thread), and many processes create additional threads to perform tasks concurrently.
 
-Key Components of a Thread:
+**Key Components of a Thread:**
 
-Thread Context: The state of the thread, including CPU registers and the program counter.
+- Thread Context: The state of the thread, including CPU registers and the program counter.
 
-Thread Stack: Contains local variables, function parameters, and control information.
+- Thread Stack: Contains local variables, function parameters, and control information.
 
-Thread Control Block (TCB): Contains metadata about the thread, such as the thread ID (TID), state, and pointers to the stack and thread-specific data.
+- Thread Control Block (TCB): Contains metadata about the thread, such as the thread ID (TID), state, and pointers to the stack and thread-specific data.
 
+### Handles
+
+A **handle** is a reference to an open instance of a kernel object, such as a file, registry key, mutex, process, or thread.
+
+Could show persistence if process has handle of registry files.
 
 ## Strings
 It is possible to run strings on a memory dump to extract info
