@@ -2607,10 +2607,15 @@ A process is an instance of a running program, containing the program's code, da
 Key Components of a Process:
 
 Executable Code (Text Segment): Contains the machine instructions for the process.
+
 Data Segment: Holds global and static variables.
+
 Heap: Used for dynamic memory allocation.
+
 Stack: Contains local variables, function parameters, and return addresses.
+
 Memory-Mapped Files: Regions of memory mapped to files, including shared libraries (DLLs).
+
 Process Control Block (PCB): Contains metadata about the process, such as the process ID (PID), state, memory management information, and open files.
 
 
@@ -2651,7 +2656,9 @@ A thread is the smallest unit of execution within a process. Each process has at
 Key Components of a Thread:
 
 Thread Context: The state of the thread, including CPU registers and the program counter.
+
 Thread Stack: Contains local variables, function parameters, and control information.
+
 Thread Control Block (TCB): Contains metadata about the thread, such as the thread ID (TID), state, and pointers to the stack and thread-specific data.
 
 
