@@ -2670,6 +2670,7 @@ A **handle** is a reference to an open instance of a kernel object, such as a fi
 
 Could show persistence if process has handle of registry files.
 
+
 ## Strings
 It is possible to run strings on a memory dump to extract info
 
@@ -2787,6 +2788,8 @@ python3 ~/Tools/volatility3-1.0.0/vol.py -f memory.raw windows.dlllist
 PoolScanner
 
 Memory pools are regions of memory set aside for dynamic memory allocation during the execution of a program.
+
+```https://learn.microsoft.com/en-us/windows/win32/memory/memory-pools```
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0f6f8df5-1462-4ff7-80b3-d03b8a6f196d)
 
