@@ -2603,7 +2603,7 @@ Windows is written in C and uses C structures. Some of these structures are Exec
 ### Processes
 
 A process is an instance of a running program, containing the program's code, data, heap, stack, and other resources. Each process operates in its own isolated memory space, ensuring stability and security.
-```
+
 Key Components of a Process:
 
 Executable Code (Text Segment): Contains the machine instructions for the process.
@@ -2612,18 +2612,48 @@ Heap: Used for dynamic memory allocation.
 Stack: Contains local variables, function parameters, and return addresses.
 Memory-Mapped Files: Regions of memory mapped to files, including shared libraries (DLLs).
 Process Control Block (PCB): Contains metadata about the process, such as the process ID (PID), state, memory management information, and open files.
-```
+
+
+#### Process Memory
+
+| **Structure/Region** | **Location**                   | **Purpose**                             | **Key Data**                                                   |
+|----------------------|--------------------------------|-----------------------------------------|----------------------------------------------------------------|
+| **PEB**              | User-mode address space        | Information about the process           | Image base address, startup parameters, heap pointers, modules |
+| **TEB**              | User-mode address space, per thread | Information specific to each thread    | Stack base and limit, thread ID, environment pointer           |
+| **Executable Code**  | User-mode address space        | Executable instructions of the process  | Machine code, read-only                                        |
+| **Data Segment**     | User-mode address space        | Holds global and static variables       | Initialized data, uninitialized data (BSS)                     |
+| **Heap**             | User-mode address space        | Dynamic memory allocation               | Allocated variables, runtime data, user inputs                 |
+| **Stack**            | User-mode address space, per thread | Manages function calls and variables  | Function call parameters, return addresses, local variables    |
+| **Memory-Mapped Files** | User-mode address space     | Maps files or libraries into memory     | DLLs, memory-mapped data files                                 |
+| **Loaded Modules**   | User-mode address space        | Lists modules loaded into the process   | Base addresses, names and paths of DLLs, entry points          |
+| **Handles and Resources** | Kernel and user-mode     | Manages system resources                | File handles, registry handles, network connections            |
+| **PCB**              | Kernel-mode address space      | Contains process state information      | PID, process state, scheduling information                     |
+
+
+Using windbg to view process dump of peb.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f0098402-efd6-443d-842b-09fcb7319b56)
+
+Also holds environment variables.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f276e21b-ea68-4107-bad1-674dfc386026)
+
+Heap
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1674676e-ee3e-4fe7-89fe-57014bf60f79)
+
+
 
 ### Threads
 
 A thread is the smallest unit of execution within a process. Each process has at least one thread (the main thread), and many processes create additional threads to perform tasks concurrently.
-```
+
 Key Components of a Thread:
 
 Thread Context: The state of the thread, including CPU registers and the program counter.
 Thread Stack: Contains local variables, function parameters, and control information.
 Thread Control Block (TCB): Contains metadata about the thread, such as the thread ID (TID), state, and pointers to the stack and thread-specific data.
-```
+
 
 ## Strings
 It is possible to run strings on a memory dump to extract info
