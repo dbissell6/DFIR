@@ -3541,6 +3541,11 @@ In the VM
 
 ## Some manual enumeration
 
+Get system info
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b657d44e-0964-4bd8-b317-f98ac2daf8c1)
+
+
 get powershell history
 
 ```
