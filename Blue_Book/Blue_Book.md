@@ -3677,6 +3677,29 @@ Select event names from user `forela-ec2-automation` sorted by time
 ![Pasted image 20231130123929](https://github.com/dbissell6/DFIR/assets/50979196/f931dcb4-0e65-4b04-af48-5a78e1456c96)
 
 
+#### Getting Cloudtrails on splunk
+
+Copy data into docker container
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/fc046ba5-15c1-4655-9f5a-c6e4b6d0115b)
+
+OR ... consolatate into one .json file
+
+```
+find . -type f -name '*.json' -exec cat {} + | jq -c '.Records[]' > combined_cloudtrail_logs.json
+```
+
+Download aws add-on 
+
+Apps -> Find More Apps -> 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/b7456dc5-4925-4717-9027-5054d0ef1597)
+
+Upload data -> upload -> Set source type aws:cloudtrail  
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a8f4c38f-d93a-4fd5-9a38-5c52ae82ef98)
+
+
 ## Azure
 
 Azure is Microsoft’s cloud computing platform offering services for computing, analytics, storage, and networking. Users can develop new applications or run existing ones in the public cloud.
@@ -3789,7 +3812,24 @@ eval isOutlier=if(NetworkConnections > (avg + (0.5*stdev)), 1, 0) | search isOut
 *    The results are then refined to display only these outliers.
 
 
+### Download install splunk docker
 
+```
+https://docs.splunk.com/Documentation/Splunk/9.2.1/Installation/DeployandrunSplunkEnterpriseinsideDockercontainers
+```
+
+If docker isn't Downloaded
+```
+sudo apt install docker.io
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/94c5d3ae-6510-4e04-860e-2f8c7131dfa4)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/9cba2f07-ab1c-44c3-854b-033d30d68d16)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/7b423a34-fabc-44cc-b1be-37d594aed05a)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4cfd485e-9b44-4ea5-b408-14be390b3e46)
 
 ## ELK
 
