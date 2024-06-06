@@ -3885,6 +3885,29 @@ Google is your friend.
 
 
 
+## Android Forensics
+
+```
+https://github.com/RealityNet/Android-Forensics-References
+```
+
+
+This needs to be moved
+
+### ALEAPP
+
+Android Logs Events And Protobuf Parser.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/98c7185c-a4fe-4c1f-b115-908b02807caa)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c4f20dd6-7bc6-4cfa-9b47-7e47c01e0a50)
+
+
+```
+https://github.com/abrignoni/ALEAPP
+```
+
 
 # move
 
