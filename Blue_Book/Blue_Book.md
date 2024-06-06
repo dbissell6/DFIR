@@ -1511,13 +1511,15 @@ When a file is downloaded from the internet, Windows assigns it a Zone Identifie
 
 Browser artifacts are crucial for profiling user activity on a system. They include history, cookies, cache, sessions, and configurations. Notably, browsers track local file access in their history, such as when viewing local PDFs or SVGs. These accesses can also be found in %LocalAppData%\Microsoft\Windows\WebCache\WebCacheV01.dat with entries like file:///X:/path/to/file, where "X" denotes the drive letter.
 
+### Live NirLauncher
+
 NirLauncher -> BrowsingHistoryView
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ecbae68b-502e-43b6-8087-7d781c9373c0)
 
 Most databases use sqlite. Can also use bulkextract
 
-### Chrome history
+### Chrome 
 
 appdata/local/google/chrome/User Data/default/History
 
@@ -1530,6 +1532,8 @@ appdata/local/google/chrome/User Data/default/History
 ### Edge
 
 appdata\local\Microsoft\Edge\UserData\[Default|ProfileX]\*
+
+appdata\local\microsoft\windows\webcache\webcacheV01.dat
 
 ## .git
 
