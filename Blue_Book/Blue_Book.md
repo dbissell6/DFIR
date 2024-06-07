@@ -2532,6 +2532,19 @@ A steganography tool that allows users to embed hidden data within image and aud
 
 ![Pasted image 20230216081232](https://user-images.githubusercontent.com/50979196/221450510-6200f7e2-45b7-4669-afb4-430cad7c25f7.png)
 
+### stegseek
+
+Crack
+```
+https://github.com/RickdeJager/stegseek
+
+sudo dpkg -i stegseek_0.6-1.deb
+sudo apt-get install -f # install dependencies
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/4b39dbbb-2aab-455f-9000-27e15f76dbbb)
+
+
 ### Zsteg 
 A steganography tool that can be used to detect hidden information within images. It can be used to identify the type of steganography being used, extract hidden data, and even recover lost data. Zsteg is particularly useful for identifying the presence of LSB (Least Significant Bit) steganography, which is a common technique used to hide data within images.
 ![Pasted image 20230221160217](https://user-images.githubusercontent.com/50979196/221450531-b66bfdf7-3c9d-4cd0-9a20-54fe3d14c5ef.png)
