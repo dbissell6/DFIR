@@ -437,7 +437,9 @@ Encryption may be encountered in Wireshark captures, and can be identified by th
 
 ###  Decrpyt TLS
 
-Input RSA key
+#### Input RSA key
+
+
 From G, but TLS instead of SSL
 
 ![Pasted image 20230113164502](https://user-images.githubusercontent.com/50979196/221450214-77e163e3-dc62-4555-b15c-811c27d5f114.png)
@@ -447,7 +449,28 @@ From G, but TLS instead of SSL
 ![Pasted image 20230113164557](https://user-images.githubusercontent.com/50979196/221450269-c795cfa1-5921-44ce-9aa6-a33de361632f.png)
 
 
-marshall in the middle Similar method used in but instead of a RSA to decrypt the TLS it is a secrets.log
+
+
+#### With a log file
+
+marshall in the middle uses similar method used but instead of a RSA to decrypt the TLS it is a secrets.log
+
+Find something like
+
+![history](https://github.com/dbissell6/DFIR/assets/50979196/a85c4fbf-5cd9-4f90-8e56-718c9539f54c)
+
+Content of sslkey.log might look something like
+
+```
+CLIENT_HANDSHAKE_TRAFFIC_SECRET 1883768c955100059c9e4ebcd16d8168e762436f65f66aaf905680f3e8a439a6 35f05c44c0d5cd5b9b80622cc6f7314895a0a0a45a2fa249291a509db8156256
+SERVER_HANDSHAKE_TRAFFIC_SECRET 1883768c955100059c9e4ebcd16d8168e762436f65f66aaf905680f3e8a439a6 3a8ec62b1e2b1505ce7a44f1a7977490f302beef16c993b28ac4b1b512a2db76
+CLIENT_RANDOM 53172363ba45dbe949f9f5c237c39b4a14f2a9d55cefb751420120a105a07c3e d877c33bdfa568ecc0c2e2304814cc9160209eee8d6b2ffb620f198a451d488010786fd0e7b4bf9c03a462b2af3aa1f8
+CLIENT_HANDSHAKE_TRAFFIC_SECRET c42740946ffc0245c919b390949ee549079e8be2e0e4a59e8c0e7487c292822d bb5dd2319fdab57773785e3ec3a6949bc551fad6c090d113a6ed225c9e0a3d3e
+```
+
+Decrypt similar to using key
+
+![tls](https://github.com/dbissell6/DFIR/assets/50979196/e0ae5cd0-5493-4a1f-8136-2789269a7ae0)
 
 
 ### Decrypt SMB2
