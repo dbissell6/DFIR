@@ -2354,8 +2354,27 @@ Web based, can check hashes and run in sandboxes. Crucial for linux binaries.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/45f165da-48ba-4868-91ec-00c11aeb3432)
 
-
 https://otx.alienvault.com
+
+### MalwareBazaar
+
+MalwareBazaar is an open-source threat intelligence platform developed and maintained by abuse.ch. It serves as a repository for collecting, analyzing, and sharing malware samples. Security researchers, threat analysts, and IT professionals use MalwareBazaar to submit malware samples they encounter in the wild. The platform allows users to download these samples for further analysis and study. MalwareBazaar also provides detailed metadata about each sample, including its hash values, file type, and associated indicators of compromise (IOCs). This information helps security professionals stay informed about the latest threats and enhances their ability to defend against malware.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/8571b5f9-3f2d-4c2f-b42d-f22633cc4b40)
+
+```
+https://bazaar.abuse.ch
+```
+
+### ThreatFox
+
+ThreatFox is another threat intelligence platform developed by abuse.ch, focusing specifically on collecting and sharing indicators of compromise (IOCs) related to various types of cyber threats, including malware, phishing, and other malicious activities. ThreatFox aggregates IOCs from multiple sources, providing a centralized repository for threat intelligence data. Users can search for and access detailed information about IP addresses, domain names, URLs, and file hashes associated with malicious activities. ThreatFox aims to facilitate the sharing of actionable threat intelligence among the cybersecurity community, helping organizations to better detect and mitigate cyber threats.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/a1febc11-1f14-48cd-9fab-ddf5699e059b)
+
+```
+https://threatfox.abuse.ch
+```
 
 ## Deobfuscation
 
