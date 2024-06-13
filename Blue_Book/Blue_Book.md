@@ -692,6 +692,7 @@ C:\Windows\System32\winevt\logs
 
 | EventId | Description |
 |---------------|-------------|
+| **1102** | The audit log was cleared |
 | **4104** | PowerShell script block logging |
 | **4624** | Successful account logon |
 | **4625** | Failed account logon |
@@ -742,6 +743,9 @@ C:\Windows\System32\winevt\logs
 | **5124** | A security setting was updated on the OCSP Responder Service |
 | **5156** | The Windows Filtering Platform allowed a connection |
 | **5157** | The Windows Filtering Platform blocked a connection |
+| **7001** | Service start operations |
+| **7022** | Service hung on starting |
+| **7045** | A serviuce was installed on the system |
 
 
 ## Sysmon EventId - Description
