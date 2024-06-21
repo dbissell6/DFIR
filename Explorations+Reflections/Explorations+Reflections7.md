@@ -68,7 +68,9 @@ CompTIA cert. I dont like the idea of paying for the classes and certs and the C
 the voucher and forcing me to study (I just so happened to get a free month of linkedin and some reccomended a video series that covers the material on linkedinlearning) has again
 forced me consider the knowledge of these domains(Real world, CTFs, certificates). 
 
-It is frustrating that the certs are so expensive and behind a paywall(SANS actually does a good job at providing a syllabus). Currently it is $404 to just take the test, that is stupid. I cant find what the actual knowldge needed to pass
+It is frustrating that the certs are so expensive and behind a paywall(SANS actually does a good job at providing a syllabus).
+```http://www.comptia.org/training/resources/exam-objectives```
+Currently it is $404 to just take the test, that is stupid. I cant find what the actual knowldge needed to pass
 test is, so they are also selling you study guides.To get the study guide and test combined package!! it is almost $1000, this is stupid.
 
 <img width="1277" alt="Screen Shot 2024-06-20 at 9 49 03 AM" src="https://github.com/dbissell6/DFIR/assets/50979196/08b17eb1-58e2-48c9-82b1-3978e313ceeb">
