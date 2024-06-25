@@ -2,6 +2,8 @@ A reflection anomaly. Summer time.
 
 As always I must start with, these past 3 months have felt like another lifetime, each time if feels more cliche but no less true.
 
+Some Highlights:
+
 Joining L3ak
 Hosting a CTF
 Creating challenges
@@ -14,11 +16,11 @@ incorporating these ideas into designing future ctf challs, what would be useful
 # Joining L3AK
 
 Not too long after the winter sherlock collection (OPTinselTrace) someone reached out saying the writeup was dope and asked if I wanted
-to join a CTF team on the forensics branch. In the last post I was lamenting on the struggles of being alone so i did some research found they were a top team and accpeted.
+to join a CTF team on the forensics branch. In the last post I was lamenting on the struggles of being alone so I did some research found they were a top team and accpeted.
+The experience has been completly different. Before I would try out a most easy and medium challenges taking ~50% of the time in the competition. I would eventually get to some hard and insane in the forensics and misc category and solve maybe 1 or 2.
 
-The experience has been completly different. Before I would try out a most east and medium taking ~50% of the time in the competition. I would eventually get to some hard and insane in the
-forensics and misc category and solve maybe 1 or 2. Working with a good large team almost all time is dedicated to hard forensics problems. There have been differences in the 
-process of solving problems too. One that sticks out post right now is I found a some suspicious powershell logs, when sharing them with the team smoeone else was able to notice exactly what
+Working with a good large team almost all time is dedicated to hard forensics problems. There have been differences in the 
+process of solving problems too. One that sticks out right now is I found a some suspicious powershell logs, when sharing them with the team someone else was able to notice exactly what
 they were and the next steps to solving. Thinking back to doing it on my own, it was a huge disk, many users and while knowing it was suspicious I may still have started to look
 for other pieces of evidence maybe eventually even just getting stuck. 
 
@@ -26,7 +28,7 @@ Now it isnt rare for us to finish the forensics category in the first day withou
 
 # L3AKCTF
 
-After a month or two of being on the team I got notice the team was going to host a CTF. ofcourse i got excited and wanted to join. they had been planning it for almost a year and it
+After a month or two of being on the team I got notice the team was going to host a CTF. Of course i got excited and wanted to join. they had been planning it for almost a year and it
 was set to take place in just a couple months. I was mainly focused on creating the challenges which was a great experience. however most of the knowledge and value I gained was getting
 to see behind the scences of how the infrastructure was created. 
 
@@ -69,9 +71,10 @@ the voucher and forcing me to study (I just so happened to get a free month of l
 forced me consider the knowledge of these domains(Real world, CTFs, certificates). 
 
 It is frustrating that the certs are so expensive and behind a paywall(SANS actually does a good job at providing a syllabus).
+
 ```http://www.comptia.org/training/resources/exam-objectives```
-Currently it is $404 to just take the test, that is stupid. I cant find what the actual knowldge needed to pass
-test is, so they are also selling you study guides.To get the study guide and test combined package!! it is almost $1000, this is stupid.
+
+It is still expensive.
 
 <img width="1277" alt="Screen Shot 2024-06-20 at 9 49 03 AM" src="https://github.com/dbissell6/DFIR/assets/50979196/08b17eb1-58e2-48c9-82b1-3978e313ceeb">
 
@@ -98,8 +101,8 @@ was invaluable the BlueBook
 
 ## What would it take?
 
-What would it take to create something more valuable than the knowledge given from these courses. Ive said before and still believe the value comes from the combination of the knowlege
-and the ability to let the person practice in a lab.This is what people are paying for. But the parts do exist in the wild for free.
+What would it take to create something more valuable than the knowledge given from these courses. Ive said before and still believe the value comes from the combination of the knowledge
+and the ability to let the person practice in a lab. This is what people are paying for. But the parts do exist in the wild for free.
 
 I imagine a wikipedia of digital forensics. open source driven by community contributions.
 
