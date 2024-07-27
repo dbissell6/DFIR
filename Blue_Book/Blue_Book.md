@@ -1572,6 +1572,15 @@ The .git directory is a goldmine of information for forensic analysts. It is the
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/bf4f2466-26a3-41f8-9d06-f33f1db83c07)
 
+## Email
+
+.ost 
+
+OST stands for Offline Storage Table. These files are used by Microsoft Outlook to store a copy of your mailbox data (emails, calendar events, contacts, etc.) when using Outlook with a Microsoft Exchange account. They allow you to work offline and synchronize changes with the Exchange server when you reconnect.
+
+![image](https://github.com/user-attachments/assets/d920d3b3-18d0-40b3-a8d6-375290cc50ad)
+
+
 
 # Files/Executables
 
