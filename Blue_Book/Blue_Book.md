@@ -1711,10 +1711,15 @@ If you have a file that has a wrong extentions, no extentions, or corrputed you 
 
 https://www.garykessler.net/library/file_sigs.html
 
-### Windows/Macros(.docm, .doc, .bin, .vba, .pptm, .one)
+### Windows/Macros(.docm, .docx .doc, .bin, .vba, .pptm, .one)
 .docm .doc .bin .vba .pptm .one .rtf
 
-can sometimes using unzip or 7z on word files can reveal hidden content.
+Can sometimes using unzip or 7z on word files can reveal hidden content.
+
+![Pasted image 20240729163554](https://github.com/user-attachments/assets/32819dd0-cfdf-4abb-9549-32dbaa9ec123)
+
+
+![Pasted image 20240729163615](https://github.com/user-attachments/assets/a5498a3c-ffc0-4485-ad9d-e59907d3cd61)
 
 #### .rtf
 
@@ -2632,6 +2637,7 @@ Common File formats of memory dumps
 -   Raw binary format (.bin)
 -   Microsoft crash dump format (.dmp)
 -   RAW (.raw)
+-   Virtual Machine Memory file (.vmem)
 
 ## Kernel 
 
