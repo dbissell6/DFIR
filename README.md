@@ -41,12 +41,15 @@ https://www.youtube.com/@digitaldeductions
 
 ## Outside Resources
 https://github.com/cugu/awesome-forensics#ctfs-and-challenges  
+
 https://github.com/apsdehal/awesome-ctf/blob/master/README.md#forensics
 
 https://www.sans.org/posters/hunt-evil/   
+
 https://sansorg.egnyte.com/dl/cOBcwZSosv  ## Zimmermans Tools cheatsheet
 
 https://thedfirreport.com  ## Writeups of real attacks
+
 https://vx-underground.org/ ## Malware repo with writeups
 
 
