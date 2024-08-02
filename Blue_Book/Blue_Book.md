@@ -508,7 +508,16 @@ We need to create a string of 5 parts found in the traffic.
 
 For the last section NTLMv2Response we must remove the first 16 bytes/32 characters.
 
+We should see something like this in the pcap.
+
+![image](https://github.com/user-attachments/assets/97a87800-4c0d-4a13-9a6f-222f5a5f095e)
+
+
 We can find 4 of the pieces in
+```
+Session Setup Request
+```
+
 ```
 SMB2 (Server Message Block Protocol Version 2) -> Session Setup Response (0x1) -> Security Blob -> GSS-API Generic **** ->
 Simple Protected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> -> NTLM Response -> NTLMv2 Response -> NTProofStr.
@@ -516,7 +525,11 @@ Simple Protected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> 
 
 ![image](https://github.com/user-attachments/assets/832d2e73-c824-4935-94b9-13132d7a200d)
 
-The last piece can be found
+The last piece can be found 
+
+```
+Session Setup Response
+```
 
 ```
 SMB2 (Server Message Block ProtocolVersion 2) -> Session Setup Response (0x1) -> Security Blob -> GSS-API Generic ->
