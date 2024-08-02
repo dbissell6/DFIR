@@ -535,7 +535,8 @@ Session Setup Response
 SMB2 (Server Message Block ProtocolVersion 2) -> Session Setup Response (0x1) -> Security Blob -> GSS-API Generic ->
 SimpleProtected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> NTLM Server Challenge.
 ```
-![image](https://github.com/user-attachments/assets/3c11c6a2-a35f-44e5-9593-5c87a30a362c)
+
+![image](https://github.com/user-attachments/assets/b207b112-3704-43cc-a0eb-07ca35659218)
 
 In total it should look like
 
