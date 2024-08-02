@@ -549,6 +549,9 @@ Can try to crack hash in responder.
 hashcat -m 5600 responder_hash /usr/share/wordlists/rockyou.txt 
 ```
 
+![image](https://github.com/user-attachments/assets/6eaad109-36ae-414e-a750-70e5926d9bb0)
+
+
 
 ### Decrypt winrm
 
