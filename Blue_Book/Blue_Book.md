@@ -500,6 +500,41 @@ Edit > Preferences > Protocols > SMB2
 
 ![Pasted image 20221121131210](https://github.com/dbissell6/DFIR/assets/50979196/07dbef05-8cb1-4d22-b2d0-ff3632a58aff)
 
+### Getting user password from SMB
+
+We need to create a string of 5 parts found in the traffic.
+
+![image](https://github.com/user-attachments/assets/a453769f-72a9-4e20-8364-9c91f75d5818)
+
+For the last section NTLMv2Response we must remove the first 16 bytes/32 characters.
+
+We can find 4 of the pieces in
+```
+SMB2 (Server Message Block Protocol Version 2) -> Session Setup Response (0x1) -> Security Blob -> GSS-API Generic **** ->
+Simple Protected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> -> NTLM Response -> NTLMv2 Response -> NTProofStr.
+```
+
+![image](https://github.com/user-attachments/assets/832d2e73-c824-4935-94b9-13132d7a200d)
+
+The last piece can be found
+
+```
+SMB2 (Server Message Block ProtocolVersion 2) -> Session Setup Response (0x1) -> Security Blob -> GSS-API Generic ->
+SimpleProtected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> NTLM Server Challenge.
+```
+![image](https://github.com/user-attachments/assets/3c11c6a2-a35f-44e5-9593-5c87a30a362c)
+
+In total it should look like
+
+![image](https://github.com/user-attachments/assets/fe2c82c4-654a-4d5c-be94-da7e43601ae3)
+
+Can try to crack hash in responder.
+
+```
+hashcat -m 5600 responder_hash /usr/share/wordlists/rockyou.txt 
+```
+
+
 ### Decrypt winrm
 
 ![Pasted image 20221125081327](https://github.com/dbissell6/DFIR/assets/50979196/49eeb941-f7fe-4452-b875-62de9dd1719c)
