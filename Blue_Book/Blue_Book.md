@@ -540,7 +540,8 @@ SimpleProtected Negotiation -> negTokenTarg -> NTLM Secure Service Provider -> N
 
 In total it should look like
 
-![image](https://github.com/user-attachments/assets/fe2c82c4-654a-4d5c-be94-da7e43601ae3)
+![image](https://github.com/user-attachments/assets/d1dcec6c-7e98-49f0-b368-24a7a07de6ff)
+
 
 Can try to crack hash in responder.
 
