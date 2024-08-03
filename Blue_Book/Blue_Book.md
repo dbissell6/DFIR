@@ -1878,6 +1878,12 @@ cmake ..
 make
 ```
 
+pylingual is an online decompiler. PyLingual makes novel use of transformer models to learn new Python bytecode specifications as they are released.
+
+```
+https://pylingual.io/
+```
+
 ### Image files (.jpg, .png, .bmp)
 
 These files can contain hidden messages or steganography, where data is hidden within the image.
