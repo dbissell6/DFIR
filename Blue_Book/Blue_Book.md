@@ -1436,7 +1436,7 @@ In the above example we are trying to find the the info in shared_key before it 
 
 ![image](https://github.com/user-attachments/assets/8e07212f-facb-4f97-abad-ccd24d4671f7)
 
-These wwas the key used in ransomware and we can now use it to decrypt files. 
+This was the key used in ransomware and we can now use it to decrypt files. 
 
 ## .apmx
 
