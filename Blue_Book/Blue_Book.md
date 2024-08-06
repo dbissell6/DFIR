@@ -106,6 +106,11 @@ ASymmetric - One key for encryption, another key for decryption.
 
 -    AES (Advanced Encryption Standard): This is a symmetric encryption algorithm that is widely used for data encryption. It uses block ciphers with a key size of 128, 192, or 256 bits.
 
+  ![image](https://github.com/user-attachments/assets/64a78c9c-478f-4d0e-8d42-874d1363253c)
+
+  ![image](https://github.com/user-attachments/assets/c0db0b4f-f227-46a2-a9a1-0eb58f4108ce)
+
+
 -    RSA: This is an asymmetric encryption algorithm that is widely used for securing data transmission over the internet. It uses a public-private key pair to encrypt and decrypt data.
 
 -    DES (Data Encryption Standard): This is a symmetric encryption algorithm that uses block ciphers with a key size of 56 bits. It is not considered secure for modern applications.
@@ -1404,7 +1409,34 @@ C:\Windows\System32\config\SOFTWARE
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ebfde46c-3d6b-4649-80e3-9a818db17dc0)
 
+## $Logfile
 
+The Log file is used for transaction logging by the NTFS file system. Can be used to reconstruct file system operations and recover recent changes.
+
+### LogfileParser
+
+```https://github.com/jschicht/LogFileParser```
+
+
+Delimters is | can change it quick with this
+```
+$inputFile = "path\to\your\inputfile.csv"
+$outputFile = "path\to\your\outputfile.csv"
+
+(Get-Content $inputFile) -replace '\|', ',' | Set-Content $outputFile
+```
+
+We can open the CSV in timeline explorer.
+
+![image](https://github.com/user-attachments/assets/527e28cc-f66b-4d36-89ae-17b55e1b9051)
+
+In the above example we are trying to find the the info in shared_key before it was deleted with sdelete64.exe It says go to debug.log to see the data
+
+![image](https://github.com/user-attachments/assets/6e724866-6bf7-4475-b87f-1195d409b094)
+
+![image](https://github.com/user-attachments/assets/8e07212f-facb-4f97-abad-ccd24d4671f7)
+
+These wwas the key used in ransomware and we can now use it to decrypt files. 
 
 ## .apmx
 
