@@ -1102,6 +1102,10 @@ Using Tools -> Find
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0893e121-3aee-4152-bb2e-0455306faa56)
 
+### reglookup
+
+![image](https://github.com/user-attachments/assets/05dda3df-4da0-4ef0-8730-d565906bda30)
+
 
 ### AmcacheParser
 
