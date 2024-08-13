@@ -22,7 +22,7 @@ Lessons learned on the path
 
 PICO - https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/
 
-## CTF Challenges
+## DFIR CTF Challenges
 
 https://play.picoctf.org/practice
 
