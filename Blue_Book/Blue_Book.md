@@ -399,6 +399,9 @@ Duration & Activity: Conversations that last for an unusually long or short time
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/66593d3e-146b-48a4-aa63-58974bfe6af2)
 
+### Search for strings in packets
+
+![image](https://github.com/user-attachments/assets/45a906f5-10a7-4a59-9ac5-2a58b2147663)
 
 ### Helpful Queries
 
