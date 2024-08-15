@@ -439,6 +439,23 @@ To access streams right click on a packet
 
 ![Pasted image 20230212123647](https://user-images.githubusercontent.com/50979196/221450181-2bbd9132-4d32-410a-a94e-67119e6d00fa.png)
 
+### Protocols in Wireshark
+
+#### NetBIOS Name Service (NBNS)
+
+NetBIOS Name Service (NBNS) is a protocol that operates over UDP on port 137. It is part of the NetBIOS suite of services, which is used for name resolution on local networks. NBNS allows computers to register their names and resolve NetBIOS names to IP addresses on a local network, similar to how DNS resolves domain names to IP addresses on the internet.
+
+From a digital forensics standpoint, NBNS traffic can be quite useful in several scenarios:
+
+Identifying Devices on a Network:
+
+Device Discovery: By analyzing NBNS traffic, you can discover devices on a network, including their NetBIOS names and IP addresses. This can be particularly useful in mapping out the network topology.
+    
+Device Role Identification: The NetBIOS name often includes clues about the role of the device (e.g., "FORELA-WKSTN001"), which can help in identifying critical assets.
+
+![image](https://github.com/user-attachments/assets/55541ce0-50a3-42b1-9bf8-d20f656928f4)
+
+
 ### Encryption in Wireshark
 
 Encryption may be encountered in Wireshark captures, and can be identified by the use of protocols such as SSL/TLS or SSH. When encryption is used, the data being transmitted is protected and cannot be viewed in plain text. However, it is possible to view the encrypted traffic in Wireshark and attempt to decrypt it using the appropriate keys or passwords. To do this, select the encrypted traffic in Wireshark and then use the "Follow SSL Stream" or "Follow SSH Stream" options to view the encrypted data. If the appropriate keys or passwords are available, they can be entered in the "Decode As" settings to decrypt the traffic.
