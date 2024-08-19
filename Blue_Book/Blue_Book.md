@@ -4097,7 +4097,9 @@ Android Logs Events And Protobuf Parser.
 https://github.com/abrignoni/ALEAPP
 ```
 
-## Geo
+## Geoguesser
+
+https://docs.google.com/spreadsheets/d/1UNvkoY-LaktF75nU_cP7-wVRAEvH3fSqVZet20HqxXA/edit?gid=0#gid=0
 
 ### geohints
 
