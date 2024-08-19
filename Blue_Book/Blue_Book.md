@@ -4101,6 +4101,10 @@ https://github.com/abrignoni/ALEAPP
 
 https://docs.google.com/spreadsheets/d/1UNvkoY-LaktF75nU_cP7-wVRAEvH3fSqVZet20HqxXA/edit?gid=0#gid=0
 
+### Reading Japanese Utility pole plates
+
+https://docs.google.com/document/d/17WL3aQeSvfnqymGKtV-DbSJDd7KTYCqEbWgtEsJNKFs/edit
+
 ### geohints
 
 https://geohints.com/
