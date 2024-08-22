@@ -78,6 +78,10 @@ To decode in linux
 
 ![image](https://user-images.githubusercontent.com/50979196/229380187-b3c34620-e19a-470f-a13f-f8c1d8eeb253.png)
 
+Binary to decimal
+
+![image](https://github.com/user-attachments/assets/cbb8d1fd-ac44-4e60-95df-4e37cc53d73a)
+
 
 ### Cyberchef  
 Useful for most decoding  
