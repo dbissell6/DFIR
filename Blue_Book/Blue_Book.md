@@ -62,6 +62,12 @@ Decoding is the process of converting encoded data into a readable format. Encod
 
 -    Unicode decoding: Unicode is a standard for encoding text in various writing systems, such as Chinese, Arabic, and Cyrillic. Forensic analysts may encounter Unicode-encoded text in emails, documents, or chat messages. Decoding Unicode involves converting the encoded text back into its original form.
 
+### Cyberchef  
+Useful for most decoding  
+https://gchq.github.io/CyberChef/
+
+https://github.com/mattnotmax/cyberchef-recipes#
+
 For instance the string 'hello@world.com' can be encoded these 5 ways
 
 -    Base64: "aGVsbG9Ad29ybGQuY29t"
@@ -82,12 +88,10 @@ Binary to decimal
 
 ![image](https://github.com/user-attachments/assets/cbb8d1fd-ac44-4e60-95df-4e37cc53d73a)
 
+![image](https://github.com/user-attachments/assets/e0b1ff23-6a94-416a-878e-3b8e5d684eb6)
 
-### Cyberchef  
-Useful for most decoding  
-https://gchq.github.io/CyberChef/
 
-https://github.com/mattnotmax/cyberchef-recipes#
+
 
 ## Decryption
 
