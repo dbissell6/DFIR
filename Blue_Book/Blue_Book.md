@@ -90,6 +90,9 @@ Binary to decimal
 
 ![image](https://github.com/user-attachments/assets/e0b1ff23-6a94-416a-878e-3b8e5d684eb6)
 
+Hex to decimal
+
+![image](https://github.com/user-attachments/assets/d05380fe-7b8a-4080-9359-920d9fc5727b)
 
 
 
