@@ -3261,13 +3261,24 @@ Noob tip if you mount the system and you try to access something like root and i
 sudo ls -la root
 ```
 
-## Example fdisk+Mount Windows
+## Example fdisk+Mount Windows vhdx
 
 ![Pasted image 20230318133623](https://user-images.githubusercontent.com/50979196/229358946-72832415-38f2-4742-ba91-c91332de8981.png)
 ![Pasted image 20230318133610](https://user-images.githubusercontent.com/50979196/229358957-684da311-e205-419d-a3e2-29e26e6bfc4e.png)
 ![Pasted image 20230318133553](https://user-images.githubusercontent.com/50979196/229358976-02560289-3226-4f8f-af22-11dc6e120430.png)
 ![Pasted image 20230318133535](https://user-images.githubusercontent.com/50979196/229359015-4c1dd124-6f5e-4709-9168-335a1d6ea0cf.png)
 ![Pasted image 20230318133520](https://user-images.githubusercontent.com/50979196/229359026-40b14558-22fb-4a98-9e80-7e52a39465e3.png)
+
+## guestmount windows vhdx
+
+![image](https://github.com/user-attachments/assets/2a1e9f29-39ee-4fd0-8dc3-64318f124e12)
+
+![image](https://github.com/user-attachments/assets/8a79232c-0b86-49c4-8273-e9eeb71230ca)
+
+![image](https://github.com/user-attachments/assets/0eae362b-6fa1-497d-b24b-bbab362de5bd)
+
+![image](https://github.com/user-attachments/assets/bd3ada11-27a2-455c-8072-41f962a55043)
+
 
 ## Autopsy on Linux
 
