@@ -396,7 +396,57 @@ Same prompt as above
 
 Same prompt as 1
 
-![image](https://github.com/user-attachments/assets/1c4dbace-4f44-4d93-8bde-fd6ddd85e061)
+![image](https://github.com/user-attachments/assets/31c33654-dd42-4edd-b5e7-731653a48e4c)
+
+    Initial Setup:
+        mov DWORD PTR [rbp-0xc], 0x9fe1a moves 0x9fe1a (which is 654874 in decimal) to [rbp-0xc].
+        mov DWORD PTR [rbp-0x8], 0x4 moves 0x4 (which is 4 in decimal) to [rbp-0x8].
+
+    Move to eax:
+        mov eax, DWORD PTR [rbp-0xc] moves 0x9fe1a (654874) into eax.
+
+    Multiplication:
+        imul eax, DWORD PTR [rbp-0x8] multiplies eax by 4:
+    654874×4=2619496
+    654874×4=2619496
+
+    Addition:
+        add eax, 0x1f5 adds 501 to 2619496:
+    2619496+501=2619997
+    2619496+501=2619997
+
+    
+
+
+
+Conclusion:
+    picoCTF{2619997}
+
+Can also recompile and debug
+
+![image](https://github.com/user-attachments/assets/293fe585-2469-4c94-9fe4-14f9adc6da97)
+
+
+```
+nasm -f elf64 -o program.o program.asm
+ld -o program program.o  
+```
+
+
+![image](https://github.com/user-attachments/assets/ec31f80b-bf61-472c-8d9c-be2b25feb211)
+
+
+![image](https://github.com/user-attachments/assets/d7a5898a-7e51-44fe-9106-f2dcb23addef)
+
+# Bit-o-asm-4
+
+Same prompt as 1
+
+![image](https://github.com/user-attachments/assets/14ef9707-58d8-4c0d-b08a-eca5b9c4a1d9)
+
+Here we see a cmp and a jle(Jump if less), Here 0x9fe1a is not less than 0x2700 so we dont jump. We hit the sub and subtract 0x9fe1a - 0x65 then jump over the add to the move. 
+
+![image](https://github.com/user-attachments/assets/c9f00d00-9d46-4482-8eb0-8316fe1f0b2a)
 
 
 # Bbbloat
@@ -415,4 +465,16 @@ Given ELF 32-bit LSB pie executable, Intel 80386, version 1 (SYSV), dynamically 
 
 
 
+# Checkpass
 
+Given ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked
+
+![image](https://github.com/user-attachments/assets/4e78eca4-ad7d-4aeb-b076-7f9f9a028b17)
+
+
+# reverse_cipher
+
+![image](https://github.com/user-attachments/assets/3ed5f736-6e70-4852-a89c-b14d2b7bac2b)
+
+even index - 5
+odd index + 2
