@@ -358,4 +358,28 @@ Examining in Ghidra
 ![image](https://github.com/user-attachments/assets/6e6cd655-2905-4381-be17-fc44deaaa2d9)
 
 
+# Bit-o-asm-1
+
+Can you figure out what is in the eax register? Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents of the eax register in the decimal number base. If the answer was 0x11 your flag would be picoCTF{17}.
+
+![image](https://github.com/user-attachments/assets/918f5f72-e3d3-42a5-85fe-24a0cf400f47)
+
+![image](https://github.com/user-attachments/assets/b55b4572-d059-45c5-b94b-8d7ade4e6e82)
+
+# Bbbloat
+
+ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked
+
+Open in Ghidra, Notice a comparison
+
+![image](https://github.com/user-attachments/assets/5b029cff-699b-4f03-8d29-a19dc876a921)
+
+![image](https://github.com/user-attachments/assets/d64851e8-8fe1-43a7-8d9d-d5e246ff434f)
+
+# Forky
+
+Given ELF 32-bit LSB pie executable, Intel 80386, version 1 (SYSV), dynamically linked,
+
+
+
 
