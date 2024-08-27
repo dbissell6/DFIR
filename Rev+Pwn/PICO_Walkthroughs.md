@@ -145,7 +145,7 @@ main calls a function that multiplies eax by a constant. The flag for this chall
 
 ![image](https://github.com/user-attachments/assets/ef95681b-20d2-4727-b507-7e9f1ef964ef)
 
-#ASCII FTW
+# ASCII FTW
 
 This program has constructed the flag using hex ascii values. Identify the flag text by disassembling the program.
 Given ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked.
@@ -337,6 +337,15 @@ or just running it
 
 ![image](https://github.com/user-attachments/assets/0085dbd9-8e47-499e-b3e1-7684c755cac4)
 
+# Investigative Reversing 0
+
+
+![image](https://github.com/user-attachments/assets/82cd0654-8c31-4f4a-8db8-d01c567f36b0)
+
+![image](https://github.com/user-attachments/assets/f2ca4802-2292-4969-b6e0-f12be9eb79c0)
+
+
+
 # Investigative Reversing 1
 
 This is found in forensics but... you know.
@@ -356,6 +365,17 @@ Trying to cheese it, it looks like the trailing data is scrambled
 Examining in Ghidra
 
 ![image](https://github.com/user-attachments/assets/6e6cd655-2905-4381-be17-fc44deaaa2d9)
+
+We can see the total length of the flag was 26
+
+The first 4 characters are taken and added to the files. There are 3 small lopps to add the rest. 
+
+Reversing getting the p 0x85-0x15 = 0x70
+We can get the o by sing the loop iterate 4 times s - 4 = o
+
+![image](https://github.com/user-attachments/assets/727a5626-0a24-4d1c-866d-9ce009853694)
+
+![image](https://github.com/user-attachments/assets/121d73f5-29f3-40cb-9d0b-1b0dc1f42a57)
 
 
 # Bit-o-asm-1
