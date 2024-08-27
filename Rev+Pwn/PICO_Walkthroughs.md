@@ -386,6 +386,19 @@ Can you figure out what is in the eax register? Put your answer in the picoCTF f
 
 ![image](https://github.com/user-attachments/assets/b55b4572-d059-45c5-b94b-8d7ade4e6e82)
 
+# Bit-o-asm-2
+
+Same prompt as above
+
+![image](https://github.com/user-attachments/assets/ba4f81d2-0182-4a41-aa14-9b3015f26fd7)
+
+# Bit-o-asm-3
+
+Same prompt as 1
+
+![image](https://github.com/user-attachments/assets/1c4dbace-4f44-4d93-8bde-fd6ddd85e061)
+
+
 # Bbbloat
 
 ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked
