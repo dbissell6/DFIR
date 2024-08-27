@@ -125,8 +125,6 @@ Now for something a little different. 0x2262c96b is loaded into memory in the ma
 
 ![image](https://github.com/user-attachments/assets/d1201cb3-52d2-41c4-b1b4-1da2acaff6b7)
 
-![image](https://github.com/user-attachments/assets/f73916b9-2f60-4f66-90b1-231aa3b0a4b3)
-
 
 ```
 Memory address = rbp− 0x4 = 0x00007fffffffdd70 − 0x4 = 0x00007fffffffdd6c
