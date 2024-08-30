@@ -4087,7 +4087,7 @@ Google is your friend.
 
 ## Discord
 
-
+This needs to be moved
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/42da7d72-e5bc-4440-86ca-8fb53bc55559)
 
