@@ -2364,6 +2364,15 @@ Can filter type of activity (Registry, filesystem, network)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/7c2711d4-5f0c-4391-a62c-05322251b5f7)
 
+Can see process tree by clicking on tree , or Tools -? Process Tree
+
+![image](https://github.com/user-attachments/assets/10998502-e6e1-4aec-9bea-192f4970e678)
+
+Can see more details Options -> Select Columns 
+
+![image](https://github.com/user-attachments/assets/a963d253-9bae-44e1-87e1-13499d8615a1)
+
+
 ### Process Explorer
 
 Process Explorer is another tool from the Sysinternals suite, and it provides detailed information about which handles and DLLs processes have opened or loaded. It offers a more in-depth view than the standard Windows Task Manager.
