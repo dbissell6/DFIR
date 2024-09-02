@@ -2121,7 +2121,7 @@ https://www.ibm.com/support/pages/decimal-hexadecimal-ebcdic-ascii-bit-conversio
 
 ## Binwalk
 
-Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel.
+Binwalk is a popular tool used in cybersecurity for analyzing and extracting information from binary files, such as firmware images and file systems. With binwalk, analysts can identify and extract various components of a binary file, including the file system, bootloader, and kernel. Binwalk can really be used for any file.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/34c98f59-bb60-465e-b80e-b26d627b1986)
 
@@ -2145,6 +2145,23 @@ xxd is a command-line utility that is used to convert binary files into hexadeci
 Hexedit is a hexadecimal editor that allows users to modify binary files directly. It can be used to view and edit the contents of binary files at the byte level, and can be particularly useful for changing specific bytes in a file. In the Pico CTF challenge "Tunnel," Hexedit was used to change the header of a .bmp file.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/5f1f63c2-8013-4d1d-a28a-5c1112ab3f88)
+
+## Scalpel 
+
+Scalpel is an open-source, high-performance file carving tool used in digital forensics and data recovery. It scans disk images for file signatures based on user-defined patterns (usually file headers and footers) and extracts files that match those signatures.
+
+First step is to edit the conf file to select what you want
+
+```
+sudo nano /etc/scalpel/scalpel.conf
+```
+Uncomment the file types we want to search for
+
+![image](https://github.com/user-attachments/assets/983dda7d-9fd1-473f-aa60-f158063278d6)
+
+Run it
+
+![image](https://github.com/user-attachments/assets/4d02f022-dd64-46c4-aaaf-331f990ff041)
 
 
 
