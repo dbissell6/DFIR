@@ -1137,23 +1137,6 @@ Using Tools -> Find
 
 ![image](https://github.com/user-attachments/assets/05dda3df-4da0-4ef0-8730-d565906bda30)
 
-
-### AmcacheParser
-
-The Amcache is a repository that holds essential data about installed applications and executables. This data encompasses information such as file paths, sizes, digital signatures, and timestamps of the last execution of applications.
-
-Found at
-```
-C:\Windows\AppCompat\Programs\Amcache.hve
-```
-On windows make sure Amcache.hve and logs are all together in same dir/folder
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/1e138b9f-d729-4879-8f85-edc85db89a2b)
-
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/09703637-4b75-4773-8bb1-4df6adbf822d)
-
-
 ### regshell
 
 Cli tool allows traverse the registry. 
@@ -1161,7 +1144,6 @@ Cli tool allows traverse the registry.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/53163a8d-9521-4638-a0be-d63985e80fa6)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/dfeab73f-8a4b-4f38-a8e7-35710476c1f6)
-
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/efd52960-936f-40bc-91d0-fefb696db125)
 
@@ -1174,6 +1156,19 @@ RegRipper operates by applying a series of pre-defined plugins or "rippers" to t
 
 RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data,for insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
 
+To use all plugins (Something annoying is that sometimes the binary wont work unlkess you put an extra space or 2 after the -a)
+
+![image](https://github.com/user-attachments/assets/962f0825-adc3-4494-a377-36a6b4f034c5)
+
+
+Cal also guess the hive file type
+```
+-g
+```
+List all plugins
+```
+-l
+```
 
 ### Important Registry Paths for Forensic Analysis
 
@@ -1210,6 +1205,21 @@ RegRipper can be a powerful tool for analyzing Windows systems and identifying p
 | HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot                    | Safe boot options                                        |
 
 https://redteamrecipe.com/Registry-Attack-Vectors/
+
+### AmcacheParser
+
+The Amcache is a repository that holds essential data about installed applications and executables. This data encompasses information such as file paths, sizes, digital signatures, and timestamps of the last execution of applications.
+
+Found at
+```
+C:\Windows\AppCompat\Programs\Amcache.hve
+```
+On windows make sure Amcache.hve and logs are all together in same dir/folder
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1e138b9f-d729-4879-8f85-edc85db89a2b)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/09703637-4b75-4773-8bb1-4df6adbf822d)
 
 # Other Windows artifacts
 
