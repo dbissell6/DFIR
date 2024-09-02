@@ -3462,6 +3462,7 @@ Foremost uses a technique called file carving to recover files from disk images 
 
 Foremost can be used in a variety of scenarios, such as when trying to recover deleted files, investigating a cybercrime incident, or recovering data from a damaged disk. It is a powerful tool for file recovery and reconstruction and can help in restoring valuable data that may have been lost or deleted.
 
+![image](https://github.com/user-attachments/assets/695eab74-6ffe-4d78-948b-8918f9d4d2d7)
 
 
 ## RAID Disk recovery
