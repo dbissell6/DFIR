@@ -2133,8 +2133,11 @@ This switch tells binwalk to extract the identified file systems from the binary
     -y 
 This switch tells binwalk to suppress confirmation prompts during extraction. This can be useful when you want to automate the extraction process and don't want to be prompted for confirmation every time.
 
+Sometimes binwalk -e doesnt work need to use
 
-
+```
+~/.local/bin/binwalk -e --dd='.*' pngfile
+```
 ## xxd
 
 xxd is a command-line utility that is used to convert binary files into hexadecimal and vice versa. It can be used to create a hexadecimal dump of a binary file, or to convert a hexadecimal dump back into a binary file. xxd is useful for analyzing binary files and for converting between different formats.
