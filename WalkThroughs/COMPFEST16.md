@@ -192,7 +192,7 @@ So should be easy lets go into secret project and get the flag.  We see a hint t
 
 ![Pasted image 20240908110258](https://github.com/user-attachments/assets/f9cb5da8-7546-4698-96b5-59dea0b1f8b0)
 
-A commit where we should find the flag
+A commit where we should find the flag. Go look for it and of course its not there. The hint about the dev branch becomes important.
 
 
 ![Pasted image 20240908112531](https://github.com/user-attachments/assets/1db5388f-5f92-4990-9ecf-a4c7bb7803f9)
