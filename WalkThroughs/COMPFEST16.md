@@ -9,11 +9,16 @@
 
 Given Pcap.
 
+1) What ports are open on the attacked machine?
+
 ![Pasted image 20240908062853](https://github.com/user-attachments/assets/8bd07b0b-7171-44ec-9245-30f3e8a0d947)
 
 ```
 tcp.flags.syn == 1 && tcp.flags.ack == 1
 ```
+
+
+2) What are the credentials used to access the database?
 
 Moving down we can see log of failed login attempts
 
@@ -31,17 +36,18 @@ The last login attempt before accessing the database
 
 ![Pasted image 20240908063418](https://github.com/user-attachments/assets/1f88b9df-330c-4bb5-a248-ea509e81cf8b)
 
-
+3) What is the password for the "super" user on the database?
 
 ![Pasted image 20240908061948](https://github.com/user-attachments/assets/038df9b4-87b4-4ac7-96bc-f005e8a2f125)
 
 ![Pasted image 20240908062514](https://github.com/user-attachments/assets/f994a33c-bb03-4d48-8374-aad735a4963d)
 
+4) What table does the attacker modify?
 
 
 ![Pasted image 20240908062607](https://github.com/user-attachments/assets/44d53cce-94bd-41b7-b118-5112500dfe44)
 
-
+5) It seems that the attackers has modidied their own data, what is their full name?
 
 ![Pasted image 20240908061924](https://github.com/user-attachments/assets/c6d98d4d-2330-4faa-9ed7-0876c9a68109)
 
