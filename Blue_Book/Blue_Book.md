@@ -3300,6 +3300,24 @@ Noob tip if you mount the system and you try to access something like root and i
 sudo ls -la root
 ```
 
+## EWF on Linux
+
+The Expert Witness Format (EWF), commonly represented by .E01 files, is a forensic disk image format used to store digital evidence. It was developed by Guidance Software for EnCase and is widely used in digital forensics. EWF supports compression, encryption, and metadata storage, such as case details and hash values for verification.
+
+![image](https://github.com/user-attachments/assets/6a55d681-7d5d-48ff-912a-e20415cbed2a)
+
+![image](https://github.com/user-attachments/assets/2bb7c67c-237c-4d7a-9406-6dac528140c7)
+
+![image](https://github.com/user-attachments/assets/185a30a3-c41d-4833-87d2-745b8cbb671b)
+
+![image](https://github.com/user-attachments/assets/c0fa7686-ebbf-4055-bf7a-c2b7c5a9866c)
+
+Can also mount with
+
+![image](https://github.com/user-attachments/assets/68e84cba-abd3-431d-ae90-7d7f3b953501)
+
+
+
 ## Example fdisk+Mount Windows vhdx
 
 ![Pasted image 20230318133623](https://user-images.githubusercontent.com/50979196/229358946-72832415-38f2-4742-ba91-c91332de8981.png)
