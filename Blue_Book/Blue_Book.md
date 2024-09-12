@@ -2311,6 +2311,10 @@ GDB, short for the GNU Debugger, is the standard debugger for the GNU software s
 | `print $eax`                  | Displays the value of the EAX register.            |
 | `set $eax=0x12345678`         | Sets the EAX register to the value `0x12345678`.   |
 | `x/s $rdi`                    | Displays the string pointed to by the RDI register.|
+| `display <expression>`       | Automatically prints the value of an expression every time GDB stops. |
+| `undisplay <n>`              | Stops displaying the expression with the given display number `n`.    |
+| `delete display`             | Stops displaying all expressions.                                     |
+| `info display`               | Lists all currently displayed expressions and their display numbers.  |
 | `watch *0x004005f0`           | Sets a watchpoint at the given memory address.     |
 | `info breakpoints`            | Lists all breakpoints and watchpoints.             |
 | `delete 1`                    | Deletes breakpoint number 1.   |
