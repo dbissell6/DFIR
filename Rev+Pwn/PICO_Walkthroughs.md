@@ -312,6 +312,13 @@ print(result)
 
 </details>
 
+# Vault Door 5
+
+![image](https://github.com/user-attachments/assets/b5d50a1c-6772-47be-ba85-28030e1b5271)
+
+
+![image](https://github.com/user-attachments/assets/0ea7578e-98fd-4270-9ef0-7b069480bbbc)
+
 
 # GDB Test Drive
 
