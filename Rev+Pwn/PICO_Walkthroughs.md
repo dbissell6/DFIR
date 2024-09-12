@@ -312,6 +312,19 @@ print(result)
 
 </details>
 
+# Vault Door 4
+
+![image](https://github.com/user-attachments/assets/0d092d9b-a2a8-49ab-9d7d-97731f959ad1)
+
+![image](https://github.com/user-attachments/assets/038b4a40-f929-4401-adba-5269d5f4696b)
+
+![image](https://github.com/user-attachments/assets/c048d20a-bced-4ed3-8f3b-e19b5e96fe53)
+
+![image](https://github.com/user-attachments/assets/ab888974-522c-4cb2-9707-6806861e9484)
+
+
+`picoCTF{jU5t_4_bUnCh_0f_bYt3s_c194f7458e}`
+
 # Vault Door 5
 
 ![image](https://github.com/user-attachments/assets/b5d50a1c-6772-47be-ba85-28030e1b5271)
