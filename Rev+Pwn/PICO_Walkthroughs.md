@@ -478,3 +478,56 @@ Given ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linke
 
 even index - 5
 odd index + 2
+
+
+# patchme.py
+
+![image](https://github.com/user-attachments/assets/08cafb25-3eee-49c3-b2cc-6519b89321b3)
+
+![image](https://github.com/user-attachments/assets/5ba18e3b-4ac6-4a08-b131-090bc04ca0fc)
+
+or
+
+![image](https://github.com/user-attachments/assets/60b35cf2-6da1-42c1-b703-3b3696e4583e)
+
+or
+
+Change the logic of the check
+
+![image](https://github.com/user-attachments/assets/d70e9863-7f97-40f6-bdaf-db8235999b2a)
+
+![image](https://github.com/user-attachments/assets/db7565fd-c8ec-4edf-94fe-23a2e0dd3e55)
+
+# Fresh Java
+
+Given Java class data
+
+![image](https://github.com/user-attachments/assets/b635d803-6f01-4c75-b5e2-798251fa8bf0)
+
+![image](https://github.com/user-attachments/assets/a74f5469-e022-46cc-be24-256cb81555c8)
+
+Looking in Ghidra can see the flag in reverse order
+
+![image](https://github.com/user-attachments/assets/d27d9a48-0b67-4426-90fd-26e54b7ffff1)
+
+Can also use
+```
+http://www.javadecompilers.com/
+```
+
+`
+picoCTF{700l1ng_r3qu1r3d_738cac89}
+`
+
+# Bloat.py
+
+given python script and flag
+
+![image](https://github.com/user-attachments/assets/07179e80-364a-4a57-9d0e-2818cd905635)
+
+Just change logic
+
+![image](https://github.com/user-attachments/assets/ac0a9d4c-5b86-43b8-9860-580ccfbec68c)
+
+![image](https://github.com/user-attachments/assets/29d5fcef-0e79-44ac-8f61-43294cff340c)
+
