@@ -1281,13 +1281,6 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
 
-## Schtasks
-
-Found at
-```
-C:\Windows\System32\Tasks
-```
-
 ## Appdata
 
 The C:\Users\$USER\AppData directory in Windows operating systems is a central hub for storing user-specific application data. This hidden folder is critical for both application functionality and forensic investigations, as it contains data that applications do not want exposed to regular user browsing, which might alter or delete sensitive information unintentionally.
