@@ -1498,6 +1498,24 @@ In `Monitored Processes` pane, can hover over cmd and powershell processes to se
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/e47ab520-9d30-436b-b8e0-6ae3e166e463)
 
+## Defender
+
+### Quarantine
+
+Records files that were quarantined after being flagged as a threat by Defender.
+
+Stored in ```C:\ProgramData\Microsoft\Windows Defender\Quarantine\entries```
+
+### MP Logs – Key Points:
+
+ Windows Defender MP logs store valuable information about files scanned by Defender, such as file paths, hashes, timestamps, and potentially signatures.
+ These logs are located in the hidden directory ```C:\ProgramData\Microsoft\Windows Defender\Support```.
+ MP logs can record command line arguments, observed files, and results, even if the file wasn’t flagged as suspicious.
+ Common logs include MPDetection (detected threats) and MPLog (scanned files and directories).
+ These logs can be pivotal in incidents where other artifacts or logs are missing, as they consolidate critical data like hashes, file paths, timestamps, and telemetry.
+
+![image](https://github.com/user-attachments/assets/a95f9654-e570-41a3-95d4-a1dbadfd723f)
+
 
 ## Timeline Explorer
 
