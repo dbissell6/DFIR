@@ -1682,6 +1682,12 @@ NirLauncher -> BrowsingHistoryView
 
 Most databases use sqlite. Can also use bulkextract
 
+Convert times
+
+```
+https://www.epochconverter.com/webkit
+```
+
 ### Chrome 
 
 appdata/local/google/chrome/User Data/default/History
