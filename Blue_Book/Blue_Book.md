@@ -1516,6 +1516,27 @@ Stored in ```C:\ProgramData\Microsoft\Windows Defender\Quarantine\entries```
 
 ![image](https://github.com/user-attachments/assets/a95f9654-e570-41a3-95d4-a1dbadfd723f)
 
+## Tasks
+
+In Windows contains XML files that define scheduled tasks for the operating system. These tasks are automated actions that Windows or applications run at specific times or in response to specific triggers, such as system startup or user login. Each XML file typically contains details about the task, including:
+
+    Task Name: The name of the scheduled task.
+    Triggers: Events or conditions that initiate the task (e.g., time-based, event-based).
+    Actions: The executable command and any arguments or scripts that the task runs.
+    Conditions: Requirements that must be met for the task to run (e.g., system idle or network availability).
+    Settings: Additional configurations such as retry intervals, permissions, and whether the task runs with elevated privileges.
+
+```
+C:\Windows\System32\Tasks
+```
+
+![image](https://github.com/user-attachments/assets/b7a5eb91-a295-4379-a98d-a01d912265d5)
+
+```
+exiftool * | grep -E "File Name|File Modification Date/Time|Task Actions Exec Command|Task Actions Exec Arguments"  | awk '{print} NR % 4 == 0 {print ""}'
+```
+
+
 
 ## Timeline Explorer
 
