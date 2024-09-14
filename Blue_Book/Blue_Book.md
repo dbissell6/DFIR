@@ -1277,6 +1277,11 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
 
+### Using exiftool
+
+![image](https://github.com/user-attachments/assets/c9b51c56-0125-46d4-a1dd-131344d2024c)
+
+
 ### PECmd.exe
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
