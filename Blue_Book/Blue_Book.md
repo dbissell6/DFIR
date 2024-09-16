@@ -1569,7 +1569,9 @@ https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer/
 `
 
 
-# Linux logs
+# Linux 
+
+## Logs
 
 Linux logs are an essential source of information for conducting digital forensics and incident response analysis in a CTF competition. There are several types of Linux logs that can be analyzed, including system logs (e.g., syslog), authentication logs (e.g., auth.log), and kernel logs (e.g., dmesg). Each of these logs provides valuable insights into the system's behavior and can help identify signs of intrusion or compromise.
 
@@ -1671,11 +1673,17 @@ sudo grep 'sshd.*Accepted' /var/log/auth.log | awk '{print $(NF-3)}'
 
 
 ## Sus Commands
-chmod, whoami, sudo, netstat ... typical exploit and elevate commands
+chmod, whoami, sudo, netstat ... typical enumeration
 
-vim/nano can be used to make malicious changes to files.
 
-## Persistence using Cronjobs  
+
+## Persistence 
+
+Most persistence mechanisms found in /etc
+
+https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/Hold%20On%20Tight%20Walkthrough.pdf
+
+### Cronjobs  
 
 In Linux, cron is a time-based job scheduler that runs commands at specified intervals. An attacker may use cron to maintain persistence on a compromised system by creating a cronjob to execute a malicious script at regular intervals. This script could be used to create backdoors, steal data, or perform other malicious activities.
 
@@ -1688,6 +1696,15 @@ In Linux, cron is a time-based job scheduler that runs commands at specified int
 
 ![Pasted image 20231122204056](https://github.com/dbissell6/DFIR/assets/50979196/ec65d879-dc6f-4703-ab6c-3ac81f2de8d8)
 
+### LD_PRELOAD
+
+LD_PRELOAD is an environment variable in Linux/Unix systems that allows users to specify a shared library to be loaded before other libraries. This functionality is often exploited by attackers to inject malicious code into legitimate processes.
+
+```
+/etc/ld.so.preload
+```
+
+![image](https://github.com/user-attachments/assets/f0691981-ae65-4567-ac4d-8f601c305d86)
 
 
 # Internet History artifacts
