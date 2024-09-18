@@ -1687,6 +1687,12 @@ https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/Hold%20On%20Tight%20Wal
 
 In Linux, cron is a time-based job scheduler that runs commands at specified intervals. An attacker may use cron to maintain persistence on a compromised system by creating a cronjob to execute a malicious script at regular intervals. This script could be used to create backdoors, steal data, or perform other malicious activities.
 
+Global found in 
+
+```
+/etc/crontab
+```
+
 ```/var/spool/cron```
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b011015a-c38a-4e41-825b-f0e564f6d422)
