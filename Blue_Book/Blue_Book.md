@@ -2448,6 +2448,12 @@ dnSpy is a debugger and .NET assembly editor, which can be used to inspect, debu
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8881de65-03e0-437e-811c-31693517365b)
 
+### dotPeek
+
+dotPeek is a free .NET decompiler and assembly browser developed by JetBrains. It allows forensic analysts and reverse engineers to decompile .NET executables and libraries back into readable C# source code.
+
+![image](https://github.com/user-attachments/assets/dc3919bf-8694-4654-b56f-5a5dbb21634e)
+
 
 ### Procmon
 
