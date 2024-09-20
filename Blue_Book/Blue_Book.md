@@ -4019,8 +4019,15 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform t
 ### Useful Commands & Tools
 - **AWS CLI**: Command line tool for AWS services. Example: Listing S3 buckets with `aws s3 ls`.
 - **EC2 Snapshots**: Create snapshots with `aws ec2 create-snapshot`.
+- **DB Snapshots**: Create snapshots with `CreateDBSnapshot`.
 - **CloudTrail Logs**: Access with AWS Console or `aws cloudtrail lookup-events`.
 - **S3 Data Access**: Download files using `aws s3 cp s3://bucket-name/path/to/object localpath`.
+- **whoami**:  Returns details about the IAM user `GetCallerIdentity`.
+- **Describe**: Returns metadata about running EC2 instances `DescribeInstances`.
+
+- 
+
+- 
 
 #### Using AWS CLI
 
