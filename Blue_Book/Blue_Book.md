@@ -1756,7 +1756,22 @@ appdata/local/google/chrome/User Data/default/History
 
 ### Firefox
 
-\Mozilla\Firefox\ Profiles\xxxxxxxx.default-release\*
+```
+Linux: ~/.mozilla/firefox/<profile_folder>/
+Windows: %APPDATA%\Mozilla\Firefox\Profiles/<profile_folder>/logins.json
+```
+
+#### View passwords
+
+Encrypted passwords are stored in `logins.json`
+
+The keys to decrypt are stored in `key4.db`
+
+![image](https://github.com/user-attachments/assets/256cfb57-921a-4916-8a07-6fe2d9850103)
+
+```
+git clone https://github.com/unode/firefox_decrypt
+```
 
 ### Edge
 
