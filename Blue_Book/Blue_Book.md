@@ -611,11 +611,73 @@ In wireshark
 ![image](https://user-images.githubusercontent.com/50979196/229363428-52f23471-42d6-4f72-855e-4637ce652bee.png)
 Notice very bottom says usage and gives 2 symbols, those are the 2 options depending if shift or caps lock was used.
 
+https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
-To learn a full wirehark tutorial chris greer
+## Data Exfiltration
+
+### ICMP
+
+#### TTL
+
+![image](https://github.com/user-attachments/assets/3d519083-eb5e-456f-9fe3-70d261aa87c9)
+
+![image](https://github.com/user-attachments/assets/a565f90e-27f3-4990-bd7c-213899021f2d)
+
+
+`tshark -r exfiltration_activity_pctf_challenge.pcapng -Y "ip.src == 192.168.237.132 && icmp" -T fields -e ip.ttl | awk '{for(i=1;i<=NF;i++) printf("%c", $i)}`
+
+### TCP
+
+
+#### Flags
+
+`tshark -r abnormal_illegal.pcapng -T fields -e 'tcp.flags.str' 'ip.addr==192.168.237.149'| sort | uniq -c`
+
+`tshark -r abnormal_illegal.pcapng -Y "tcp.flags.syn==1 and tcp.flags.fin==1" -T fields -e tcp.flags`
+
+![image](https://github.com/user-attachments/assets/791805e2-f60c-4193-9e2f-62a7ef6b6300)
+
+![image](https://github.com/user-attachments/assets/f44c2208-35c7-4229-8170-4876354ebd49)
+
+<details>
+
+<summary>Python code to convert flags to binary</summary>
+
+```
+   flag_mapping = {"0x0003": "00", "0x0007": "01", "0x000b": "10", "0x000f": "11"}
+
+# Extract flags from tshark output
+flags = open("flags.txt", "r").readlines()  # Your actual flag data here
+flags = [flag.strip() for flag in flags]
+
+binary = "".join(flag_mapping[flag] for flag in flags)
+print(binary)
+
+def binary_to_ascii(binary_string):
+    # Split the binary string into chunks of 8 bits
+    ascii_chars = [binary_string[i:i+8] for i in range(0, len(binary_string), 8)]
+
+    # Convert each chunk of 8 bits into its ASCII character
+    ascii_string = ''.join([chr(int(b, 2)) for b in ascii_chars])
+
+    return ascii_string
+
+print('')
+
+# Convert to ASCII
+ascii_result = binary_to_ascii(binary)
+
+# Print the result
+print(ascii_result)
+
+```
+
+</details>
+
+
 
 ## Tshark
-Sometimes it is useful to extract data from wireshark, this can be done with tshark
+Sometimes it is useful to extract data from pcaps, this can be done with tshark
 
 ```
 tshark -r capture.pcapng -T fields -e data -Y "!(_ws.expert) && ip.src == 172.17.0.2 && ip.src!=172.17.0.3" > output 
