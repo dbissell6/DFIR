@@ -3413,6 +3413,36 @@ Can also mount with
 
 ![image](https://github.com/user-attachments/assets/68e84cba-abd3-431d-ae90-7d7f3b953501)
 
+## WIM
+
+WIM (Windows Imaging Format)
+
+A WIM file is a disk image format created by Microsoft to store multiple disk images in a single file. It’s commonly used for Windows installation files or backups. The .wim file typically contains the contents of an entire disk or a partition and is used in Windows deployment scenarios.
+
+`wimlib-imagex info budget.wim`
+
+![image](https://github.com/user-attachments/assets/2c933b22-ed0b-4dbc-9d8f-4ba433879991)
+
+To extract
+
+`wimlib-imagex extract budget.wim 1 --dest-dir=./extracted`
+
+![image](https://github.com/user-attachments/assets/b103efb7-974d-4347-9990-3ac58d824f8c)
+
+To mount
+
+`wimlib-imagex mount budget.wim 1 wim_mount`
+
+![image](https://github.com/user-attachments/assets/1f727bd9-cea1-4c15-8f4d-e46735c10123)
+
+
+Can also use 7z to extract everything
+
+![image](https://github.com/user-attachments/assets/5cbc7f1c-83dc-45ce-9dd0-627120332b10)
+
+Useful because will extract and show if files had alternate data streams.
+
+![image](https://github.com/user-attachments/assets/e6b32940-1c77-44c0-916b-1df3878ee852)
 
 
 ## Example fdisk+Mount Windows vhdx
