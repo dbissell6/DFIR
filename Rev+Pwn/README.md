@@ -12,3 +12,5 @@ https://beginners.re/ (this one needs like 1$ i think, worth it)
 
 https://p.ost2.fyi/ (some free courses on this)
 There's also Guided Hacking on YouTube, check their playlists
+
+ https://www.youtube.com/@OALABS
