@@ -692,6 +692,19 @@ tshark -q -r shark2.pcapng -Y "ip.dst == 18.217.1.57 && dns.qry.name" -T fields 
 
 ![image](https://github.com/user-attachments/assets/2198ee96-c378-4b63-8035-f555cec1f83a)
 
+### HTTP
+
+
+#### Cookies
+
+![image](https://github.com/user-attachments/assets/eebdd233-ce84-445f-b4a6-abe3c976debd)
+
+```
+tshark -r httpcookies.pcapng -Y "http.cookie" -T fields -e http.cookie | sed 's/Session=//g' | tr -d '\n' | base64 -d | tail > flag.txt
+```
+
+![image](https://github.com/user-attachments/assets/4ed4d6fa-4913-4a27-819d-61c8800cc2fd)
+
 
 ## Tshark
 Sometimes it is useful to extract data from pcaps, this can be done with tshark
