@@ -628,7 +628,6 @@ https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
 ### TCP
 
-
 #### Flags
 
 `tshark -r abnormal_illegal.pcapng -T fields -e 'tcp.flags.str' 'ip.addr==192.168.237.149'| sort | uniq -c`
@@ -674,6 +673,24 @@ print(ascii_result)
 
 </details>
 
+### DNS
+
+
+#### Subdomains
+
+Common Attack Example: Attackers use the DNS query names (subdomains) to encode data and send it out. For example, requests might look like data1.malicious-domain.com, data2.malicious-domain.com, etc., where data1, data2, and so on contain pieces of the data being exfiltrated.
+
+Notice a bunch of wierd DNS traffic
+
+![image](https://github.com/user-attachments/assets/3d1ff9c0-961c-4d39-99db-d2b84190f3c1)
+
+Use tshark to extract and clean
+
+```
+tshark -q -r shark2.pcapng -Y "ip.dst == 18.217.1.57 && dns.qry.name" -T fields -e dns.qry.name | cut -d'.' -f1 | uniq | tr -d '\n'
+```
+
+![image](https://github.com/user-attachments/assets/2198ee96-c378-4b63-8035-f555cec1f83a)
 
 
 ## Tshark
