@@ -1879,6 +1879,12 @@ The .git directory is a goldmine of information for forensic analysts. It is the
 
 ![316927808-b9eaedbe-5de4-4596-9632-846b17e4d665](https://github.com/dbissell6/DFIR/assets/50979196/89b6c490-d21f-4747-9965-09b79a765fba)
 
+Read through all the commits and grep for specific content within them.
+
+```
+git log --format="%H" | while read commit_hash; do git show "$commit_hash"; done | grep "search_term"
+```
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/bf4f2466-26a3-41f8-9d06-f33f1db83c07)
 
 ## Email
