@@ -1395,6 +1395,29 @@ Shows execution times of programs and might hold Clipboard payloads.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/5943ec9e-eeed-4b94-9796-b3182d55724a)
 
 
+### rdp Bitmap
+
+Found at 
+```
+/Users/*/AppData/Local/Microsoft/Terminal Server Client/Cache/Cache0000.bin
+```
+
+![image](https://github.com/user-attachments/assets/67371897-53f2-494e-a822-3f23d6ee09f6)
+
+-b option will stitch them all as a non organized collage
+
+![image](https://github.com/user-attachments/assets/fb1a2ab1-5a14-4f41-8ff2-791a2351c7b2)
+
+
+```https://github.com/ANSSI-FR/bmc-tools```
+
+Can use this to stitch images together
+
+```
+https://github.com/BSI-Bund/RdpCacheStitcher
+```
+
+
 ### Powershell history
 
 ```
