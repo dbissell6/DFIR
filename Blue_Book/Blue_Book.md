@@ -4076,6 +4076,13 @@ Powershell commands
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-7.4&viewFallbackFrom=powershell-7
 ```
 
+or 
+
+```
+Get-Command
+```
+
+
 ## NirLauncher
 
 NirLauncher is a tool package created by NirSoft that offers a collection of small utilities for various purposes, including system analysis, network monitoring, password recovery, and more. 
