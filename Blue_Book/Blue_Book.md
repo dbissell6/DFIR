@@ -4070,7 +4070,11 @@ Get registry
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/4ce4bb02-38c3-4fee-ad0a-0bfe20c4f347)
 
+Powershell commands
 
+```
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-7.4&viewFallbackFrom=powershell-7
+```
 
 ## NirLauncher
 
