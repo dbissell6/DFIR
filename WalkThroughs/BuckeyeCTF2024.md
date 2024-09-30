@@ -125,7 +125,7 @@ Given a pdf file.
 
 ![Pasted image 20240929122613](https://github.com/user-attachments/assets/b83b73ba-080b-49f3-ad96-a9c19210138a)
 
-It is password protected and partially encrypted. We can still get some information about the file and see its using 
+It is password protected and partially encrypted. We can still get some information about the file and see its using 40-bit encryption. 
 
 ![Pasted image 20240927235257](https://github.com/user-attachments/assets/67c8821b-d5bf-484d-8b46-2d298747b000)
 
