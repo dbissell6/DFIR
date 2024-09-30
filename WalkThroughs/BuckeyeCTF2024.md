@@ -99,7 +99,12 @@ Create the plaintext and run bkcrack
 
 ![Pasted image 20240927185225](https://github.com/user-attachments/assets/798c9d91-f094-461b-94c9-b4d1c123350f)
 
-It cracks, just for fun a pick of a dog
+same command -x 0 saying plaintext hex starting at the beginning of the file.
+
+![image](https://github.com/user-attachments/assets/0d9e979a-ff47-4cca-a704-368875e60eb4)
+
+
+It cracks, just for fun a pic of a dog
 
 ![Pasted image 20240928180744](https://github.com/user-attachments/assets/76b5c495-4627-4bfa-a552-5336b7eaab24)
 
