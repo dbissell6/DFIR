@@ -143,6 +143,12 @@ Now with this key we can keep reading the blog post and Mr Stevens explains he f
 
 ![Pasted image 20240928151700](https://github.com/user-attachments/assets/6dad7dbe-88f2-4145-b200-7fb09133c5be)
 
+OG qpdf was updated. Could have also used
+
+```
+qpdf --password=b895821f14 --password-is-hex-key --decrypt here.pdf unlocked.pdf 
+```
+
 Open the pdf
 
 ![Pasted image 20240928150822](https://github.com/user-attachments/assets/2f766108-8ff9-495a-bea4-54cfd2435e27)
