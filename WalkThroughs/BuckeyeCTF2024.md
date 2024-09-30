@@ -143,7 +143,7 @@ Should look like
 
 ![image](https://github.com/user-attachments/assets/bf1cb0d1-0bd2-4259-9af3-58e09cac9ad0)
 
-The hint in the description tells us that the first byte in the key is `d8`. Using hashcat with this info it cracked in a couple minutes.
+The hint in the description tells us that the first byte in the key is `b8`. Using hashcat with this info it cracked in a couple minutes.
 Without that first byte hint it was expected to take over aday.
 
 ![Pasted image 20240928171501](https://github.com/user-attachments/assets/894f3c68-5025-45b4-919a-9b5ba36b19c3)
