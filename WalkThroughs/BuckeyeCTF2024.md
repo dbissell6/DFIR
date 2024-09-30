@@ -107,6 +107,11 @@ What we really want tho is the password to open up the 7z
 
 ![Pasted image 20240927185434](https://github.com/user-attachments/assets/b8dd4b0b-5c0a-4a8c-8512-7811185c2a31)
 
+We can also use hashcat 
+
+![image](https://github.com/user-attachments/assets/fb15de4f-2b1c-4366-8a54-e6949040cd0b)
+
+
 `7z x important_flags.7z`
 
 ![Pasted image 20240928180658](https://github.com/user-attachments/assets/4cf830c0-e602-4529-81f1-97da3bfc4ee2)
@@ -130,6 +135,14 @@ Reading this series of blog posts gives us all we need to crack it. The key to t
 
 `https://blog.didierstevens.com/2017/12/28/cracking-encrypted-pdfs-part-3/`
 
+First step is to get the hash with john. Hashcat doesnt want the title at the front so we have to take that out.
+
+![image](https://github.com/user-attachments/assets/0f450f95-829a-419e-b22a-a243ea7c475a)
+
+Should look like
+
+![image](https://github.com/user-attachments/assets/bf1cb0d1-0bd2-4259-9af3-58e09cac9ad0)
+
 The hint in the description tells us that the first byte in the key is `d8`. Using hashcat with this info it cracked in a couple minutes.
 Without that first byte hint it was expected to take over aday.
 
@@ -148,6 +161,9 @@ OG qpdf was updated. Could have also used
 ```
 qpdf --password=b895821f14 --password-is-hex-key --decrypt here.pdf unlocked.pdf 
 ```
+Additionally, with the key and hash it is also possible to get the password.
+
+![image](https://github.com/user-attachments/assets/9e077a24-5dd4-4fdb-a688-f26e6b31f099)
 
 Open the pdf
 
