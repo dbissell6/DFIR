@@ -1876,6 +1876,18 @@ Linux: ~/.mozilla/firefox/<profile_folder>/
 Windows: %APPDATA%\Mozilla\Firefox\Profiles/<profile_folder>/logins.json
 ```
 
+#### Places
+
+Stores browsing history, bookmarks, and downloads.
+
+`places.sqlite`
+
+![image](https://github.com/user-attachments/assets/ace37d34-d817-446e-9b99-45854ccedb58)
+
+
+![image](https://github.com/user-attachments/assets/6fc9cbff-f384-4a2f-a2cc-b73983ef4eab)
+
+
 #### View passwords
 
 Encrypted passwords are stored in `logins.json`
@@ -1887,6 +1899,35 @@ The keys to decrypt are stored in `key4.db`
 ```
 git clone https://github.com/unode/firefox_decrypt
 ```
+
+#### Session history
+
+Open tabs and session data from the last session. Can be found in user or `sessionstore-backups`
+
+![image](https://github.com/user-attachments/assets/3da231a9-8a82-464b-a7b2-a125e9926894)
+
+Use `https://jsonlint.com/` to prettify json
+
+![image](https://github.com/user-attachments/assets/8eb85739-d0ca-4d8f-a4aa-ee6f96bd92e4)
+
+![image](https://github.com/user-attachments/assets/68c708cb-8451-43be-bea6-6370ce1fef37)
+
+
+#### formhistory
+
+Stores autocomplete form data entered by the user.
+
+`formhistory.sqlite`
+
+#### Downloads
+
+Logs details of file downloads, including the source URL, download time, and save location.
+
+`downloads.json`
+
+#### Cookies
+
+`cookies.sqlite`
 
 ### Edge
 
