@@ -3625,6 +3625,34 @@ Useful because will extract and show if files had alternate data streams.
 
 ![image](https://github.com/user-attachments/assets/bd3ada11-27a2-455c-8072-41f962a55043)
 
+## Encrypted drive
+
+.vhdx encrypted with bitlocker.
+
+![image](https://github.com/user-attachments/assets/2b162ba9-68f7-47c9-a0c9-97b2bbe02a18)
+
+bit-locker2john
+
+![image](https://github.com/user-attachments/assets/6906fc9e-5f1b-4aa2-b7d7-43ccdf6a4c95)
+
+![image](https://github.com/user-attachments/assets/46e8eddf-b19a-4bc6-8e90-edefdbf4c24e)
+
+
+crack hash with hashcat
+
+`.\hashcat.exe -m 22100 -a 0 C:\Users\Daniel\Desktop\bitlocker.hash C:\Users\Daniel\Desktop\SecLists-2024.3\SecLists-2024.3\Passwords\Leaked-Databases\rockyou-75.txt`
+
+![image](https://github.com/user-attachments/assets/8d49c17e-90bb-4eae-9e26-73a9e9e693d7)
+
+
+Open on windows
+
+![image](https://github.com/user-attachments/assets/71207ce3-fac9-43dd-8a2e-ce8234f11975)
+
+![image](https://github.com/user-attachments/assets/7c6acc7e-bfcf-4c7c-a384-50d927147dcd)
+
+![image](https://github.com/user-attachments/assets/f4c3da31-6a65-4390-87ed-56d32ebd6491)
+
 
 ## Autopsy on Linux
 
