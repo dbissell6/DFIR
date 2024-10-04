@@ -2621,6 +2621,8 @@ First run aaa(analyze all). Then can run commands, here listing functions.
 
 IDA is a leading disassembler and debugger used in software reverse engineering, renowned for its in-depth binary analysis capabilities and interactive interface.
 
+`F5` for decompiling
+
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
 
