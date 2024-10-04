@@ -2750,7 +2750,24 @@ Compare
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b06f0d06-94ba-425a-a581-81598164bd7c)
 
+## Shellcode
 
+Shellcode is a small piece of code used to exploit software vulnerabilities. It's often written in assembly and injected into a program to execute arbitrary commands or manipulate the system, typically by attackers in memory to escalate privileges or perform malicious actions.
+
+### scdbg
+
+scdbg is a shellcode debugger that simulates the execution of shellcode within a controlled environment, detecting shellcode actions like API calls, memory access, and system changes to analyze its behavior without direct execution.
+
+![image](https://github.com/user-attachments/assets/15deb55a-4758-4e3c-89d1-77242e71f7bf)
+
+
+### Speakeasy
+
+Speakeasy is a dynamic binary emulation tool that allows the execution of malware in a sandboxed environment. It’s used for analyzing and understanding malware without directly executing it, useful for reverse engineering and identifying malicious behaviors.
+
+`https://github.com/mandiant/speakeasy`
+
+![image](https://github.com/user-attachments/assets/64c46a42-5cb8-4643-bf0a-2a79cfa16004)
 
 
 ## Sandboxes
