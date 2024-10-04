@@ -3739,7 +3739,10 @@ Alternate Data Streams are a feature of the NTFS file system that allows multipl
 
 ![Pasted image 20230930160904](https://github.com/dbissell6/DFIR/assets/50979196/368a57fb-5a68-402a-9c9c-8399380caf9f)
 
-On linux can also use 7z x to extract /parse the streams
+On linux can also use `7z x` to extract /parse the streams
+
+![image](https://github.com/user-attachments/assets/bb1e2e3f-cfc5-4303-a4ed-316e87c917d0)
+
 
 ## PowerForensics
 
