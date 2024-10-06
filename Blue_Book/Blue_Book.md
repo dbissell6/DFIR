@@ -172,7 +172,7 @@ Decrypt encrypted A with key (K)
 ```
 
 <details>
-<summary> Code: Python code to mess arount with xor </summary>
+<summary> Code: Python code to mess around with xor </summary>
 
 
 ```
@@ -202,6 +202,64 @@ Cyberchef example
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/ca5d693d-b14c-4498-afa4-16eee91ece0c)
 
+### AES
+
+Often aes messages will have the first 16 bytes of the message contain the IV.
+
+<details>
+
+<summary>Python code inputs file and key. Automatically parses out IV</summary>
+
+
+```
+   from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
+import hashlib
+import os
+
+def decrypt_aes_file(key, input_file_path, output_file_path):
+    # Read the input file
+    with open(input_file_path, 'rb') as f:
+        data = f.read()
+
+    # Extract the IV and ciphertext from the input data
+    iv = data[:16]   # First 16 bytes for IV
+    ciphertext = data[16:]  # Rest is the ciphertext
+
+    # Derive the AES key using SHA256
+    derived_key = hashlib.sha256(key.encode()).digest()
+
+    # Create the AES cipher object with CBC mode
+    cipher = AES.new(derived_key, AES.MODE_CBC, iv)
+
+    # Decrypt the data
+    decrypted_data = cipher.decrypt(ciphertext)
+
+    try:
+        # Unpad the decrypted data using PKCS7 padding
+        decrypted_data = unpad(decrypted_data, AES.block_size)
+
+        # Write the decrypted data to the output file
+        with open(output_file_path, 'wb') as f_out:
+            f_out.write(decrypted_data)
+
+        print(f"Decryption successful! Output saved to {output_file_path}")
+
+    except ValueError as e:
+        print(f"Decryption failed: {e}")
+
+if __name__ == "__main__":
+    # Input the key, file paths
+    key = input("Enter the key: ")
+    input_file = input("Enter the path of the encrypted file: ")
+    output_file = input("Enter the path where decrypted output should be saved: ")
+
+    # Call the decryption function
+    decrypt_aes_file(key, input_file, output_file)
+                                                      
+```
+
+</details>
 
 ### OpenSSL
 
