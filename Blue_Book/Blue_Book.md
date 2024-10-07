@@ -2397,6 +2397,15 @@ To exploit
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/c4cc4f94-474a-4b1a-89b9-88d813532014)
 
+Another store example
+
+Add plaintext to file and zip it with `-0` 
+
+![image](https://github.com/user-attachments/assets/41780e74-6b4a-4d53-8b6d-0b4c5afad430)
+
+can run pointint at index
+
+![image](https://github.com/user-attachments/assets/c0134c8a-ff7f-406d-b9a8-035e8b1cc99d)
 
 # Reconstructing 
 
