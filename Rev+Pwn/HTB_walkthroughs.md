@@ -96,5 +96,22 @@ int strcmp(const char *s1, const char *s2) {
 
 # Eat The Cake
 
+Given .exe, UPX compressed
+
+![image](https://github.com/user-attachments/assets/1517b7e2-9179-48f7-814e-65241a99c65b)
+
+![image](https://github.com/user-attachments/assets/0bc74b9b-c51b-464b-8417-eb12b1e8a320)
+
+Can find logic 
+
+![image](https://github.com/user-attachments/assets/f2ca5a4d-f27c-4e98-afa2-6c7b00198398)
+
+password length 10 has no checks, 15 only checks if characters are right. In the first check we only see 11 letters. Opening up the function that defines var 2 we can see the last 4 letters.
+
+![image](https://github.com/user-attachments/assets/483bae80-6689-4b75-b775-429beeeab281)
+
+Put these in order and have.
+
+`h@ckth3parad1$E`
 
 
