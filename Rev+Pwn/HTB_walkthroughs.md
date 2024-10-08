@@ -131,7 +131,7 @@ Testing the exe out with wrong password we see that is what is displayed if we g
 
 `HTB{fortran!}`
 
-# hisss
+# HIssss
 
 Given ELF, synamically linked
 
