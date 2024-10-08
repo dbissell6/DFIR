@@ -179,3 +179,21 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 ![image](https://github.com/user-attachments/assets/0d2ab81f-3496-4e92-8b8b-3bc0db4016ba)
 
 `HTB{Sleping_is_not_obfuscation}`
+
+# You Cant C Me
+
+Given ELF, dynamically linked
+
+![image](https://github.com/user-attachments/assets/130c4cd7-6820-4f76-9722-e2a8e3e363dd)
+
+Running it allows for input, any input replies you cant see me and kills it
+
+![image](https://github.com/user-attachments/assets/efa6a45b-27f2-4dcb-9d21-2318ea4f1c4e)
+
+Opening it up in ghidra we can see there is some password, maybe as a decoy? and a strcmp. We can hook that str comp
+
+![image](https://github.com/user-attachments/assets/22299287-5c22-4442-912e-31878b595d21)
+
+`HTB{wh00ps!_y0u_d1d_c_m3}`
+
+
