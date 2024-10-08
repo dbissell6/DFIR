@@ -131,3 +131,34 @@ Testing the exe out with wrong password we see that is what is displayed if we g
 
 `HTB{fortran!}`
 
+# hisss
+
+Given ELF, synamically linked
+
+![image](https://github.com/user-attachments/assets/d2d26565-0653-4a4a-993f-2f376480b037)
+
+Running strings notice lots of python 
+
+![image](https://github.com/user-attachments/assets/549538e5-3568-457a-95e8-fa30c3b12e7e)
+
+Slightly broken
+
+![image](https://github.com/user-attachments/assets/2e931c0f-c589-4aeb-a376-4377eb30a30c)
+
+This is better
+
+![image](https://github.com/user-attachments/assets/ba92b453-c62d-46c7-8657-abdd21ea6e17)
+
+
+![image](https://github.com/user-attachments/assets/496876da-399f-4f78-a5d7-1a123775aa03)
+
+Little suduko like logic puzzle.
+
+![image](https://github.com/user-attachments/assets/a1ca7891-0831-43c7-8f96-8013cb4fef4f)
+
+
+![image](https://github.com/user-attachments/assets/be5e2320-1318-48fe-8bf9-4b628d441314)
+
+
+`HTB{0p3n_s3sam3!}`
+
