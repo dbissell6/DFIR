@@ -112,6 +112,22 @@ password length 10 has no checks, 15 only checks if characters are right. In the
 
 Put these in order and have.
 
-`h@ckth3parad1$E`
+`HTB{h@ckth3parad1$E}`
 
+# Find the Easy Pass
+
+Given .exe
+
+![image](https://github.com/user-attachments/assets/27c400ff-d6cf-42cc-9f4b-69519dd0f29b)
+
+Testing the exe out with wrong password we see that is what is displayed if we get it wrong. So we can search these strings to find the functionality/logic to determine if our password is correct or not 
+
+![image](https://github.com/user-attachments/assets/82693118-2d0b-4da1-bf1b-9cabcbd8db9e)
+
+![image](https://github.com/user-attachments/assets/430df19a-24d3-46df-88dc-4150e6e2261d)
+
+
+![image](https://github.com/user-attachments/assets/3ffe41d2-34c3-4ec3-9eb2-44558e7fedbb)
+
+`HTB{fortran!}`
 
