@@ -162,3 +162,20 @@ Little suduko like logic puzzle.
 
 `HTB{0p3n_s3sam3!}`
 
+# ouija
+
+![image](https://github.com/user-attachments/assets/4fae3cf5-abae-454d-99cb-30055e5dee11)
+
+Looking into the binary it looks like it will give you the flag if you wait long enough. It runs the code with a bunch of sleeps. 
+
+![image](https://github.com/user-attachments/assets/b7efcc31-ae66-4116-84d5-1c7d21526b43)
+
+![image](https://github.com/user-attachments/assets/585a8ba3-23db-4e5c-9e24-90da62d60db4)
+
+We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0. 
+
+![image](https://github.com/user-attachments/assets/27a7775d-465e-48cf-9014-e8197836a404)
+
+![image](https://github.com/user-attachments/assets/0d2ab81f-3496-4e92-8b8b-3bc0db4016ba)
+
+`HTB{Sleping_is_not_obfuscation}`
