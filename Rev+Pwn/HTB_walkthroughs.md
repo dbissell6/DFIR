@@ -162,6 +162,22 @@ Little suduko like logic puzzle.
 
 `HTB{0p3n_s3sam3!}`
 
+# Hunting License
+
+Given ELF, dynamically linked
+
+![image](https://github.com/user-attachments/assets/89e126b9-2d34-4bf8-ab80-1d3364b67c87)
+
+Can use ltrace to find the passwords
+
+![image](https://github.com/user-attachments/assets/8d109f34-aefb-448d-828c-7203438742b9)
+
+
+![image](https://github.com/user-attachments/assets/f48dac2c-98c9-478f-a136-ab80dfabfcd4)
+
+![image](https://github.com/user-attachments/assets/dc03a541-a0bd-4c25-b389-4dc7c4e4c900)
+
+
 # ouija
 
 ![image](https://github.com/user-attachments/assets/4fae3cf5-abae-454d-99cb-30055e5dee11)
@@ -180,6 +196,25 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 `HTB{Sleping_is_not_obfuscation}`
 
+# Potion Master
+
+Given .hs
+
+
+
+# TearOrDear
+
+Given .exe, .NET
+
+![image](https://github.com/user-attachments/assets/f9eb17f7-211d-40e6-b083-6241b74775d6)
+
+Trying to run it get a login form
+
+![image](https://github.com/user-attachments/assets/ce53d32a-089c-4016-806b-4e8e86a6fa38)
+
+Open it up in dotPeek
+
+
 # You Cant C Me
 
 Given ELF, dynamically linked
@@ -196,6 +231,11 @@ Opening it up in ghidra we can see there is some password, maybe as a decoy? and
 
 
 ![image](https://github.com/user-attachments/assets/22299287-5c22-4442-912e-31878b595d21)
+
+LD is really more useful for memcmp becasue strcmp will show up in ltrace
+
+![image](https://github.com/user-attachments/assets/6b274d03-329f-4f11-84e8-8fd7c512130e)
+
 
 `HTB{wh00ps!_y0u_d1d_c_m3}`
 
