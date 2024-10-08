@@ -192,6 +192,9 @@ Running it allows for input, any input replies you cant see me and kills it
 
 Opening it up in ghidra we can see there is some password, maybe as a decoy? and a strcmp. We can hook that str comp
 
+![image](https://github.com/user-attachments/assets/694e9355-6a83-40b7-a655-414889d52e7d)
+
+
 ![image](https://github.com/user-attachments/assets/22299287-5c22-4442-912e-31878b595d21)
 
 `HTB{wh00ps!_y0u_d1d_c_m3}`
