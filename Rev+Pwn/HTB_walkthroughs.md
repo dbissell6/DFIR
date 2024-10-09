@@ -238,6 +238,27 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 Given .hs
 
+# Sekure Decrypt
+
+Given ELF, core dump and c source code
+
+![image](https://github.com/user-attachments/assets/171180ce-0779-4738-91bc-03dfae47726a)
+
+Looking into the c source we can see 2 important things
+
+mcrypt aes-128 is the algo
+
+![image](https://github.com/user-attachments/assets/a29b00cc-898c-422e-8107-acff4b00278a)
+
+iv = AAAAAAAAAAAAAAAA
+
+![image](https://github.com/user-attachments/assets/c68d2aa3-066b-4926-a80a-017a31fcbc99)
+
+should be able to open in gdb with, but i cant becasue the libraries are old and deprecated.
+
+`gdb ./dec ./core`
+
+
 # Secured Transfer
 
 Given ELF, dynamically linked and pcap
