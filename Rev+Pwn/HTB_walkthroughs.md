@@ -131,6 +131,14 @@ Testing the exe out with wrong password we see that is what is displayed if we g
 
 `HTB{fortran!}`
 
+# Golfer
+
+Given ELF
+
+![image](https://github.com/user-attachments/assets/cd937f25-8f37-4242-bb88-95153fc31023)
+
+
+
 # HIssss
 
 Given ELF, synamically linked
