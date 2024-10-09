@@ -238,7 +238,36 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 Given .hs
 
+# Secured Transfer
 
+Given ELF, dynamically linked and pcap
+
+![image](https://github.com/user-attachments/assets/877574ba-a823-4c04-aa2a-86b599a05807)
+
+Running strings can see some libraries to network and encrypt
+
+![image](https://github.com/user-attachments/assets/102c2bd0-f015-4a42-a47b-4f82c2d22e1e)
+
+As expected pcap looks encrypted
+
+![image](https://github.com/user-attachments/assets/667757cb-913d-4695-98f3-b65401c7961f)
+
+Ghidra does a bad job parsing the key. I could run this again to it dyunmaically and hook the library, but its version 1.1 and we are up to 3 and i dont want to worry about reverting.
+
+Luckily binary ninja does a good job parseing the key and iv
+
+![image](https://github.com/user-attachments/assets/bb5b70b9-d8f0-4a18-87b2-648d5606006d)
+
+Pull the message out out wireshark
+
+![image](https://github.com/user-attachments/assets/991eb8fb-a668-4c7e-adbd-18e778947d77)
+
+Decrypt in wireshark
+
+![image](https://github.com/user-attachments/assets/a7fc3754-1f65-40d2-8aab-eaa2db59e7ac)
+
+
+`HTB{3ncRyPt3d_F1LE_tr4nSf3r}`
 
 # TearOrDear
 
