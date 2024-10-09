@@ -178,6 +178,25 @@ Can use ltrace to find the passwords
 ![image](https://github.com/user-attachments/assets/dc03a541-a0bd-4c25-b389-4dc7c4e4c900)
 
 
+# IRCWare
+
+Given ELF, dynamically linked
+
+![image](https://github.com/user-attachments/assets/d60ffe3d-989e-492f-87b1-10c791eeebc3)
+
+
+
+Check dynamically run it with wireshark on. see its reaching out to a local connection on port 8000
+
+![image](https://github.com/user-attachments/assets/e76a3b46-31e3-4dad-8336-0fd64ffa04ca)
+
+set up a listener and run again
+
+![image](https://github.com/user-attachments/assets/c4925f72-c63c-4fe4-9168-65a1eec33c49)
+
+
+
+
 # ouija
 
 ![image](https://github.com/user-attachments/assets/4fae3cf5-abae-454d-99cb-30055e5dee11)
@@ -213,6 +232,24 @@ Trying to run it get a login form
 ![image](https://github.com/user-attachments/assets/ce53d32a-089c-4016-806b-4e8e86a6fa38)
 
 Open it up in dotPeek
+
+
+# The Art of Reversing
+
+Given .exe
+
+![image](https://github.com/user-attachments/assets/49f45cba-baa1-485c-8904-3870ed369356)
+
+
+Run the exe see it gives us a product key after entering `name` and `Activation Days`
+
+![image](https://github.com/user-attachments/assets/6e26f8ba-cf55-40c2-9c11-4d4a2a508ff0)
+
+Running strings + grepping net, notice its probably .net
+
+![image](https://github.com/user-attachments/assets/10208363-7514-4214-ae0f-1bdb4a9f8aae)
+
+
 
 
 # You Cant C Me
