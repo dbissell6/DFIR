@@ -238,6 +238,32 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 Given .hs
 
+# Rebuilding
+
+Given ELF, dynamically linked
+
+![image](https://github.com/user-attachments/assets/8bfe7d47-fb3a-45b7-905d-a29ad5c4e18d)
+
+Decompiling in Ghidra we can see xor
+
+![image](https://github.com/user-attachments/assets/d7505548-b9c4-4875-87c5-5edba6d5aba5)
+
+In Binary Ninja can see the encrypted string and key.
+
+![image](https://github.com/user-attachments/assets/3ec2ac78-9ecb-4c07-8183-74e8b5b40908)
+
+But looking more into it, the key isnt really the key, its a dictionary to get characters from different values
+
+![image](https://github.com/user-attachments/assets/0a0fdd3e-a3fd-4cff-915e-5ca2cee99f20)
+
+![image](https://github.com/user-attachments/assets/330ebd14-3c4d-4781-adb5-95fd52446d7e)
+
+
+![image](https://github.com/user-attachments/assets/c11658ba-1a9e-4d09-94a9-adcc7d28a588)
+
+
+`HTB{h1d1ng_c0d3s_1n_c0nstruct0r5}`
+
 # Sekure Decrypt
 
 Given ELF, core dump and c source code
