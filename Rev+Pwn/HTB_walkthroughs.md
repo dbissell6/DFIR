@@ -335,6 +335,37 @@ Manually order them :(
 
 `HTB{br0k3n_4p4rt...n3ver_t0_b3_r3p41r3d}`
 
+# Snakecode
+
+Given .pyc, Python 2.7
+
+![image](https://github.com/user-attachments/assets/5dec6fa5-3a4d-4e40-a93e-673a47ba4be3)
+
+![image](https://github.com/user-attachments/assets/b2d6ac0d-8fdd-4c9d-83db-d96dd22402ca)
+
+
+Trying to understand what the marshal function is doing. 
+
+The marshal module in Python is used to serialize and deserialize Python objects into a binary format, which can then be loaded and executed as part of the program. 
+
+![image](https://github.com/user-attachments/assets/30da102d-6346-4a4d-8bb3-b4951a327358)
+
+
+![image](https://github.com/user-attachments/assets/e48c4392-d638-4f30-9226-fefa03ce612a)
+
+Can see that it base64 decodes then zlibs it
+
+Use a similar code as og marshal
+
+![image](https://github.com/user-attachments/assets/6d378728-05b6-4b76-a8c8-ddc96b17fe90)
+
+
+![image](https://github.com/user-attachments/assets/ac761dc2-51eb-46c5-928d-7d50fda1008b)
+
+![image](https://github.com/user-attachments/assets/54ad43c0-b796-4522-8a9d-363e91a481da)
+
+`HTB{SuP3r_S3CRt_Sn4k3c0d3} `
+
 # TearOrDear
 
 Given .exe, .NET
