@@ -316,6 +316,25 @@ Decrypt in wireshark
 
 `HTB{3ncRyPt3d_F1LE_tr4nSf3r}`
 
+# Shattered Tablet
+
+Given Elf, dynamically linked
+
+![image](https://github.com/user-attachments/assets/dd21d451-697f-4080-95b4-04cc48a1910e)
+
+Can see it check a string of letters, of course they are mixed up. 
+
+![image](https://github.com/user-attachments/assets/2ddb8d0d-3e55-482f-8106-f088f6404abf)
+
+Manually order them :(
+
+![image](https://github.com/user-attachments/assets/3760f0c7-0862-438d-b504-cee81d6b4d61)
+
+
+![image](https://github.com/user-attachments/assets/879e0971-ba4b-4eb5-9d85-f38d4a061086)
+
+`HTB{br0k3n_4p4rt...n3ver_t0_b3_r3p41r3d}`
+
 # TearOrDear
 
 Given .exe, .NET
