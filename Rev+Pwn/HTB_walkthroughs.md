@@ -190,12 +190,31 @@ Check dynamically run it with wireshark on. see its reaching out to a local conn
 
 ![image](https://github.com/user-attachments/assets/e76a3b46-31e3-4dad-8336-0fd64ffa04ca)
 
+Can also see it reaching out with strace
+
+![image](https://github.com/user-attachments/assets/4a40f0ac-95b9-4db5-8cb3-8eb546f7e98e)
+
 set up a listener and run again
 
 ![image](https://github.com/user-attachments/assets/c4925f72-c63c-4fe4-9168-65a1eec33c49)
 
 
+Looking at decompiled code in Ghidra see the entry function. First syscall is to connect.
 
+![image](https://github.com/user-attachments/assets/8757b0ca-98c5-4c1b-91eb-bb41cd08cad5)
+
+One function sticks out to be the main logic of the program. We can see there is an option for inputting a password, then either selecting a command or printing the flag.
+
+Format for commands are `PRIVMSG #secret :@exec`
+
+![image](https://github.com/user-attachments/assets/91d497d1-58c2-4420-9512-cc15730dc018)
+
+
+
+![image](https://github.com/user-attachments/assets/2592a129-ccf0-46b8-9fa0-1bcf51708186)
+
+
+`HTB{m1N1m411st1C_fL4g_pR0v1d3r_b0T}`
 
 # ouija
 
