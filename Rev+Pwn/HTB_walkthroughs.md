@@ -248,7 +248,18 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 `HTB{Sleping_is_not_obfuscation}`
 
-# MR Abilgate
+# Malception
+
+Given pcap
+
+![image](https://github.com/user-attachments/assets/7d57e165-9558-464b-b602-58aee2df0433)
+
+This looks sus
+
+![image](https://github.com/user-attachments/assets/a056c19a-f05f-4b50-9558-3e468c1f589f)
+
+
+# Mr. Abilgate
 
 Given .exe 
 
