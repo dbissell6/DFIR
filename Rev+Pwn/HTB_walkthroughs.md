@@ -386,6 +386,106 @@ Trying to run it get a login form
 
 Open it up in dotPeek
 
+# Teleport
+
+Given ELF, dynamically linked, stripped
+
+![image](https://github.com/user-attachments/assets/4c1b37d6-7f72-4139-ac87-7df36e423eb0)
+
+Notice that all reference are pointing to this section.
+
+![image](https://github.com/user-attachments/assets/e5dec727-3fc2-4bab-a2cc-408bcf943b18)
+
+Follow a reference and notice each function looks like this. Looking at the first 3
+
+If data == 0x48
+
+![image](https://github.com/user-attachments/assets/32c4eae5-884b-432c-9875-323b5fa1a41e)
+
+
+If data == 0x54
+
+![image](https://github.com/user-attachments/assets/81996a21-eec2-46a3-8537-ed134d372ad8)
+
+
+If data == 0x42
+
+![image](https://github.com/user-attachments/assets/725e8385-76fd-4aac-a00b-f209bf785480)
+
+
+![image](https://github.com/user-attachments/assets/5d060e4e-b6a1-495e-8b8b-4a26d4646ba8)
+
+The plan, get all the function conditionals and the order they should be in. Create a python script to go line by line in the order text, and if the data is in the data text add it to the final text
+
+Data/conditionals text
+
+![image](https://github.com/user-attachments/assets/92b76e7a-3128-4889-9557-728fd71be6c2)
+
+The correct order text
+
+![image](https://github.com/user-attachments/assets/dcfe26ec-80ea-4274-a322-899b2b82b2e1)
+
+Python script
+
+![image](https://github.com/user-attachments/assets/897227bc-70f0-4748-95fc-881d98822bc6)
+
+
+<details>
+
+<summary>Python script to order data </summary>
+
+```
+# Open the order and data files
+with open('onlyorder.txt', 'r') as order_file, open('only_data.txt', 'r') as data_file:
+    # Read the content of both files
+    order_lines = order_file.readlines()
+    data_lines = data_file.readlines()
+
+# Create a list to store the final output
+final_output = []
+
+# Iterate over each line in the order file
+for order_line in order_lines:
+    # Extract the data_xxxxx value from the order line
+    if "data_" in order_line:
+        #print(order_line)
+        order_line = order_line.strip()
+        # Iterate over each line in the data file
+        for data_line in data_lines:
+            print(order_line,data_line)
+            # Check if the order data matches any line in the data file
+            if order_line in data_line:
+                print(data_line)
+                final_output.append(data_line.strip())
+                break  # Stop searching once a match is found
+
+# Write the final output to a new file
+with open('final_output.txt', 'w') as output_file:
+    for line in final_output:
+        output_file.write(line + '\n')
+
+print("Final output written to final_output.txt")
+
+```
+
+</details>
+
+
+final output
+
+![image](https://github.com/user-attachments/assets/37fa9359-9bf6-48c7-9fd1-49a1b9652401)
+
+
+with awk
+
+![image](https://github.com/user-attachments/assets/bf871a2a-76d6-424d-96ad-dc696b309e5e)
+
+
+Cyberchef
+
+![image](https://github.com/user-attachments/assets/dc0f544a-a96f-44f0-bd65-6df6465626e0)
+
+`HTB{jump1ng_thru_th3_sp4c3_t1m3_c0nt1nuum!}`
 
 # The Art of Reversing
 
