@@ -374,6 +374,61 @@ Manually order them :(
 
 `HTB{br0k3n_4p4rt...n3ver_t0_b3_r3p41r3d}`
 
+## Angr extra
+
+Start Docker and mount working directory
+
+`
+docker run -it -v /home/kali/Desktop/HTB_rev_prac/rev_shattered_tablet:/mnt angr/angr
+`
+Find addresses for conditions
+
+![image](https://github.com/user-attachments/assets/7b046673-0a23-4063-bcc8-bed8d450aac4)
+
+
+
+<details>
+
+<summary>Python + angr script </summary>
+
+```
+import angr
+
+# Initialize the project with the binary file
+# The 'auto_load_libs=False' option prevents angr from loading standard libraries,
+# making the analysis faster as we focus only on the binary itself.
+p = angr.Project('./tablet', auto_load_libs=False)
+
+# Create the initial state of the program from its entry point
+initial_state = p.factory.entry_state()
+
+# Create a simulation manager to explore the binary
+simgr = p.factory.simulation_manager(initial_state)
+
+# Define the addresses for success and failure
+# 'find' is the address where "Yes! That's right!" is printed (indicating success).
+# 'avoid' is the address where "No... not that" is printed (indicating failure).
+success_addr = 0x401371  # Adjusted for the PIE binary (0x1371 + 0x400000)
+failure_addr = 0x401378  # Adjusted for the PIE binary (0x1378 + 0x400000)
+
+# Start the exploration, aiming to find the success path while avoiding failure paths
+simgr.explore(find=success_addr, avoid=failure_addr)
+
+# If a solution is found, dump the input that leads to the success path
+if simgr.found:
+    solution_state = simgr.found[0]
+    solution = solution_state.posix.dumps(0)  # Dumps the stdin (file descriptor 0) that satisfies the condition
+    print(f"Found solution: {solution.decode('utf-8', errors='ignore')}")
+else:
+    print("No valid path found.")
+                                         
+```
+
+</details>
+
+![image](https://github.com/user-attachments/assets/fcc55bd2-c266-4e51-8062-ee18c4713a1a)
+
+
 # Spooky License
 
 Given ELF, dynamically linked, stripped
