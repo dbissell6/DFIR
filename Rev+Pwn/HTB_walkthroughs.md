@@ -691,8 +691,76 @@ Running strings + grepping net, notice its probably .net
 
 ![image](https://github.com/user-attachments/assets/10208363-7514-4214-ae0f-1bdb4a9f8aae)
 
+# The Vault
+
+Given ELF, dynamically linked, stripped
+
+![image](https://github.com/user-attachments/assets/11131975-cb4d-4aae-af63-e8781582a5b0)
+
+Right off the bat notice that the binary is looking for a flag.txt
+
+![image](https://github.com/user-attachments/assets/4fb76bc4-1b37-4bfc-90ba-9680b8f0cc90)
+
+If it doesnt find it then it says `Could not find credentials`
+
+![image](https://github.com/user-attachments/assets/7600f30c-bd6f-47fc-9ce8-2d9993d8f43c)
+
+Now we get an `Incorrect Credentials`
+
+Alright lets check the binary
+
+![image](https://github.com/user-attachments/assets/6140142e-eaa4-4c10-a04e-43a4e7afac1e)
+
+Things to notice
+
+VTable Mechanism: The comparison function uses a virtual table (vtable) to dynamically fetch expected characters from function pointers.
 
 
+
+<details>
+
+<summary>Python solve script</summary>
+
+```
+#!/usr/bin/env python3
+
+from pwn import process
+
+
+def main():
+    p = process(['gdb', '-q', 'vault'])
+    gef = b'gef\xe2\x9e\xa4  \x01\x1b[0m\x02'
+
+    p.sendlineafter(gef, b'break *0x5555555603a1')
+    p.sendlineafter(gef, b'run')
+
+    flag = []
+    prog = p.progress('Flag')
+
+    for _ in range(0x19):
+        prog.status(''.join(flag))
+        p.sendlineafter(gef, b'set $rax = $rcx')
+        p.sendlineafter(gef, b'p/c $rax')
+
+        al = p.recvline().decode().strip().split()[-1]
+        flag.append(chr(int(al, 16)))
+
+        p.sendlineafter(gef, b'continue')
+
+    prog.success(''.join(flag))
+
+
+if __name__ == '__main__':
+    main()
+                
+```
+</details>
+
+
+
+![image](https://github.com/user-attachments/assets/5e401314-be30-489a-9eb8-2ae0d8accfb1)
+
+`HTB{vt4bl3s_4r3_c00l_huh}`
 
 # You Cant C Me
 
