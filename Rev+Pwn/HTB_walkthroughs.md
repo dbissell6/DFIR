@@ -293,6 +293,27 @@ https://www.hackthebox.com/blog/business-ctf-2022-write-up-mr-abilgate
 
 Given .hs
 
+# Pseudo
+
+Given ELF, statically linked
+
+![image](https://github.com/user-attachments/assets/20138a6f-8bb8-4d8f-96dd-46fa770dd85c)
+
+Running strings notice UPX
+
+![image](https://github.com/user-attachments/assets/10061b4a-472e-4f8e-89fb-9e84a2f755dd)
+
+Strings again
+
+![image](https://github.com/user-attachments/assets/b47deafd-8008-46fa-9376-47e2b36aa401)
+
+![image](https://github.com/user-attachments/assets/e8a8d7f7-2041-4e07-9be6-add75b7bf2f1)
+
+![image](https://github.com/user-attachments/assets/4e9859d6-65b3-458a-a99d-dc5d100db10e)
+
+
+
+
 # Rebuilding
 
 Given ELF, dynamically linked
