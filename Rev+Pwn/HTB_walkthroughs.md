@@ -94,6 +94,22 @@ int strcmp(const char *s1, const char *s2) {
 
 `HTB{B4BY_R3V_TH4TS_EZ}`
 
+# Cyber Psychosis
+
+Given ELF
+
+![image](https://github.com/user-attachments/assets/aac2017c-49d6-49a9-8a20-c9589c8b53fd)
+
+This hex translates to psychosis. Rootkits typically will hook basic functions like ls, disabling the from returning the rootkits folder or file. Getdents64 would be a good place to implement this. 
+
+![image](https://github.com/user-attachments/assets/35123e5c-ba5b-4b35-91e5-6843541d0f0c)
+
+I started to try to cat psychosis
+
+![image](https://github.com/user-attachments/assets/96cadf89-51e4-43c2-b4c3-e1279340c433)
+
+``
+
 # Eat The Cake
 
 Given .exe, UPX compressed
