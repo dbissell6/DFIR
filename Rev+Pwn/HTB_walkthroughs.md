@@ -384,6 +384,10 @@ License format should be length 32
 
 ![image](https://github.com/user-attachments/assets/0426c58d-05e2-4b32-a0f6-be2fbec7a61c)
 
+Wowzers
+
+![image](https://github.com/user-attachments/assets/74fa1b5f-2d82-4f77-b921-dc528588b8b1)
+
 
 Im not doing this manually time to spend an hour downloading and learning angr
 
@@ -399,10 +403,15 @@ docker run -it angr/angr
 docker run -it -v /home/kali/Desktop/HTB_rev_prac/rev_spookylicence:/mnt angr/angr
 
 #To stop Docker
-
+exit
 
 
 ```
+In this challenge, the binary consists of one large block of conditions that compares the input flag to specific values. By using angr, we can:
+
+Symbolize the flag: Represent the 32-character flag as a symbolic value that angr can manipulate.
+Explore the binary's paths: Automatically find the path where the program prints "License Correct", while avoiding paths that lead to "License Invalid".
+Solve complex conditions: angr’s SMT solver helps us automatically determine the valid flag that satisfies all the binary’s checks without needing to manually analyze each condition.
 
 <details>
 
@@ -444,6 +453,10 @@ else:
              
 ```
 </details>
+
+![image](https://github.com/user-attachments/assets/2c78e5d5-0c11-428e-a9de-32b27107af3a)
+
+
 
 `HTB{The_sp0000000key_liC3nC3K3Y}`
 
