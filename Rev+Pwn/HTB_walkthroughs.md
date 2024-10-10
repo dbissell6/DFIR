@@ -242,6 +242,20 @@ We can patch the sleeps out in ghidra. Or atleast set the sleep time to 0.
 
 `HTB{Sleping_is_not_obfuscation}`
 
+# MR Abilgate
+
+Given .exe 
+
+![image](https://github.com/user-attachments/assets/2dc52d6b-b084-42ab-a454-6fc71355dad1)
+
+Running strings on keystorage.exe notice 2 things, looking if debugger is present and UPX
+
+![image](https://github.com/user-attachments/assets/1406e10a-089b-4a3a-94a6-44ccd8a830de)
+
+
+
+https://www.hackthebox.com/blog/business-ctf-2022-write-up-mr-abilgate
+
 # Potion Master
 
 Given .hs
