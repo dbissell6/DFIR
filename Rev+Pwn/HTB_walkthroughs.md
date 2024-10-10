@@ -131,6 +131,12 @@ Testing the exe out with wrong password we see that is what is displayed if we g
 
 `HTB{fortran!}`
 
+# Flag Casino 
+
+Given ELF
+
+https://github.com/hackthebox/business-ctf-2024/tree/main/reversing/%5BVery%20Easy%5D%20FlagCasino
+
 # Golfer
 
 Given ELF
