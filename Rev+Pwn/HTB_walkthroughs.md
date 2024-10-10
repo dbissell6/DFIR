@@ -374,6 +374,80 @@ Manually order them :(
 
 `HTB{br0k3n_4p4rt...n3ver_t0_b3_r3p41r3d}`
 
+# Spooky License
+
+Given ELF, dynamically linked, stripped
+
+![image](https://github.com/user-attachments/assets/9d2e0210-555e-4781-84c4-016b4fa1777c)
+
+License format should be length 32
+
+![image](https://github.com/user-attachments/assets/0426c58d-05e2-4b32-a0f6-be2fbec7a61c)
+
+
+Im not doing this manually time to spend an hour downloading and learning angr
+
+```
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+docker pull angr/angr
+docker run -it angr/angr
+#OR to mount the folder we are in
+docker run -it -v /home/kali/Desktop/HTB_rev_prac/rev_spookylicence:/mnt angr/angr
+
+#To stop Docker
+
+
+
+```
+
+<details>
+
+<summary>Python + angr script </summary>
+
+```
+import angr
+import claripy
+
+# Load the binary
+proj = angr.Project('/mnt/spookylicence', auto_load_libs=False)
+
+# Create a symbolic bitvector for the flag (32 bytes, 256 bits)
+flag = claripy.BVS('flag', 8 * 32)
+
+# Set up the initial state, symbolizing argv[1] as the flag
+initial_state = proj.factory.entry_state(
+    args=['./spookylicence', flag],
+    add_options={angr.options.SYMBOL_FILL_UNCONSTRAINED_MEMORY, 
+                 angr.options.SYMBOL_FILL_UNCONSTRAINED_REGISTERS}
+)
+
+# Base address of the binary (you may need to adjust this if not PIE)
+base_addr = proj.loader.main_object.mapped_base
+
+# Simulation manager
+simgr = proj.factory.simulation_manager(initial_state)
+
+# Explore paths: find the "License Correct" address, avoid the "License Invalid"
+simgr.explore(find=(base_addr + 0x1876), avoid=(base_addr + 0x1889))
+
+# Check if we found a valid path
+if simgr.found:
+    found_state = simgr.found[0]
+    # Print the valid flag
+    print(f"Valid flag: {found_state.solver.eval(flag, cast_to=bytes)}")
+else:
+    print("No valid license found.")
+             
+```
+</details>
+
+`HTB{The_sp0000000key_liC3nC3K3Y}`
+
+
 # Snakecode
 
 Given .pyc, Python 2.7
