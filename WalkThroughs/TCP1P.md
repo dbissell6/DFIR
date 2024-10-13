@@ -1,0 +1,277 @@
+![image](https://github.com/user-attachments/assets/2588e3de-81a9-4cd8-91d0-977ab46b28a3)
+
+
+# Doxxed
+
+![Pasted image 20241013082141](https://github.com/user-attachments/assets/55eddc56-58da-495e-9cc1-07e30c055d86)
+
+
+There was a recent discovery that deleted forks were still visible and this was/is intended by GitHub. They gave us the first letter, had to brute force the rest.
+
+![Pasted image 20241011105153](https://github.com/user-attachments/assets/db481e65-dee7-4abc-868a-27d234996626)
+
+![Pasted image 20241011105115](https://github.com/user-attachments/assets/3fe63640-00f6-4617-93e2-21ba7cb11a07)
+
+![Pasted image 20241011105037](https://github.com/user-attachments/assets/86562089-9d90-4623-97a8-f4a811e5cbdf)
+
+![Pasted image 20241011105010](https://github.com/user-attachments/assets/9634bc8e-8a03-4307-aa3e-3509b6bb40d3)
+
+# EncryptDecryptFile
+
+![Pasted image 20241013082202](https://github.com/user-attachments/assets/4e3038d4-4d9b-44a6-bd5c-6aebc9956fa6)
+
+Given python script and a .hg directory
+
+![image](https://github.com/user-attachments/assets/171ba27e-0c4b-40c9-b812-8985d8d10826)
+
+Mercurial (.hg) is a free, distributed version control system used to track changes in source code(like git) during software development. 
+It allows developers to collaborate and manage changes efficiently across multiple versions of code. Some basic .hg commands are
+
+.hg/store: This contains the actual data for the repository, including the changesets, manifests, and file revisions.
+
+    data/: Stores versioned files and directories in a compressed form.
+    fncache: A file that keeps track of filenames.
+    bookmarks: Contains information about bookmarks, which are lightweight references to revisions.
+
+.hg/dirstate: A binary file that tracks the state of the working directory (i.e., which files are modified, added, or removed). It's similar to Git's index.
+
+.hg/branch: Stores the active branch you are working on.
+
+.hg/hgrc: This is the configuration file for the repository. It's used to store repository-specific settings, such as user details, ignored files, hooks, etc.
+
+.hg/undo: Used for recovering from certain operations like a rollback.
+
+hg log -v to see changes
+
+![image](https://github.com/user-attachments/assets/2d708451-261e-4fc8-a79a-7fe84ce43e21)
+
+`hg status` to see `!flag.enc`
+
+` hg revert flag.enc`
+
+Once we get the og flag.enc back the python script comes with the key, iv and decrypt function
+
+![Pasted image 20241011072258](https://github.com/user-attachments/assets/dd59a7a5-df83-4d5e-8589-4b445394ab05)
+
+![Pasted image 20241011072230](https://github.com/user-attachments/assets/433469f2-d125-4264-abfd-f7281f71dfca)
+
+#Skibidi Format
+
+![Pasted image 20241013082224](https://github.com/user-attachments/assets/1567fe2b-d033-4a51-aaff-c4dbde25cbc0)
+
+Given spec.html and suisei.skibidi
+
+<details>
+
+<summary> Python script </summary>
+
+```
+import struct
+import sys
+import os
+from Crypto.Cipher import AES
+import zstandard as zstd
+from PIL import Image
+import io
+
+def read_skibidi_file(skibidi_path):
+    with open(skibidi_path, 'rb') as f:
+        data = f.read()
+    return data
+
+def parse_header(data):
+    print("Parsing header...")
+    if len(data) < 58:
+        raise ValueError("File too short to be a valid Skibidi file.")
+
+    # Parse Magic Number
+    magic_number = data[0:4]
+    if magic_number != b'SKB1':
+        raise ValueError(f"Invalid Magic Number: {magic_number}. Not a Skibidi file or unsupported version.")
+
+    # Parse Width and Height
+    width = struct.unpack('<I', data[4:8])[0]
+    height = struct.unpack('<I', data[8:12])[0]
+
+    # Parse Channels
+    channels = data[12]
+    if channels not in (1, 3, 4):
+        raise ValueError(f"Unsupported number of channels: {channels}")
+
+    # Parse Compression Method
+    compression_method = data[13]
+    if compression_method != 1:
+        raise ValueError(f"Unsupported compression method identifier: {compression_method}")
+
+    # Parse AES Key and IV
+    aes_key = data[14:46]
+    aes_iv = data[46:58]
+
+    # Encrypted Data
+    encrypted_data = data[58:]
+
+    # Print header information for debugging
+    print(f"Magic Number: {magic_number}")
+    print(f"Width: {width}")
+    print(f"Height: {height}")
+    print(f"Channels: {channels}")
+    print(f"Compression Method: {compression_method}")
+    print(f"AES Key (hex): {aes_key.hex()}")
+    print(f"AES IV (hex): {aes_iv.hex()}")
+    print(f"Encrypted Data Length: {len(encrypted_data)} bytes")
+
+    return {
+        'width': width,
+        'height': height,
+        'channels': channels,
+        'compression_method': compression_method,
+        'aes_key': aes_key,
+        'aes_iv': aes_iv,
+        'encrypted_data': encrypted_data
+    }
+
+def decrypt_data(encrypted_data, aes_key, aes_iv):
+    print("Starting decryption...")
+    # The authentication tag is usually the last 16 bytes of the encrypted data
+    if len(encrypted_data) < 16:
+        raise ValueError("Encrypted data is too short to contain an authentication tag.")
+
+    # Extract the tag and ciphertext
+    tag = encrypted_data[-16:]
+    ciphertext = encrypted_data[:-16]
+
+    cipher = AES.new(aes_key, AES.MODE_GCM, nonce=aes_iv)
+    try:
+        decrypted_data = cipher.decrypt_and_verify(ciphertext, tag)
+        print("Decryption successful with tag at the end.")
+    except ValueError as e:
+        raise ValueError(f"Decryption failed: {e}")
+    return decrypted_data
+
+def decompress_data(compressed_data):
+    print("Starting decompression...")
+    # Check for Zstandard magic number
+    zstd_magic = b'\x28\xB5\x2F\xFD'
+    if not compressed_data.startswith(zstd_magic):
+        print("Warning: Compressed data does not start with Zstandard magic number.")
+    else:
+        print("Zstandard magic number found in compressed data.")
+
+    dctx = zstd.ZstdDecompressor()
+    try:
+        # Use stream_reader for data without content size in frame header
+        with dctx.stream_reader(io.BytesIO(compressed_data)) as reader:
+            decompressed_data = reader.read()
+            print("Streaming decompression successful.")
+    except zstd.ZstdError as e:
+        raise ValueError(f"Decompression failed: {e}")
+    return decompressed_data
+
+def reconstruct_image(decompressed_data, width, height, channels):
+    print("Reconstructing image...")
+    expected_size = width * height * channels
+    if len(decompressed_data) != expected_size:
+        raise ValueError(f"Decompressed data size ({len(decompressed_data)} bytes) does not match expected image dimensions ({expected_size} bytes).")
+
+    mode = {1: 'L', 3: 'RGB', 4: 'RGBA'}[channels]
+    image = Image.frombytes(mode, (width, height), decompressed_data)
+    return image
+
+def skibidi_to_png(skibidi_path, output_path):
+    data = read_skibidi_file(skibidi_path)
+    header = parse_header(data)
+
+    decrypted_data = decrypt_data(header['encrypted_data'], header['aes_key'], header['aes_iv'])
+    decompressed_data = decompress_data(decrypted_data)
+    image = reconstruct_image(decompressed_data, header['width'], header['height'], header['channels'])
+    image.save(output_path)
+    print(f"Successfully converted '{skibidi_path}' to '{output_path}'.")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: python skibidi_to_png.py input.skibidi output.png")
+        sys.exit(1)
+
+    skibidi_path = sys.argv[1]
+    output_path = sys.argv[2]
+
+    if not os.path.isfile(skibidi_path):
+        print(f"Input file '{skibidi_path}' does not exist.")
+        sys.exit(1)
+
+    try:
+        skibidi_to_png(skibidi_path, output_path)
+    except Exception as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+                             
+   puts "Hello World"
+```
+
+</details>
+
+After running script
+
+![image](https://github.com/user-attachments/assets/dfd8005e-0dbf-4ac1-9416-4c357cc71336)
+
+# Lost Progress
+
+![Pasted image 20241013082242](https://github.com/user-attachments/assets/db7388cc-f16d-4154-85de-45737a6033c4)
+
+![image](https://github.com/user-attachments/assets/7e3a04d7-d33c-42de-b2fd-b6052c5a190d)
+
+Given .rar
+
+Getting symbols with volatility
+
+![Pasted image 20241012185637](https://github.com/user-attachments/assets/3a5de696-cabd-4c4a-bd14-6a61213e2b4f)
+
+Given the hints we use the mememory map dumps to view the images in GIMP. This process can be found in the bluebook and wont be repeated here.
+
+![Pasted image 20241012201659](https://github.com/user-attachments/assets/30fa0905-4fa6-4aec-b7c5-07610d8017f8)
+
+![Pasted image 20241012201717](https://github.com/user-attachments/assets/adca3183-3e7a-4b77-a4ad-3a2a65d4447e)
+
+![Pasted image 20241013005651](https://github.com/user-attachments/assets/89552298-5e8d-41aa-ac4d-25a7884814de)
+
+Together the flag was
+
+`TCP1P{wIeRRRMQqykX6zs3O7KSQY6Xq6z4TKnr_ekxyAH2jIrh0Opyu432tk9y0KdiujkMu}`
+
+# Lost Younger Sister
+
+![Pasted image 20241013082323](https://github.com/user-attachments/assets/99d56c0e-78a5-41b3-80fd-080386f618f8)
+
+![image](https://github.com/user-attachments/assets/06b6a437-9fc4-4481-9aa4-f99ffd7c03c8)
+
+Given pdf with some background info, .kdbx and icloud backup.zip
+
+First step was opening the .kdbx. The password was the pets name `Ogipedro` found in the pdf.
+
+![image](https://github.com/user-attachments/assets/e26b165b-183b-41d7-aa9d-4436e3f71925)
+
+Using keepassxc-cli
+
+![image](https://github.com/user-attachments/assets/0144cba1-1a30-472a-9035-f60d5750f6f6)
+
+![image](https://github.com/user-attachments/assets/da5b459d-c53a-4cbb-b752-66ec04d04d54)
+
+Password is protected. Use -s to see.
+
+![image](https://github.com/user-attachments/assets/2ad7ceba-4c6c-4966-ae60-13a09fa5767d)
+
+Now can unzip the password protected `icloud backup.zip`
+
+![image](https://github.com/user-attachments/assets/ce6f6cb8-c644-4445-b8a8-65567fc0f5be)
+
+Open it up to see this image.
+
+![Pasted image 20241013042236](https://github.com/user-attachments/assets/2cc2a984-0242-4f14-9a3b-5c41c15173e4)
+
+Googled the numbers on the billboard and this came up with an address. There were also other clues like the license plate prefix.
+
+![Pasted image 20241013041945](https://github.com/user-attachments/assets/b736ae6f-22c8-4c3b-9312-099b60817ba5)
+
+Moving around we can see the flag as the bus stop name to the left
+
+![Pasted image 20241013041911](https://github.com/user-attachments/assets/19d8acbc-1d4b-47ce-90ac-1657d225dfa3)
