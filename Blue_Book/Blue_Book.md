@@ -2693,6 +2693,16 @@ IDA is a leading disassembler and debugger used in software reverse engineering,
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
 
 
+### x64dbg
+
+Debugger for windows exe
+
+Some malware will check for debugger, can counteract that with `hide debugger`
+
+![image](https://github.com/user-attachments/assets/907c993d-cce2-420d-babf-e76fa5c65804)
+
+
+
 ### dnSpy
 
 dnSpy is a debugger and .NET assembly editor, which can be used to inspect, debug, and edit .NET assemblies. One of its powerful features is the ability to decompile .NET assemblies back to C# or VB.NET source code, providing insights into the underlying functionality of the software. dnSpy allows users to set breakpoints, step through code, and inspect variables and objects, making it a valuable tool for reverse engineering and debugging .NET applications.
