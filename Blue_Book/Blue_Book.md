@@ -3133,6 +3133,59 @@ A steganography tool that can be used to detect hidden information within images
 A Java-based tool that can be used to analyze and manipulate images for steganography purposes. It provides a range of filters and visual aids to help users identify hidden information within images. Stegsolve is particularly useful for identifying the location and type of steganography being used within an image.
 ![Pasted image 20230221202426](https://user-images.githubusercontent.com/50979196/221450558-7c93ed5f-4a8a-450a-84d1-8d77d9b77458.png)
 
+
+### LSB in MP3s
+
+<details>
+
+<summary>Python script</summary>
+
+```
+import sys
+
+def extract_message_from_mp3(file_path):
+    bits = []
+    with open(file_path, 'rb') as f:
+        byte = f.read(1)
+        while byte:
+            byte_value = byte[0]
+            lsb = byte_value & 1  # Extract the least significant bit
+            bits.append(str(lsb))
+            # Check if we have enough bits to form a byte
+            if len(bits) % 8 == 0:
+                byte_bits = bits[-8:]
+                byte_str = ''.join(byte_bits)
+                byte_value = int(byte_str, 2)
+                if byte_value == 0:  # Null terminator
+                    break
+            byte = f.read(1)
+
+    # Now convert all bits into bytes
+    message_bytes = []
+    for i in range(0, len(bits), 8):
+        byte_bits = bits[i:i+8]
+        if len(byte_bits) < 8:
+            break
+        byte_str = ''.join(byte_bits)
+        byte_value = int(byte_str, 2)
+        message_bytes.append(byte_value)
+
+    message = bytes(message_bytes)
+    try:
+        decoded_message = message.decode('utf-8', errors='replace')
+        print("Hidden message:")
+        print(decoded_message)
+    except UnicodeDecodeError:
+        print("Failed to decode message")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python extract_message_from_mp3.py <mp3_file>")
+    else:
+        extract_message_from_mp3(sys.argv[1])
+```
+</details>
+
 ### If stuck with Steg
 
 https://stegonline.georgeom.net/checklist
