@@ -102,6 +102,31 @@ int strcmp(const char *s1, const char *s2) {
 
 `HTB{B4BY_R3V_TH4TS_EZ}`
 
+# CryptOfTheUndead
+
+Given Elf, Dynamically Linked
+
+![image](https://github.com/user-attachments/assets/0ae55046-d5b8-47dd-884e-f069c7b656d0)
+
+
+Looking in Ghidra we can see encrypt_buf function and what looks like the key `BRAAAAAAAAAAAAAAAAAAAAAAAAAINS!!`
+
+![image](https://github.com/user-attachments/assets/462be708-9845-45a5-984d-4df0df253f31)
+
+In this function we can see it is implementing ChaCha
+
+![image](https://github.com/user-attachments/assets/9e1957f1-2b1c-40f2-85b0-b424c296f848)
+
+Opening this up in gdb with a fake flag, we break on the init. can see the text of fake.txt as `fakeflagfakeflag`. rsi holding the key and the nonce being an
+`0x0000000000000000`.
+
+![image](https://github.com/user-attachments/assets/eba987dd-9ec2-4c05-acc8-3b91df5709de)
+
+Putting this in cyberchef
+
+![image](https://github.com/user-attachments/assets/62b59f4e-e1e6-4dcd-8c76-e77b2b6b147f)
+
+
 # Cyber Psychosis
 
 Given ELF
