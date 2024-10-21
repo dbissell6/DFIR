@@ -6,6 +6,7 @@ this was recently started, pretty cool (edited)
 
 
 https://malwareunicorn.org/#/
+
 https://revers.engineering/applied-reverse-engineering-series/
 
 https://beginners.re/ (this one needs like 1$ i think, worth it)
