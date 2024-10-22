@@ -551,3 +551,27 @@ Just change logic
 
 ![image](https://github.com/user-attachments/assets/29d5fcef-0e79-44ac-8f61-43294cff340c)
 
+# unpackme.py
+
+Given python script
+
+![image](https://github.com/user-attachments/assets/56c377b5-804f-435b-8ad5-189ee58aa978)
+
+Easiest method to solve is place prints
+
+![image](https://github.com/user-attachments/assets/8d0249b8-9832-4431-bc0c-1374d4b2e368)
+
+
+`picoCTF{175_chr157m45_5274ff21}`
+
+# keygen-trial.py
+
+Given python script with 1/3 and last third of flag in plain text.
+
+![image](https://github.com/user-attachments/assets/7b029f7a-3746-4638-b47c-026b30eed953)
+
+
+
+
+
+
