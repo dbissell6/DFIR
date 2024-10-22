@@ -333,6 +333,19 @@ print(result)
 ![image](https://github.com/user-attachments/assets/0ea7578e-98fd-4270-9ef0-7b069480bbbc)
 
 
+# Vault Door 6
+
+
+![image](https://github.com/user-attachments/assets/8a4442e8-ed46-4886-879e-67137c893694)
+
+![image](https://github.com/user-attachments/assets/743dd7d8-7dae-421e-acf4-f5d18df3d6ed)
+
+Basic XOR
+
+![image](https://github.com/user-attachments/assets/d11d2e07-f77e-4ff8-8f4c-f8d646c30f92)
+
+`picoCTF{n0t_mUcH_h4rD3r_tH4n_x0r_948b888}`
+
 # GDB Test Drive
 
 Given ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked,
@@ -573,5 +586,16 @@ Given python script with 1/3 and last third of flag in plain text.
 
 
 
+# Keygenme
 
+Given ELF, dynamically linked
+
+![image](https://github.com/user-attachments/assets/d420d2d4-ac22-4036-a404-00793eb847bb)
+
+
+# Droids1 
+
+Given Android package (APK)
+
+![image](https://github.com/user-attachments/assets/4abb12ea-a767-4b92-a9fc-b889e68097fe)
 
