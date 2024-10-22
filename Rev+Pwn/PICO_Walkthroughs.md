@@ -346,6 +346,50 @@ Basic XOR
 
 `picoCTF{n0t_mUcH_h4rD3r_tH4n_x0r_948b888}`
 
+# Vault Door 6
+
+![image](https://github.com/user-attachments/assets/64fe318b-7199-4f6d-9145-a9d3fd079c2c)
+
+
+<details>
+
+<summary>Python equivelent to reverse</summary>
+
+
+```
+def int_to_hex_string(int_value):
+    # Convert integer to 4-byte hex and remove '0x' prefix
+    return f'{int_value:08x}'
+
+def reverse_password():
+    # Given integers from the checkPassword function
+    password_integers = [
+        1096770097, 1952395366, 1600270708, 1601398833,
+        1716808014, 1734304867, 942695730, 942748212
+    ]
+    
+    # Convert each integer to its corresponding 8 hex characters
+    hex_parts = [int_to_hex_string(i) for i in password_integers]
+    
+    # Combine the hex parts into the full password
+    password = ''.join(hex_parts)
+    
+    return password
+
+# Output the reversed password
+reversed_password = reverse_password()
+print("Reversed password:", reversed_password)
+
+```
+
+</details>
+
+![image](https://github.com/user-attachments/assets/c01dce0f-9389-4d0d-a141-02df9b526e29)
+
+![image](https://github.com/user-attachments/assets/24fea603-5f5b-4d3e-89e8-afc7e65a487e)
+
+`picoCTF{A_b1t_0f_b1t_sh1fTiNg_dc80e28124}`
+
 # GDB Test Drive
 
 Given ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked,
