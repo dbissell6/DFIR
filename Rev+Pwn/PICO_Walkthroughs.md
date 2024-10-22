@@ -643,3 +643,15 @@ Given Android package (APK)
 
 ![image](https://github.com/user-attachments/assets/4abb12ea-a767-4b92-a9fc-b889e68097fe)
 
+# Lets Get Dynamic
+
+Given Assembler source
+
+![image](https://github.com/user-attachments/assets/7d619eb7-13f6-4f2e-a849-b842ce264253)
+
+# OTP Implementation
+
+Given ELF, Dynamically Linked and flag.txt
+
+![image](https://github.com/user-attachments/assets/0ae3e9dc-3c25-4390-957e-7f6155715546)
+
