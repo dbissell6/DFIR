@@ -655,3 +655,88 @@ Given ELF, Dynamically Linked and flag.txt
 
 ![image](https://github.com/user-attachments/assets/0ae3e9dc-3c25-4390-957e-7f6155715546)
 
+
+Looking into ghidra can see some  jumple function and the clear string of what the key should be
+
+![image](https://github.com/user-attachments/assets/629a7677-7570-4303-b087-a66825c22413)
+
+
+![image](https://github.com/user-attachments/assets/ef5bfb30-6054-4b40-a354-b065e08867ed)
+
+<details>
+
+<summary>Python script to brute it</summary>
+
+
+```
+import re
+from subprocess import Popen, PIPE, DEVNULL
+
+# Known target string from the program (for comparison)
+target = "jbgkfmgkknbiblpmibgkcneiedgokibmekffokamknbkhgnlhnajeefpekiefmjgeogjbflijnekebeokpgngjnfbimlkdjdjhan"
+
+# Create a list to store the current guess for the key
+key = ['a'] * len(target)
+
+# Iterate over the length of the target
+for i in range(len(target)):
+    for x in '0123456789abcdef':
+        key[i] = x
+        p = Popen(['ltrace', '-s', '1000', './otp', ''.join(key)], stderr=PIPE, stdout=DEVNULL)
+        output = p.stderr.read().decode()
+        
+        # Extract the matched string from the program's output
+        match = re.search(r'strncmp\("(.+)"', output)
+        
+        if match:
+            result = match.group(1)[:len(target)]  # Compare only up to the target length
+            
+            # Debugging: print the current match and target comparison
+            print(f"Matching at index {i}:")
+            print(f"Result: {result}")
+            print(f"Target: {target[:i+1]}")
+            
+            if target[i] == result[i]:
+                print(f"Correct guess at index {i}: {x}")
+                break
+            else:
+                print(f"Incorrect guess at index {i}: {x}")
+
+# After constructing the key, output the final guessed key
+key_string = ''.join(key)
+print(f"Found key: {key_string}")
+
+def xor_hex_strings(flag_hex, key_string):
+    # Convert both hex strings to bytes
+    flag_bytes = bytes.fromhex(flag_hex)
+    key_bytes = bytes.fromhex(key_string)
+
+    # XOR the bytes
+    result = bytes(a ^ b for a, b in zip(flag_bytes, key_bytes * (len(flag_bytes) // len(key_bytes) + 1)))
+
+    # Convert the result back to a string (or to ASCII if it's readable)
+    return result.decode('utf-8')
+
+
+
+# Read the flag from flag.txt
+with open('flag.txt', 'r') as flag_file:
+    flag_hex = flag_file.read().strip()
+
+# XOR them together
+decoded_flag = xor_hex_strings(flag_hex, key_string)
+
+# Print the decoded flag
+print(f"Decoded flag: {decoded_flag}")
+
+
+```
+
+</details>
+
+We can see its just hex and a 1 to 1 relationship
+
+![image](https://github.com/user-attachments/assets/ac2991f1-f125-4fd1-9040-774e2bd5ecfd)
+
+
+`picoCTF{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_50869043}`
