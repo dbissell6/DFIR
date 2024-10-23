@@ -3186,6 +3186,13 @@ if __name__ == "__main__":
 ```
 </details>
 
+### Audio Morse code
+
+`https://morsecode.world/international/decoder/audio-decoder-adaptive.html`
+
+![image](https://github.com/user-attachments/assets/7871530a-a835-4dff-8cdb-70c013e7ec05)
+
+
 ### If stuck with Steg
 
 https://stegonline.georgeom.net/checklist
