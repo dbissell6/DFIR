@@ -102,6 +102,40 @@ int strcmp(const char *s1, const char *s2) {
 
 `HTB{B4BY_R3V_TH4TS_EZ}`
 
+# ChromeMiner
+
+Given ip to connect to. Find .exe
+
+![image](https://github.com/user-attachments/assets/f1e3080c-d681-460b-a6ac-bbe6d6c5207e)
+
+
+![image](https://github.com/user-attachments/assets/6517fa5b-039c-4680-a585-6a203e6ff2b6)
+
+
+DotPeek to look inside and see it downloads an archive.zip
+
+![image](https://github.com/user-attachments/assets/1ec58297-b22b-4a4e-99d3-5877de71283f)
+
+
+![image](https://github.com/user-attachments/assets/86350d77-5beb-491d-99ef-28c3be10f9c5)
+
+Ya this looks sus, obfuscated javascript(.js)
+
+![image](https://github.com/user-attachments/assets/0cb1196f-fb2e-4c5b-9e1c-3e2b49894995)
+
+Simple Python script to grep all of the q[???] and replace with the value
+
+![image](https://github.com/user-attachments/assets/fb2f62fa-eecc-443a-8256-cb7257cc1f05)
+
+We can see there is a AES encryption going on with the key and iv being `_NOT_THE_SECRET_` the encoded text being
+`E242E64261D21969F65BEDF954900A995209099FB6C3C682C0D9C4B275B1C212BC188E0882B6BE72C749211241187FA8`
+
+Put it in cyberchef
+
+![image](https://github.com/user-attachments/assets/f61a498a-f53b-4efd-94a6-d96e66015be5)
+
+`HTB{__mY_vRy_owN_CHR0me_M1N3R__}`
+
 # CryptOfTheUndead
 
 Given Elf, Dynamically Linked
