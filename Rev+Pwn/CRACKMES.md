@@ -1,3 +1,11 @@
+# s4rs Encrypted box
+
+Given ELF, statically linked
+
+![image](https://github.com/user-attachments/assets/2667fe4d-c5da-4060-be31-e7430539c3ed)
+
+
+
 # Keygen
 
 Given ELF, dynmaically linked
@@ -13,6 +21,20 @@ and it checks if their difference is equal to 0xffffffff (or -1).
 
 ![image](https://github.com/user-attachments/assets/ee978964-47d8-4f7e-9645-3f3a338df381)
 
+
+# Personal Safe
+
+Given ELF, statically linked
+
+![image](https://github.com/user-attachments/assets/521dff34-1a11-459f-9309-d9e57d8dbeed)
+
+start
+
+![image](https://github.com/user-attachments/assets/57972bcc-ead8-4512-b738-c3bd50b13bef)
+
+verify
+
+![image](https://github.com/user-attachments/assets/b85fea48-6a4e-4d22-a519-f6e820be2f08)
 
 
 # Vending Machine
