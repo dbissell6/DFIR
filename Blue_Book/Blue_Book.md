@@ -2688,9 +2688,31 @@ First run aaa(analyze all). Then can run commands, here listing functions.
 
 IDA is a leading disassembler and debugger used in software reverse engineering, renowned for its in-depth binary analysis capabilities and interactive interface.
 
-`F5` for decompiling
+
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/52f35413-2a06-440a-955a-38a2175c2ca4)
+
+#### Decompiling
+
+`F5` for decompiling
+
+#### Rebase
+
+Sometimes using and comparing to ghidra you will notices the addresses dont match up
+
+Compare
+
+![image](https://github.com/user-attachments/assets/175e25e0-f181-405a-88eb-1ebd1575d7f2)
+
+to
+
+![image](https://github.com/user-attachments/assets/1cf1da43-070f-4d67-b2c9-791b60cf7205)
+
+To fix this you can rebase.
+
+`Edit -> Segments -> Rebase Program -> Set value to 0`
+
+![image](https://github.com/user-attachments/assets/8b55899e-c88f-4f6a-a30c-3d212d1c4126)
 
 
 ### x64dbg
