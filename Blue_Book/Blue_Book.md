@@ -2605,6 +2605,9 @@ Ghidrathon embeds your local Python 3 interpreter in Ghidra, giving it access to
 There was a piece of malware that had obfuscated strings in DAT. The strings were ran through a function before being used in the exe. This script allows the user to programatically
 get the bytes and run them through the function.
 
+![image](https://github.com/user-attachments/assets/722c5807-c973-47c5-b879-92a01cd254d6)
+
+
 This example works 90%. More of a basius for future scripts.
 <details>
 
