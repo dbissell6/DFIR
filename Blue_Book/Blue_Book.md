@@ -2594,6 +2594,141 @@ Ghidra is an open-source reverse engineering framework developed by the National
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/02e2d697-9302-4c59-a38b-109acbfcfbd7)
 
+#### Ghidrathon
+
+Ghidrathon embeds your local Python 3 interpreter in Ghidra, giving it access to your database and the framework’s scripting API. You can then use modern Python, including any third-party packages you have installed, to programmatically access your Ghidra database. 
+
+`https://github.com/mandiant/Ghidrathon/tree/main`
+
+##### XOR + index example
+
+There was a piece of malware that had obfuscated strings in DAT. The strings were ran through a function before being used in the exe. This script allows the user to programatically
+get the bytes and run them through the function.
+
+This example works 90%. More of a basius for future scripts.
+<details>
+
+<summary>Python script</summary>
+
+
+```
+# Import necessary Ghidra classes
+from ghidra.app.decompiler import DecompInterface
+from ghidra.program.model.data import ByteDataType, ArrayDataType
+from ghidra.util.task import TaskMonitor
+import re  # Import regex module
+
+
+def index_subtraction_and_xor(data):
+    # The key 'Love_Her'
+    key = "Love_Her"
+
+    # Convert the key 'Love_Her' to its byte representation
+    key = key.encode('utf-8')  # 'Love_Her' => b'Love_Her'
+
+    result = bytearray()
+    key_length = len(key)
+
+    # Loop over the input data
+    for i in range(len(data)):
+        # Subtract the index from the byte
+        subtracted_value = (data[i] - i) % 256
+        
+        # XOR the result with the corresponding byte from the key (repeated)
+        xor_value = subtracted_value ^ key[i % key_length]
+        
+        # Append the result to the output
+        result.append(xor_value)
+
+    # Print the output as an ASCII string (ignore non-printable characters)
+    try:
+        ascii_output = result.decode('ascii', errors='ignore')  # Ignore non-printable characters
+        print("Output (ASCII):", ascii_output)
+    except UnicodeDecodeError:
+        print("Output contains non-printable characters and cannot be fully converted to ASCII.")
+
+
+# Define the function you're targeting
+function_name = "tls_callback_0"
+
+# Get the current program
+program = getCurrentProgram()
+
+if program:
+    # Get the target function by name
+    functions = getGlobalFunctions(function_name)
+
+    if functions:
+        function = functions[0]
+        print(f"Function {function_name} found at address: {function.getEntryPoint()}")
+
+        # Set up decompiler
+        decomp_interface = DecompInterface()
+        decomp_interface.openProgram(program)
+
+        # Decompile the function
+        decompiled = decomp_interface.decompileFunction(function, 30, TaskMonitor.DUMMY)
+
+        if decompiled.decompileCompleted():
+            decompiled_code = decompiled.getDecompiledFunction().getC()
+            print(f"Decompiled code for {function_name}:\n{decompiled_code}")
+
+            # Split decompiled code into lines and process
+            lines = decompiled_code.splitlines()
+            for line in lines:
+                line = line.strip()
+
+                # Identify function calls that reference `DAT_` entries
+                if line.startswith("FUN_"):
+                    parts = line.split(',')
+                    second_arg = parts[1].strip().rstrip(");")
+
+                    # Check for a DAT reference in the second argument
+                    if "DAT_" in second_arg:
+                        dat_address_str = second_arg.split('&DAT_')[-1].strip()
+                        dat_address = toAddr(f"0x{dat_address_str}")
+
+                        # Determine the byte count (default to 16 if third argument is missing)
+                        byte_count = 16
+                        if len(parts) >= 3:
+                            try:
+                                byte_count = int(parts[2].strip().rstrip(");"), 0)
+                            except ValueError:
+                                pass
+
+                        # Define the data at `DAT_` as a byte array
+                        byte_data_type = ArrayDataType(ByteDataType(), byte_count, 1)
+                        createData(dat_address, byte_data_type)  # Define data as byte array
+
+                        # Extract the byte array
+                        defined_data = getDataAt(dat_address)
+                        if defined_data and defined_data.isArray():
+                            data_bytes = [defined_data.getComponent(i).getByte(0) for i in range(byte_count)]
+                            data_hex = ''.join([f'{byte:02x}' for byte in data_bytes])
+
+                            # Remove dashes, spaces, and filter only valid hex characters
+                            data_hex_clean = re.sub(r'[^0-9a-fA-F]', '', data_hex)
+
+                            print(f"Cleaned Hex data at {dat_address_str}: {data_hex_clean}")
+
+                            # Convert the cleaned hex string to actual byte data and run the XOR operation
+                            data_bytes = bytes.fromhex(data_hex_clean)
+                            index_subtraction_and_xor(data_bytes)
+                        else:
+                            print(f"Failed to define or extract data at {dat_address_str}")
+        else:
+            print(f"Decompilation of {function_name} failed!")
+    else:
+        print(f"Function {function_name} not found!")
+else:
+    print("No program found!")
+
+```
+
+</details>
+
+
+
 
 ## **Dynamic Analysis Techniques**
 Dynamic analysis techniques involve analyzing the behavior of a program as it executes. Techniques like debugging and sandboxing can be used to analyze malware in a controlled environment. Debugging allows analysts to step through a program and observe its behavior at runtime. Sandboxing involves running a program in an isolated environment to analyze its behavior without risking damage to the host system.
@@ -4740,11 +4875,6 @@ You can add an image or a code block, too.
 ```
 
 </details>
-
-
-
-**Data Exfiltration Techniques**: Data exfiltration techniques are methods used by attackers to extract data from a compromised system. Common techniques include DNS exfiltration, FTP exfiltration, and HTTP exfiltration. DNS exfiltration involves sending stolen data in DNS queries. FTP exfiltration involves using FTP to transfer data to an attacker-controlled server. HTTP exfiltration involves sending stolen data over HTTP requests.
-
 
 
 
