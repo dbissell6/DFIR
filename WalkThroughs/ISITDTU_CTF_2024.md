@@ -95,6 +95,9 @@ Here's your reward: ISITDTU{https://www.youtube.com/watch?v=yqp61_Wqm-A}
 
 # Unexpected
 
+![image](https://github.com/user-attachments/assets/106bd799-e2e5-4b90-b045-c7ec03d64784)
+
+
 Given eml that contained a .zip and a password. Zip contained pcapng, process dump and sslkeylog.
 
 
@@ -181,6 +184,9 @@ Final Flag
 `ISITDTU{3vEry7h!n9_c0uLd_B3_u5ed_4s_c2-chAnNe|~}`
 
 # Swatted 
+
+![image](https://github.com/user-attachments/assets/0a4df46f-d5f1-4d81-8425-6c165d52d540)
+
 
 Given vmdk
 
@@ -301,6 +307,9 @@ Congrats! Here is your flag: ISITDTU{https://www.youtube.com/watch?v=H3d26v9TciI
 ```
 # CPUsage
 
+![image](https://github.com/user-attachments/assets/d4e05033-b6cb-4bda-a8de-e02fd033ed28)
+
+
 Given Windows Event Trace Log
 
 
@@ -330,6 +339,9 @@ psscan
 
 
 # Initial
+
+![image](https://github.com/user-attachments/assets/28d67fcf-ee9e-451c-b6e4-67b7507f6b68)
+
 
 Stupid
 
