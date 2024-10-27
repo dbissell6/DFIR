@@ -139,7 +139,13 @@ Given eml that contained a .zip and a password. Zip contained pcapng, process du
 
 ## Part 1
 
-First part requires us to extract the exe and open it up in dotPeek.
+First part requires us to extract the exe. We can use foremost for this.
+
+![image](https://github.com/user-attachments/assets/0623ef9e-710d-4bd5-b91b-71f47a595916)
+
+![image](https://github.com/user-attachments/assets/b7c809bc-f7f8-4d8b-89be-4b88526575a3)
+
+Now open it up in dotPeek.
 
 
 ![Pasted image 20241026005204](https://github.com/user-attachments/assets/03cb719b-7988-4bd8-9f77-7f78223a3eec)
