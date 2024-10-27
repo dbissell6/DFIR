@@ -53,6 +53,11 @@ ls /mnt/vhd
 
 Can recover MFT USNJrnl to answer. Use zone identifier to find time of download of .pdf
 
+`sudo icat /dev/mapper/loop0p1 0-128-6 > ~/Desktop/MFT\`
+
+![image](https://github.com/user-attachments/assets/d08df5ab-560f-4b85-8427-036dbb207ed4)
+
+
 ```
 Welcome to the FORENSIC challenge!
 Answer all the questions correctly to get the flag!
