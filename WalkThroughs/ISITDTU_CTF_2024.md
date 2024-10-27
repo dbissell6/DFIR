@@ -4,11 +4,54 @@
 
 ![Pasted image 20241027040000](https://github.com/user-attachments/assets/4ba8f544-b222-4718-920c-6d48a635792e)
 
+Given .vhd
+
+![image](https://github.com/user-attachments/assets/c4d0a45b-2263-4978-9e3e-389900273677)
+
+
+![image](https://github.com/user-attachments/assets/6de05fb3-0c63-4c1b-aa6e-abfc6ed65f77)
+
+## Tampered OEM ID
+
+The OEM ID in the boot sector is located at offset 0x03 and is 8 bytes long. The standard OEM ID for NTFS is 'NTFS ' (with 'S' as 0x53). Here, the 'S' (0x53) has been tampered with and replaced by 0x00.
+
+```
+dd if=Deleted.vhd bs=1 skip=$((0x10000)) count=64 2>/dev/null | hexdump -C
+
+00000000  eb 52 90 4e 54 46 00 20  20 20 20 00 02 08 00 00  |.R.NTF.    .....|
+00000010  00 00 00 00 00 f8 00 00  3f 00 ff 00 80 00 00 00  |........?.......|
+00000020  00 00 00 00 80 00 80 00  ff 07 03 00 00 00 00 00  |................|
+00000030  55 20 00 00 00 00 00 00  02 00 00 00 00 00 00 00  |U ..............|
+00000040
+```
+
+Fixed byte
+
+![image](https://github.com/user-attachments/assets/2c7b3aa5-ff26-4375-9202-a829671f4694)
+
+
+To mount
+
+```
+# Map the partitions within the VHD file
+sudo kpartx -av fixed.vhd
+
+# Create a mount point
+sudo mkdir -p /mnt/vhd
+
+# Mount the partition (replace loop0p1 with the correct partition if needed)
+sudo mount -o ro /dev/mapper/loop0p1 /mnt/vhd
+
+# Access the mounted filesystem
+ls /mnt/vhd
+```
 
 
 `sudo fls -r -o 0 /dev/mapper/loop0p1`
 
 ![Pasted image 20241025215710](https://github.com/user-attachments/assets/b622bc82-7b34-441b-ab3b-c1c91fcd494c)
+
+Can recover MFT USNJrnl to answer. Use zone identifier to find time of download of .pdf
 
 ```
 Welcome to the FORENSIC challenge!
@@ -37,8 +80,6 @@ MustRead
 [+] Congrats! You have successfully completed the test.
 Here's your reward: ISITDTU{https://www.youtube.com/watch?v=yqp61_Wqm-A}
 ```
-
-
 
 
 
