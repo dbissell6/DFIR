@@ -57,6 +57,38 @@ Can recover MFT USNJrnl to answer. Use zone identifier to find time of download 
 
 ![image](https://github.com/user-attachments/assets/d08df5ab-560f-4b85-8427-036dbb207ed4)
 
+Can recover the USN in the same way
+
+![image](https://github.com/user-attachments/assets/2af84678-7e37-488b-a109-6241397d149b)
+
+Use MFTECmd to parse the USN
+
+![image](https://github.com/user-attachments/assets/2b2809ac-c344-4ac6-8f4c-e5f7087d6bf5)
+
+See the difference in times. 126 Seconds
+
+![image](https://github.com/user-attachments/assets/c875d238-2d0b-4521-be8a-45db7b7c7317)
+
+Can see Best is entry number `56`
+
+![image](https://github.com/user-attachments/assets/28d9e1aa-5ad2-4d9b-8318-baf1d24deee6)
+
+Parent `56` means this is the first folder it was put in
+
+![image](https://github.com/user-attachments/assets/7baa1201-db25-4720-8457-7a14db7683de)
+
+Eventually gets put in `47`
+
+![image](https://github.com/user-attachments/assets/9b73b1e9-299c-41c3-85e8-e2a98d935b0d)
+
+`47` Becomes MustRead
+
+![image](https://github.com/user-attachments/assets/f7dfd4a9-7dca-4bae-8d5c-b5923c8f1f60)
+
+Finally we can see the file is deleted
+
+![image](https://github.com/user-attachments/assets/a0e64134-0cc8-4d30-8908-6484794866f5)
+
 
 ```
 Welcome to the FORENSIC challenge!
