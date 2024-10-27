@@ -217,8 +217,6 @@ Using these in a python script. The iv is the last 16 bytes, the rest of the dat
 
 ![Pasted image 20241026010427](https://github.com/user-attachments/assets/b291e689-c95a-4090-833c-ad13704abe05)
 
-
-
 Final Flag
 
 `ISITDTU{3vEry7h!n9_c0uLd_B3_u5ed_4s_c2-chAnNe|~}`
@@ -250,6 +248,22 @@ Next is to find the AppName
 
 ![image](https://github.com/user-attachments/assets/368c1021-f98c-4ef5-b9c0-cb1c1742f0a0)
 
+Wire
+
+```
+Wire is a collaboration platform and offers the strongest security for organizations looking to protect their communications and document sharing.
+End-to-end encryption gives you the confidence to talk, message, and share across teams, and with clients, through a single app –available on all your devices.
+```
+
+Next find names of convos
+
+Running strings we can see the owner name
+
+![image](https://github.com/user-attachments/assets/01d2c998-a27f-4ca3-a76b-d79d0206d801)
+
+The data base is protected but some more use of strings we can see the conversation is with a user name with handle `clowncz123`
+
+![image](https://github.com/user-attachments/assets/9d33ba1d-0353-427a-ad89-9ad38b17d368)
 
 
 Can find the downloads in firefox
