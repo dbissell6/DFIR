@@ -168,7 +168,9 @@ Find a playlist of QR codes
 
 
 Remembering the Key and iv from the exe and part 1.
+
 key = `c4530e2eeb9ea61d57910fe9ec86f47e25359840bf430c3ce78e4c363c5d24ef`
+
 iv = `6c44f45102fdd739cbc6b572ed8698db`
 
 
