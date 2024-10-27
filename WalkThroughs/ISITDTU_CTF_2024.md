@@ -184,11 +184,39 @@ Given vmdk
 
 ![Pasted image 20241026113156](https://github.com/user-attachments/assets/a4c26db6-dc42-4ad6-ad92-a871436f46b8)
 
+First thing to do is crack the password in etc/shadow
+
+![image](https://github.com/user-attachments/assets/bf34f318-1238-4ca1-b874-724cdeaf3b20)
+
+
+![image](https://github.com/user-attachments/assets/aadd9367-ba1a-4c16-ba5c-d5251709e8e6)
+
+
+![image](https://github.com/user-attachments/assets/d81a8ea0-d0e4-4f3b-92ab-a14607dfac46)
+
+Next is to find the AppName
+
+Can find the downloads in firefox
+
+`sqlitebrowser .mozilla/firefox/hxlb0h6t.default-release/places.sqlite `
+
+![image](https://github.com/user-attachments/assets/0d613ca4-54b5-484a-a8fd-a06c3578edaf)
+
+
+
+To convert the time
 
 ![Pasted image 20241026131935](https://github.com/user-attachments/assets/87062d34-6925-4b84-aaad-cb1f86b9b991)
 
+A couple hints from bash history and firefox history is the app is contained in a docker. We can find the docker in
+
+`var/lib/docker/overlay2/ztbi7f97lnyjjmvh1a2plkan`
+
+In the docker we can check the git and find the email
 
 ![Pasted image 20241026124057](https://github.com/user-attachments/assets/eac39cc2-b131-476f-9b52-67d34edabb3a)
+
+
 
 
 ![Pasted image 20241026140011](https://github.com/user-attachments/assets/e91f0748-704c-427f-bfcf-1187857753cb)
