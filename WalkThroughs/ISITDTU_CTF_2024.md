@@ -196,6 +196,11 @@ First thing to do is crack the password in etc/shadow
 
 Next is to find the AppName
 
+
+![image](https://github.com/user-attachments/assets/368c1021-f98c-4ef5-b9c0-cb1c1742f0a0)
+
+
+
 Can find the downloads in firefox
 
 `sqlitebrowser .mozilla/firefox/hxlb0h6t.default-release/places.sqlite `
