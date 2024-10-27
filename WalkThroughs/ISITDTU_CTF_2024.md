@@ -336,11 +336,15 @@ Given registry
 
 ![Pasted image 20241027045423](https://github.com/user-attachments/assets/ea32e16e-7f35-4480-af35-1f9ae78e43ff)
 
-
+https://medium.com/@boutnaru/the-windows-forensics-journey-word-wheel-query-file-explorer-searches-819fe76dfa12
 
 ```
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery] "MRUListEx"=hex:00,00,00,00,ff,ff,ff,ff "0"=hex:4a,00,6b,00,30,00,78,00,30,00,69,00,66,00,57,00,51,00,4b,00,59,00,38,\   00,6c,00,5a,00,65,00,57,00,63,00,39,00,52,00,57,00,51,00,62,00,71,00,34,00,\   4f,00,76,00,4f,00,6b,00,75,00,76,00,54,00,7a,00,6c,00,71,00,6f,00,71,00,38,\   00,50,00,79,00,67,00,79,00,4e,00,6c,00,68,00,67,00,4c,00,37,00,00,00
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery] "MRUListEx"=hex:00,00,00,00,ff,ff,ff,ff
+
+"0"=hex:4a,00,6b,00,30,00,78,00,30,00,69,00,66,00,57,00,51,00,4b,00,59,00,38,\   00,6c,00,5a,00,65,00,57,00,63,00,39,00,52,00,57,00,51,00,62,00,71,00,34,00,\
+
+4f,00,76,00,4f,00,6b,00,75,00,76,00,54,00,7a,00,6c,00,71,00,6f,00,71,00,38,\   00,50,00,79,00,67,00,79,00,4e,00,6c,00,68,00,67,00,4c,00,37,00,00,00
 
 
 ```
