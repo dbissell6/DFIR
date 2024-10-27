@@ -210,13 +210,27 @@ To convert the time
 
 A couple hints from bash history and firefox history is the app is contained in a docker. We can find the docker in
 
-`var/lib/docker/overlay2/ztbi7f97lnyjjmvh1a2plkan`
+`var/lib/docker/overlay2/`
+
+![image](https://github.com/user-attachments/assets/05377c15-f333-4dc2-91ef-1697b8eb1d0a)
+
+Mount the docker
+
+![image](https://github.com/user-attachments/assets/22a7d77e-a8ec-48d3-b1a7-82d51aac4428)
+
+
+![image](https://github.com/user-attachments/assets/a6a621e6-7eb9-4298-bcc0-ea23b77c3631)
+
+
 
 In the docker we can check the git and find the email
 
 ![Pasted image 20241026124057](https://github.com/user-attachments/assets/eac39cc2-b131-476f-9b52-67d34edabb3a)
 
 
+Credentials is again empty but this will be the php to populate it
+
+![image](https://github.com/user-attachments/assets/13b89216-3ce1-4672-84b9-95ba814e7bef)
 
 
 ![Pasted image 20241026140011](https://github.com/user-attachments/assets/e91f0748-704c-427f-bfcf-1187857753cb)
