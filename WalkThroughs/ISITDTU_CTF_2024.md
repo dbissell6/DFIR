@@ -302,6 +302,7 @@ Credentials is again empty but this will be the php to populate it
 
 ![image](https://github.com/user-attachments/assets/13b89216-3ce1-4672-84b9-95ba814e7bef)
 
+The challenge wanted us to decrpyt the gpg credentials.txt to Answer 9 and 10. But they forgot to shred it the plaintext. So we can find the data using strings. Cheesy.
 
 ![Pasted image 20241026140011](https://github.com/user-attachments/assets/e91f0748-704c-427f-bfcf-1187857753cb)
 
@@ -370,26 +371,35 @@ Given Windows Event Trace Log
 
 ![Pasted image 20241027045801](https://github.com/user-attachments/assets/1242ffb4-b3ba-4871-bfb8-95331044f469)
 
+First use malfind to find the malicious process `dlIhost.exe`
+
 
 ![Pasted image 20241026144340](https://github.com/user-attachments/assets/d19adbb6-4dba-406e-ae82-8ebc35c0124b)
 
+Similar to what is going on here.
+
+![image](https://github.com/user-attachments/assets/7fad7fea-2d65-4955-9e89-a8f6e3aabc57)
+
+Next use netstat to find connections `45.77.240.51`
 
 ![Pasted image 20241026143929](https://github.com/user-attachments/assets/2af430fd-daf2-4406-98c4-f146332ab2eb)
 
 
-![Pasted image 20241026144310](https://github.com/user-attachments/assets/9195a367-8ffd-44f9-aad0-be5f0c915c48)
-
-psscan
+psscan to find parent process `264`
 
 ![Pasted image 20241026144149](https://github.com/user-attachments/assets/68167aac-b64e-416d-ad8f-544a4a4928ae)
 
 
+Now we can use file scan to pull the file to submit to virustotal
+
+![Pasted image 20241026144310](https://github.com/user-attachments/assets/9195a367-8ffd-44f9-aad0-be5f0c915c48)
+
+See family is `harharminer`
 
 ![Pasted image 20241026143827](https://github.com/user-attachments/assets/4e4c7aec-5f53-4d8e-a91f-c006ba6c7a7c)
 
 
-
-`ISITDTU{dlIhost.exe-C:\Users\m4shl3\AppData\Roaming\DLL\dlIhost.exe-264_45.77.240.51-harharminer`
+`ISITDTU{dlIhost.exe-C:\Users\m4shl3\AppData\Roaming\DLL\dlIhost.exe-264_45.77.240.51-harharminer}`
 
 
 # Initial
@@ -409,8 +419,9 @@ https://medium.com/@boutnaru/the-windows-forensics-journey-word-wheel-query-file
 
 ```
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery] "MRUListEx"=hex:00,00,00,00,ff,ff,ff,ff
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery]
 
+"MRUListEx"=hex:00,00,00,00,ff,ff,ff,ff
 "0"=hex:4a,00,6b,00,30,00,78,00,30,00,69,00,66,00,57,00,51,00,4b,00,59,00,38,\
  00,6c,00,5a,00,65,00,57,00,63,00,39,00,52,00,57,00,51,00,62,00,71,00,34,00,\
  4f,00,76,00,4f,00,6b,00,75,00,76,00,54,00,7a,00,6c,00,71,00,6f,00,71,00,38,\
