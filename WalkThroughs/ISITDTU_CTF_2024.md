@@ -326,7 +326,11 @@ Prompts for a password qwerty again
 ZqI8gPx1GAKqRVDVEPqZBgJcbwhYdOfR
 `
 
-![image](https://github.com/user-attachments/assets/d86b7455-09f5-4f31-8cbc-146895f7facb)
+![image](https://github.com/user-attachments/assets/dd63cfd2-1cbc-44e4-9977-be21dd048f20)
+
+
+![image](https://github.com/user-attachments/assets/62d27999-8a04-4efa-b8a4-7de0a875f189)
+
 
 
 ```
