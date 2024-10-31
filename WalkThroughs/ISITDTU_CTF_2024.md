@@ -306,6 +306,16 @@ The challenge wanted us to decrpyt the gpg credentials.txt to Answer 9 and 10. B
 
 ![Pasted image 20241026140011](https://github.com/user-attachments/assets/e91f0748-704c-427f-bfcf-1187857753cb)
 
+To do it the right way. We can see he mounted.
+
+![image](https://github.com/user-attachments/assets/600993fc-ae80-439f-8fe0-9eb169a963f2)
+
+the temp is empty, the secretpwd in root has data.
+
+![image](https://github.com/user-attachments/assets/e0a7a5ef-4546-42a1-8bbb-dcd0150c622b)
+
+
+
 ```
     └─$ nc 152.69.210.130 1259
 
