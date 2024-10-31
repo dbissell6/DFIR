@@ -124,11 +124,6 @@ ASymmetric - One key for encryption, another key for decryption.
 
 -    AES (Advanced Encryption Standard): This is a symmetric encryption algorithm that is widely used for data encryption. It uses block ciphers with a key size of 128, 192, or 256 bits.
 
-  ![image](https://github.com/user-attachments/assets/64a78c9c-478f-4d0e-8d42-874d1363253c)
-
-  ![image](https://github.com/user-attachments/assets/c0db0b4f-f227-46a2-a9a1-0eb58f4108ce)
-
-
 -    RSA: This is an asymmetric encryption algorithm that is widely used for securing data transmission over the internet. It uses a public-private key pair to encrypt and decrypt data.
 
 -    DES (Data Encryption Standard): This is a symmetric encryption algorithm that uses block ciphers with a key size of 56 bits. It is not considered secure for modern applications.
@@ -266,6 +261,12 @@ if __name__ == "__main__":
                                                       
 ```
 
+
+![image](https://github.com/user-attachments/assets/64a78c9c-478f-4d0e-8d42-874d1363253c)
+
+![image](https://github.com/user-attachments/assets/c0db0b4f-f227-46a2-a9a1-0eb58f4108ce)
+
+
 </details>
 
 ### OpenSSL
@@ -320,8 +321,6 @@ Can mount
 ![Pasted image 20240322203715](https://github.com/dbissell6/DFIR/assets/50979196/fc87352f-762b-4086-9577-4069ab956101)
 
 # PCAPS (.pcap)
-
-
 
 ## Intro 
 
