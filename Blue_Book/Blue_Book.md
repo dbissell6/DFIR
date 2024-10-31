@@ -6,6 +6,8 @@
 
 The handbook is written to be accessible to new forensic CTF players and is designed to serve as a reference similar to a hacktricks guide. Hopefully useful to someone with no experience wanting to start and to someone with experience that needs a quick reference. 
 
+0) [Decoding+Decryption](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#Decoding+Decryption)
+
 1) [Network traffic analysis](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#pcaps-pcap) 
 
 2) [Logs + Registry + Artifacts](https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md#logs--registry--artifacts)
@@ -52,6 +54,15 @@ The structure of this document is sectioned by type of evidence typically given.
 
 General tip. Most challenges medium and above require the player to create a python script.
 
+# Decoding+Decryption
+
+## Cyberchef  
+
+Useful for most decoding  
+`https://gchq.github.io/CyberChef/`
+
+`https://github.com/mattnotmax/cyberchef-recipes#`
+
 ## Decoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
@@ -62,11 +73,7 @@ Decoding is the process of converting encoded data into a readable format. Encod
 
 -    Unicode decoding: Unicode is a standard for encoding text in various writing systems, such as Chinese, Arabic, and Cyrillic. Forensic analysts may encounter Unicode-encoded text in emails, documents, or chat messages. Decoding Unicode involves converting the encoded text back into its original form.
 
-### Cyberchef  
-Useful for most decoding  
-https://gchq.github.io/CyberChef/
 
-https://github.com/mattnotmax/cyberchef-recipes#
 
 For instance the string 'hello@world.com' can be encoded these 5 ways
 
