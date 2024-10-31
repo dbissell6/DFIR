@@ -1783,6 +1783,13 @@ When analyzing Linux logs in a CTF DFIR competition, it is important to focus on
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/962852b7-cbc8-4613-a551-e9d7dc9be510)
 
 
+## Bash history
+
+The `.bash_history` file is a valuable forensic artifact that records the commands entered by a user in a Linux shell. Analyzing this file can reveal critical information about user activities, such as executed commands, file access, network connections, software installations, and potential attempts to cover tracks or alter system files. Found as a hidden file in the users home, investigators can use `.bash_history` to reconstruct user actions, identify malicious behaviors, and establish a timeline of events, making it an essential tool for incident response and digital forensics.
+
+![image](https://github.com/user-attachments/assets/4531c973-6e90-43ae-a93c-d8c56fd92189)
+
+
 ## system.journal
 
 Holds logged system events and messages.
