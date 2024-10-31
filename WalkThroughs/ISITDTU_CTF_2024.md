@@ -314,6 +314,19 @@ the temp is empty, the secretpwd in root has data.
 
 ![image](https://github.com/user-attachments/assets/e0a7a5ef-4546-42a1-8bbb-dcd0150c622b)
 
+![image](https://github.com/user-attachments/assets/c37844f2-1013-4b6c-8c18-a90e0785a28e)
+
+![image](https://github.com/user-attachments/assets/4e24f430-b395-4291-9864-cca2ac62e8e8)
+
+Prompts for a password qwerty again
+
+![image](https://github.com/user-attachments/assets/07bc3881-d3a6-4acf-9992-465ffb2f57a0)
+
+`
+ZqI8gPx1GAKqRVDVEPqZBgJcbwhYdOfR
+`
+
+![image](https://github.com/user-attachments/assets/d86b7455-09f5-4f31-8cbc-146895f7facb)
 
 
 ```
