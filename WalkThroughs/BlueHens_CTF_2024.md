@@ -206,12 +206,18 @@ Run sstv on it, it works. Its mode scottie 1, and was able to create an image.
 ![Pasted image 20241108111838](https://github.com/user-attachments/assets/c4398e1f-e058-4c96-90d8-5f07f75aa3b1)
 
 
+![image](https://github.com/user-attachments/assets/7abe96c6-de3c-492b-98f9-4073c636a968)
 
-QRZ is a ...
+In amateur (ham) radio, "QRZ" is a procedural signal used to ask, "Who is calling me?" or "Who is on frequency?" It's commonly used to identify other operators on a frequency and to check for other participants who want to communicate.
 
+CQ: In amateur radio, "CQ" is a general call to invite anyone listening to respond. "CQ SSTV" specifically invites others to join an SSTV transmission session.
+DE: "DE" in radio communications stands for "this is" or "from" and precedes the sender’s call sign. For example, "CQ SSTV DE W3UD" means "Calling SSTV, this is W3UD."
+
+Going to `qrz.com` and entering the callsign can see a reference to the CTF.
 
 ![Pasted image 20241108112215](https://github.com/user-attachments/assets/b418ab27-713a-42dd-8391-d082137cc409)
 
+There is a hint open it being somewhere on the page or site. Opening up editor can see the flag ass a hidden comment. 
 
 ![Pasted image 20241108112709](https://github.com/user-attachments/assets/1d6f54a6-d06c-4f7f-8627-fa0a14dcde43)
 
