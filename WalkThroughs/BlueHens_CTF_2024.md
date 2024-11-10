@@ -11,12 +11,15 @@ Given .jpeg
 
 ![Pasted image 20241108101228](https://github.com/user-attachments/assets/fc3b7944-bad3-4baa-acfb-c84d200dc398)
 
+The file command shows a comment. Guessing base64 shows its a password.
 
 ![Pasted image 20241108100835](https://github.com/user-attachments/assets/57204392-cc39-4eee-a362-d6a9c5ee4e8d)
 
+Using steghide and extract
 
 ![Pasted image 20241108100910](https://github.com/user-attachments/assets/d15c1fcc-a046-444c-8451-c87f4e11c1b2)
 
+We get an aes-256 encrpted file. Using ssl and the same password as before can decrypt the file.
 
 ![Pasted image 20241108101054](https://github.com/user-attachments/assets/d7ad5cf2-bcd1-4d8c-9e17-b95057dcc35f)
 
@@ -34,10 +37,8 @@ Given one long string of 4 different emojies
 
 ![Pasted image 20241109060646](https://github.com/user-attachments/assets/d1d161c6-e2e7-4709-adc5-fd49dd7acaef)
 
-
-
-![Pasted image 20241109223506](https://github.com/user-attachments/assets/fb2de0f7-7878-4772-b2e4-3031fb3ae96b)
-
+A previous challenge in a past ctf this year there was a pcap challenge that had bad tcp flags, allowing 4 similar options. The 4 options are 00,01,10,11. 
+Combine these and they give you strings of binary. Having to guess the key value of emoji to hex was involved. Eventually finding the correct pariing.
 
 
 ```
@@ -47,6 +48,11 @@ Given one long string of 4 different emojies
 🐫 = 11
 ```
 
+Creating simple cyberchef pipeline to findreplace emoji and hex, then convert it all from binary.
+
+![Pasted image 20241109223506](https://github.com/user-attachments/assets/fb2de0f7-7878-4772-b2e4-3031fb3ae96b)
+
+Opening up gif.
 
 ![Pasted image 20241109223446](https://github.com/user-attachments/assets/2b6c7ca1-76c5-477c-8594-fa8ff1798e10)
 
@@ -75,7 +81,7 @@ Can use stegseek to solve
 
 ![Pasted image 20241109034715](https://github.com/user-attachments/assets/f63e4602-2eb6-4db6-99ba-b0b75d2a67d1)
 
-
+First 2 commands that gave us anything back.
 
 ```
 dig @184.60.121.146 hostname.bind CH ANY
@@ -83,6 +89,9 @@ dig @184.60.121.146 hostname.bind CH ANY
 ```
 dig any yatznetlab.ctf @184.60.121.146
 ```
+
+A teammate found this chess.com article about a chess game with the same name. We tried submitting white's opening move as a subdomain
+and we got a response from the dns server that was also black's response in the famous game of chess. 
 
 
 ![Pasted image 20241109034648](https://github.com/user-attachments/assets/34ed49f9-b9ac-49d9-bf1b-86405b68db59)
@@ -155,10 +164,13 @@ tsmy5%vy~}?,y7>bK7g#Qmd
 ```
 
 Looking at the first letter of each row we get another hint
+
 `check_cert_record_@root`
 
 
 ![Pasted image 20241109034438](https://github.com/user-attachments/assets/b798abc9-14c5-4541-a0af-61ed2dafd5b0)
+
+We found the cert early on and decided it wasnt useful, this time we take another look at it geven the hint. 
 
 `openssl x509 -in download.cer -text -noout`
 
@@ -172,6 +184,8 @@ This all looks normal but this part is odd
 
 23 ciphers each 23 letters and this: 1803180708100206200917102304170314180710042210 which has a length of 46.
 
+The string of `1803180708100206200917102304170314180710042210` is a string of indicies to take that letter from the 23 strings,
+18-03-18-07-08-... The 18th letter in the first, the 3rd letter in the second, 18th in the 3rd, 7th in the fourth....
 
 ![Pasted image 20241109034214](https://github.com/user-attachments/assets/0e628f93-5bc1-4b2b-bb64-fd5dc7c4e03a)
 
