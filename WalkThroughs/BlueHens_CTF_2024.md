@@ -196,20 +196,16 @@ The string of `1803180708100206200917102304170314180710042210` is a string of in
 
 # Scottish Ham
 
-
-
 ![Pasted image 20241108113143](https://github.com/user-attachments/assets/b3c6f80e-0917-4bea-bb62-42a6d4507c43)
 
 
-Given .wav
+Given .wav.
+
+Run sstv on it, it works. Its mode scottie 1, and was able to create an image.
+
+![Pasted image 20241108111838](https://github.com/user-attachments/assets/c4398e1f-e058-4c96-90d8-5f07f75aa3b1)
 
 
-
-![[../Pasted image 20241108111838.png]]
-
-
-
-![[../Pasted image 20241108111838.png]]
 
 QRZ is a ...
 
