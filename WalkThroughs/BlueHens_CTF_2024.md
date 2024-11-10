@@ -217,7 +217,7 @@ Going to `qrz.com` and entering the callsign can see a reference to the CTF.
 
 ![Pasted image 20241108112215](https://github.com/user-attachments/assets/b418ab27-713a-42dd-8391-d082137cc409)
 
-There is a hint open it being somewhere on the page or site. Opening up editor can see the flag ass a hidden comment. 
+There is a hint about it being somewhere on the page or site. Opening up editor can see the flag as a hidden comment. 
 
 ![Pasted image 20241108112709](https://github.com/user-attachments/assets/1d6f54a6-d06c-4f7f-8627-fa0a14dcde43)
 
