@@ -2342,6 +2342,11 @@ Open with
 
 ![Pasted image 20240323011307](https://github.com/dbissell6/DFIR/assets/50979196/30907313-2a87-4db4-a7da-a1994cc302a1)
 
+### Bitcode Formats (llvm,)
+
+![image](https://github.com/user-attachments/assets/5f33836e-2ac2-4358-930b-50e6635a60f3)
+
+
 ### Audio files (e.g., MP3, WAV)
 Information can be hidden in the frequency spectrum of the audio signal, in unused space within the file, or by modifying the phase of the audio waveform.  
 ### Video files (e.g., MP4, AVI)
