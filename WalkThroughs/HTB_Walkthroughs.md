@@ -181,6 +181,83 @@ Same as before change print using Write-Host to print variable names. After prin
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/4cd90bc7-de98-4561-a130-dee949480b49)
 
 
+## Sp00ky Theme - Very Easy
+
+Description - I downloaded a very nice haloween global theme for my Plasma installation and a couple of widgets! It was supposed to keep the bad spirits away while I was improving my ricing skills... Howerver, now strange things are happening and I can't figure out why...
+
+Given 
+
+![image](https://github.com/user-attachments/assets/d52048e6-dbc7-43b1-862f-569a20ab49ec)
+
+There is a .js. That really seems like the only code that can execute at this point.
+
+![image](https://github.com/user-attachments/assets/f5646a56-9eab-4d48-8db5-9b43efec14f3)
+
+
+![image](https://github.com/user-attachments/assets/54611de5-1e0a-4b26-922b-136d85438348)
+
+`HTB{pwn3d_by_th3m3s!?_1t_c4n_h4pp3n}`
+
+## Urgent - Very Easy
+
+Given .eml 
+
+![image](https://github.com/user-attachments/assets/e08b80fe-f712-48a0-8169-3fafaecff478)
+
+Notice some attachments
+
+![image](https://github.com/user-attachments/assets/bd1f305c-0019-48c2-b5a6-29d3802f0b20)
+
+Save and base64 decode
+
+![image](https://github.com/user-attachments/assets/9488e5ca-e56f-4c0e-8fc7-e71569eb305e)
+
+
+Cyberchef to url decode
+
+![image](https://github.com/user-attachments/assets/3ee08530-4514-4ce9-95f9-8f12dc51be5d)
+
+## An unusual sighting - Very Easy
+
+Description - As the preparations come to an end, and The Fray draws near each day, our newly established team has started work on refactoring the new CMS application for the competition. However, after some time we noticed that a lot of our work mysteriously has been disappearing! We managed to extract the SSH Logs and the Bash History from our dev server in question. The faction that manages to uncover the perpetrator will have a massive bonus come the competition! Note: Operating Hours of Korp: 0900 - 1900
+
+Given ssh logs
+
+
+![image](https://github.com/user-attachments/assets/0325e27d-0f37-4beb-9e50-4ebd428bb04c)
+
+
+`HTB{4n_unusual_s1ght1ng_1n_SSH_l0gs!} `
+
+## Endpoint - Easy
+
+Description - E Corp's sinister control over society through the chemical compound "EverLast" must be stopped. Analyze the provided network traffic capture file to uncover critical information hidden within the malicious payload. Your task is to extract the key details, including a callback endpoint used in various missions to disseminate EverLast, to help the resistance dismantle the corporation's grip on the world.
+
+Given pcap
+
+![image](https://github.com/user-attachments/assets/4a2d82bf-8c48-4740-bf41-27ca6fe2a13f)
+
+Just by running strings notice some fishyness
+
+
+![image](https://github.com/user-attachments/assets/e8e8847b-8c45-4d07-ae49-bfaa836e73f8)
+
+![image](https://github.com/user-attachments/assets/58755b41-02ad-4ee3-a08b-50bda67fbe30)
+
+It looks like the Values are base64 encoded. Greate a strings + grep to extract just those.
+
+![image](https://github.com/user-attachments/assets/fa840187-a66e-419f-83ee-a4969ae7ffc9)
+
+
+Remove the `INSERT INTO xQGgYA VALUES ('` and `'`. Left with just the base64 strings
+
+![image](https://github.com/user-attachments/assets/ee32492e-4477-42d6-a65b-df267fd47f25)
+
+
+![image](https://github.com/user-attachments/assets/da2264af-fb2b-43d4-9754-2e07478472ac)
+
+
+`HTB{chunk5_4nd_udf_f0r_br34kf457}`
 
 ## Project RedLine
 
