@@ -259,6 +259,38 @@ Remove the `INSERT INTO xQGgYA VALUES ('` and `'`. Left with just the base64 str
 
 `HTB{chunk5_4nd_udf_f0r_br34kf457}`
 
+## Foggy Intrusion - Easy
+
+Description - On a fog-covered Halloween night, a secure site experienced unauthorized access under the veil of darkness. With the world outside wrapped in silence, an intruder bypassed security protocols and manipulated sensitive areas, leaving behind traceable yet perplexing clues in the logs.
+
+Given pcap
+
+![image](https://github.com/user-attachments/assets/bb9f47f9-f7c2-458b-9acb-9ba18945aa9d)
+
+Notice some sus
+
+![image](https://github.com/user-attachments/assets/b29e8ae2-43c1-4be8-8c2b-7784989415a8)
+
+
+Base64 + raw inflate
+
+![image](https://github.com/user-attachments/assets/d949cc97-7ebe-4a82-a513-aae5d34d8441)
+
+![image](https://github.com/user-attachments/assets/cff6a670-81cc-4a02-8117-e5dff0a0b32f)
+
+`HTB{f06_d154pp34r3d_4nd_fl46_w4s_f0und!}`
+
+## Valhalloween - Easy
+
+Given Windows logs
+
+![image](https://github.com/user-attachments/assets/8052b4ed-9c80-4cbb-acf5-dcf4cfa93c8a)
+
+Open up chainsaw and answer questions, submitting them with nc.
+
+![image](https://github.com/user-attachments/assets/2c669b21-b115-4d63-b030-8f938a9f6ac9)
+
+
 ## Project RedLine
 
 ## No Start Where
