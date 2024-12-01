@@ -690,6 +690,19 @@ https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
 `tshark -r exfiltration_activity_pctf_challenge.pcapng -Y "ip.src == 192.168.237.132 && icmp" -T fields -e ip.ttl | awk '{for(i=1;i<=NF;i++) printf("%c", $i)}`
 
+#### CheckSum
+
+Given pcap of ICMP notice short and checksum is one of three.
+
+Use tshark to extract checksums.
+
+`tshark -r chall.pcap -Y "icmp" -T fields -e icmp.checksum`
+
+Use cyberchef to convert to morse code.
+
+![image](https://github.com/user-attachments/assets/7045f995-db80-4f6c-aaf4-683709156145)
+
+
 ### TCP
 
 #### Flags
