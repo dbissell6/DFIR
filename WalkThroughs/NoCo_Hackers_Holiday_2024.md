@@ -1,4 +1,4 @@
-
+# NoCo Hackers Holiday 2024
 
 
 
@@ -10,7 +10,8 @@ Most of the downloadable content was found in this.
 ![image](https://github.com/user-attachments/assets/383d0899-8fd9-4959-854b-a32aa0e96abd)
 
 
-![image](https://github.com/user-attachments/assets/c4e56a8d-6601-4eeb-8bab-5acc108cf25d)
+![image](https://github.com/user-attachments/assets/52988264-8a77-4ca1-8f4b-b23ba38b4034)
+
 
 
 After solving `Inode I missed something` the player has access to a private key that allows them to ssh onto a jumpbox and
@@ -55,15 +56,18 @@ Found it running strings.
 
 ![Pasted image 20241215122601](https://github.com/user-attachments/assets/b4b27570-669b-4348-bec5-de4e33955421)
 
+Run `file` and see it's a jpg as advertised. 
 
 ![Pasted image 20241215122920](https://github.com/user-attachments/assets/cfa424ea-b1d7-4baa-9428-d9437b11ada8)
 
 
 ![Pasted image 20241215122546](https://github.com/user-attachments/assets/ed975447-31cb-4e47-a0ad-763aa3d7a362)
 
+Run `stegoveritas`
 
 ![Pasted image 20241215122853](https://github.com/user-attachments/assets/e74c4281-fa33-47c2-a5cd-06557d295d82)
 
+Looking through the output see some QR codes
 
 ![Pasted image 20241215122821](https://github.com/user-attachments/assets/ba83af00-d9bf-4bb7-9abd-2acf31bfdcd3)
 
@@ -140,13 +144,18 @@ Take the QR Code to get scanned.
 
 ![Pasted image 20241215101211](https://github.com/user-attachments/assets/6c719c69-9bee-4737-a461-adbb7249f25c)
 
+
+Referencing the original directory structure find the contacts as a locked pdf. Use `pdf2john` to create a hash.
+
 ![Pasted image 20241215101339](https://github.com/user-attachments/assets/69f31aa3-9025-4496-9330-d20c5996d7a8)
 
 ![Pasted image 20241215101404](https://github.com/user-attachments/assets/c35cf4c2-e4d0-4ad9-8c59-9551de5a1598)
 
+Hashcat to crack.
 
 ![Pasted image 20241215101316](https://github.com/user-attachments/assets/9ff3a376-fe80-4cb1-9df7-a9a2c0871720)
 
+Use the password to open the pdf and see the flag on top of the page.
 
 ![Pasted image 20241215101129](https://github.com/user-attachments/assets/cccab523-cbc4-4b96-86b9-c748e58f9624)
 
@@ -173,27 +182,36 @@ Use Cisco Password Cracker
 
 ![Pasted image 20241215103356](https://github.com/user-attachments/assets/1007bebd-1c6f-4b86-a315-77cd27afb672)
 
+Given a pcap
+
 ![Pasted image 20241215103419](https://github.com/user-attachments/assets/71a7a3b5-b5d1-4235-af2e-456edc602662)
+
+from the challenge name look up the FTP protocol, nothing comes up. Try searching for `ftp` string.  
 
 ![Pasted image 20241215103723](https://github.com/user-attachments/assets/f06ca04d-3839-40d7-bf7f-f41cb40d240a)
 
-Follow this stream
+Follow this stream and notice there is a zip being transfered over the python ftb library.
 
 
 ![Pasted image 20241215103627](https://github.com/user-attachments/assets/f718a677-1359-4aa8-8db1-0ff7569c79d8)
 
+Use binwalk extract the pcap
 
 ![Pasted image 20241215103811](https://github.com/user-attachments/assets/f1674334-29e9-4a72-95b2-fbec8aa0206d)
 
+`zip2john` to get the hashes of the password protected compressed file.
 
 ![Pasted image 20241215201920](https://github.com/user-attachments/assets/9b09c7f9-b1f8-4505-9829-f784d7bc7d58)
 
+Use Hashcat on mode `-m 13600` to crack the hash. 
 
 ![Pasted image 20241215201849](https://github.com/user-attachments/assets/ad6260ba-7c9c-4505-873c-5ce04aadef3c)
 
+Use 7-Zip to open the file with  password `TH3tr!foco`
+
 ![Pasted image 20241215202445](https://github.com/user-attachments/assets/e1ec84db-3495-43f8-acb2-efaa914b1cc8)
 
- password `TH3tr!foco`
+Get the flag.
 
 ![Pasted image 20241215202334](https://github.com/user-attachments/assets/341d2c8d-72a2-4998-b574-07012ef79092)
 
