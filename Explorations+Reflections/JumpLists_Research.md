@@ -16,28 +16,29 @@ However, when using Zimmerman's Jump List tools, the original name was not refer
 
 ## Starting from the Beginning
 
-To demonstrate this, I created a folder named A_New_Folder on the desktop and examined its presence in Recent files.
+To demonstrate this, I created a folder named `A_New_Folder` on the desktop and examined its presence in Recent files.
 
 ![Pasted image 20241219085907](https://github.com/user-attachments/assets/fcf0a206-3554-4568-a2a7-abac854c87d4)
 
 
-Searching through the directory using strings, I located the folder in the f01b4d95cf55d32a.automaticDestinations-ms file.
+Running strings confirmed that the `automaticDestinations` file contained the original folder name.
 
 ![Pasted image 20241219090031](https://github.com/user-attachments/assets/56c7c13b-d725-44c9-b042-f0bdc0a431c7)
+
+Searching through the directory using strings, I located the folder in the `f01b4d95cf55d32a.automaticDestinations-ms` file.
 
 ![Pasted image 20241219090200](https://github.com/user-attachments/assets/ae0f6ef8-0171-436b-b655-6df5abdf0947)
 
 
-Running strings confirmed that the automaticDestinations file contained the original folder name.
 
 ## Testing Renaming Behavior
 
-Next, I renamed the folder to B_New_Folder. Interestingly, the `/Recent` directory entry still referred to the old name: `A_New_Folder.lnk`.
+Next, I renamed the folder to `B_New_Folder`. Interestingly, the `/Recent` directory entry still referred to the old name: `A_New_Folder.lnk`.
 
 ![Pasted image 20241219090547](https://github.com/user-attachments/assets/0db7a70e-49d9-46fc-bd9d-97b71ebd1ec4)
 
 
-When I re-ran strings on the Jump List file, both folder names (A_New_Folder and B_New_Folder) were present.
+When I re-ran strings on the Jump List file, both folder names (`A_New_Folder` and `B_New_Folder`) were present.
 
 ![Pasted image 20241219090724](https://github.com/user-attachments/assets/6982c58d-a31f-49a6-acca-a6b466cf88d2)
 
