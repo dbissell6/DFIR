@@ -138,6 +138,11 @@ Through these experiments, I identified the following key behaviors:
     A new .lnk file is not created in /Recent until the object is interacted with again, and it retains the old name.
     Current Jump List parsers, including JLECmd, do not capture the renaming history. They only parse the current metadata.
 
+
+![Pasted image 20241219093033](https://github.com/user-attachments/assets/7b1cb4b2-8a1a-400f-bcdd-43a38dbdf723)
+
+This shows the entry does not keep a log of changes, just the first and last.
+
 ## Conclusion
 
 My analysis highlights a gap in current JumpList parsing tools, which do not account for renaming history stored in the automaticDestinations-ms file.
