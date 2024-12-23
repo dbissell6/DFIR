@@ -8,15 +8,11 @@
 
 ![Pasted image 20241222075526](https://github.com/user-attachments/assets/98737a90-b52e-4f95-be87-42d9f437047d)
 
-
-
-
+Given firefox configuration files. 
 
 ![Pasted image 20241222075540](https://github.com/user-attachments/assets/f24aa0be-0510-43c4-926d-6d4387dfda0b)
 
 
-
-![Pasted image 20241222101950](https://github.com/user-attachments/assets/328e5d03-5f24-418c-8ff4-1a3316df5e22)
 
 ![image](https://github.com/user-attachments/assets/c6394b06-5aa2-474a-ba7b-3a4a43536048)
 
@@ -201,8 +197,12 @@ Using hashcat to crack the hash
 
 ![Pasted image 20241222093304](https://github.com/user-attachments/assets/4372adef-f2ec-491d-946a-1f8a4904ac16)
 
+Given a .pdf.
+
 
 ![Pasted image 20241222093354](https://github.com/user-attachments/assets/22ca2156-19e2-43ed-b542-d9ded8d0af7e)
+
+Take a look, seems like a normal pdf.
 
 ![Pasted image 20241222093530](https://github.com/user-attachments/assets/b54c8180-9cad-4929-8ab7-f8b8fe3fcdf9)
 
@@ -212,20 +212,27 @@ pdf-parser notice object 999
 
 ![Pasted image 20241222172534](https://github.com/user-attachments/assets/eadd20fc-4852-412f-a055-d560176cbf2a)
 
+Notice the directory had a weird string.
 
 ![Pasted image 20241222172618](https://github.com/user-attachments/assets/73985ee0-49e4-4c73-842f-c5158bcc8527)
 
+Concat all the bytes from the object and xor with `57`.
 
 ![Pasted image 20241222172458](https://github.com/user-attachments/assets/04009982-d978-4d0e-a519-3b400961e5cf)
 
+See we get a zip
+
 ![Pasted image 20241222172157](https://github.com/user-attachments/assets/c7d603f7-1968-4319-9af7-c9f0d4405a79)
 
+Get the hash with john. Convert to the hashcat format
 
 ![image](https://github.com/user-attachments/assets/e45a422d-3eb3-4c02-b6b2-0cf8facdbc63)
 
+Remember the decription said something about `d3ad0ne` and `ruleset`, and use that as a `ruleset`.
 
 ![Pasted image 20241223074118](https://github.com/user-attachments/assets/06a51bcc-8859-413c-a0a7-af8341e4dff5)
 
+Use firefox decrypt to get the password and flag.
 
 ![Pasted image 20241223074228](https://github.com/user-attachments/assets/53ee5c37-95c0-4508-97f4-af912ca77a79)
 
@@ -236,28 +243,31 @@ pdf-parser notice object 999
 
 ![Pasted image 20241222084326](https://github.com/user-attachments/assets/5d549ce9-bf53-42b0-982e-86260b3c11c1)
 
-
+Given pcap. 
 
 ![Pasted image 20241222085749](https://github.com/user-attachments/assets/ca526036-b27c-445c-a6aa-99aa8651b3d1)
 
-Running strings on the pcap get a `secret.wav`
+Running strings on the pcap get a `secret.wav`. Running **binwalk** also see `key.txt`
 
 
 ![Pasted image 20241222085924](https://github.com/user-attachments/assets/c9330ca4-624c-448f-8848-4d29254f2276)
 
+Find one of the streams conintaing that info in **Wireshark**.
 
 ![image](https://github.com/user-attachments/assets/9fc1735a-76e5-4352-838d-9e03e3043987)
 
+Extract the ZIP file, extract and recover both files. Take the contents of `key.txt` to **CyberChef**.
 
 ![image](https://github.com/user-attachments/assets/ef21a00a-21b5-4de4-8d55-c358365b515d)
 
+Now that we have a password we can take both to **DeepSound** to extract files.
 
 ![Pasted image 20241222105410](https://github.com/user-attachments/assets/d7ac9fd6-bdd6-4203-8ddf-5668a07396b5)
 
 
 `https://github.com/Jpinsoft/DeepSound`
 
-Click on extract secret files
+Click on extract secret files. Put in password.
 
 
 ![Pasted image 20241222110154](https://github.com/user-attachments/assets/2755ca2f-d5d7-47f3-adbe-04d9d418b9b2)
