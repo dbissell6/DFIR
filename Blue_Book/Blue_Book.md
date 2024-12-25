@@ -1226,7 +1226,9 @@ Chainsaw is a command-line interface tool that can be used to analyze log files 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/be6ed469-0ee9-4b40-80b4-a0068ad7a2d0)
 
+For multiple conditions
 
+`./chainsaw search -t 'Event.EventData.ProcessId: =4' -t 'Event.System.EventID: =18' ~/Desktop/Tracer/Tracer/C/Windows/System32/winevt/logs/*`
 
 #### sigma
 
@@ -1238,6 +1240,12 @@ Using hunt(+ sigma, rules, mappings)
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/3ac4f54d-57a8-437a-b801-7e0b9b242342)
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/8262311b-64ac-4579-96a8-ffc5ebd80d77)
+
+
+Adding a level to help filter events
+```
+./chainsaw hunt -s sigma -r rules -m mappings/sigma-event-logs-all.yml /home/kali/Desktop/Tracer/Tracer/C/Windows/System32/winevt/logs --skip-errors --level high
+```
 
 Using from and to(filtering time)
 
