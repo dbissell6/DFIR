@@ -1419,6 +1419,14 @@ Zone Identifier - to see where a file was downloaded from
 
 https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table
 
+### Chainsaw
+
+MFT utilizing the `dump` option and enabling output.
+
+![image](https://github.com/user-attachments/assets/31a1c655-13cb-4cf3-976f-d6cc7a33255f)
+
+has a `--decode-data-streams` option
+
 ### MFTECmd.exe 
 Tool to parse MFT +($Boot...)
 
