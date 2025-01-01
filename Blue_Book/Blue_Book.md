@@ -1969,6 +1969,16 @@ appdata/local/google/chrome/User Data/default/History
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/d6d87ba5-73eb-421c-b208-273fe7c90a2a)
 
+
+Recover passwords
+
+![image](https://github.com/user-attachments/assets/c9c02884-ab49-4fb3-b3e0-84b1c7b52c67)
+
+![image](https://github.com/user-attachments/assets/d38e5c38-b271-408e-9ceb-b464d1651239)
+
+![image](https://github.com/user-attachments/assets/74af0d10-6ea0-453e-859b-269adb023779)
+
+
 ### Firefox
 
 ```
