@@ -651,6 +651,24 @@ hashcat -m 5600 responder_hash /usr/share/wordlists/rockyou.txt
 
 ![image](https://github.com/user-attachments/assets/6eaad109-36ae-414e-a750-70e5926d9bb0)
 
+### Kerberos Analysis and Decryption
+
+#### AS-REP Hash Extraction
+
+
+![Pasted image 20250101230155](https://github.com/user-attachments/assets/88298450-7b6b-4dee-b734-9a3f4c1331e7)
+
+Manually getting the components from Wireshark.
+
+![Pasted image 20250101230815](https://github.com/user-attachments/assets/e71150aa-5060-4165-b4ef-0dc15fabaad2)
+
+Constructing the hash for john
+
+![Pasted image 20250101230934](https://github.com/user-attachments/assets/f1a0fc72-8e45-4b47-8307-aad59e337dd4)
+
+hashcat needs a different format, the username and realm must be included, even though it doesnt use it.
+
+![Pasted image 20250101231556](https://github.com/user-attachments/assets/fc397bef-c387-4a9f-917b-dce57c2a7297)
 
 
 ### Decrypt winrm
