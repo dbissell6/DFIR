@@ -78,99 +78,161 @@ Given mouse usb pcap.
 
 ![Pasted image 20250103174742](https://github.com/user-attachments/assets/d1fbe3b0-555a-471c-b72f-912b8e5143c8)
 
-```tshark -r art.pcapng -T fields -e usb.src -e us.dst -e usb.capdata -Y 'usb.capdata' > usbcap.out```
+First step extract and filter with tshark.
 
+```
+tshark -r art.pcapng -T fields -e usb.src -e usb.dst -e usb.capdata -Y 'usb.capdata' > mouse_data.out
+
+```
+
+The challenge has two steps: 1) Traditional mouse pcap. 2) Pen tablet 
+
+Output from basic mouse.
+
+![image](https://github.com/user-attachments/assets/e19fb3f0-03fb-45b7-8a37-070d7e3b61ea)
+
+
+
+Python scipt combining the two parsers
 ```
 #!/usr/bin/env python3
 import sys
+import struct
 import matplotlib.pyplot as plt
+from pwn import u16  # Required for pen data parsing
 
+###############################################################################
+# MOUSE LOGIC
+###############################################################################
 def parse_mouse_report(raw_hex):
     """
-    Convert 16 hex chars (8 bytes) into X/Y deltas.
-    Adjust or swap X/Y if you see mirrored or upside-down text.
+    Convert raw hex (16 chars, 8 bytes) into X/Y deltas.
     """
     report_bytes = bytes.fromhex(raw_hex)
-    # Example: we invert Y to fix 'upside-down' effect
     x_delta = int.from_bytes(report_bytes[2:4], 'little', signed=True)
-    y_delta = -int.from_bytes(report_bytes[4:6], 'little', signed=True)
+    y_delta = -int.from_bytes(report_bytes[4:6], 'little', signed=True)  # Negate Y
     return x_delta, y_delta
 
-def ascii_preview(byte_data, max_len=80):
+def parse_mouse_data(all_lines):
     """
-    Return a quick ASCII-ish preview of the bytes:
-      - Print ASCII if 32 <= byte <= 126
-      - Else print '.'
-    Just for a quick look at the content.
+    Parse mouse data from lines with 16 hex characters in the third column.
     """
-    preview = []
-    for b in byte_data[:max_len]:
-        if 32 <= b < 127:
-            preview.append(chr(b))
-        else:
-            preview.append('.')
-    return "".join(preview)
+    x, y = 0, 0
+    coords = [(x, y)]  # Start at origin
+    for line in all_lines:
+        line = line.strip()
+        if not line:
+            continue
 
+        parts = line.split()
+        if len(parts) < 3:
+            continue
+
+        raw_hex = parts[2]
+        if len(raw_hex) == 16:  # Mouse lines
+            dx, dy = parse_mouse_report(raw_hex)
+            x += dx
+            y += dy
+            coords.append((x, y))
+
+    return coords
+
+###############################################################################
+# PEN/TABLET LOGIC
+###############################################################################
+def parse_pen_data(all_lines):
+    """
+    Parse pen data from lines with 20 hex characters in the third column.
+    """
+    xvals = []
+    yvals = []
+    for line in all_lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        parts = line.split()
+        if len(parts) < 3:
+            continue
+
+        raw_hex = parts[2]
+        if len(raw_hex) == 20:  # Pen lines
+            try:
+                # Extract X, Y, Z values from the raw hex string
+                X_hex = raw_hex[4:8]   # 3rd to 5th bytes
+                Y_hex = raw_hex[8:12]  # 5th to 7th bytes
+                Z_hex = raw_hex[12:16] # 9th and 10th bytes
+
+                X = int(X_hex, 16)
+                Y = int(Y_hex, 16)
+                Z = int(Z_hex, 16)
+
+                if Z > 0:  # Only process when Z > 0
+                    xvals.append(u16(struct.pack(">H", X)))
+                    yvals.append(-u16(struct.pack(">H", Y)))  # Negate Y
+            except ValueError:
+                continue
+
+    return xvals, yvals
+
+###############################################################################
+# MAIN LOGIC
+###############################################################################
 def main(input_file):
-    x, y = 0, 0  # track cumulative mouse movement
-    mouse_coords = [(x, y)]
-
     with open(input_file, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
+        all_lines = f.readlines()
 
-            parts = line.split()
-            if len(parts) < 3:
-                continue
-
-            # The raw hex is presumably in column 3
-            raw_hex = parts[2]
-
-            # Distinguish small lines (mouse) from big lines (bulk data, etc.)
-            if len(raw_hex) == 16:
-                # This is likely an 8-byte mouse HID report
-                print(parts[0])
-                dx, dy = parse_mouse_report(raw_hex)
-                x += dx
-                y += dy
-                mouse_coords.append((x, y))
-
-            elif len(raw_hex) >= 128:
-                # This is some large bulk data
-                # Let's decode and show a quick ASCII preview
-                big_bytes = bytes.fromhex(raw_hex)
-                preview_str = ascii_preview(big_bytes)
-                # Print the line length and an ASCII snippet
-                print(f"[BIG] HexLen={len(raw_hex)} Bytes={len(big_bytes)} Preview: {preview_str}")
-
-                # If you suspect it might contain coordinate pairs, you could parse them here
-                # For now, we just show a snippet and move on.
-
-            else:
-                # Medium-sized lines or anything else
-                pass
-
-    # Done parsing. Now plot the mouse coordinates
+    # Parse and plot mouse data
+    mouse_coords = parse_mouse_data(all_lines)
     if len(mouse_coords) > 1:
         xs, ys = zip(*mouse_coords)
-        plt.figure(figsize=(6,6))
-        plt.plot(xs, ys, marker='.', linestyle='-')
-        plt.title("Mouse Movement from HID Reports")
+        plt.figure(figsize=(6, 6))
+        plt.clf()  # Clear the current figure before plotting
+        plt.title("Mouse Movement")
+        plt.plot(xs, ys, marker='.', linestyle='-', color='blue')
         plt.xlabel("X position")
         plt.ylabel("Y position")
         plt.grid(True)
         plt.axis('equal')
         plt.show()
     else:
-        print("No small (16-hex-char) mouse lines found to plot.")
+        print("[INFO] No valid mouse data found.")
 
+    # Parse and plot pen data
+    pen_x, pen_y = parse_pen_data(all_lines)
+    if pen_x and pen_y:
+        plt.figure(figsize=(6, 6))
+        plt.clf()  # Clear the current figure before plotting
+        plt.title("Pen/Tablet Movement")
+        plt.scatter(pen_x, pen_y, s=10, c='red')
+        plt.xlabel("X position")
+        plt.ylabel("Y position")
+        plt.grid(True)
+        plt.axis('equal')
+        plt.show()
+    else:
+        print("[INFO] No valid pen data found.")
+
+###############################################################################
+# Script Entry Point
+###############################################################################
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(f"Usage: {sys.argv[0]} <tshark_output.txt>")
         sys.exit(1)
+
     main(sys.argv[1])
+                                  
 
 ```
+
+
+The other part of the challenge was using the `1.14.1` convo, which was a tablet pen. 
+
+
+![image](https://github.com/user-attachments/assets/7663ad50-8d12-4b5b-8366-4af0caa4a892)
+
+
+
+
 
