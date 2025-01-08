@@ -1459,6 +1459,22 @@ Can load raw MFT. Useful but takes 45 minutes to load
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/298cb258-b113-4aee-85b8-e9d9e76bf540)
 
+## UsnJrnl (Update Sequence Number Journal)
+
+The UsnJrnl is a feature of the NTFS file system that logs changes to files and directories on the volume. Each update or modification to a file or directory creates an entry in the UsnJrnl, which includes metadata such as timestamps, file attributes, and the nature of the change (e.g., created, modified, deleted).
+
+Forensic investigators often analyze the UsnJrnl to determine file activity, reconstruct timelines, or identify tampering with system files. 
+
+### Use MFTECmd to parse the USN
+
+![image](https://github.com/user-attachments/assets/2b2809ac-c344-4ac6-8f4c-e5f7087d6bf5)
+
+
+
+### usnjrnl_rewind
+
+```https://github.com/CyberCX-DFIR/usnjrnl_rewind```
+
 
 ## Windows prefetch(.pf)
 
