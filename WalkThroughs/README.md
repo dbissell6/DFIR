@@ -1,6 +1,12 @@
 Start
 
+# Srdnlen CTF 2025 1-18-2025
+
+.evtx logs, pcap hash of hashes, memory dump track ransomware, threat intel on VirusTotal, pcap hid keyboard + vss code, Dos .com file,
+
 # UofT CTF 2025 + CyberLeague 2025 - 1-11-2025
+
+rar2john, bruteforce time seed, pcap encrypted exe decrypt shellcode, flag hidden in random forest classifier weights. 
 
 # Iris CTF 2025 - 01-04-2025
 
@@ -8,7 +14,11 @@ Pcap hid keyboard, pcap hid mouse, pcap hid tablet pen. Syslog, SSO, RADIUS, dns
 
 # BlueHens CTF 2024 - 11-8-2024
 
+.jpeg steghide, emojis to hex, .jpg stegseek, Dig DNS chess, .wav sstv ham radio, 
+
 # ISITDTU CTF 2024 Quals 10-25-2024
+
+Fix damaged .vhd, recover USNJournal, YouTube QR-codes as c2, | memdump, malfind, VirusTotal, 
 
 # Sunshine 10-17-2024
 
