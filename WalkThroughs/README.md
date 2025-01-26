@@ -1,5 +1,9 @@
 Start
 
+# x3c + TUCTF 1-25-2025
+
+Find keepass password in dmp restore from history | aircrack decrypt traffic in wireshark
+
 # Srdnlen CTF 2025 1-18-2025
 
 .evtx logs, pcap hash of hashes, memory dump track ransomware, threat intel on VirusTotal, pcap hid keyboard + vss code, Dos .com file,
