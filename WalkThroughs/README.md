@@ -1,5 +1,9 @@
 Start
 
+# nullcon HackIM CTF 2025 2-1-2025
+
+Fix bad jpeg markers, Decoding I2C protocol, Fix broken gif header,
+
 # x3c + TUCTF 1-25-2025
 
 Find keepass password in dmp restore from history | aircrack decrypt traffic in wireshark
