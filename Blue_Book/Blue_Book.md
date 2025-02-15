@@ -63,6 +63,14 @@ Useful for most decoding
 
 `https://github.com/mattnotmax/cyberchef-recipes#`
 
+
+## Dcode
+
+dCode.fr is a collection of over 900 tools to help solve games, riddles, ciphers, mathematics, puzzles, etc.
+`https://www.dcode.fr/en`
+
+
+
 ## Decoding
 
 Decoding is the process of converting encoded data into a readable format. Encoding is a technique used to represent data in a specific format, often to save space or to ensure data integrity. Decoding is used to analyze binary data or to extract data from file formats that are not natively supported by forensic tools.
@@ -2681,6 +2689,13 @@ ldd is a Unix and Linux command-line utility that stands for "List Dynamic Depen
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/11f1a938-6b99-404e-b265-e20c398a547f)
 
 
+### Dogbolt
+
+This is the Decompiler Explorer! It is an interactive online decompiler which shows equivalent C-like output of decompiled programs from many popular decompilers. It's meant to be the reverse of the amazing Compiler Explorer.
+
+`https://dogbolt.org`
+
+
 ### Ghidra
 
 Ghidra is an open-source reverse engineering framework developed by the National Security Agency, offering a suite of capabilities to analyze compiled code and decompile it into higher-level representations.
@@ -3386,6 +3401,12 @@ A steganography tool that can be used to detect hidden information within images
 A Java-based tool that can be used to analyze and manipulate images for steganography purposes. It provides a range of filters and visual aids to help users identify hidden information within images. Stegsolve is particularly useful for identifying the location and type of steganography being used within an image.
 ![Pasted image 20230221202426](https://user-images.githubusercontent.com/50979196/221450558-7c93ed5f-4a8a-450a-84d1-8d77d9b77458.png)
 
+### Aperisolve
+
+Aperi'Solve is an online platform which performs layer analysis on image. The platform also uses zsteg, steghide, outguess, exiftool, binwalk, foremost and strings for deeper steganography analysis. The platform supports the following images format: .png, .jpg, .gif, .bmp, .jpeg, .jfif, .jpe, .tiff...
+
+
+`https://www.aperisolve.com`
 
 ### LSB in MP3s
 
