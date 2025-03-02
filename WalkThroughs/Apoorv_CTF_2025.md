@@ -192,7 +192,8 @@ Below we can see most of what we need
 
 X/Y public key coords
 
-![image](https://github.com/user-attachments/assets/4882b871-bd29-448b-ab10-4804f9de06f9)
+![image](https://github.com/user-attachments/assets/d0249676-3385-43bd-85b6-5ce72b850785)
+
 
 Random pairings
 
@@ -206,7 +207,12 @@ mac addresses
 
 So we have everything but the private key. However, becasue we see debug key we know it is well known private key. Find the private key here.
 
+
+![image](https://github.com/user-attachments/assets/4882b871-bd29-448b-ab10-4804f9de06f9)
+
 `https://community.onsemi.com/s/article/KB-How-to-use-Bluetooth-LE-security-manager-in-debug-mode`
+
+Notice the x, y is the same from what we have.
 
 ![image](https://github.com/user-attachments/assets/d147afa5-45ea-40a5-b4df-b3c12651bb92)
 
