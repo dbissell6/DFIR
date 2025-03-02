@@ -1,8 +1,12 @@
 Start
 
+# ApoorvCTF 2025 3-1-2025
+
+rpd bitmap cache | bcrack png | keyboard pcap, nvim commands | mem dump chrome history | bluetooth pcap
+
 # nullcon HackIM CTF 2025 2-1-2025
 
-Fix bad jpeg markers, Decoding I2C protocol, Fix broken gif header,
+Fix bad jpeg markers, Decoding I2C protocol, Fix broken gif header
 
 # x3c + TUCTF 1-25-2025
 
