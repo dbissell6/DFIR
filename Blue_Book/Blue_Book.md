@@ -703,6 +703,33 @@ Notice very bottom says usage and gives 2 symbols, those are the 2 options depen
 
 https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
+### Bluetooth
+
+`https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/security-manager-specification.html`
+
+
+Key Protocols & Packets
+
+    A2DP (Advanced Audio Distribution Profile) – Used for streaming audio.
+    AVDTP (Audio/Video Distribution Transport Protocol) – Sets up media streaming.
+    SBC Codec Packets – Encapsulated audio data in Bluetooth packets.
+    L2CAP (Logical Link Control and Adaptation Protocol) – Carries audio data.
+
+
+`Wireless - Bluetooh Devices`
+
+![image](https://github.com/user-attachments/assets/0901b9fb-5c9d-4609-8df4-0823e5b2de5a)
+
+
+`Telephony-RTP-RTP Streams`
+
+![image](https://github.com/user-attachments/assets/1bdf6b20-0a98-421f-a2f1-0c34012f58f9)
+
+
+#### LTK
+
+https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/Apoorv_CTF_2025.md#dura-lesc-sed-lesc-from-pwnme
+
 ## Data Exfiltration
 
 ### ICMP
