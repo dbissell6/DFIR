@@ -156,7 +156,69 @@ Given Bluetooth pcap
 
 ![Pasted image 20250301212430](https://github.com/user-attachments/assets/30941905-48be-463e-9db3-92c7af1a28c2)
 
-Some is some billie eyelash. 
+Song is some billie eyelash. 
+
+## Dura Lesc Sed Lesc (From PwnMe)
+
+![Pasted image 20250228125940](https://github.com/user-attachments/assets/07f13694-af46-47fe-894d-399134e6fa02)
+
+Given Bluetooth pcap.
+
+See raspberrypi source.
+
+![image](https://github.com/user-attachments/assets/2851ef9e-7c81-4cd8-876c-0fb437a7f04e)
+
+Currently encrypted
+
+![image](https://github.com/user-attachments/assets/f4a15085-c04d-4ec5-ab03-616e7c01f135)
+
+
+Bluetooth Documentation
+
+`https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/security-manager-specification.html`
+
+We need the LTK. To create it we need 3 sets of info and a private key.
+
+1) X/Y public key coords
+
+2) Random pairings
+
+3) mac addresses
+
+
+Below we can see most of what we need
+
+![Pasted image 20250228200246](https://github.com/user-attachments/assets/d07b7f0a-924e-4829-8518-83ac774d85f5)
+
+X/Y public key coords
+
+![image](https://github.com/user-attachments/assets/4882b871-bd29-448b-ab10-4804f9de06f9)
+
+Random pairings
+
+![image](https://github.com/user-attachments/assets/94c71f72-791e-4531-be55-38dae4558a21)
+
+![image](https://github.com/user-attachments/assets/dbfcaa9c-44dd-49ca-a79c-dd11d0a8631f)
+
+mac addresses
+
+![Pasted image 20250228151154](https://github.com/user-attachments/assets/6c84960d-2fc9-460a-9af8-c77085a5be45)
+
+So we have everything but the private key. However, becasue we see debug key we know it is well known private key. Find the private key here.
+
+`https://community.onsemi.com/s/article/KB-How-to-use-Bluetooth-LE-security-manager-in-debug-mode`
+
+![image](https://github.com/user-attachments/assets/d147afa5-45ea-40a5-b4df-b3c12651bb92)
+
+
+Can now use python script to get the LTK and use crackle to decrypt the pcap
+
+![image](https://github.com/user-attachments/assets/f4026d79-14f6-4ff6-9645-238d77c0a102)
+
+
+Final view of previously encrypted traffic.
+
+![image](https://github.com/user-attachments/assets/e5a7b21a-9d02-4d46-a4fc-b059092d12db)
 
 
 ## Holy Rice
