@@ -710,10 +710,8 @@ https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
 Key Protocols & Packets
 
-    A2DP (Advanced Audio Distribution Profile) – Used for streaming audio.
-    AVDTP (Audio/Video Distribution Transport Protocol) – Sets up media streaming.
-    SBC Codec Packets – Encapsulated audio data in Bluetooth packets.
-    L2CAP (Logical Link Control and Adaptation Protocol) – Carries audio data.
+    SBC 
+    L2CAP (Logical Link Control and Adaptation Protocol) – 
 
 
 `Wireless - Bluetooh Devices`
