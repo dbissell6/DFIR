@@ -610,6 +610,40 @@ Decrypt similar to using key
 
 ![tls](https://github.com/dbissell6/DFIR/assets/50979196/e0ae5cd0-5493-4a1f-8136-2789269a7ae0)
 
+#### Preshared key
+
+
+##### Setting it up 
+
+Setting up server with psk of `4d79537570657253656372657450534b`.
+
+`openssl s_server -psk 4d79537570657253656372657450534b -nocert -cipher PSK-AES128-CBC-SHA -accept 4433 -tls1_2`
+
+![image](https://github.com/user-attachments/assets/41ebaa76-5063-4f6b-b3ca-3b92e1dbc308)
+
+
+Connect
+
+`openssl s_client -psk 4d79537570657253656372657450534b -cipher PSK-AES128-CBC-SHA -connect localhost:4433 -tls1_2`
+
+![image](https://github.com/user-attachments/assets/fa4073a3-61c1-453f-9c1f-9329f6b764ac)
+
+
+Encrypted
+
+![image](https://github.com/user-attachments/assets/60a2066c-716e-4d32-bf18-2bf5f438dba2)
+
+Enter PSK to decrypt traffic in Wireshark
+
+`Preferences-TLS-PSK`
+
+![image](https://github.com/user-attachments/assets/6d640643-c4ee-40ac-ada4-107a8b3a75e9)
+
+
+Decrypted
+
+![image](https://github.com/user-attachments/assets/842a95a8-7d35-4ca6-b8cb-6df6c9567a2e)
+
 
 ### Decrypt SMB2
 
