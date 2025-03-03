@@ -556,7 +556,37 @@ From G, but TLS instead of SSL
 
 ![Pasted image 20230113164557](https://user-images.githubusercontent.com/50979196/221450269-c795cfa1-5921-44ce-9aa6-a33de361632f.png)
 
+##### Setting this up
 
+```
+# 1 Generate a 2048-bit RSA private key
+openssl genrsa -out server_rsa.key 2048
+
+# 2 Create a self-signed certificate
+openssl req -new -x509 -key server_rsa.key -out server_rsa.crt -days 365 -subj "/CN=localhost"
+```
+
+Start server
+
+```
+openssl s_server -cert server_rsa.crt -key server_rsa.key -tls1_2 -cipher RSA -accept 4433
+
+```
+
+![image](https://github.com/user-attachments/assets/8a832ff4-787e-45d9-987e-f8a6dd798e66)
+
+
+Connect
+
+`openssl s_client -connect localhost:4433 -tls1_2`
+
+![image](https://github.com/user-attachments/assets/d904e53a-ce08-474c-b0c6-d08a1713b767)
+
+![image](https://github.com/user-attachments/assets/3cb1c14b-e985-47de-9d06-3f6719fe64a8)
+
+Follow adding key as before in Wireshark.
+
+![image](https://github.com/user-attachments/assets/075ac9b5-1eb0-4830-a70e-ea4d0ec66bb9)
 
 
 #### With a log file
