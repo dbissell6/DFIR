@@ -172,6 +172,21 @@ Suggest to do something like this but it didnt work.
 ![Pasted image 20250308201654](https://github.com/user-attachments/assets/66b66958-1ba1-41d9-996f-2f6660817a33)
 
 
+Should have ran with `--dislocker` tag.
+
+![image](https://github.com/user-attachments/assets/41ae200c-8c83-4f08-add7-2eb48275a027)
+
+Decrypt with Dislocker-fuse
+
+![image](https://github.com/user-attachments/assets/d54e3e37-1d02-4ff9-a4a8-2671d8acb11d)
+
+Mount decrypted
+
+![image](https://github.com/user-attachments/assets/f95e73dd-c6e0-444c-9eb9-166064da1231)
+
+![image](https://github.com/user-attachments/assets/e9c21ee7-f6b2-444d-b253-17e44edb4ffe)
+
+
 
 # General Skills
 
