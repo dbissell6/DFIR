@@ -2,7 +2,9 @@ Start
 
 # UTAustinCTF + picoCTF 2-14-2025
 
-btrfs disk | QR code from bitstring | convert permissions to 0/1  
+btrfs disk | QR code from bitstring | convert permissions of files to 0/1  
+
+crack bitlocker hash | bitlocker fvek from mem dump | png + zsteg | lsb to binary | evtx logs
 
 # ApoorvCTF + PwnMe 2025 3-1-2025
 
