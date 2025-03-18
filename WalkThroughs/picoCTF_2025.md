@@ -339,6 +339,23 @@ Given access to a site with an input field vulnerable to SSTI. This time there a
 
 ![Pasted image 20250308143010](https://github.com/user-attachments/assets/09af8164-9616-4fac-9405-8c6938ae995b)
 
+## Apriti sesamo
+
+![Pasted image 20250308152735](https://github.com/user-attachments/assets/43955813-ae15-4155-8c0c-13e5dcea6797)
+
+Given Access to a php login page.
+
+![Pasted image 20250308151342](https://github.com/user-attachments/assets/6d469572-24be-4c5d-a3e5-740b74767f70)
+
+![Pasted image 20250308153100](https://github.com/user-attachments/assets/253e471b-3f90-4a42-b922-009c2e879fce)
+
+![image](https://github.com/user-attachments/assets/b7cfde0c-2d5b-4ee2-bada-41b24d87217b)
+
+Change input to arrays.
+
+![image](https://github.com/user-attachments/assets/8f656c09-fc66-41aa-9dd5-a05741ce77fe)
+
+
 # Cryptography
 
 ## hashcrack
