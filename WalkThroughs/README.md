@@ -1,36 +1,36 @@
 Start
 
-# UTAustinCTF + picoCTF 3-14-2025
+# UTAustinCTF + picoCTF || 3-14-2025
 
 btrfs disk | QR code from bitstring | convert permissions of files to 0/1  
 
 crack bitlocker hash | bitlocker fvek from mem dump | png + zsteg | lsb to binary | evtx logs
 
-# ApoorvCTF + PwnMe 2025 3-1-2025
+# ApoorvCTF + PwnMe 2025 || 3-1-2025
 
 rpd bitmap cache | bcrack png | keyboard pcap, nvim commands | mem dump chrome history | bluetooth pcap extract song | bluetooth pcap generate LTK
 
-# nullcon HackIM CTF 2025 2-1-2025
+# nullcon HackIM CTF 2025 || 2-1-2025
 
 Fix bad jpeg markers, Decoding I2C protocol, Fix broken gif header
 
-# x3c + TUCTF 1-25-2025
+# x3c + TUCTF || 1-25-2025
 
 Find keepass password in dmp restore from history | aircrack decrypt traffic in wireshark
 
-# Srdnlen CTF 2025 1-18-2025
+# Srdnlen CTF 2025 || 1-18-2025
 
 .evtx logs, pcap hash of hashes, memory dump track ransomware, threat intel on VirusTotal, pcap hid keyboard + vss code, Dos .com file,
 
-# UofT CTF 2025 + CyberLeague 2025 - 1-11-2025
+# UofT CTF 2025 + CyberLeague 2025 || 1-11-2025
 
 rar2john, bruteforce time seed, pcap encrypted exe decrypt shellcode, flag hidden in random forest classifier weights. 
 
-# Iris CTF 2025 - 01-04-2025
+# Iris CTF 2025 || 01-04-2025
 
 Pcap hid keyboard, pcap hid mouse, pcap hid tablet pen. Syslog, SSO, RADIUS, dns, dhcp
 
-# BlueHens CTF 2024 - 11-8-2024
+# BlueHens CTF 2024 || 11-8-2024
 
 .jpeg steghide, emojis to hex, .jpg stegseek, Dig DNS chess, .wav sstv ham radio, 
 
