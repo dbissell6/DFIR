@@ -42,8 +42,14 @@ Fix damaged .vhd, recover USNJournal, YouTube QR-codes as c2, | memdump, malfind
 
 # TCP1P 10-10-2024
 
+Forensics on exec bin in docker| Mercurial (.hg) file recovery | mem dump notepad in gimp | open keepass | Powershell debug trace logging
+
 # Buckeye CTF 2024 09-26-2024
+
+SSTV | Keyboard pcap HID | bkcrack zip | pdf2john crack | Keycron Keyboard pcap HID
 
 # Patriot CTF 2024 09-19-2024
 
 # COMPFEST CTF 2024 09-07-2024
+
+pcap with sql traffic | replace png magic bytes | 
