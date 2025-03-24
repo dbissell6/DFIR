@@ -2,6 +2,7 @@ Start
 
 # HTB_CyberApocalypse_CTF 2025 + RITSEC CTF + WolvCTF 2025  || 3-21-2025
 
+HTB    ~|~ memdump - pcap - smb password crack | pcap icmp data |  pdf with hidden exe  | Cracking hashes  ~|~ Wolv
 
 # UTAustinCTF + picoCTF || 3-14-2025
 
