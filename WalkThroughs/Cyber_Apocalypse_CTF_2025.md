@@ -89,7 +89,7 @@ Given `capture.pcapng`.
 ```
 1. 4880
 2. malext
-3. d
+3. nnjofihdjilebhiiemfmdlpbdkbjcpae
 4. 000003.log
 5. drive.google.com
 6. clips.mummify.proofs
@@ -118,6 +118,14 @@ Can dump some of these files and view them.
 
 
 ![Pasted image 20250325231117](https://github.com/user-attachments/assets/842ed2aa-7642-43a2-8b74-77d8a142ed13)
+
+Important part is 
+
+```
+Because the extension is not downloaded through the Web Store, it does not reside in the normal User Data/Default/Extensions directory.
+StackOverflow suggests that the local storage for extensions is under User Data\Default\Local Extension Settings\__extensionID__.
+
+```
 
 Shows a log file containing keylogger strokes will be made in appdata.
 
