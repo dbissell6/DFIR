@@ -53,7 +53,13 @@ use git log and show to see a previous version of the file with the flag
 
 ![Pasted image 20250330102006](https://github.com/user-attachments/assets/aa4ed23c-ac6a-4ef5-876a-4cbb7b93b8ac)
 
+
+
 ![Pasted image 20250328161833](https://github.com/user-attachments/assets/7084f4f6-179a-434f-9e50-40be27445f71)
+
+Extract with pem2john. Change 1 to 2. Run with hashcat
+
+![image](https://github.com/user-attachments/assets/c98ee7a2-fce0-4760-8082-3dcfaa8c64a5)
 
 
 ## NII
