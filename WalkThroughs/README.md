@@ -1,8 +1,12 @@
 Start
 
+# JerseyCTF + TAMUCTF 2025 || 3-30-2025
+
+
+
 # HTB_CyberApocalypse_CTF 2025 + RITSEC CTF + WolvCTF 2025  || 3-21-2025
 
- Reverse powershell | Discover web config | pcap imap, decrypt commands | memdump key logger | pcap C2 Reversing | obfuscated powershell from evtx, reverse pdf | Reverse encrypted obfuscated javascript, get telegram bot token, dynamically reverse exe ~|~ memdump - pcap - smb password crack | pcap icmp data |  pdf with hidden exe  | Cracking hashes  ~|~ Wolv
+Reverse powershell | Discover web config | pcap imap, decrypt commands | memdump key logger | pcap C2 Reversing | obfuscated powershell from evtx, reverse pdf | Reverse encrypted obfuscated javascript, get telegram bot token, dynamically reverse exe ~|~ memdump - pcap - smb password crack | pcap icmp data |  pdf with hidden exe  | Cracking hashes  ~|~ Wolv
 
 # UTAustinCTF + picoCTF || 3-14-2025
 
