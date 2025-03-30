@@ -20,6 +20,18 @@ Given windows event logs evtx. Run Chainsaw
 
 ![Pasted image 20250329145327](https://github.com/user-attachments/assets/ff500fd1-f724-4a7a-ae8f-797a9d1eae3c)
 
+Given archive of jpgs
+
+![Pasted image 20250330153838](https://github.com/user-attachments/assets/96bf5523-8c41-4d35-901a-72f45c5d2416)
+
+Notice one hidden file
+
+![image](https://github.com/user-attachments/assets/f4ff6805-f474-4ae7-88e4-f07f5da651a5)
+
+Get ip and port converting from base64 on cyberchef
+
+![image](https://github.com/user-attachments/assets/0d664dcd-3d56-4d48-8169-f2ee238f22aa)
+
 
 ## Frequencies-of-Deception
 
