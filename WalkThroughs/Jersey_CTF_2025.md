@@ -1,5 +1,7 @@
 # Jersey CTF 2025
 
+![Pasted image 20250330142437](https://github.com/user-attachments/assets/c6190475-b617-4af8-9265-57d1c5faa6ab)
+
 ## evtx
 
 ![Pasted image 20250329145248](https://github.com/user-attachments/assets/7fc65f87-c93c-484f-a513-0ba1a152b645)
