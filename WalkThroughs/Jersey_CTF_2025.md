@@ -37,6 +37,21 @@ Get ip and port converting from base64 on cyberchef
 
 ![Pasted image 20250329145349](https://github.com/user-attachments/assets/5122a077-4dff-4171-84b3-a82a838f4b1c)
 
+Given unknown.wav
+
+Looking for DTMF
+
+![image](https://github.com/user-attachments/assets/7eadfb69-5cac-4605-8ea0-ea09af0a80a7)
+
+
+![image](https://github.com/user-attachments/assets/b35a5d05-7820-463a-b364-9772c34d406d)
+
+
+![image](https://github.com/user-attachments/assets/c28905b0-b38b-49af-8647-a7578d80df49)
+
+
+![image](https://github.com/user-attachments/assets/ee317b3b-b267-463c-8d16-776d2a2a78a0)
+
 
 ## path-finder
 
