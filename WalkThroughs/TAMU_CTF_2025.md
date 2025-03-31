@@ -59,7 +59,12 @@ use git log and show to see a previous version of the file with the flag
 
 Extract with pem2john. Change 1 to 2. Run with hashcat
 
+![image](https://github.com/user-attachments/assets/70d6f72e-956e-4f47-8204-ae08239b9473)
+
+
 ![image](https://github.com/user-attachments/assets/c98ee7a2-fce0-4760-8082-3dcfaa8c64a5)
+
+![image](https://github.com/user-attachments/assets/b9479c84-8294-48a1-a0b9-3a6ec0480ee1)
 
 
 ## NII
