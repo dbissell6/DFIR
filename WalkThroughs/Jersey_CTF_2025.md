@@ -119,11 +119,21 @@ pcap has the actual transfer.
 
 
 ```
-tshark -r firewall-packet-capture.pcap  -Y "(ip.dst == 172.16.0.50) && (ip.src == 1.1.1.1) && dns" -T fields -e dns.qry.name | grep 'domainforhire' | cut -d'.' -f1 | awk '!seen[$0]++' > extracted_prefixes.txt
+tshark -r firewall-packet-capture.pcap  -Y "(ip.dst == 172.16.0.50) && (ip.src == 1.1.1.1) && dns" -T fields -e dns.qry.name 
 
 ```
 
 
+Cyber chef to clean up. Notice magic bytes arnt cab.
+
+![image](https://github.com/user-attachments/assets/1a94bfd9-d965-4933-92ff-c604bc5dc92e)
+
+Replace with proper magic bytes and extract
+
+![image](https://github.com/user-attachments/assets/d6d8cfe6-c518-455a-bac6-8453841a9568)
+
+
+![image](https://github.com/user-attachments/assets/4d90ed5d-d1e3-4f5e-a698-7f56c8e85e44)
 
 ## Ransom-in-the-Shadows
 
