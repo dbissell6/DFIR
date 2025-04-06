@@ -3702,6 +3702,14 @@ Grep for commands
 strings PhysicalMemory.raw | grep -E "(cmd|powershell|bash)[^\s]+"
 `
 
+## memprocfs
+
+
+![image](https://github.com/user-attachments/assets/de9224a5-c659-4d1d-a9ed-e32654d599dd)
+
+![image](https://github.com/user-attachments/assets/26fd0157-6c44-4985-bfa0-d51e6272b0c3)
+
+
 ## Volatility 3
 
 Volatility 3 is an Open-Source memory forensics tool that allows analysts to extract and analyze information from a computer's volatile memory, such as running processes, network connections, and open files. To do this, Volatility needs to know the kernel version and build of the operating system from which the memory was obtained. This is because the kernel is responsible for managing the memory and processes, and its data structures and behavior can change between different versions or builds of the operating system.
