@@ -74,7 +74,8 @@ I got lucky i didnt even notice there were different flags
 
 ## Scrambled Packets
 
-![[Pasted image 20250411132727.png]]
+
+![Pasted image 20250411132727](https://github.com/user-attachments/assets/d120fd69-5f9d-4eff-93a0-3730d2bf3472)
 
 
 ```
