@@ -43,12 +43,15 @@ Given a windows memory dump.
 
 ![Pasted image 20250411170855](https://github.com/user-attachments/assets/ab8a3d9e-bfee-4b5e-8689-9b70571c5186)
 
+Can start to see 89 being the last seed.
+
 ![Pasted image 20250411171316](https://github.com/user-attachments/assets/d35c049e-7b29-4f63-824a-373e369c6592)
 
+Extract and check the contents.
 
 ![Pasted image 20250411171700](https://github.com/user-attachments/assets/129ef6b1-56cf-4376-af51-f133a6bc9a5b)
 
-I thought i was going to need to run the generator with the seed? idk.
+See that these are all being created by a generator.exe. I thought i was going to need to run it with the seed? idk but there it is.
 ```
 0xe78e758b8a60  \Users\user\Documents\Flags\libcrypto-3-x64.dll
 0xe78e757c07c0  \Users\user\Documents\Flags\generator.exe
@@ -66,10 +69,11 @@ python3 ~/Tools/volatility3/vol.py -f evidence.mem windows.mftscan.MFTScan | gre
 `seed_89.txt` = **actual data file**, created at `2025-03-26 02:08:23`
 ```
 
+Given that it was already ran i figured it should be in memory somewhere so searched with `strings`.
 
 ![Pasted image 20250411221403](https://github.com/user-attachments/assets/3648af6e-64e8-4beb-8d77-c1b9f36788cb)
 
-I got lucky i didnt even notice there were different flags
+I got lucky i didnt even notice there were different flags.
 
 Append the time to that top flag for the final flag.
 
