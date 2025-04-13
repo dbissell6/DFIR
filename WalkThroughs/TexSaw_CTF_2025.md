@@ -9,16 +9,17 @@
 
 ![Pasted image 20250411130152](https://github.com/user-attachments/assets/88be67bc-fa96-45dc-a644-09b81dd75efc)
 
-
+Given a password protected zip. John provided a hash but it didnt crack. The challenge lets us know there is a wav file in the zip.
+It is using zipcrypto and stored so we can use bkcrack. Only thing that makes this unique is we dont know 12 bytes in a row. We know the first 4, dont know 4, then know 8.
 
 ![Pasted image 20250411170536](https://github.com/user-attachments/assets/537a0eff-aa45-40c0-8761-4ac0d400d53b)
 
 
-
+bkcrack command
 
 ![Pasted image 20250411153815](https://github.com/user-attachments/assets/ff094590-9052-40ce-9430-cf786cf6808c)
 
-
+unzip with password and run strings on wav file 
 
 ![Pasted image 20250411153750](https://github.com/user-attachments/assets/afda9da6-4bc8-410a-bdbe-9c075255ba69)
 
@@ -28,6 +29,7 @@
 
 ![Pasted image 20250411144132](https://github.com/user-attachments/assets/e84e66e9-a8fb-4143-8ffa-2b0333cff4f8)
 
+given an image, run strings
 
 ![Pasted image 20250411144117](https://github.com/user-attachments/assets/7f97420c-3911-416f-8494-1e1ce3b59c32)
 
@@ -37,7 +39,7 @@
 
 ![Pasted image 20250411130323](https://github.com/user-attachments/assets/6990bd74-356f-492a-baed-1a8c868317b2)
 
-
+Given a windows memory dump. 
 
 ![Pasted image 20250411170855](https://github.com/user-attachments/assets/ab8a3d9e-bfee-4b5e-8689-9b70571c5186)
 
@@ -46,7 +48,7 @@
 
 ![Pasted image 20250411171700](https://github.com/user-attachments/assets/129ef6b1-56cf-4376-af51-f133a6bc9a5b)
 
-
+I thought i was going to need to run the generator with the seed? idk.
 ```
 0xe78e758b8a60  \Users\user\Documents\Flags\libcrypto-3-x64.dll
 0xe78e757c07c0  \Users\user\Documents\Flags\generator.exe
@@ -54,6 +56,7 @@
 
 ```
 
+The part of the seed we actually need is the time, we can search the MFT for this.
 
 ```
 python3 ~/Tools/volatility3/vol.py -f evidence.mem windows.mftscan.MFTScan | grep -i seed | grep txt
@@ -68,7 +71,7 @@ python3 ~/Tools/volatility3/vol.py -f evidence.mem windows.mftscan.MFTScan | gre
 
 I got lucky i didnt even notice there were different flags
 
-
+Append the time to that top flag for the final flag.
 
 
 
@@ -77,6 +80,7 @@ I got lucky i didnt even notice there were different flags
 
 ![Pasted image 20250411132727](https://github.com/user-attachments/assets/d120fd69-5f9d-4eff-93a0-3730d2bf3472)
 
+Given pcap. Open in wireshark and notice icmp packets not in proper order. 
 
 ```
 tshark -r cap.pcap -Y "icmp" -T fields -e icmp.seq -e data.data | \ 
@@ -84,6 +88,8 @@ tshark -r cap.pcap -Y "icmp" -T fields -e icmp.seq -e data.data | \
   sort -n
 
 ```
+
+Run, order and extract the data from the icmp packets. 
 
 ![Pasted image 20250411140508](https://github.com/user-attachments/assets/3f033b3b-1d9e-4456-ab0d-6e80ef1a2506)
 
