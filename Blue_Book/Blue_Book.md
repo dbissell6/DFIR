@@ -545,8 +545,52 @@ Encryption may be encountered in Wireshark captures, and can be identified by th
 
 ###  Decrpyt TLS
 
-#### Input RSA key
+#### TLS v1.2 + RSA Key Exchange
 
+    Look for: Server Hello, Certificate → x509 with RSA public key
+
+    Also works for old SMTP/POP3/IMAP/FTPS with SSL
+
+✅ The server's public key is vulnerable:
+
+    Small key sizes (e.g. 512-bit, 768-bit)
+
+    Reused primes or weak randomness
+
+
+![Pasted image 20250424205523](https://github.com/user-attachments/assets/3acbbf02-6083-4be8-81d8-683ebaf1a7c2)
+
+
+Save the hex output as `my_certificate` Convert to binary. Get the Modulus.
+
+![Pasted image 20250424210033](https://github.com/user-attachments/assets/06b4b7d0-3e86-4778-9535-f3752f538bbf)
+
+Clean it
+
+![Pasted image 20250424210200](https://github.com/user-attachments/assets/69b308cc-b4e6-45dd-9b18-2c08bd39401b)
+
+Convert from hex to decimal
+
+![Pasted image 20250424211424](https://github.com/user-attachments/assets/8996a996-69d7-4209-a9b6-0e7e4f1b02c8)
+
+![Pasted image 20250424211322](https://github.com/user-attachments/assets/98c13496-7376-4d37-a0e6-4f537048a84c)
+
+
+Use factors to create private key
+
+![Pasted image 20250424211502](https://github.com/user-attachments/assets/06b7aac8-70bf-42cd-8174-29e1e025c795)
+
+Load key in Wireshark
+
+![Pasted image 20250424212357](https://github.com/user-attachments/assets/5ba63a0b-f5f3-4b18-9edd-e4c04c3e3b63)
+
+
+Now we can see traffic
+
+![Pasted image 20250424211736](https://github.com/user-attachments/assets/5527263c-0d67-43ce-b3cd-b669fd8fe5dc)
+
+
+#### Input RSA key
 
 From G, but TLS instead of SSL
 
