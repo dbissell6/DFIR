@@ -19,6 +19,11 @@ Use by
 ![image](https://user-images.githubusercontent.com/50979196/208254847-2ea6c06d-db2c-49ea-9f1e-60f1fa61e7ec.png)
 
 
+## Ghetto_zsteg.py
+
+zsteg crashes, heres something simple that wont crash.
+
+![image](https://github.com/user-attachments/assets/8ba780a5-490b-40a2-830e-05ce858c22bf)
 
 
 
