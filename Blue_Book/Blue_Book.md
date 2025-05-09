@@ -1568,6 +1568,8 @@ On windows make sure Amcache.hve and logs are all together in same dir/folder
 https://www.sans.org/posters/windows-forensic-analysis/
 https://www.sans.org/gated-content?resource=/Shared/Website%20Public%20Content/Posters%20and%20Cheat%20Sheets/SANS_DFPS_FOR500_v4.17_02-23.pdf
 
+https://www.sans.org/blog/running-ez-tools-natively-on-linux-a-step-by-step-guide/
+
 ## Master File Table (MFT)
 
 The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
