@@ -4565,7 +4565,13 @@ Press F12 when booting select Caine
 
 ## KAPE (Kroll Artifact Parser and Extractor)
 
-KAPE extracts artifacts from a system, isnt open source. 
+KAPE extracts artifacts from a system.
+
+Comes with Targets and Modules.
+
+
+`./kape.exe --tsource C: --target !SANS_Triage,ProgrameData --tdest D:\KAPEOUT`
+
 
 ### Velociraptor + KAPE
 
