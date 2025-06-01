@@ -2643,6 +2643,10 @@ can run pointint at index
 
 ![image](https://github.com/user-attachments/assets/c0134c8a-ff7f-406d-b9a8-035e8b1cc99d)
 
+
+Another Example, not 16 continous bytes
+https://github.com/dbissell6/DFIR/blob/3eeb5a757fbe5b3bbabe088b65b4a23dc8b36726/WalkThroughs/TexSaw_CTF_2025.md#hidden-beneath-the-wavs
+
 # Reconstructing 
 
 Some times you may come across something(like an Hex output in wireshark) that needs to be recontructed back into a binary or a zip. Sometimes you come across a file with a corrupted header that needs to be fixed.
