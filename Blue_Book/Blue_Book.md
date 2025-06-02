@@ -4874,6 +4874,8 @@ Select event names from user `forela-ec2-automation` sorted by time
 
 #### Getting Cloudtrails on splunk
 
+`https://help.splunk.com/en/splunk-enterprise/get-started/install-and-upgrade/9.2/install-splunk-enterprise-in-virtual-and-containerized-environments/deploy-and-run-splunk-enterprise-inside-a-docker-container`
+`https://www.youtube.com/watch?v=TG6zBnSgf5M`
 
 ![image](https://github.com/user-attachments/assets/dca02f6e-f464-4c00-ad32-b1bf1965888b)
 
