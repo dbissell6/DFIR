@@ -4874,6 +4874,11 @@ Select event names from user `forela-ec2-automation` sorted by time
 
 #### Getting Cloudtrails on splunk
 
+
+![image](https://github.com/user-attachments/assets/dca02f6e-f464-4c00-ad32-b1bf1965888b)
+
+
+
 Copy data into docker container
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/fc046ba5-15c1-4655-9f5a-c6e4b6d0115b)
