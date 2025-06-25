@@ -4889,6 +4889,11 @@ OR ... consolatate into one .json file
 
 ```
 find . -type f -name '*.json' -exec cat {} + | jq -c '.Records[]' > combined_cloudtrail_logs.json
+
+#Get the files in the docker
+
+sudo docker cp combined_cloudtrail_logs.json splunk:/tmp/combined_cloudtrail_logs.json
+
 ```
 
 Download aws add-on 
