@@ -6,6 +6,10 @@ Script to create LTK from bluetooth pcap traffic. Used Pwnme Dura Lesc Sec Lesc
 
 ![image](https://github.com/user-attachments/assets/91b2e610-a1f6-4724-84db-75d9b91de4c8)
 
+## Decrypt_TLS.py
+
+<img width="898" height="188" alt="image" src="https://github.com/user-attachments/assets/7a7840e4-d9df-4ec1-95df-6b4efba6becd" />
+
 
 ## parse_full_pcap_keyboard.py
 
