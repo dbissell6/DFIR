@@ -2282,6 +2282,30 @@ This switch specifies the minimum length of the strings that strings will displa
 
 -el: This option specifies the encoding of the strings to search for. The l stands for "little-endian". This means strings will search for 16-bit little-endian encoded characters. This is particularly useful when dealing with files from Windows systems, as some files (like those from the Windows Registry/.doc) might store strings in UTF-16 little-endian encoding.
 
+### Strings recursivly 
+
+```
+ find Users/rumi -type f -size -100M -print0 |                     
+while IFS= read -r -d '' f; do
+  printf '\n----- %s -----\n' "$f"
+  strings -a -n 4 "$f"
+  strings -a -n 4 -e l "$f"
+  strings -a -n 4 -e b "$f"
+done 2>/dev/null
+```
+
+### ASCII/UTF-8 (treat all files as text)
+
+```
+rg -n -F -a --hidden --no-ignore \
+  'toallknownlawsofaviationthereisnowayabeeshouldbeabletofly' Users/rumi
+
+# UTF-16LE and UTF-16BE
+rg -n -F -a --encoding utf-16le \
+  'toallknownlawsofaviationthereisnowayabeeshouldbeabletofly' Users/rumi
+rg -n -F -a --encoding utf-16be \
+  'toallknownlawsofaviationthereisnowayabeeshouldbeabletofly' Users/rumi
+```
 ## Floss
 
 Can also be used to get static strings from binaries
