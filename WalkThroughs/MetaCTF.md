@@ -84,6 +84,9 @@
 <img width="1217" height="298" alt="image" src="https://github.com/user-attachments/assets/5b3e330d-1519-440c-9c76-a41313ec6a97" />
 
 
+
+
+
 ## Mimican't
 
 <img width="1218" height="306" alt="image" src="https://github.com/user-attachments/assets/b1227e4f-3a6e-4919-97be-4bf820e1d561" />
@@ -111,6 +114,16 @@
 `89 50 4E 47 0D 0A 1A 0A`
 
 <img width="1318" height="732" alt="image" src="https://github.com/user-attachments/assets/3036b0a1-2bd9-442d-9c5e-2e527342d823" />
+
+
+## Armorless
+
+<img width="1217" height="384" alt="image" src="https://github.com/user-attachments/assets/4e4a1584-afae-4767-bb09-ab2f07caee55" />
+
+<img width="1106" height="352" alt="image" src="https://github.com/user-attachments/assets/a7874d59-9613-4041-bd73-6e673d6a4b19" />
+
+<img width="973" height="511" alt="image" src="https://github.com/user-attachments/assets/3a30561f-c4da-4ce3-a26c-9753f1557da9" />
+
 
 
 
