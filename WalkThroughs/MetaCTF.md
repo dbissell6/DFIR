@@ -49,6 +49,8 @@
 <img width="1217" height="298" alt="image" src="https://github.com/user-attachments/assets/5b3e330d-1519-440c-9c76-a41313ec6a97" />
 
 
+
+
 ## Mimican't
 
 <img width="1218" height="306" alt="image" src="https://github.com/user-attachments/assets/b1227e4f-3a6e-4919-97be-4bf820e1d561" />
@@ -59,13 +61,23 @@
 
 <img width="1180" height="87" alt="image" src="https://github.com/user-attachments/assets/faf12a6c-a246-48cf-81a6-372099aa89e9" />
 
+<img width="1580" height="686" alt="image" src="https://github.com/user-attachments/assets/1e6f5223-c4ef-4a34-afb3-dd37152d7206" />
 
 
 
+## Filesystem Folly
+
+<img width="1218" height="329" alt="image" src="https://github.com/user-attachments/assets/526cb220-7f5c-4df9-8be7-bc9700f44a17" />
 
 
+<img width="1790" height="201" alt="image" src="https://github.com/user-attachments/assets/8805880a-6905-4df7-a30f-fe4ab175d46d" />
 
 
+<img width="1713" height="916" alt="image" src="https://github.com/user-attachments/assets/87d289c7-c248-4a98-bed2-677d63fb1f69" />
+
+`89 50 4E 47 0D 0A 1A 0A`
+
+<img width="1318" height="732" alt="image" src="https://github.com/user-attachments/assets/3036b0a1-2bd9-442d-9c5e-2e527342d823" />
 
 
 
