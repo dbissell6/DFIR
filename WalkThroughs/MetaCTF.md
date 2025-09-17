@@ -41,6 +41,25 @@
 
 <img width="1707" height="657" alt="image" src="https://github.com/user-attachments/assets/29bc731d-f68c-45d0-990f-42ee68d25d22" />
 
+## Magical Meta
+
+<img width="1213" height="330" alt="image" src="https://github.com/user-attachments/assets/1ef065ee-72d4-4059-bbd5-b47c5afdb02a" />
+
+<img width="625" height="96" alt="image" src="https://github.com/user-attachments/assets/b718170d-1eea-4665-9d77-23be07890c7c" />
+
+<img width="1740" height="236" alt="image" src="https://github.com/user-attachments/assets/4b4b1a9a-dd4f-4774-9643-a76abfef13d2" />
+
+<img width="951" height="182" alt="image" src="https://github.com/user-attachments/assets/a8569ee8-cbbd-48da-9d3f-468e8981209e" />
+
+<img width="1739" height="180" alt="image" src="https://github.com/user-attachments/assets/6d1b05d4-07fb-47d6-b568-73067d642dcd" />
+
+
+<img width="1724" height="113" alt="image" src="https://github.com/user-attachments/assets/b110649e-d86f-4b28-b416-a39d3388edb3" />
+
+
+<img width="1196" height="635" alt="image" src="https://github.com/user-attachments/assets/7a8d5b3e-5b8e-456f-a8df-73d90dc5cbeb" />
+
+
 
 ## Obnoxious Offset
 
