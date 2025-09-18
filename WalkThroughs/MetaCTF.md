@@ -143,6 +143,26 @@
 <img width="674" height="714" alt="image" src="https://github.com/user-attachments/assets/6c80fa9a-a99f-4dc8-8f90-708ee142178a" />
 
 
+## Email From Krampus
+
+<img width="1087" height="342" alt="image" src="https://github.com/user-attachments/assets/66477078-463e-4930-be95-7aab4f4ffcbb" />
+
+<img width="524" height="198" alt="image" src="https://github.com/user-attachments/assets/cc830a28-c62b-452c-b834-02b9b2bd0c98" />
+
+<img width="1111" height="98" alt="image" src="https://github.com/user-attachments/assets/f991e684-e640-4350-b576-25012eddc420" />
+
+
+<img width="727" height="654" alt="image" src="https://github.com/user-attachments/assets/efee3d32-0992-4d09-aaf5-e0c28ebefbeb" />
+
+<img width="1235" height="730" alt="image" src="https://github.com/user-attachments/assets/eec7baba-e114-45c0-aa43-5d64ab29bb37" />
+
+<img width="1125" height="250" alt="image" src="https://github.com/user-attachments/assets/ee9af151-8873-4a9f-b776-bce040414c95" />
+
+<img width="1168" height="138" alt="image" src="https://github.com/user-attachments/assets/6aaeae95-70ea-4a91-9794-b956a1b633ea" />
+
+
+
+
 ## Filesystem Folly
 
 <img width="1218" height="329" alt="image" src="https://github.com/user-attachments/assets/526cb220-7f5c-4df9-8be7-bc9700f44a17" />
