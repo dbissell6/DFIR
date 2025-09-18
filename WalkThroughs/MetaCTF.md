@@ -59,6 +59,20 @@
 
 <img width="1196" height="635" alt="image" src="https://github.com/user-attachments/assets/7a8d5b3e-5b8e-456f-a8df-73d90dc5cbeb" />
 
+## Talk To Me
+
+<img width="1214" height="274" alt="image" src="https://github.com/user-attachments/assets/ab555e8e-46ce-43e8-9197-2d441a416c27" />
+
+<img width="1715" height="98" alt="image" src="https://github.com/user-attachments/assets/9f45fce5-51f2-4194-bbfb-70839bf5ce63" />
+
+<img width="1719" height="914" alt="image" src="https://github.com/user-attachments/assets/68522292-6f59-4a0c-a8d3-49160286e15b" />
+
+## Backchimney
+
+<img width="1217" height="319" alt="image" src="https://github.com/user-attachments/assets/a0047173-e6a6-4411-9cfe-08819a74d7ed" />
+
+<img width="770" height="265" alt="image" src="https://github.com/user-attachments/assets/732e1af1-fd9a-4964-a818-9ec8cdbe54bf" />
+
 
 
 ## Obnoxious Offset
