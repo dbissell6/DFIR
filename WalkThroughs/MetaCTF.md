@@ -74,6 +74,12 @@
 <img width="770" height="265" alt="image" src="https://github.com/user-attachments/assets/732e1af1-fd9a-4964-a818-9ec8cdbe54bf" />
 
 
+`git clone https://github.com/mandiant/flare-wmi.git`
+
+
+<img width="1728" height="673" alt="image" src="https://github.com/user-attachments/assets/9e9bfd3d-6d8b-48df-b557-a06cf5e4e725" />
+
+
 
 ## Obnoxious Offset
 
