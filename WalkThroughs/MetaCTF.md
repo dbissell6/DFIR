@@ -202,9 +202,28 @@
 
 <img width="1495" height="628" alt="image" src="https://github.com/user-attachments/assets/95fe2475-5b55-4e55-b0d5-447e8e877df3" />
 
+run psxview - sus notice mispelling
+ 
+<img width="1079" height="137" alt="image" src="https://github.com/user-attachments/assets/6d792114-9d02-4f6f-8857-5d96efad84bf" />
+
+Find file mispelled again
+<img width="1190" height="203" alt="image" src="https://github.com/user-attachments/assets/d212d054-7629-4fc8-8c65-a88724c4f3e5" />
+
+Dump file
+
+<img width="1573" height="193" alt="image" src="https://github.com/user-attachments/assets/cc45a379-9041-46ee-a1e7-26d38a67750f" />
+
+Notice it calls python
+
+<img width="765" height="132" alt="image" src="https://github.com/user-attachments/assets/43630cd7-af5d-4373-b580-3d53c00a2c31" />
+
+pyinstxtractor
+
+<img width="1544" height="555" alt="image" src="https://github.com/user-attachments/assets/50e60711-cdab-47cd-b184-b18b0543a84a" />
 
 
+<img width="811" height="710" alt="image" src="https://github.com/user-attachments/assets/8b0893f0-01b1-443b-9f4b-bd6422750da7" />
 
-
+<img width="1267" height="759" alt="image" src="https://github.com/user-attachments/assets/bbabb24f-81a6-41b3-9870-8b2e75be0a2e" />
 
 
