@@ -767,6 +767,31 @@ hashcat -m 5600 responder_hash /usr/share/wordlists/rockyou.txt
 
 ![image](https://github.com/user-attachments/assets/6eaad109-36ae-414e-a750-70e5926d9bb0)
 
+```
+PCAP=Some.pcapng
+
+# 1) CHALLENGE (Type 2): get server challenge per tcp.stream
+tshark -r "$PCAP" -Y "ntlmssp.ntlmserverchallenge" -T fields \
+  -e tcp.stream -e ntlmssp.ntlmserverchallenge \
+  > /tmp/chal.txt
+
+# 2) AUTH (Type 3): get user, domain, NTLMv2 response per tcp.stream
+tshark -r "$PCAP" -Y "ntlmssp.ntlmv2_response && ntlmssp.auth.username" -T fields \
+  -e tcp.stream -e ntlmssp.auth.username -e ntlmssp.auth.domain -e ntlmssp.ntlmv2_response \
+  > /tmp/auth.txt
+
+# 3) Join by stream and format for hashcat -m 5600 (NetNTLMv2)
+awk 'NR==FNR {chal[$1]=$2; next}
+     {
+       stream=$1; user=$2; dom=$3; resp=$4;
+       ntproof=substr(resp,1,32); blob=substr(resp,33);
+       printf "%s::%s:%s:%s:%s\n", user, dom, chal[stream], ntproof, blob
+     }' /tmp/chal.txt /tmp/auth.txt > netntlmv2.txt
+
+echo "[+] Wrote netntlmv2.txt"
+```
+
+
 ### Kerberos Analysis and Decryption
 
 #### AS-REP Hash Extraction
