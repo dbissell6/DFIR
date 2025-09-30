@@ -1414,6 +1414,10 @@ For multiple conditions
 
 `./chainsaw search -t 'Event.EventData.ProcessId: =4' -t 'Event.System.EventID: =18' ~/Desktop/Tracer/Tracer/C/Windows/System32/winevt/logs/*`
 
+To and From with tau
+
+`~/Tools/chainsaw/chainsaw search -t 'Event.System.EventID: =4688' C/Windows/System32/winevt/logs/* --timestamp 'Event.System.TimeCreated_attributes.SystemTime' --from '2025-08-24T22:50:57' --to '2025-08-24T23:55:00' --timezone 'UTC' --skip-errors`
+
 #### sigma
 
 Sigma is a generic and open standard for defining log and detection patterns. It provides a structured way to describe log patterns in a human-readable YAML format. These patterns can then be converted into various SIEM (Security Information and Event Management) tool queries or detection rules to identify potential security threats or incidents based on log data.
