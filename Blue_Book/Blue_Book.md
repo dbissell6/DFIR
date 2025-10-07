@@ -2205,6 +2205,8 @@ To Decrypt the Vault
 
 `https://metamask.github.io/vault-decryptor/`
 
+<img width="1709" height="472" alt="Pasted image 20251004174208" src="https://github.com/user-attachments/assets/640c520b-e408-4af1-95b0-a1a2d2c137af" />
+
 
 ### Firefox
 
