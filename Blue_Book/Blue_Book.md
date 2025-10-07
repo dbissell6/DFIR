@@ -2577,7 +2577,11 @@ https://pylingual.io/
 
 These files can contain hidden messages or steganography, where data is hidden within the image.
 
+#### bmp
+
 A .bmp  file is a bitmap image file format that contains uncompressed image data. The file starts with a 14-byte header that contains information about the file format, such as the file size, offset to the pixel data, and the number of bits per pixel. After the header, there is an optional color table that maps color values to specific pixels. The pixel data follows the color table (if present) and is stored row-by-row, with each row padded to a multiple of 4 bytes. Each pixel is represented by a series of bits that indicate its color and position in the image. The size of the pixel data can be calculated based on the file size and offset values in the header. It is important to note that .bmp files do not contain any compression or encryption.
+
+#### png
 
 A .png file is made up of chunks of data, where each chunk contains information about the image. Each chunk starts with a 4-byte length field, which specifies the number of bytes in the chunk (excluding the length field itself). This is followed by a 4-byte type field, which identifies the type of data in the chunk. After the type field comes the chunk data, which can be of varying length depending on the type of chunk. Finally, the chunk ends with a 4-byte CRC (Cyclic Redundancy Check) field, which is used to verify the integrity of the chunk data.
 
@@ -2589,6 +2593,16 @@ To summarize, each chunk in a PNG file contains 4 fields in the following order:
 -    Type (4 bytes): identifies the type of data in the chunk.
 -    Chunk data (variable length): the actual data contained in the chunk.
 -    CRC (4 bytes): a checksum used to verify the integrity of the chunk data.
+
+#### jpeg/jpg
+
+Notice discrepency in size
+
+<img width="700" height="121" alt="image" src="https://github.com/user-attachments/assets/6bd4b7cc-7c10-474d-9e0f-4f2715fd3e53" />
+
+
+<img width="873" height="130" alt="Pasted image 20251004003017" src="https://github.com/user-attachments/assets/2b9c109c-d102-4de0-93c7-a10ee83b7633" />
+
 
 ### Email (.eml)
 
