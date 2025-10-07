@@ -4152,6 +4152,25 @@ magic bytes + Ascii
 
 https://github.com/hackthebox/cyber-apocalypse-2024/tree/main/forensics/%5BInsane%5D%20Oblique%20Final
 
+
+## Crash dumps
+
+Sometimes the memory of a single program is dumped.
+
+<img width="1431" height="98" alt="image" src="https://github.com/user-attachments/assets/a678aedc-5f4d-4056-9732-0d188b91cfc7" />
+
+Sometimes can use volatility like on a regular memory dump. Other times must use WinDbg.
+
+
+```
+.symfix
+.reload /f
+!analyze -v
+.bugcheck
+kv
+```
+
+
 # Disk
 
 ## Intro
