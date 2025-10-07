@@ -1693,6 +1693,14 @@ Shows execution times of programs and might hold Clipboard payloads.
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/5943ec9e-eeed-4b94-9796-b3182d55724a)
 
+#### Clipboard
+
+Can find clipboard data in `AppData/Local/ConnectedDevicesPlatform/<USER>/ActivitiesCache.db` in SmartLookup table, ClipboardPayload
+
+`python3 -c 'import sqlite3,json,base64,sys; print("\n".join(base64.b64decode(i["content"]).decode("utf-8","ignore") for (p,) in sqlite3.connect(sys.argv[1]).execute("select ClipboardPayload from SmartLookup") if p and p!="[]" for i in json.loads(p) if i.get("formatName")=="Text"))' ./ActivitiesCache.db`
+
+<img width="1786" height="420" alt="image" src="https://github.com/user-attachments/assets/53306002-13e0-460c-a082-64c8b3bcfa83" />
+
 
 ### rdp Bitmap
 
@@ -1725,9 +1733,13 @@ C:\Users\htb-student\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\Con
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1bc4e7eb-1e18-4310-8533-913342e6bbb7)
 
+
+
 ### Browser history 
 
 Most browser artifcats are found here. Has its own section below.
+
+
 
 ## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
@@ -2183,6 +2195,15 @@ Recover passwords
 ![image](https://github.com/user-attachments/assets/d38e5c38-b271-408e-9ceb-b464d1651239)
 
 ![image](https://github.com/user-attachments/assets/74af0d10-6ea0-453e-859b-269adb023779)
+
+
+#### MetaMask Vault Location
+
+`AppData/Local/Google/Chrome/User Data/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn` 
+
+To Decrypt the Vault
+
+`https://metamask.github.io/vault-decryptor/`
 
 
 ### Firefox
