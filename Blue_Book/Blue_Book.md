@@ -4378,6 +4378,28 @@ On linux can also use `7z x` to extract /parse the streams
 ![image](https://github.com/user-attachments/assets/bb1e2e3f-cfc5-4303-a4ed-316e87c917d0)
 
 
+## Android Forensics
+
+```
+https://github.com/RealityNet/Android-Forensics-References
+```
+
+### ALEAPP
+
+Android Logs Events And Protobuf Parser.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/98c7185c-a4fe-4c1f-b115-908b02807caa)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c4f20dd6-7bc6-4cfa-9b47-7e47c01e0a50)
+
+
+```
+https://github.com/abrignoni/ALEAPP
+```
+
+
+
 ## PowerForensics
 
 PowerForensics is a powerful and flexible tool for digital forensic investigations on Windows systems. Can use on mounted systems or live systems. PowerForensics offers a suite of cmdlets that can extract a variety of forensic artifacts, such as the Master File Table (MFT), Volume Boot Record (VBR), Event Logs, and more.
@@ -5164,28 +5186,6 @@ This needs to be moved
 
 
 
-## Android Forensics
-
-```
-https://github.com/RealityNet/Android-Forensics-References
-```
-
-
-This needs to be moved
-
-### ALEAPP
-
-Android Logs Events And Protobuf Parser.
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/98c7185c-a4fe-4c1f-b115-908b02807caa)
-
-
-![image](https://github.com/dbissell6/DFIR/assets/50979196/c4f20dd6-7bc6-4cfa-9b47-7e47c01e0a50)
-
-
-```
-https://github.com/abrignoni/ALEAPP
-```
 
 ## Geoguesser
 
