@@ -160,6 +160,9 @@ Putting this in cyberchef
 
 ![image](https://github.com/user-attachments/assets/62b59f4e-e1e6-4dcd-8c76-e77b2b6b147f)
 
+Because this is a CHACHA20 it can be used to reverse the original like XOR.
+
+
 
 # Cyber Psychosis
 
