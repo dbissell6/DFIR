@@ -208,6 +208,16 @@ Put these in order and have.
 
 `HTB{h@ckth3parad1$E}`
 
+
+# Encryption Bot
+
+Given elf, dynamically linked and encrypted flag.
+
+<img width="1211" height="195" alt="image" src="https://github.com/user-attachments/assets/c5792273-74f9-43c1-87fb-0dcdb8816f18" />
+
+
+
+
 # Find the Easy Pass
 
 Given .exe
