@@ -230,10 +230,65 @@ Given ELF
 ![image](https://github.com/user-attachments/assets/cd937f25-8f37-4242-bb88-95153fc31023)
 
 
+# Graverobber
+
+Given ELF, dyamically linked
+
+<img width="1326" height="93" alt="image" src="https://github.com/user-attachments/assets/a61e0dd2-dd4d-40b0-a1c4-37d37a7360e0" />
+
+Looking in Ghidra, the main loop shows it checks if the return of stat == 0 then it will continue iterating, otherwise it breaks.
+
+<img width="1168" height="359" alt="image" src="https://github.com/user-attachments/assets/00068879-0fe0-4247-ac07-b2f7082aed55" />
+
+We can see this with ltrace.
+
+<img width="880" height="131" alt="image" src="https://github.com/user-attachments/assets/63399ce0-16b5-4cb5-8808-38e0c79dd5a4" />
+
+Creating a H directory and running ltrace again we can see it continues, now looking for a T directory.
+
+<img width="860" height="200" alt="image" src="https://github.com/user-attachments/assets/34742140-db12-44d3-896b-44687256d3be" />
+
+Running in gdb we can see the call, test and jump if equal.
+
+<img width="627" height="58" alt="image" src="https://github.com/user-attachments/assets/93608c36-b64d-4059-aeb7-dac01511e59b" />
+
+Breaking we can see rax being set to 0 and rsi holding the `H`
+
+<img width="1117" height="373" alt="image" src="https://github.com/user-attachments/assets/90a1d520-0c96-485e-911c-937b3f579a44" />
+
+In the second round we can see rax being set to fffffffff and rsi now holding `HT`
+
+<img width="1162" height="371" alt="image" src="https://github.com/user-attachments/assets/ed90c65c-3f46-41a5-a806-6e72a654af9c" />
+
+Now that we understand this logic, we can patch the binary flip it to instead TEST change to XOR which will guarantee a 0.
+
+<img width="1198" height="152" alt="image" src="https://github.com/user-attachments/assets/62102482-754a-4ac6-9a2b-ea83e08e7c9c" />
+
+Going back to ltrace we can see it printing out the flag.
+
+<img width="1153" height="423" alt="image" src="https://github.com/user-attachments/assets/04dcd1b6-ffb6-45ef-837d-a24a99edd378" />
+
+We can use the `-s` tag to print the whole flag.
+
+<img width="1191" height="656" alt="image" src="https://github.com/user-attachments/assets/762d620a-58cb-4634-b62c-a9e393c2f48b" />
+
+We can also do this another way. Going back to gdb we see the logic comparing rax to 0. We could instead change rax to 0 each time in the loop with `set $eax = 0`.
+
+To automate this we could use the following.
+
+<img width="524" height="55" alt="image" src="https://github.com/user-attachments/assets/617611c2-31a6-4989-b3d8-beb709bde110" />
+
+<img width="1075" height="366" alt="image" src="https://github.com/user-attachments/assets/d7948f78-f05a-4940-9cde-bc4905ccff6a" />
+
+To print the whole flag we can use something like the following
+
+<img width="808" height="582" alt="image" src="https://github.com/user-attachments/assets/c4915710-4656-42cf-990a-03a110fbe3e6" />
+
+
 
 # HIssss
 
-Given ELF, synamically linked
+Given ELF, dynamically linked
 
 ![image](https://github.com/user-attachments/assets/d2d26565-0653-4a4a-993f-2f376480b037)
 
