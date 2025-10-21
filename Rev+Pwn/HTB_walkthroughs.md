@@ -843,6 +843,26 @@ Cyberchef
 
 `HTB{jump1ng_thru_th3_sp4c3_t1m3_c0nt1nuum!}`
 
+
+# TerrorFryer
+
+Given elf, dynamically linked
+
+<img width="1207" height="110" alt="image" src="https://github.com/user-attachments/assets/2b01dc52-60e1-4f59-be37-9482032f2cc6" />
+
+Running the program we can see it makes some shifts.
+
+<img width="949" height="147" alt="image" src="https://github.com/user-attachments/assets/978e313a-8516-4655-8a6a-d79dd41c60d1" />
+
+The key is putting in something that we know the order to, then measuring the transformation, then finally using that to reverse the expected value we saw.
+
+<img width="706" height="550" alt="image" src="https://github.com/user-attachments/assets/89c6be39-d72a-469e-85c3-81a46388c366" />
+
+Running the python code.
+
+<img width="1208" height="125" alt="image" src="https://github.com/user-attachments/assets/79ca04c2-1cd3-4362-8211-781679857486" />
+
+
 # The Art of Reversing
 
 Given .exe
