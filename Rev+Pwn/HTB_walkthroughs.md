@@ -180,6 +180,14 @@ I started to try to cat psychosis
 
 ``
 
+# Don't Panic
+
+Given elf, dynamically linked
+
+<img width="1314" height="91" alt="image" src="https://github.com/user-attachments/assets/1031abf7-f7c5-46f7-a2f3-dc38cdc9ffa5" />
+
+
+
 # Eat The Cake
 
 Given .exe, UPX compressed
@@ -370,6 +378,19 @@ Format for commands are `PRIVMSG #secret :@exec`
 
 
 `HTB{m1N1m411st1C_fL4g_pR0v1d3r_b0T}`
+
+# LinkHands
+
+Given elf, dynamically linked
+
+<img width="1315" height="99" alt="image" src="https://github.com/user-attachments/assets/afdfac2e-8ac4-4468-9e9a-b55432a66a85" />
+
+Looking at the main function in Ghidra
+
+<img width="715" height="715" alt="image" src="https://github.com/user-attachments/assets/0195edfa-ce8a-4327-9dd5-7e7048a30716" />
+
+
+
 
 # ouija
 
