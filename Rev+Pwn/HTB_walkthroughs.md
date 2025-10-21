@@ -709,6 +709,21 @@ else:
 `HTB{The_sp0000000key_liC3nC3K3Y}`
 
 
+# Spookypass
+
+Given elf, dynamically linked
+
+<img width="1210" height="111" alt="image" src="https://github.com/user-attachments/assets/948e5012-002f-4668-bfe6-2a9a98634330" />
+
+Running strings we see a password type string
+
+<img width="694" height="599" alt="image" src="https://github.com/user-attachments/assets/63e09727-45d4-4a64-9b83-e81ed545efdd" />
+
+Running ltrace we see a strcmp comparing the strings
+
+<img width="1118" height="332" alt="image" src="https://github.com/user-attachments/assets/d3fd846f-7f37-4d5f-99eb-429af68a69ac" />
+
+
 # Snakecode
 
 Given .pyc, Python 2.7
