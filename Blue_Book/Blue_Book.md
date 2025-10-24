@@ -1580,6 +1580,7 @@ https://redteamrecipe.com/Registry-Attack-Vectors/
 ### AmcacheParser
 
 The Amcache is a repository that holds essential data about installed applications and executables. This data encompasses information such as file paths, sizes, digital signatures, and timestamps of the last execution of applications.
+One of the highlights of this is it will take a SHA-1 hash of most executed files + time of execution. (does not take hash of full file just first ~32MB, so will not be accurate cross referencing online dbs for files greater than that length)
 
 Found at
 ```
@@ -1591,6 +1592,15 @@ On windows make sure Amcache.hve and logs are all together in same dir/folder
 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/09703637-4b75-4773-8bb1-4df6adbf822d)
+
+### amcache-evilhunter
+
+Has functionality to use VT to cross ref hashes.(need api key)
+
+`https://github.com/cristianzsh/amcache-evilhunter`
+
+<img width="1784" height="382" alt="image" src="https://github.com/user-attachments/assets/a04a19fd-109e-4949-ae56-64996703e921" />
+
 
 # Other Windows artifacts
 
