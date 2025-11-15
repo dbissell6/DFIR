@@ -3557,6 +3557,13 @@ Just to finish this off see another base64 and a xor
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/b4fab743-6fa3-46c3-8bfb-f3fc592a6cde)
 
+# Android Malware
+
+apk
+
+## apktool
+
+<img width="1036" height="362" alt="image" src="https://github.com/user-attachments/assets/e84092dc-a883-4449-90d9-f61f5b0ec3a9" />
 
 
 
