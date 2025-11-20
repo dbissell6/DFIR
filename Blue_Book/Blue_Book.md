@@ -3879,14 +3879,35 @@ Download
 
 ```https://github.com/volatilityfoundation/volatility3```
 
-### Fix
+### Creating a profile for a memory dump
 
+First run banners to see what version
 
+<img width="1236" height="243" alt="image" src="https://github.com/user-attachments/assets/3000cc38-06fb-441d-b3d1-0513b3dc4288" />
 
-Two primary types of network artifacts are sockets and connections. 
+Next go get the
 
-Kernel modules are pieces of code that can be dynamically loaded and unloaded into the operating system's kernel at runtime.
+<img width="1551" height="765" alt="image" src="https://github.com/user-attachments/assets/7d369b69-5fc7-4ad3-966e-bb738659355d" />
 
+Check sum
+
+<img width="1326" height="94" alt="image" src="https://github.com/user-attachments/assets/efbd2311-0aca-4f31-8db1-7328c1c083ba" />
+
+Extract
+
+<img width="911" height="64" alt="image" src="https://github.com/user-attachments/assets/c49fc62a-ec34-47f3-955d-b57bbdbf49f3" />
+
+Create with **Dwarf2json** 
+
+<img width="1352" height="89" alt="image" src="https://github.com/user-attachments/assets/7c8614fb-e59e-4345-b082-23ea30fe905e" />
+
+Move to correct folder
+
+<img width="1059" height="74" alt="image" src="https://github.com/user-attachments/assets/2f4fb0cd-b7fc-4a22-8fd1-e095f7a261d5" />
+
+Profit
+
+<img width="1076" height="404" alt="image" src="https://github.com/user-attachments/assets/94fd8392-0fbe-41eb-b422-60c2470b41b5" />
 
 
 ### General Steps
