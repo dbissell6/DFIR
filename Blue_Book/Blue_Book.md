@@ -966,6 +966,16 @@ tshark -r httpcookies.pcapng -Y "http.cookie" -T fields -e http.cookie | sed 's/
 
 ![image](https://github.com/user-attachments/assets/4ed4d6fa-4913-4a27-819d-61c8800cc2fd)
 
+### User Agent
+
+There could be additional letters appended to the useragent
+
+<img width="1304" height="378" alt="Pasted image 20250920214729" src="https://github.com/user-attachments/assets/0c3e6efd-ce9f-4dd6-9418-71a63395ef50" />
+
+<img width="972" height="290" alt="Pasted image 20250920214804" src="https://github.com/user-attachments/assets/de15f709-c747-42eb-afeb-b46e5d6d1578" />
+
+<img width="1378" height="473" alt="Pasted image 20250920214828" src="https://github.com/user-attachments/assets/f0add5b9-3a39-443d-895c-a6e44f097881" />
+
 
 ## Tshark
 Sometimes it is useful to extract data from pcaps, this can be done with tshark
