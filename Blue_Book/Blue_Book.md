@@ -823,7 +823,7 @@ python3 winrm_decrypt.py capture.pcap -n 8bb1f8635e5708eb95aedf142054fc95 > decr
 ```
 
 HTB keep the steam going
-### HID - USB
+## HID - USB
 
 Some pcaps are not of a network, but keyboard commands captured by a USB. There are a couple challenges(logger, deadly arthropod) that require you to decode these commands. Doing so typically yields the flag.
 There are some python scripts that will do the decoding, becareful with cases(A or a).  But they essentially map 
@@ -836,7 +836,7 @@ Notice very bottom says usage and gives 2 symbols, those are the 2 options depen
 
 https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
 
-### Bluetooth
+## Bluetooth
 
 `https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/security-manager-specification.html`
 
@@ -857,9 +857,20 @@ Key Protocols & Packets
 ![image](https://github.com/user-attachments/assets/1bdf6b20-0a98-421f-a2f1-0c34012f58f9)
 
 
-#### LTK
+### LTK
 
 https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/Apoorv_CTF_2025.md#dura-lesc-sed-lesc-from-pwnme
+
+## Drone Footage
+
+Videos can be sent over networks
+
+<img width="1684" height="650" alt="Pasted image 20250921113456" src="https://github.com/user-attachments/assets/df41fcf4-23c4-409b-83ac-76eb1f5a8bc5" />
+
+<img width="961" height="60" alt="Pasted image 20250921113402" src="https://github.com/user-attachments/assets/67b5a990-6529-44d6-8479-7c5781714f3f" />
+
+<img width="470" height="54" alt="Pasted image 20250921113422" src="https://github.com/user-attachments/assets/25acd41e-85f5-4414-b92d-627d8723b28b" />
+
 
 ## Data Exfiltration
 
