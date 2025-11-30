@@ -4089,6 +4089,57 @@ The Modscan plugin employs pool tag scanning across the physical address space, 
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/c4645d8c-9dc8-444a-8f72-1d8885987acf)
 
+### Linux Commands
+
+| Plugin | Description | Useful For… |
+|--------|-------------|--------------|
+| linux.bash.Bash | Recovers bash command history from memory. | Reconstructing attacker commands & TTPs. |
+| linux.boottime.Boottime | Shows the system boot time. | Timeline building, correlating events. |
+| linux.capabilities.Capabilities | Lists process capability sets. | Detecting privilege escalation without root UID. |
+| linux.check_afinfo.Check_afinfo | Verifies network protocol function pointers. | Finding kernel rootkit hooks in AF structures. |
+| linux.check_creds.Check_creds | Detects shared credential structures. | Spotting process masquerading / privilege abuse. |
+| linux.check_idt.Check_idt | Verifies the Interrupt Descriptor Table. | Detecting low-level rootkits hooking interrupts. |
+| linux.check_modules.Check_modules | Compares module list with sysfs. | Identifying hidden or unlinked kernel modules. |
+| linux.check_syscall.Check_syscall | Checks syscall table for hooks. | Detecting syscall-hooking kernel rootkits. |
+| linux.ebpf.EBPF | Lists loaded eBPF programs. | Finding malicious eBPF backdoors & stealth monitoring. |
+| linux.elfs.Elfs | Enumerates memory-mapped ELF files. | Locating injected binaries, memory-only implants. |
+| linux.envars.Envars | Extracts process environment variables. | Finding secrets, LD_PRELOAD, malicious env vars. |
+| linux.graphics.fbdev.Fbdev | Extracts framebuffer images. | Capturing on-screen evidence (screenshots). |
+| linux.hidden_modules.Hidden_modules | Carves memory looking for hidden modules. | Detecting kernel-level stealth modules. |
+| linux.iomem.IOMem | Rebuilds `/proc/iomem`. | Finding unusual device mappings (DMA implants). |
+| linux.ip.Addr | Lists interface IP addresses. | Identifying attacker network config or pivots. |
+| linux.ip.Link | `ip link show` equivalent. | Enumerating NICs, virtual interfaces, tunnels. |
+| linux.kallsyms.Kallsyms | Lists kernel symbol table. | Understanding kernel memory layout & offsets. |
+| linux.keyboard_notifiers.Keyboard_notifiers | Lists keyboard notifier callbacks. | Detecting keyloggers. |
+| linux.kmsg.Kmsg | Kernel log buffer reader. | Kernel-level logging of attacks or crashes. |
+| linux.kthreads.Kthreads | Enumerates kernel threads. | Detecting malicious or unknown kthreads. |
+| linux.library_list.LibraryList | Lists libraries in processes. | Detecting injected / swapped libraries. |
+| linux.lsmod.Lsmod | Shows loaded kernel modules. | Basic kernel module presence check. |
+| linux.lsof.Lsof | Lists open files per process. | Identifying exfil, staging, deleted binaries. |
+| linux.malfind.Malfind | Finds injected memory regions. | Detecting userland malware/injected code. |
+| linux.module_extract.ModuleExtract | Extracts kernel modules from memory. | Recovering malicious kernel modules for RE. |
+| linux.modxview.Modxview | Consolidates module visibility checks. | Red/blue team rootkit detection overview. |
+| linux.mountinfo.MountInfo | Lists mount points & namespaces. | Detecting container escapes & attacker mounts. |
+| linux.netfilter.Netfilter | Lists Netfilter hooks. | Spotting firewall-hooking backdoors. |
+| linux.pagecache.Files | Lists files present in page cache. | Finding deleted files attackers tried to hide. |
+| linux.pagecache.InodePages | Lists & extracts inode pages. | Recovering partial or deleted file fragments. |
+| linux.pagecache.RecoverFs | Recovers filesystem structure from cache. | Rebuilding a filesystem even if wiped. |
+| linux.pidhashtable.PIDHashTable | Walks PID hash table. | Detecting hidden/unlinked processes. |
+| linux.proc.Maps | Lists process memory maps. | Reviewing memory regions for anomalies/injection. |
+| linux.psaux.PsAux | Shows processes with arguments. | Confirming exec args for attacker tools. |
+| linux.pscallstack.PsCallStack | Shows call stack per task. | Analyzing what threads/functions were active. |
+| linux.pslist.PsList | Lists tasks from linked lists. | Primary process enumeration. |
+| linux.psscan.PsScan | Carves for process structures. | Finding hidden/unlinked processes. |
+| linux.pstree.PsTree | Tree of process parent-child relationships. | Identifying attacker pivot process lineage. |
+| linux.ptrace.Ptrace | Lists ptrace relationships. | Finding debugging, spying, credential-stealing. |
+| linux.sockstat.Sockstat | Lists all network connections. | Identifying attacker C2, tunnels, handles. |
+| linux.tracing.ftrace.CheckFtrace | Detects ftrace hooks. | Rootkit detection (ftrace-based hooking). |
+| linux.tracing.perf_events.PerfEvents | Lists perf events. | Detecting perf-based snooping or injections. |
+| linux.tracing.tracepoints.CheckTracepoints | Detects tracepoint hooks. | Rootkits modifying kernel tracepoints. |
+| linux.tty_check.tty_check | Checks TTY hooks. | Spotting keyloggers or input hijacking. |
+| linux.vmaregexscan.VmaRegExScan | Regex scan across VMA regions. | Hunting strings, IOCs, config data in RAM. |
+| linux.vmayarascan.VmaYaraScan | Yara scan across VMA regions. | Pattern-matching malware in memory. |
+| linux.vmcoreinfo.VMCoreInfo | Lists VMCoreInfo tables. | Understanding kernel crash dump metadata. |
 
 
 ### Vol Extras
