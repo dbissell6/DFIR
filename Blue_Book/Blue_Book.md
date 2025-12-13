@@ -4434,6 +4434,13 @@ Useful because will extract and show if files had alternate data streams.
 
 ![image](https://github.com/user-attachments/assets/bd3ada11-27a2-455c-8072-41f962a55043)
 
+
+```
+tar -xvf image.ova
+sudo LIBGUESTFS_BACKEND=direct guestmount -a anakt-disk001.vmdk -i /mnt/vm
+sudo guestunmount /mnt/vm
+```
+
 ## Encrypted drive
 
 .vhdx encrypted with bitlocker.
