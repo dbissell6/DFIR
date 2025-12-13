@@ -2569,6 +2569,19 @@ In Linux, executable files don't necessarily have a specific file extension like
 .run (installer script)
 .out (object file)
 
+### Java (.jar)
+
+Java applications are typically distributed as JAR (Java ARchive) or WAR files, which are essentially ZIP archives containing compiled Java bytecode (.class files).
+
+jadx to decompile
+
+<img width="1517" height="169" alt="image" src="https://github.com/user-attachments/assets/abf7a8cb-9705-4fcb-a7eb-96f6d7259ca8" />
+
+cfr to decompile
+
+<img width="834" height="261" alt="image" src="https://github.com/user-attachments/assets/20ffadd7-95e9-4412-814c-cb026f99f41b" />
+
+
 ### Python (.py, .pyc)
 
 py Files: .py files are Python source code files. These files contain human-readable code written in the Python programming language. They can include scripts, modules, or complete applications.
