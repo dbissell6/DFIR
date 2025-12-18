@@ -3242,7 +3242,16 @@ Some malware will check for debugger, can counteract that with `hide debugger`
 
 ![image](https://github.com/user-attachments/assets/907c993d-cce2-420d-babf-e76fa5c65804)
 
+### Bash Trace
 
+`-x`
+
+<img width="348" height="139" alt="image" src="https://github.com/user-attachments/assets/3fe36741-c476-4153-b7bb-553748db0fcc" />
+
+
+### PowerShell Trace
+
+`Set-PSDebug -Trace 2`
 
 ### dnSpy
 
