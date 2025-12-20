@@ -987,6 +987,10 @@ There could be additional letters appended to the useragent
 
 <img width="1378" height="473" alt="Pasted image 20250920214828" src="https://github.com/user-attachments/assets/f0add5b9-3a39-443d-895c-a6e44f097881" />
 
+### NTP
+
+`https://github.com/evallen/ntpescape`
+
 
 ## Tshark
 Sometimes it is useful to extract data from pcaps, this can be done with tshark
