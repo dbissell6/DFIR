@@ -1768,6 +1768,18 @@ C:\Users\htb-student\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\Con
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1bc4e7eb-1e18-4310-8533-913342e6bbb7)
 
+### Notifications History
+
+Windows Push Notifications (WPN) are the mechanism Windows uses to deliver system, application, and service notifications to a user (e.g., app alerts, toast notifications, background sync events). These notifications can originate locally or from remote services via Microsoft’s push notification infrastructure.
+
+
+Found at 
+```
+/Users/[USER]/AppData/Local/Microsoft/Windows/Notifications/wpndatabase.db
+```
+
+<img width="1770" height="477" alt="image" src="https://github.com/user-attachments/assets/37cb9713-72ef-4bbe-8f9a-660a4ee909a4" />
+
 
 
 ### Browser history 
