@@ -4466,6 +4466,18 @@ sudo LIBGUESTFS_BACKEND=direct guestmount -a anakt-disk001.vmdk -i /mnt/vm
 sudo guestunmount /mnt/vm
 ```
 
+## BTRFS
+
+Btrfs is a modern Linux copy-on-write filesystem that supports features like subvolumes, snapshots, checksumming, compression, and pooled storage. For forensics, the big thing is that data may exist across multiple subvolumes or snapshots, so enumerating only the default mount can miss older or alternate versions of files.
+
+<img width="1214" height="106" alt="image" src="https://github.com/user-attachments/assets/f19defa3-6d3b-4c9e-bcc9-5b8f210a262b" />
+
+Can mount and investigate
+
+<img width="822" height="454" alt="image" src="https://github.com/user-attachments/assets/fa68a790-1447-4f2e-9856-1a4081894f88" />
+
+
+
 ## Encrypted drive
 
 .vhdx encrypted with bitlocker.
