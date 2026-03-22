@@ -26,8 +26,9 @@ for ($i = 0; $i -lt $count; $i++) {
 
 
 
+Decrypted strings are garbo due to GPT not knowing how to create xor :(
 
-
+<img width="1040" height="565" alt="image" src="https://github.com/user-attachments/assets/48606a71-64ac-4896-b1c4-65c0f108adb8" />
 
 
 
