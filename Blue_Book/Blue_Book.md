@@ -4977,6 +4977,10 @@ output will be our .raw
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/1c6b9a6a-52a1-437e-b9ed-f202bc6e7a16)
 
 
+### Dump virtualbox memory from running VM
+
+In PowerShell
+`& "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" debugvm "Win112" dumpvmcore --filename win112.raw`
 
 ## Dump Linux Memory
 
