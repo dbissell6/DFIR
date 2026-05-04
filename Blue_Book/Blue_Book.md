@@ -1,6 +1,8 @@
 # The Blue Book
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/01043023-47b7-44dc-87f8-fa31247b9b1d)
+
+<img width="1402" height="1122" alt="vivi_bluebook" src="https://github.com/user-attachments/assets/49316c34-b4a8-496d-b3c9-11cfa425a6d1" />
+
 
 ## Intro
 
