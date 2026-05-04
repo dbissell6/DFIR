@@ -21,7 +21,7 @@ Lessons learned on the path
 
 ## Walkthroughs
 
-PICO - https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/
+https://github.com/dbissell6/DFIR/blob/main/WalkThroughs/
 
 ## DFIR CTF Challenges
 
@@ -37,6 +37,7 @@ https://cyberdefenders.org/blueteam-ctf-challenges/
 
 
 ## Videos
+
 https://www.youtube.com/@digitaldeductions
 
 
