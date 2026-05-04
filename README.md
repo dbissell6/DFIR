@@ -1,8 +1,9 @@
 # DFIR
 
-![image](https://github.com/dbissell6/DFIR/assets/50979196/3123b46e-44c6-4ab0-9c51-292915a8994d)
+<img width="1402" height="1122" alt="vivi_bluebook" src="https://github.com/user-attachments/assets/49316c34-b4a8-496d-b3c9-11cfa425a6d1" />
 
 
+ 
 This is a repository dedicated to the DFIR journey. Contains notes, reflections, walkthroughs and links to tools.
 
 ## BlueBook
