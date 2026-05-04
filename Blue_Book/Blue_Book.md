@@ -334,7 +334,7 @@ Can mount
 
 ## Intro 
 
-Pcaps stand for packet catpure and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
+Pcap stands for packet capture and they are the events (or a log of the events) of what happenened on the network or 'over the wire'. For noobs they can be best conceptualized as text message logs.
 
 Sender | Receiver | Time | Messege
 ```
