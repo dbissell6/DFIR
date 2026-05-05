@@ -10,6 +10,11 @@ User artifacts, on the other hand, are generated through user activity and appli
 
 # Windows OS Artifacts
 
+https://www.sans.org/posters/windows-forensic-analysis/
+https://www.sans.org/gated-content?resource=/Shared/Website%20Public%20Content/Posters%20and%20Cheat%20Sheets/SANS_DFPS_FOR500_v4.17_02-23.pdf
+
+https://www.sans.org/blog/running-ez-tools-natively-on-linux-a-step-by-step-guide/
+
 ## Windows Logs
 
 The main types of Event Viewer (EVTX) logs in Windows are:
@@ -275,6 +280,38 @@ List all plugins
 ```
 -l
 ```
+
+## Master File Table (MFT)
+
+The NTFS file system includes a crucial component known as the Master File Table (MFT), which contains information about every file on an NTFS volume, including its attributes like size, timestamps, permissions, and data content. Files and directories in NTFS are represented either within the MFT or in areas described by MFT entries. When files are added, the MFT grows with new entries, and when files are deleted, their MFT entries are marked as available for reuse, but the allocated disk space for these entries remains unchanged. NTFS reserves a specific space, called the MFT zone, to ensure the MFT remains contiguous, and file and directory space is allocated from this zone once all other volume space is used up.
+
+Each MFT record is 1024 bytes in size. Files smaller than 1024 bytes are stored directly in the MFT file itself, known as MFT Resident files. During Windows filesystem investigations, it's crucial to search for any malicious or suspicious files that may be resident in the MFT. This can reveal the contents of malicious files/scripts. 
+
+Zone Identifier - to see where a file was downloaded from
+
+https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table
+
+### Chainsaw
+
+MFT utilizing the `dump` option and enabling output.
+
+![image](https://github.com/user-attachments/assets/31a1c655-13cb-4cf3-976f-d6cc7a33255f)
+
+has a `--decode-data-streams` option
+
+### MFTECmd.exe 
+Tool to parse MFT +($Boot...)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/65638932-3b22-4945-bec3-85c795ecb3bc)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f74b64ff-aeb7-4821-b224-62fd469e8d36)
+
+### MTF Explorer
+
+Can load raw MFT. Useful but takes 45 minutes to load
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/298cb258-b113-4aee-85b8-e9d9e76bf540)
 
 
 
