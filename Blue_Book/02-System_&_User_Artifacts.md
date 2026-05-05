@@ -14,3 +14,7 @@ User artifacts, on the other hand, are generated through user activity and appli
 
 
 # User Artifacts
+
+## Browser Artifacts
+
+### FireFox
