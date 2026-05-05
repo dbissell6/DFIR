@@ -231,7 +231,7 @@ Identifying and analyzing registry keys related to persistence can be a key part
 https://redteamrecipe.com/Registry-Attack-Vectors/
 
 
-### Registry Explorer
+#### Registry Explorer
 
 Registry Explorer is a tool developed by Eric Zimmerman. It allows users to examine the contents of Windows registry files in a comprehensive manner. 
 
@@ -239,11 +239,11 @@ Using Tools -> Find
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0893e121-3aee-4152-bb2e-0455306faa56)
 
-### reglookup
+#### reglookup
 
 ![image](https://github.com/user-attachments/assets/05dda3df-4da0-4ef0-8730-d565906bda30)
 
-### regshell
+#### regshell
 
 Cli tool allows traverse the registry. 
 
@@ -254,7 +254,7 @@ Cli tool allows traverse the registry.
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/efd52960-936f-40bc-91d0-fefb696db125)
 
 
-### RegRipper
+#### RegRipper
 
 RegRipper is a popular open-source tool used for extracting and analyzing information from the Windows registry. RegRipper can be used to quickly and efficiently extract key artifacts from the registry, including user and account information, installed software, network settings, and much more.
 
