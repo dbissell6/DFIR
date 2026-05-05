@@ -365,6 +365,120 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 # User Artifacts
 
+## Appdata
+
+The C:\Users\$USER\AppData directory in Windows operating systems is a central hub for storing user-specific application data. This hidden folder is critical for both application functionality and forensic investigations.
+
+The AppData folder is subdivided into three key subdirectories:
+
+```Roaming:``` This folder contains data that moves with a user profile from one computer to another in environments where user profiles are managed on a network. Applications store configuration data here, like user settings and profiles that need to be consistent across multiple workstations.
+```Local:``` Stores data that is specific to a single computer, used for data that doesn’t need to be with the user’s profile as they move to different machines. This includes cached data and larger files that don’t need to roam.
+```LocalLow:``` Used by applications that run with lower security settings than the normal user context, such as Internet Explorer when operating in protected mode.
+
+### ActivitiesCache.db
+
+Shows execution times of programs and might hold Clipboard payloads.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/5943ec9e-eeed-4b94-9796-b3182d55724a)
+
+#### Clipboard
+
+Can find clipboard data in `AppData/Local/ConnectedDevicesPlatform/<USER>/ActivitiesCache.db` in SmartLookup table, ClipboardPayload
+
+`python3 -c 'import sqlite3,json,base64,sys; print("\n".join(base64.b64decode(i["content"]).decode("utf-8","ignore") for (p,) in sqlite3.connect(sys.argv[1]).execute("select ClipboardPayload from SmartLookup") if p and p!="[]" for i in json.loads(p) if i.get("formatName")=="Text"))' ./ActivitiesCache.db`
+
+<img width="1786" height="420" alt="image" src="https://github.com/user-attachments/assets/53306002-13e0-460c-a082-64c8b3bcfa83" />
+
+
+### rdp Bitmap
+
+Found at 
+```
+/Users/*/AppData/Local/Microsoft/Terminal Server Client/Cache/Cache0000.bin
+```
+
+![image](https://github.com/user-attachments/assets/67371897-53f2-494e-a822-3f23d6ee09f6)
+
+-b option will stitch them all as a non organized collage
+
+![image](https://github.com/user-attachments/assets/fb1a2ab1-5a14-4f41-8ff2-791a2351c7b2)
+
+
+```https://github.com/ANSSI-FR/bmc-tools```
+
+Can use this to stitch images together
+
+```
+https://github.com/BSI-Bund/RdpCacheStitcher
+```
+
+
+### Powershell history
+
+```
+C:\Users\htb-student\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/1bc4e7eb-1e18-4310-8533-913342e6bbb7)
+
+### Notifications History
+
+Windows Push Notifications (WPN) are the mechanism Windows uses to deliver system, application, and service notifications to a user (e.g., app alerts, toast notifications, background sync events). These notifications can originate locally or from remote services via Microsoft’s push notification infrastructure.
+
+
+Found at 
+```
+/Users/[USER]/AppData/Local/Microsoft/Windows/Notifications/wpndatabase.db
+```
+
+<img width="1770" height="477" alt="image" src="https://github.com/user-attachments/assets/37cb9713-72ef-4bbe-8f9a-660a4ee909a4" />
+
+
+
+### Browser history 
+
+Most browser artifcats are found here. Has its own section below.
+
+
+
+## Shellbags
+Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
+
+It's important to note that shellbags are focused on the user's interactions with the GUI, and not all file system interactions are reflected in this data, thus shellbags would typically be relevant when a user is using Remote Desktop Protocol (RDP).
+
+Found in registry at
+
+```
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
+• USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
+• NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
+• HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f416e2e0-ee2e-4737-8310-f265b043bc66)
+
+
+### Shell Bags Explorer
+
+Looking at offline UsrClass.dat
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/c1776763-15d8-4437-afe1-222a6364ca12)
+
+
+## .lnk (Windows Shortcut) Files
+
+.LNK files, also known as Windows shortcuts, are small files containing a reference to a target file or directory. When a user clicks on a .LNK file, it redirects them to the specified target, allowing for quick access to applications, files, or folders.
+
+Found at 
+```
+C:\Users\<Username>\AppData\Local\Microsoft\Windows\Recent\
+```
+
+On linux can use file and exiftool to see contents
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ce95b0e7-fdd4-4001-b595-881620651ad9)
+
+
 ## Browser Artifacts
 
 ### FireFox
