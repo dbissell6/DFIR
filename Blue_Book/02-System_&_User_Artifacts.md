@@ -313,6 +313,51 @@ Can load raw MFT. Useful but takes 45 minutes to load
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/298cb258-b113-4aee-85b8-e9d9e76bf540)
 
+## UsnJrnl (Update Sequence Number Journal)
+
+The UsnJrnl is a feature of the NTFS file system that logs changes to files and directories on the volume. Each update or modification to a file or directory creates an entry in the UsnJrnl, which includes metadata such as timestamps, file attributes, and the nature of the change (e.g., created, modified, deleted).
+
+Forensic investigators often analyze the UsnJrnl to determine file activity, reconstruct timelines, or identify tampering with system files. 
+
+### Use MFTECmd to parse the USN
+
+![image](https://github.com/user-attachments/assets/2b2809ac-c344-4ac6-8f4c-e5f7087d6bf5)
+
+
+
+### usnjrnl_rewind
+
+```https://github.com/CyberCX-DFIR/usnjrnl_rewind```
+
+
+## Windows prefetch(.pf)
+
+Windows Prefetch files are designed to improve the application startup process by preloading essential components into memory based on past usage patterns. The information they contain typically includes:
+
+* Name of the Executable: This is the main executable file associated with the application.
+
+* Unicode List of DLLs (Dynamic Link Libraries): DLLs are shared libraries containing code and data that multiple programs can use simultaneously. The prefetch file lists the DLLs associated with the executable.
+
+* Execution Count: This indicates how many times the executable has been run, helping the system understand the application's frequency of use.
+
+* Timestamp: The timestamp indicates the last time the program was run, assisting in determining the most recent usage of the application.
+
+### Can Examine using WindowsPrefetchView
+
+Files found in `C:\Windows\Prefetch`
+
+Can also import a folder of .pfs `Options -> Advanced_Options`
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/f426127b-2744-4ef1-bf57-cb499f384769)
+
+### Using exiftool
+
+![image](https://github.com/user-attachments/assets/c9b51c56-0125-46d4-a1dd-131344d2024c)
+
+
+### PECmd.exe
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
 
 
 # Linux OS Artifacts
