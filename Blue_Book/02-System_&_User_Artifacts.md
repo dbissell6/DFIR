@@ -359,6 +359,32 @@ Can also import a folder of .pfs `Options -> Advanced_Options`
 
 ![image](https://github.com/dbissell6/DFIR/assets/50979196/0eee2a31-9710-42b6-a601-9fb2a80a75b9)
 
+## Windows Management Instrumentation Repository (WMI)
+
+Found at
+```
+C/Windows/System32/wbem/Repository
+```
+
+The WMI repository is a database that contains information about the Windows Management Instrumentation (WMI) classes installed on a computer, and it has the following structure:
+
+* OBJECTS.DATA: Objects managed by WMI
+
+* INDEX.BTR: Index of files imported into OBJECTS.DATA
+
+* MAPPING[1-3].MAP: Correlates data in OBJECTS.DATA and INDEX.BTR
+
+WMI can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Examples of events that may be subscribed to are the wall clock time, user logging, or the computer's uptime. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system.
+
+![Pasted image 20221116224453](https://github.com/dbissell6/DFIR/assets/50979196/6491e06d-1f6c-4a25-8b09-cdaa9ada3fa8)
+
+WMI data is stored in
+
+```
+\Windows\System32\wbem\Repository
+```
+
+
 
 # Linux OS Artifacts
 
