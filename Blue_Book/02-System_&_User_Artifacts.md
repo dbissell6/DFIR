@@ -194,6 +194,89 @@ Attackers may use a variety of techniques to establish persistence via the regis
 
 Identifying and analyzing registry keys related to persistence can be a key part of the challenge. This may involve searching for suspicious or unusual keys or values, examining the contents of known persistence mechanisms (such as scheduled tasks), or using specialized tools and techniques to identify and analyze hidden or obfuscated persistence methods. 
 
+### Important Registry Paths for Forensic Analysis
+
+| Registry Path                                                     | Description                                               |
+|-------------------------------------------------------------------|-----------------------------------------------------------|
+| HKLM\SYSTEM\CurrentControlSet\Control\ComputerName                 | Computer name                                             |
+| HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall          | Installed software                                        |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs | Recent documents                                          |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU | Recently opened/saved files           |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU    | Run history                                               |
+| HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters           | Network configuration                                    |
+| HKCU\Software\Microsoft\Internet Explorer\TypedURLs               | Typed URLs in Internet Explorer                           |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings  | Internet settings                                         |
+| HKLM\SYSTEM\CurrentControlSet\Services\bam\UserSettings          | Recently executed programs                               |
+| HKCU\Software\Microsoft\Office                                     | Microsoft Office usage                                   |
+| HKLM\SYSTEM\CurrentControlSet\Enum\USB                              | USB device history                                       |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 | Mounted devices                                        |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon       | Winlogon settings                                        |
+| HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation         | Time zone information                                    |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist | UserAssist data                                          |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList     | User profile paths                                       |
+| HKCU\Control Panel\Desktop                                         | Desktop settings                                         |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders | User-specific folders                                 |
+| HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy       | Group policy settings                                    |
+| HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management | Memory management settings                         |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows        | Windows folder paths                                     |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer   | User-specific policies                                  |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles | Network profiles                                      |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts   | File extension actions                                  |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Drivers32       | System drivers                                           |
+| HKCU\Software\Microsoft\Search Assistant\ACMru                    | Search Assistant history                                 |
+| HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug         | Debugger settings                                        |
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit     | Last key viewed in Regedit                               |
+| HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot                    | Safe boot options                                        |
+
+https://redteamrecipe.com/Registry-Attack-Vectors/
+
+
+### Registry Explorer
+
+Registry Explorer is a tool developed by Eric Zimmerman. It allows users to examine the contents of Windows registry files in a comprehensive manner. 
+
+Using Tools -> Find
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/0893e121-3aee-4152-bb2e-0455306faa56)
+
+### reglookup
+
+![image](https://github.com/user-attachments/assets/05dda3df-4da0-4ef0-8730-d565906bda30)
+
+### regshell
+
+Cli tool allows traverse the registry. 
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/53163a8d-9521-4638-a0be-d63985e80fa6)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/dfeab73f-8a4b-4f38-a8e7-35710476c1f6)
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/efd52960-936f-40bc-91d0-fefb696db125)
+
+
+### RegRipper
+
+RegRipper is a popular open-source tool used for extracting and analyzing information from the Windows registry. RegRipper can be used to quickly and efficiently extract key artifacts from the registry, including user and account information, installed software, network settings, and much more.
+
+RegRipper operates by applying a series of pre-defined plugins or "rippers" to the registry, each of which is designed to extract specific types of information. This modular design allows users to easily customize and extend RegRipper's functionality, tailoring it to their specific forensic needs.
+
+RegRipper can be a powerful tool for analyzing Windows systems and identifying potential security issues. By using RegRipper to extract and analyze registry data,for insights into the inner workings of a system and identify potential indicators of compromise (IOCs) or persistence mechanisms.
+
+To use all plugins (Something annoying is that sometimes the binary wont work unlkess you put an extra space or 2 after the -a)
+
+![image](https://github.com/user-attachments/assets/962f0825-adc3-4494-a377-36a6b4f034c5)
+
+
+Cal also guess the hive file type
+```
+-g
+```
+List all plugins
+```
+-l
+```
+
+
 
 # Linux OS Artifacts
 
