@@ -434,13 +434,6 @@ Found at
 <img width="1770" height="477" alt="image" src="https://github.com/user-attachments/assets/37cb9713-72ef-4bbe-8f9a-660a4ee909a4" />
 
 
-
-### Browser history 
-
-Most browser artifcats are found here. Has its own section below.
-
-
-
 ## Shellbags
 Shellbags, short for "shell folders and bagMRU," are a forensic artifact found in Microsoft Windows operating systems. They are part of the Windows Explorer feature that remembers how folders are displayed (view settings) and stores user interaction with the file system, including folder navigation and access times.
 
