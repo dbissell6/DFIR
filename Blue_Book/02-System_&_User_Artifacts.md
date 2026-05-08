@@ -652,3 +652,29 @@ Logs details of file downloads, including the source URL, download time, and sav
 #### Cookies
 
 `cookies.sqlite`
+
+## .git
+
+Not really internet artifact, Where is better tho?
+
+The .git directory is a goldmine of information for forensic analysts. It is the hidden folder within a Git repository that contains the entire version control history. This includes details about every commit, configuration settings, branches, and the objects that represent the filesystem of the project at every recorded point in time.
+
+![316927808-b9eaedbe-5de4-4596-9632-846b17e4d665](https://github.com/dbissell6/DFIR/assets/50979196/89b6c490-d21f-4747-9965-09b79a765fba)
+
+Read through all the commits and grep for specific content within them.
+
+```
+git log --format="%H" | while read commit_hash; do git show "$commit_hash"; done | grep "search_term"
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/bf4f2466-26a3-41f8-9d06-f33f1db83c07)
+
+## Email
+
+.ost 
+
+OST stands for Offline Storage Table. These files are used by Microsoft Outlook to store a copy of your mailbox data (emails, calendar events, contacts, etc.) when using Outlook with a Microsoft Exchange account. They allow you to work offline and synchronize changes with the Exchange server when you reconnect.
+
+![image](https://github.com/user-attachments/assets/d920d3b3-18d0-40b3-a8d6-375290cc50ad)
+
+
