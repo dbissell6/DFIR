@@ -384,6 +384,99 @@ WMI data is stored in
 \Windows\System32\wbem\Repository
 ```
 
+## SRUM
+
+SRUM, which stands for System Resource Usage Monitor, is a Windows artifact that records detailed system resource usage by each application and user. It provides information about network connectivity, data usage, and application resource consumption over time.
+
+```
+C:\Windows\System32\sru\srudb.dat
+```
+
+```
+C:\Windows\System32\config\SOFTWARE
+```
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/d9e968ae-f410-4aec-ba00-6c5b424ef138)
+
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/ebfde46c-3d6b-4649-80e3-9a818db17dc0)
+
+## $Logfile
+
+The Log file is used for transaction logging by the NTFS file system. Can be used to reconstruct file system operations and recover recent changes.
+
+### LogfileParser
+
+```https://github.com/jschicht/LogFileParser```
+
+
+Delimters is | can change it quick with this
+```
+$inputFile = "path\to\your\inputfile.csv"
+$outputFile = "path\to\your\outputfile.csv"
+
+(Get-Content $inputFile) -replace '\|', ',' | Set-Content $outputFile
+```
+
+We can open the CSV in timeline explorer.
+
+![image](https://github.com/user-attachments/assets/527e28cc-f66b-4d36-89ae-17b55e1b9051)
+
+In the above example we are trying to find the the info in shared_key before it was deleted with sdelete64.exe It says go to debug.log to see the data
+
+![image](https://github.com/user-attachments/assets/6e724866-6bf7-4475-b87f-1195d409b094)
+
+![image](https://github.com/user-attachments/assets/8e07212f-facb-4f97-abad-ccd24d4671f7)
+
+This was the key used in ransomware and we can now use it to decrypt files. 
+
+## .apmx
+
+File type for API Monitor, a tool for monitoring and analyzing API calls made by applications on Windows systems. These files contain a record of API calls, including details such as the calling process, the APIs invoked, parameters, return values, and any errors that occurred.
+
+
+In `Monitored Processes` pane, can hover over cmd and powershell processes to see commandline. In Summary pane bionoculars to find something from the strings and we can get it in the Parameters pane.
+
+![image](https://github.com/dbissell6/DFIR/assets/50979196/e47ab520-9d30-436b-b8e0-6ae3e166e463)
+
+## Defender
+
+### Quarantine
+
+Records files that were quarantined after being flagged as a threat by Defender.
+
+Stored in ```C:\ProgramData\Microsoft\Windows Defender\Quarantine\entries```
+
+### MP Logs – Key Points:
+
+ Windows Defender MP logs store valuable information about files scanned by Defender, such as file paths, hashes, timestamps, and potentially signatures.
+ These logs are located in the hidden directory ```C:\ProgramData\Microsoft\Windows Defender\Support```.
+ MP logs can record command line arguments, observed files, and results, even if the file wasn’t flagged as suspicious.
+ Common logs include MPDetection (detected threats) and MPLog (scanned files and directories).
+ These logs can be pivotal in incidents where other artifacts or logs are missing, as they consolidate critical data like hashes, file paths, timestamps, and telemetry.
+
+![image](https://github.com/user-attachments/assets/a95f9654-e570-41a3-95d4-a1dbadfd723f)
+
+## Tasks
+
+In Windows contains XML files that define scheduled tasks for the operating system. These tasks are automated actions that Windows or applications run at specific times or in response to specific triggers, such as system startup or user login. Each XML file typically contains details about the task, including:
+
+    Task Name: The name of the scheduled task.
+    Triggers: Events or conditions that initiate the task (e.g., time-based, event-based).
+    Actions: The executable command and any arguments or scripts that the task runs.
+    Conditions: Requirements that must be met for the task to run (e.g., system idle or network availability).
+    Settings: Additional configurations such as retry intervals, permissions, and whether the task runs with elevated privileges.
+
+```
+C:\Windows\System32\Tasks
+```
+
+![image](https://github.com/user-attachments/assets/b7a5eb91-a295-4379-a98d-a01d912265d5)
+
+```
+exiftool * | grep -E "File Name|File Modification Date/Time|Task Actions Exec Command|Task Actions Exec Arguments"  | awk '{print} NR % 4 == 0 {print ""}'
+```
+
 
 
 # Linux OS Artifacts
